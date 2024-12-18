@@ -44,7 +44,7 @@
 [ext_resource type="Texture2D" uid="uid://dcihcay6132lg" path="res://textures/CustomText/RustyDangerSign.png" id="41_o3yng"]
 [ext_resource type="PackedScene" path="res://prefabs/page_object.tscn" id="43_fic3o"]
 [ext_resource type="Texture2D" uid="uid://p45o3pautgvw" path="res://Sprites/Paper/ElevatorPomp.png" id="44_i8rr6"]
-[ext_resource type="PackedScene" uid="uid://untrnqh2eqkn" path="res://MercModPrefabls/anime_stalk.tscn" id="45_f85yf"]
+[ext_resource type="PackedScene" uid="uid://untrnqh2eqkn" path="res://KOMPrefabs/NPCs/anime_stalk.tscn" id="45_f85yf"]
 [ext_resource type="Script" path="res://CustomScripts/AnimeStalkFriendlyBehavior.gd" id="46_03oaq"]
 [ext_resource type="Material" path="res://textures/Door01.tres" id="47_gsoxx"]
 [ext_resource type="PackedScene" uid="uid://dmt5a0l2b5o36" path="res://KOMPrefabs/Enemies/GummingDisease.tscn" id="49_baxl0"]
