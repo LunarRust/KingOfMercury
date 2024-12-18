@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dmnp2xhvv1iy5"
+path="res://.godot/imported/TeleporterRing.blend-5d8632bf00663ace8d8d076b2c7eb05d.scn"
+
+[deps]
+
+source_file="res://Models/TeleporterRing.blend"
+dest_files=PackedStringArray("res://.godot/imported/TeleporterRing.blend-5d8632bf00663ace8d8d076b2c7eb05d.scn")
+
+[params]
+
+dummy_value_ignore_me=0

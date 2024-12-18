@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b6c5tix1k04q8"
+path="res://.godot/imported/HumanScream1.ogg-397de7028b4ef20a8fb5573ebef2dde7.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/HumanScream1.ogg"
+dest_files=["res://.godot/imported/HumanScream1.ogg-397de7028b4ef20a8fb5573ebef2dde7.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

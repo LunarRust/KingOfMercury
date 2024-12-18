@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cmn86lg6kavv1"
+path="res://.godot/imported/Mother.blend-ed3aa58c212dcc30922c3ccb68fcbc4f.scn"
+
+[deps]
+
+source_file="res://Models/Mother.blend"
+dest_files=PackedStringArray("res://.godot/imported/Mother.blend-ed3aa58c212dcc30922c3ccb68fcbc4f.scn")
+
+[params]
+
+dummy_value_ignore_me=0

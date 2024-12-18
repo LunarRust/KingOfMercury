@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://n22v1lj04u6m"
+path="res://.godot/imported/DemoZone.map-42f3d426d75ec619712d9b9a8452aa90.tres"
+
+[deps]
+
+source_file="res://CustomMaps/DemoZone.map"
+dest_files=["res://.godot/imported/DemoZone.map-42f3d426d75ec619712d9b9a8452aa90.tres"]
+
+[params]
+

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bqf1bqtobbp37"
+path="res://.godot/imported/DogOpen.ogg-228bbb6167984402e39e4ac59e819978.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/DogOpen.ogg"
+dest_files=["res://.godot/imported/DogOpen.ogg-228bbb6167984402e39e4ac59e819978.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

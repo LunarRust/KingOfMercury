@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dsnwuh6bfjp0d"
+path="res://.godot/imported/Squidy.blend-8b6f29d3e24e7f7f359ec95380d4c24d.scn"
+
+[deps]
+
+source_file="res://Models/Squidy.blend"
+dest_files=PackedStringArray("res://.godot/imported/Squidy.blend-8b6f29d3e24e7f7f359ec95380d4c24d.scn")
+
+[params]
+
+dummy_value_ignore_me=0

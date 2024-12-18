@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dxm02h0dmdk7t"
+path="res://.godot/imported/LifeOrder.blend-e018db7f4ab16f73e3aae23c6d2b7ae9.scn"
+
+[deps]
+
+source_file="res://Models/LifeOrder.blend"
+dest_files=PackedStringArray("res://.godot/imported/LifeOrder.blend-e018db7f4ab16f73e3aae23c6d2b7ae9.scn")
+
+[params]
+
+dummy_value_ignore_me=0

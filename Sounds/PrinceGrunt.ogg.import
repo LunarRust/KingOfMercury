@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://r1bia5w7ckh1"
+path="res://.godot/imported/PrinceGrunt.ogg-e439421b192f371ce5b2afbbfa6c20e4.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/PrinceGrunt.ogg"
+dest_files=["res://.godot/imported/PrinceGrunt.ogg-e439421b192f371ce5b2afbbfa6c20e4.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

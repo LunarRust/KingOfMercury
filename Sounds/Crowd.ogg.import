@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dp4n4dbwkwa7n"
+path="res://.godot/imported/Crowd.ogg-416b7a4bcabc62aaf6a9ee36feabf387.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Crowd.ogg"
+dest_files=["res://.godot/imported/Crowd.ogg-416b7a4bcabc62aaf6a9ee36feabf387.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

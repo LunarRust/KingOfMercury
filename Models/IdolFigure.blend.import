@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://sdhevq3xs6q0"
+path="res://.godot/imported/IdolFigure.blend-67776193764dded3ae5857db4d53242d.scn"
+
+[deps]
+
+source_file="res://Models/IdolFigure.blend"
+dest_files=PackedStringArray("res://.godot/imported/IdolFigure.blend-67776193764dded3ae5857db4d53242d.scn")
+
+[params]
+
+dummy_value_ignore_me=0

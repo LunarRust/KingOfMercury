@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://boalaqnkr4hru"
+path="res://.godot/imported/HandDemonFace.blend-012b33a743789355ec4117c7ab70513a.scn"
+
+[deps]
+
+source_file="res://Models/HandDemonFace.blend"
+dest_files=PackedStringArray("res://.godot/imported/HandDemonFace.blend-012b33a743789355ec4117c7ab70513a.scn")
+
+[params]
+
+dummy_value_ignore_me=0

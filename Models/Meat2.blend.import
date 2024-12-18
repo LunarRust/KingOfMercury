@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cdrf6dkrlkqig"
+path="res://.godot/imported/Meat2.blend-55860c0db552f0ffd140f0d81d5c1a95.scn"
+
+[deps]
+
+source_file="res://Models/Meat2.blend"
+dest_files=PackedStringArray("res://.godot/imported/Meat2.blend-55860c0db552f0ffd140f0d81d5c1a95.scn")
+
+[params]
+
+dummy_value_ignore_me=0

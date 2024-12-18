@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[sub_resource type="Shader" id="1"]
+code = "shader_type spatial;
+
+void fragment() {
+	ALBEDO = TANGENT;
+}"
+
+[resource]
+render_priority = 0
+next_pass = null
+shader = SubResource("1")

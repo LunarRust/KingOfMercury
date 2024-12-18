@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://d3wbs7nromd0y"
+path="res://.godot/imported/Computer.blend-dbf76721e07de273811d7be35c614cb7.scn"
+
+[deps]
+
+source_file="res://Models/Computer.blend"
+dest_files=PackedStringArray("res://.godot/imported/Computer.blend-dbf76721e07de273811d7be35c614cb7.scn")
+
+[params]
+
+dummy_value_ignore_me=0

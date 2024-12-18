@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c8lgtg7txcpr5"
+path="res://.godot/imported/PieHead.blend-b97c92eda735f9cf499ef1f608e2111a.scn"
+
+[deps]
+
+source_file="res://Models/PieHead.blend"
+dest_files=PackedStringArray("res://.godot/imported/PieHead.blend-b97c92eda735f9cf499ef1f608e2111a.scn")
+
+[params]
+
+dummy_value_ignore_me=0

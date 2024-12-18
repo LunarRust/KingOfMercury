@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cm3ecirhkhxmy"
+path="res://.godot/imported/Paragon2.blend-94239d5393f70519bba0cd283334ff1f.scn"
+
+[deps]
+
+source_file="res://Models/Paragon2.blend"
+dest_files=PackedStringArray("res://.godot/imported/Paragon2.blend-94239d5393f70519bba0cd283334ff1f.scn")
+
+[params]
+
+dummy_value_ignore_me=0

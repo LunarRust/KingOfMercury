@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b65nqgm08b0un"
+path="res://.godot/imported/WallLight.blend-cd36677204cf748a59b2ad3826d88146.scn"
+
+[deps]
+
+source_file="res://Models/WallLight.blend"
+dest_files=PackedStringArray("res://.godot/imported/WallLight.blend-cd36677204cf748a59b2ad3826d88146.scn")
+
+[params]
+
+dummy_value_ignore_me=0

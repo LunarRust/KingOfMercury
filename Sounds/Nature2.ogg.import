@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dlcoxgpymf421"
+path="res://.godot/imported/Nature2.ogg-93bdf24abddcf3987a6b75082eb16fde.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Nature2.ogg"
+dest_files=["res://.godot/imported/Nature2.ogg-93bdf24abddcf3987a6b75082eb16fde.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

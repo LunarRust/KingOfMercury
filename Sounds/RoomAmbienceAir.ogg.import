@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b27w0g7mxd1ai"
+path="res://.godot/imported/RoomAmbienceAir.ogg-be6799ff64612ee929388a931dc8c0e7.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/RoomAmbienceAir.ogg"
+dest_files=["res://.godot/imported/RoomAmbienceAir.ogg-be6799ff64612ee929388a931dc8c0e7.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

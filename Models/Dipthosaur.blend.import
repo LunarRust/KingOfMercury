@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bq5uq0nemtocx"
+path="res://.godot/imported/Dipthosaur.blend-b387dd04e102518930624e64a823edb5.scn"
+
+[deps]
+
+source_file="res://Models/Dipthosaur.blend"
+dest_files=PackedStringArray("res://.godot/imported/Dipthosaur.blend-b387dd04e102518930624e64a823edb5.scn")
+
+[params]
+
+dummy_value_ignore_me=0

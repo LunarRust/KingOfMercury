@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cnh06xjilykw8"
+path="res://.godot/imported/Keycard.blend-aab1c5c5e149ad476510f16da5444a4b.scn"
+
+[deps]
+
+source_file="res://Models/Keycard.blend"
+dest_files=PackedStringArray("res://.godot/imported/Keycard.blend-aab1c5c5e149ad476510f16da5444a4b.scn")
+
+[params]
+
+dummy_value_ignore_me=0

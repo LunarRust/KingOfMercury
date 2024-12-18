@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cyllehc4eewpv"
+path="res://.godot/imported/MetalMother.ogg-b18d2cb3afaf996c49fd50de7a456921.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/MetalMother.ogg"
+dest_files=["res://.godot/imported/MetalMother.ogg-b18d2cb3afaf996c49fd50de7a456921.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

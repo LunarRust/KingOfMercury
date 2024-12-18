@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://clkijl6wyg242"
+path="res://.godot/imported/SwingScythe.blend-be5552914c8cf8ec4a3fd5ef6b231c30.scn"
+
+[deps]
+
+source_file="res://Models/SwingScythe.blend"
+dest_files=PackedStringArray("res://.godot/imported/SwingScythe.blend-be5552914c8cf8ec4a3fd5ef6b231c30.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dufo4bgrt80a0"
+path="res://.godot/imported/PSIMachine.blend-805329f61a875fae55c54e913e0d0945.scn"
+
+[deps]
+
+source_file="res://Models/PSIMachine.blend"
+dest_files=PackedStringArray("res://.godot/imported/PSIMachine.blend-805329f61a875fae55c54e913e0d0945.scn")
+
+[params]
+
+dummy_value_ignore_me=0

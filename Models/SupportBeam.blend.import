@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cvtowiwipaaem"
+path="res://.godot/imported/SupportBeam.blend-cbddfeaf170cb2cc015bcdc228f9d28d.scn"
+
+[deps]
+
+source_file="res://Models/SupportBeam.blend"
+dest_files=PackedStringArray("res://.godot/imported/SupportBeam.blend-cbddfeaf170cb2cc015bcdc228f9d28d.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c2xv1e3ea8sg4"
+path="res://.godot/imported/Ferns.blend-1e9f608847176fded0de5c66d8692a0f.scn"
+
+[deps]
+
+source_file="res://Models/Ferns.blend"
+dest_files=PackedStringArray("res://.godot/imported/Ferns.blend-1e9f608847176fded0de5c66d8692a0f.scn")
+
+[params]
+
+dummy_value_ignore_me=0

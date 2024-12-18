@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c5gplgem21x5i"
+path="res://.godot/imported/WallVein2.blend-bb20f0c84796c1c5b1ba2b866a1c5801.scn"
+
+[deps]
+
+source_file="res://Models/WallVein2.blend"
+dest_files=PackedStringArray("res://.godot/imported/WallVein2.blend-bb20f0c84796c1c5b1ba2b866a1c5801.scn")
+
+[params]
+
+dummy_value_ignore_me=0

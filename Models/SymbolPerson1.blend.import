@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c5uwgsidqm3lh"
+path="res://.godot/imported/SymbolPerson1.blend-0f8c1bddf06164484ce5f9a34b6d89f9.scn"
+
+[deps]
+
+source_file="res://Models/SymbolPerson1.blend"
+dest_files=PackedStringArray("res://.godot/imported/SymbolPerson1.blend-0f8c1bddf06164484ce5f9a34b6d89f9.scn")
+
+[params]
+
+dummy_value_ignore_me=0

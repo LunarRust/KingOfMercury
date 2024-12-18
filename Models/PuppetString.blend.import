@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b8iscfblxwood"
+path="res://.godot/imported/PuppetString.blend-32880ca604dbd9de1407e50b49f5ce6c.scn"
+
+[deps]
+
+source_file="res://Models/PuppetString.blend"
+dest_files=PackedStringArray("res://.godot/imported/PuppetString.blend-32880ca604dbd9de1407e50b49f5ce6c.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://cu7lb357r6xc1"
+path="res://.godot/imported/door.map-f1c76b7340dc0823cc48839c31016d41.tres"
+
+[deps]
+
+source_file="res://CustomMaps/door.map"
+dest_files=["res://.godot/imported/door.map-f1c76b7340dc0823cc48839c31016d41.tres"]
+
+[params]
+

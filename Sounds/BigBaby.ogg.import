@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://f13x0ki62t85"
+path="res://.godot/imported/BigBaby.ogg-f03ec1697053659a526d199269b14070.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/BigBaby.ogg"
+dest_files=["res://.godot/imported/BigBaby.ogg-f03ec1697053659a526d199269b14070.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

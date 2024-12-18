@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://mq6sc7b5j4u5"
+path="res://.godot/imported/ClayNurse.blend-e1b1dd539d6d4c4c7a2c151f1e51dce0.scn"
+
+[deps]
+
+source_file="res://Models/ClayNurse.blend"
+dest_files=PackedStringArray("res://.godot/imported/ClayNurse.blend-e1b1dd539d6d4c4c7a2c151f1e51dce0.scn")
+
+[params]
+
+dummy_value_ignore_me=0

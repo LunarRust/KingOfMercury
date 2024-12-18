@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://crlgblcsx7wgo"
+path="res://.godot/imported/Tree2.blend-b43e36f0c3f8db0bae3418e2a997d40c.scn"
+
+[deps]
+
+source_file="res://Models/Tree2.blend"
+dest_files=PackedStringArray("res://.godot/imported/Tree2.blend-b43e36f0c3f8db0bae3418e2a997d40c.scn")
+
+[params]
+
+dummy_value_ignore_me=0

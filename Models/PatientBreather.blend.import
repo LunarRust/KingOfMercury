@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://p80q2usvwmes"
+path="res://.godot/imported/PatientBreather.blend-1d922d3c4be2deb154dacc62e168583c.scn"
+
+[deps]
+
+source_file="res://Models/PatientBreather.blend"
+dest_files=PackedStringArray("res://.godot/imported/PatientBreather.blend-1d922d3c4be2deb154dacc62e168583c.scn")
+
+[params]
+
+dummy_value_ignore_me=0

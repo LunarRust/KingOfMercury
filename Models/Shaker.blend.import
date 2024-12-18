@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bhevqshhvkujy"
+path="res://.godot/imported/Shaker.blend-431f25a46bf0b8576c103f9b777199bf.scn"
+
+[deps]
+
+source_file="res://Models/Shaker.blend"
+dest_files=PackedStringArray("res://.godot/imported/Shaker.blend-431f25a46bf0b8576c103f9b777199bf.scn")
+
+[params]
+
+dummy_value_ignore_me=0

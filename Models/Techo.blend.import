@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b0wnk53xgkkhk"
+path="res://.godot/imported/Techo.blend-144adabc70eed28ae9f4e811d7efcf21.scn"
+
+[deps]
+
+source_file="res://Models/Techo.blend"
+dest_files=PackedStringArray("res://.godot/imported/Techo.blend-144adabc70eed28ae9f4e811d7efcf21.scn")
+
+[params]
+
+dummy_value_ignore_me=0

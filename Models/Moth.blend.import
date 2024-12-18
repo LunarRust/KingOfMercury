@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c0w6rc4tklne2"
+path="res://.godot/imported/Moth.blend-86fd0c9cbbe790a2d3c2bea7d1bdc0a4.scn"
+
+[deps]
+
+source_file="res://Models/Moth.blend"
+dest_files=PackedStringArray("res://.godot/imported/Moth.blend-86fd0c9cbbe790a2d3c2bea7d1bdc0a4.scn")
+
+[params]
+
+dummy_value_ignore_me=0

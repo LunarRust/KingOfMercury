@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://spmq72jsi02w"
+path="res://.godot/imported/QueenShell.blend-8dc750d929c8ce22da5b342d1a9a6e0b.scn"
+
+[deps]
+
+source_file="res://Models/QueenShell.blend"
+dest_files=PackedStringArray("res://.godot/imported/QueenShell.blend-8dc750d929c8ce22da5b342d1a9a6e0b.scn")
+
+[params]
+
+dummy_value_ignore_me=0

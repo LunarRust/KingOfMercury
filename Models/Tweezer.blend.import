@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://ddj4w67si7crn"
+path="res://.godot/imported/Tweezer.blend-e4c685f2b5b1ff80879c0f196fe9d2b7.scn"
+
+[deps]
+
+source_file="res://Models/Tweezer.blend"
+dest_files=PackedStringArray("res://.godot/imported/Tweezer.blend-e4c685f2b5b1ff80879c0f196fe9d2b7.scn")
+
+[params]
+
+dummy_value_ignore_me=0

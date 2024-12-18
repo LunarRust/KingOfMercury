@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b4r0eg07wxr6c"
+path="res://.godot/imported/Guillotine.blend-5f2fb3f0024da1cbd9cf281f8f743e81.scn"
+
+[deps]
+
+source_file="res://Models/Guillotine.blend"
+dest_files=PackedStringArray("res://.godot/imported/Guillotine.blend-5f2fb3f0024da1cbd9cf281f8f743e81.scn")
+
+[params]
+
+dummy_value_ignore_me=0

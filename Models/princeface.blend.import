@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://deq1ijibuug5n"
+path="res://.godot/imported/princeface.blend-92ee3c9776112fda793a5645116e902f.scn"
+
+[deps]
+
+source_file="res://Models/princeface.blend"
+dest_files=PackedStringArray("res://.godot/imported/princeface.blend-92ee3c9776112fda793a5645116e902f.scn")
+
+[params]
+
+dummy_value_ignore_me=0

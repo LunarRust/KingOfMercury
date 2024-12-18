@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://33rrx0yu7k03"
+path="res://.godot/imported/new ear.blend-4ee81057954cf0fbaa74fc3e6e941c94.scn"
+
+[deps]
+
+source_file="res://Models/new ear.blend"
+dest_files=PackedStringArray("res://.godot/imported/new ear.blend-4ee81057954cf0fbaa74fc3e6e941c94.scn")
+
+[params]
+
+dummy_value_ignore_me=0

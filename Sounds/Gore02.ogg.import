@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cndtsa78dgq1r"
+path="res://.godot/imported/Gore02.ogg-4cb3d47889c12cd52af21dd09d10f2c4.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Gore02.ogg"
+dest_files=["res://.godot/imported/Gore02.ogg-4cb3d47889c12cd52af21dd09d10f2c4.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

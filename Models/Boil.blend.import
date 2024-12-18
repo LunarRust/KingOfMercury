@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cwgna6v86cfvi"
+path="res://.godot/imported/Boil.blend-b6cccb88198e770bf5e38baa15cda4c4.scn"
+
+[deps]
+
+source_file="res://Models/Boil.blend"
+dest_files=PackedStringArray("res://.godot/imported/Boil.blend-b6cccb88198e770bf5e38baa15cda4c4.scn")
+
+[params]
+
+dummy_value_ignore_me=0

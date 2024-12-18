@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://beoqybf0di8ti"
+path="res://.godot/imported/Quake1.ogg-782086a618e3ba1b393f73b2ca2e49bc.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Quake1.ogg"
+dest_files=["res://.godot/imported/Quake1.ogg-782086a618e3ba1b393f73b2ca2e49bc.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

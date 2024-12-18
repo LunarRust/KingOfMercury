@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://csk2nj17wcquw"
+path="res://.godot/imported/ElevatorDoors.blend-3cfb6b82bff2eff43e1fc00fa10dbd84.scn"
+
+[deps]
+
+source_file="res://Models/ElevatorDoors.blend"
+dest_files=PackedStringArray("res://.godot/imported/ElevatorDoors.blend-3cfb6b82bff2eff43e1fc00fa10dbd84.scn")
+
+[params]
+
+dummy_value_ignore_me=0

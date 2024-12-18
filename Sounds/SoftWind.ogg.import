@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://di0xbbbqmsgex"
+path="res://.godot/imported/SoftWind.ogg-020b06cdc60ea2b3faa20323233f1126.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/SoftWind.ogg"
+dest_files=["res://.godot/imported/SoftWind.ogg-020b06cdc60ea2b3faa20323233f1126.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

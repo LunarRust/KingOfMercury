@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c3d7quhlnw8o"
+path="res://.godot/imported/2DStep1.ogg-d403fbd9fad3e3b375b0e25f53e7cf6e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/2DStep1.ogg"
+dest_files=["res://.godot/imported/2DStep1.ogg-d403fbd9fad3e3b375b0e25f53e7cf6e.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

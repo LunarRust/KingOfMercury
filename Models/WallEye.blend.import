@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://03cgerfcpari"
+path="res://.godot/imported/WallEye.blend-fd5568ca39b132fa5afe8b2a2b19ace0.scn"
+
+[deps]
+
+source_file="res://Models/WallEye.blend"
+dest_files=PackedStringArray("res://.godot/imported/WallEye.blend-fd5568ca39b132fa5afe8b2a2b19ace0.scn")
+
+[params]
+
+dummy_value_ignore_me=0

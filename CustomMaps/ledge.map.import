@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://bpjec4kbe2e40"
+path="res://.godot/imported/ledge.map-9abb4c8b50e8cd1b48ea264021f9e888.tres"
+
+[deps]
+
+source_file="res://CustomMaps/ledge.map"
+dest_files=["res://.godot/imported/ledge.map-9abb4c8b50e8cd1b48ea264021f9e888.tres"]
+
+[params]
+

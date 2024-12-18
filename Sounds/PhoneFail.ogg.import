@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b0nhp2d6sbq2n"
+path="res://.godot/imported/PhoneFail.ogg-b8108207853d0017dc1e13173e2699eb.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/PhoneFail.ogg"
+dest_files=["res://.godot/imported/PhoneFail.ogg-b8108207853d0017dc1e13173e2699eb.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

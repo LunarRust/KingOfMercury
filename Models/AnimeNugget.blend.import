@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cyayj7j4yqbqs"
+path="res://.godot/imported/AnimeNugget.blend-acf9f18d9690733f8ca1c6116ea9ab4d.scn"
+
+[deps]
+
+source_file="res://Models/AnimeNugget.blend"
+dest_files=PackedStringArray("res://.godot/imported/AnimeNugget.blend-acf9f18d9690733f8ca1c6116ea9ab4d.scn")
+
+[params]
+
+dummy_value_ignore_me=0

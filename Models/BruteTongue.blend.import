@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://d0b7gmdix2wq2"
+path="res://.godot/imported/BruteTongue.blend-2218c9e3742b497d71dc973f0383e746.scn"
+
+[deps]
+
+source_file="res://Models/BruteTongue.blend"
+dest_files=PackedStringArray("res://.godot/imported/BruteTongue.blend-2218c9e3742b497d71dc973f0383e746.scn")
+
+[params]
+
+dummy_value_ignore_me=0

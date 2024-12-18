@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cebpkq1nrn6yg"
+path="res://.godot/imported/DDT.blend-95aa8e3150ca94ed3ad37e1a7f9cf410.scn"
+
+[deps]
+
+source_file="res://Models/DDT.blend"
+dest_files=PackedStringArray("res://.godot/imported/DDT.blend-95aa8e3150ca94ed3ad37e1a7f9cf410.scn")
+
+[params]
+
+dummy_value_ignore_me=0

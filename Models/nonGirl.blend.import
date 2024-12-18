@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://chv52m5updmi3"
+path="res://.godot/imported/nonGirl.blend-5b44a13253652ba55f19ef40a850a405.scn"
+
+[deps]
+
+source_file="res://Models/nonGirl.blend"
+dest_files=PackedStringArray("res://.godot/imported/nonGirl.blend-5b44a13253652ba55f19ef40a850a405.scn")
+
+[params]
+
+dummy_value_ignore_me=0

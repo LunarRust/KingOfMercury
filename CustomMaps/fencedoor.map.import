@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://bf80bohhrxt8v"
+path="res://.godot/imported/fencedoor.map-548cae477726573634c780d48f8c843d.tres"
+
+[deps]
+
+source_file="res://CustomMaps/fencedoor.map"
+dest_files=["res://.godot/imported/fencedoor.map-548cae477726573634c780d48f8c843d.tres"]
+
+[params]
+

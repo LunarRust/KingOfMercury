@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://4lioovkdh0s4"
+path="res://.godot/imported/HeadWires.blend-b3be1f53a7db470f64b200f2000fdd0e.scn"
+
+[deps]
+
+source_file="res://Models/HeadWires.blend"
+dest_files=PackedStringArray("res://.godot/imported/HeadWires.blend-b3be1f53a7db470f64b200f2000fdd0e.scn")
+
+[params]
+
+dummy_value_ignore_me=0

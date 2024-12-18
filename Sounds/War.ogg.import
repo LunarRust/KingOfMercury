@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dvgmrc1spir7t"
+path="res://.godot/imported/War.ogg-056489a874c2f1bcfd17d146124a544a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/War.ogg"
+dest_files=["res://.godot/imported/War.ogg-056489a874c2f1bcfd17d146124a544a.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

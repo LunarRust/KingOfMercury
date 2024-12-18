@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cwovi10544vbh"
+path="res://.godot/imported/Cochlea.blend-2510a579cb67984b1ffd437b16946f76.scn"
+
+[deps]
+
+source_file="res://Models/Cochlea.blend"
+dest_files=PackedStringArray("res://.godot/imported/Cochlea.blend-2510a579cb67984b1ffd437b16946f76.scn")
+
+[params]
+
+dummy_value_ignore_me=0

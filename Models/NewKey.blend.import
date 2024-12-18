@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://behqwycjgai3q"
+path="res://.godot/imported/NewKey.blend-5d8fb71dbf172c08663a966044a137f1.scn"
+
+[deps]
+
+source_file="res://Models/NewKey.blend"
+dest_files=PackedStringArray("res://.godot/imported/NewKey.blend-5d8fb71dbf172c08663a966044a137f1.scn")
+
+[params]
+
+dummy_value_ignore_me=0

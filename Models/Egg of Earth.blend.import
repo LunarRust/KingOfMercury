@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b6q0hgkh6hx5j"
+path="res://.godot/imported/Egg of Earth.blend-443a3767f606b04a004ee309f7d63f65.scn"
+
+[deps]
+
+source_file="res://Models/Egg of Earth.blend"
+dest_files=PackedStringArray("res://.godot/imported/Egg of Earth.blend-443a3767f606b04a004ee309f7d63f65.scn")
+
+[params]
+
+dummy_value_ignore_me=0

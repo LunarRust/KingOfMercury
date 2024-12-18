@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://delta4pcvkexk"
+path="res://.godot/imported/BuildingRoot.blend-1b17b0b22d0e082a0a6e231cd787e204.scn"
+
+[deps]
+
+source_file="res://Models/BuildingRoot.blend"
+dest_files=PackedStringArray("res://.godot/imported/BuildingRoot.blend-1b17b0b22d0e082a0a6e231cd787e204.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://clljp1h0f1pt"
+path="res://.godot/imported/Piston2.ogg-805b93fcc0deea4358acf73d6117a37e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Piston2.ogg"
+dest_files=["res://.godot/imported/Piston2.ogg-805b93fcc0deea4358acf73d6117a37e.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://ddu35ykpevf6h"
+path="res://.godot/imported/StreetLightFlesh.blend-25974635da427c4fbad332d7b412c75a.scn"
+
+[deps]
+
+source_file="res://Models/StreetLightFlesh.blend"
+dest_files=PackedStringArray("res://.godot/imported/StreetLightFlesh.blend-25974635da427c4fbad332d7b412c75a.scn")
+
+[params]
+
+dummy_value_ignore_me=0

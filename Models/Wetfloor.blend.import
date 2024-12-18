@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://btj83b2s2r02j"
+path="res://.godot/imported/Wetfloor.blend-01d793d49d762ecfb736222440170905.scn"
+
+[deps]
+
+source_file="res://Models/Wetfloor.blend"
+dest_files=PackedStringArray("res://.godot/imported/Wetfloor.blend-01d793d49d762ecfb736222440170905.scn")
+
+[params]
+
+dummy_value_ignore_me=0

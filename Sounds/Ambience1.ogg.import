@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b0ghpmguefprk"
+path="res://.godot/imported/Ambience1.ogg-5c313322e0edd3b88e199c476066e11e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Ambience1.ogg"
+dest_files=["res://.godot/imported/Ambience1.ogg-5c313322e0edd3b88e199c476066e11e.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b8lmrc20gi58n"
+path="res://.godot/imported/WomanLighter.blend-1931212d54980165f7a068f894734c43.scn"
+
+[deps]
+
+source_file="res://Models/WomanLighter.blend"
+dest_files=PackedStringArray("res://.godot/imported/WomanLighter.blend-1931212d54980165f7a068f894734c43.scn")
+
+[params]
+
+dummy_value_ignore_me=0

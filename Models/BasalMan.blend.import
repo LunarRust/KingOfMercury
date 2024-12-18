@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://gp8ih4f8cvms"
+path="res://.godot/imported/BasalMan.blend-5798b60ba83f256d08ddf3555bd66a1c.scn"
+
+[deps]
+
+source_file="res://Models/BasalMan.blend"
+dest_files=PackedStringArray("res://.godot/imported/BasalMan.blend-5798b60ba83f256d08ddf3555bd66a1c.scn")
+
+[params]
+
+dummy_value_ignore_me=0

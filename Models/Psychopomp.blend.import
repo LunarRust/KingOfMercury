@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cdrrn3lbdl02i"
+path="res://.godot/imported/Psychopomp.blend-215d19875ae584b24a55a9169ca03b68.scn"
+
+[deps]
+
+source_file="res://Models/Psychopomp.blend"
+dest_files=PackedStringArray("res://.godot/imported/Psychopomp.blend-215d19875ae584b24a55a9169ca03b68.scn")
+
+[params]
+
+dummy_value_ignore_me=0

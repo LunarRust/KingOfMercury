@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dw2p5xtpvf5t0"
+path="res://.godot/imported/statureman.ogg-19826c6823d41fa1b9d2ff17166ebf6c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/statureman.ogg"
+dest_files=["res://.godot/imported/statureman.ogg-19826c6823d41fa1b9d2ff17166ebf6c.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

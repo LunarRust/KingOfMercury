@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dhy4bjs7rqikf"
+path="res://.godot/imported/DNAFade.blend-4ed8e9f26404e8a51ac2a65ea7048c0e.scn"
+
+[deps]
+
+source_file="res://Models/DNAFade.blend"
+dest_files=PackedStringArray("res://.godot/imported/DNAFade.blend-4ed8e9f26404e8a51ac2a65ea7048c0e.scn")
+
+[params]
+
+dummy_value_ignore_me=0

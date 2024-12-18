@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cbsju6id36ei6"
+path="res://.godot/imported/Sulphur.blend-ad7b7d10b650fe83ef6844914948cb34.scn"
+
+[deps]
+
+source_file="res://Models/Sulphur.blend"
+dest_files=PackedStringArray("res://.godot/imported/Sulphur.blend-ad7b7d10b650fe83ef6844914948cb34.scn")
+
+[params]
+
+dummy_value_ignore_me=0

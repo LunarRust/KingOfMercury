@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bvj6otvsvfgx8"
+path="res://.godot/imported/TotallerWarning.ogg-3e5c690bfa1492888eb5f92c5991a5ff.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/TotallerWarning.ogg"
+dest_files=["res://.godot/imported/TotallerWarning.ogg-3e5c690bfa1492888eb5f92c5991a5ff.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

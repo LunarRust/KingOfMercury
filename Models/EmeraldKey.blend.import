@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bscf6orgycg7l"
+path="res://.godot/imported/EmeraldKey.blend-159e692c5eee6a684f5e6bfaac2d59af.scn"
+
+[deps]
+
+source_file="res://Models/EmeraldKey.blend"
+dest_files=PackedStringArray("res://.godot/imported/EmeraldKey.blend-159e692c5eee6a684f5e6bfaac2d59af.scn")
+
+[params]
+
+dummy_value_ignore_me=0

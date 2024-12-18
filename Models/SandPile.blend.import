@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cso1l85ypr22x"
+path="res://.godot/imported/SandPile.blend-8719defed14da5d360f634be7705f098.scn"
+
+[deps]
+
+source_file="res://Models/SandPile.blend"
+dest_files=PackedStringArray("res://.godot/imported/SandPile.blend-8719defed14da5d360f634be7705f098.scn")
+
+[params]
+
+dummy_value_ignore_me=0

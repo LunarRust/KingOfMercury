@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://ds327bmlbs232"
+path="res://.godot/imported/Crusher2.blend-5bbab70e3680ae17c44bf65c19f409e3.scn"
+
+[deps]
+
+source_file="res://Models/Crusher2.blend"
+dest_files=PackedStringArray("res://.godot/imported/Crusher2.blend-5bbab70e3680ae17c44bf65c19f409e3.scn")
+
+[params]
+
+dummy_value_ignore_me=0

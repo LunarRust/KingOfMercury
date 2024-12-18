@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://1gixf543lis0"
+path="res://.godot/imported/newTV.blend-3b7f7525e2b9b2bb254c4ba1a88bee10.scn"
+
+[deps]
+
+source_file="res://Models/newTV.blend"
+dest_files=PackedStringArray("res://.godot/imported/newTV.blend-3b7f7525e2b9b2bb254c4ba1a88bee10.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://w0oemot6stsx"
+path="res://.godot/imported/MetalMother.blend-914349128f488cd8aa02c7253819f4f7.scn"
+
+[deps]
+
+source_file="res://Models/MetalMother.blend"
+dest_files=PackedStringArray("res://.godot/imported/MetalMother.blend-914349128f488cd8aa02c7253819f4f7.scn")
+
+[params]
+
+dummy_value_ignore_me=0

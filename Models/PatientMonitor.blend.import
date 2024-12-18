@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bqw7pxpgoktt3"
+path="res://.godot/imported/PatientMonitor.blend-31879552520ba1ff034d32206ed64419.scn"
+
+[deps]
+
+source_file="res://Models/PatientMonitor.blend"
+dest_files=PackedStringArray("res://.godot/imported/PatientMonitor.blend-31879552520ba1ff034d32206ed64419.scn")
+
+[params]
+
+dummy_value_ignore_me=0

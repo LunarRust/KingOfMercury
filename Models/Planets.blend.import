@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://u68balsvihjf"
+path="res://.godot/imported/Planets.blend-afda7cf92f0ab6ba5808534f682ce504.scn"
+
+[deps]
+
+source_file="res://Models/Planets.blend"
+dest_files=PackedStringArray("res://.godot/imported/Planets.blend-afda7cf92f0ab6ba5808534f682ce504.scn")
+
+[params]
+
+dummy_value_ignore_me=0

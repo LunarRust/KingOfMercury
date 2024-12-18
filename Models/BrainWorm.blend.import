@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b46w6me8wh8eb"
+path="res://.godot/imported/BrainWorm.blend-b57ecb47853745c957513e8e1842137a.scn"
+
+[deps]
+
+source_file="res://Models/BrainWorm.blend"
+dest_files=PackedStringArray("res://.godot/imported/BrainWorm.blend-b57ecb47853745c957513e8e1842137a.scn")
+
+[params]
+
+dummy_value_ignore_me=0

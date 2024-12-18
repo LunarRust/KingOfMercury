@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b8efg6t8nyv1k"
+path="res://.godot/imported/MachineStart.ogg-7227ce05bc33939ab61011533e358dea.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/MachineStart.ogg"
+dest_files=["res://.godot/imported/MachineStart.ogg-7227ce05bc33939ab61011533e358dea.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

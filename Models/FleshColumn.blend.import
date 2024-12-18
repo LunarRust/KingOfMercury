@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://blxtq0y1sgjmj"
+path="res://.godot/imported/FleshColumn.blend-916495e241cab25a91bbcf9b84132b1d.scn"
+
+[deps]
+
+source_file="res://Models/FleshColumn.blend"
+dest_files=PackedStringArray("res://.godot/imported/FleshColumn.blend-916495e241cab25a91bbcf9b84132b1d.scn")
+
+[params]
+
+dummy_value_ignore_me=0

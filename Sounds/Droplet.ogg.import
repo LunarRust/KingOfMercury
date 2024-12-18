@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://x3xpwx5jds16"
+path="res://.godot/imported/Droplet.ogg-0a66257bea9a81929f26ac111bdef660.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Droplet.ogg"
+dest_files=["res://.godot/imported/Droplet.ogg-0a66257bea9a81929f26ac111bdef660.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

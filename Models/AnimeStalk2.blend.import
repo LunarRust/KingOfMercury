@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://ddo3oa1y8i5ke"
+path="res://.godot/imported/AnimeStalk2.blend-a94c09b1fd17b3758fded97405ea8ab3.scn"
+
+[deps]
+
+source_file="res://Models/AnimeStalk2.blend"
+dest_files=PackedStringArray("res://.godot/imported/AnimeStalk2.blend-a94c09b1fd17b3758fded97405ea8ab3.scn")
+
+[params]
+
+dummy_value_ignore_me=0

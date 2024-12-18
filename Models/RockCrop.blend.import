@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://gukloec4ssi1"
+path="res://.godot/imported/RockCrop.blend-8e53eaed6cd1c4b0571ea2cb126149ad.scn"
+
+[deps]
+
+source_file="res://Models/RockCrop.blend"
+dest_files=PackedStringArray("res://.godot/imported/RockCrop.blend-8e53eaed6cd1c4b0571ea2cb126149ad.scn")
+
+[params]
+
+dummy_value_ignore_me=0

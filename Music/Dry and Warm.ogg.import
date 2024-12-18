@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://pj54k8rannuj"
+path="res://.godot/imported/Dry and Warm.ogg-cd2d3750e8118a5ad7ed921939af3c1c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music/Dry and Warm.ogg"
+dest_files=["res://.godot/imported/Dry and Warm.ogg-cd2d3750e8118a5ad7ed921939af3c1c.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

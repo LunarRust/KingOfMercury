@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://8t8krj3l837h"
+path="res://.godot/imported/ParagonDoor.blend-c0a6b496a5e876b6f7b45a6a7b832500.scn"
+
+[deps]
+
+source_file="res://Models/ParagonDoor.blend"
+dest_files=PackedStringArray("res://.godot/imported/ParagonDoor.blend-c0a6b496a5e876b6f7b45a6a7b832500.scn")
+
+[params]
+
+dummy_value_ignore_me=0

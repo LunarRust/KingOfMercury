@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ccmpa67wo31vo"
+path="res://.godot/imported/ScubaBreath2.ogg-36a3b069824e62561a340bec9eff733e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/ScubaBreath2.ogg"
+dest_files=["res://.godot/imported/ScubaBreath2.ogg-36a3b069824e62561a340bec9eff733e.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

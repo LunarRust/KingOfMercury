@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dtsxu3riubgll"
+path="res://.godot/imported/Lever.ogg-383209cbfb4ee5887ed3ea8b5034f09e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Lever.ogg"
+dest_files=["res://.godot/imported/Lever.ogg-383209cbfb4ee5887ed3ea8b5034f09e.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

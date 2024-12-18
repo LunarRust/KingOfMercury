@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://lhm7igbcj6h3"
+path="res://.godot/imported/BigScythe.ogg-9c5fbd6e2b2d546b930e613bc0703e3b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/BigScythe.ogg"
+dest_files=["res://.godot/imported/BigScythe.ogg-9c5fbd6e2b2d546b930e613bc0703e3b.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

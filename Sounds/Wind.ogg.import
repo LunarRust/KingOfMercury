@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bbxdbrwunqosh"
+path="res://.godot/imported/Wind.ogg-f90449592b52782a399ac7832e3134fc.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Wind.ogg"
+dest_files=["res://.godot/imported/Wind.ogg-f90449592b52782a399ac7832e3134fc.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

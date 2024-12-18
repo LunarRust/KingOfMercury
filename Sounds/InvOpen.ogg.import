@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://e1bcf4bead15"
+path="res://.godot/imported/InvOpen.ogg-3aef0d1f3b51680e7b72bdc98da69f1b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/InvOpen.ogg"
+dest_files=["res://.godot/imported/InvOpen.ogg-3aef0d1f3b51680e7b72bdc98da69f1b.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

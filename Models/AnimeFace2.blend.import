@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://kwhmqkhgm54q"
+path="res://.godot/imported/AnimeFace2.blend-c8b8cc4e7c02a5083a0e20d15909fd29.scn"
+
+[deps]
+
+source_file="res://Models/AnimeFace2.blend"
+dest_files=PackedStringArray("res://.godot/imported/AnimeFace2.blend-c8b8cc4e7c02a5083a0e20d15909fd29.scn")
+
+[params]
+
+dummy_value_ignore_me=0

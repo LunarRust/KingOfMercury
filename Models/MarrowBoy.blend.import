@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bft1bb0j27klj"
+path="res://.godot/imported/MarrowBoy.blend-f5b759ce633f1f52676f50669aba360e.scn"
+
+[deps]
+
+source_file="res://Models/MarrowBoy.blend"
+dest_files=PackedStringArray("res://.godot/imported/MarrowBoy.blend-f5b759ce633f1f52676f50669aba360e.scn")
+
+[params]
+
+dummy_value_ignore_me=0

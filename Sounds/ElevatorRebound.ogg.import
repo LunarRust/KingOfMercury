@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://or04w0jley8y"
+path="res://.godot/imported/ElevatorRebound.ogg-39b2cf35710f32fefacf91b78e96e9ac.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/ElevatorRebound.ogg"
+dest_files=["res://.godot/imported/ElevatorRebound.ogg-39b2cf35710f32fefacf91b78e96e9ac.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

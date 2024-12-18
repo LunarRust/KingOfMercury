@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cwngrjjnrefsm"
+path="res://.godot/imported/Weirdfall.ogg-460ccfbc5fdf59e35d0a36c9b8f266cb.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Weirdfall.ogg"
+dest_files=["res://.godot/imported/Weirdfall.ogg-460ccfbc5fdf59e35d0a36c9b8f266cb.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

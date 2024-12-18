@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cya4yycih5kv"
+path="res://.godot/imported/Zap.ogg-a89a45a1c251e3f6ddb41817bf04c682.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Zap.ogg"
+dest_files=["res://.godot/imported/Zap.ogg-a89a45a1c251e3f6ddb41817bf04c682.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bkd217g1t7kjm"
+path="res://.godot/imported/HoodSymbol.blend-5f4d93659b76fe0362c80258f27f4eb7.scn"
+
+[deps]
+
+source_file="res://Models/HoodSymbol.blend"
+dest_files=PackedStringArray("res://.godot/imported/HoodSymbol.blend-5f4d93659b76fe0362c80258f27f4eb7.scn")
+
+[params]
+
+dummy_value_ignore_me=0

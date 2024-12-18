@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bn21gw274xqvf"
+path="res://.godot/imported/DNAGate.blend-786004ca379d5c1afd9c05fd72754b35.scn"
+
+[deps]
+
+source_file="res://Models/DNAGate.blend"
+dest_files=PackedStringArray("res://.godot/imported/DNAGate.blend-786004ca379d5c1afd9c05fd72754b35.scn")
+
+[params]
+
+dummy_value_ignore_me=0

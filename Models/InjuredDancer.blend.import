@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://d0pxj4qxwsehg"
+path="res://.godot/imported/InjuredDancer.blend-eaaf89775ddc0438eba90fa3296b4ac3.scn"
+
+[deps]
+
+source_file="res://Models/InjuredDancer.blend"
+dest_files=PackedStringArray("res://.godot/imported/InjuredDancer.blend-eaaf89775ddc0438eba90fa3296b4ac3.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cql7f3q1isseq"
+path="res://.godot/imported/GoldCrest.blend-3f276025cda593381b9eda106bd0322d.scn"
+
+[deps]
+
+source_file="res://Models/GoldCrest.blend"
+dest_files=PackedStringArray("res://.godot/imported/GoldCrest.blend-3f276025cda593381b9eda106bd0322d.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://ctxjcgyft2oca"
+path="res://.godot/imported/ThomasPoint.blend-f28cd9af910471d2f25e2e248c08188d.scn"
+
+[deps]
+
+source_file="res://Models/ThomasPoint.blend"
+dest_files=PackedStringArray("res://.godot/imported/ThomasPoint.blend-f28cd9af910471d2f25e2e248c08188d.scn")
+
+[params]
+
+dummy_value_ignore_me=0

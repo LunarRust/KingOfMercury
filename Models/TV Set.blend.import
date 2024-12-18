@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://l2gj2egp6j82"
+path="res://.godot/imported/TV Set.blend-d31f55298f80b575976b725e06d24da1.scn"
+
+[deps]
+
+source_file="res://Models/TV Set.blend"
+dest_files=PackedStringArray("res://.godot/imported/TV Set.blend-d31f55298f80b575976b725e06d24da1.scn")
+
+[params]
+
+dummy_value_ignore_me=0

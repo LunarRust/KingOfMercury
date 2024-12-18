@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://j044x1glus1a"
+path="res://.godot/imported/Tasty.blend-d0c745ca53ad74b66b84ac028b3cb0cb.scn"
+
+[deps]
+
+source_file="res://Models/Tasty.blend"
+dest_files=PackedStringArray("res://.godot/imported/Tasty.blend-d0c745ca53ad74b66b84ac028b3cb0cb.scn")
+
+[params]
+
+dummy_value_ignore_me=0

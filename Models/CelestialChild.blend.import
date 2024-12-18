@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b2b0dp26xuhxs"
+path="res://.godot/imported/CelestialChild.blend-70f868aa3616d8ec1201f6fa63510b16.scn"
+
+[deps]
+
+source_file="res://Models/CelestialChild.blend"
+dest_files=PackedStringArray("res://.godot/imported/CelestialChild.blend-70f868aa3616d8ec1201f6fa63510b16.scn")
+
+[params]
+
+dummy_value_ignore_me=0

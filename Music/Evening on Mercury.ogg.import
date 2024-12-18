@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://rbewso8nr2ce"
+path="res://.godot/imported/Evening on Mercury.ogg-14ed2139e8f75445b672bbbfb3da9a71.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music/Evening on Mercury.ogg"
+dest_files=["res://.godot/imported/Evening on Mercury.ogg-14ed2139e8f75445b672bbbfb3da9a71.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

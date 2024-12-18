@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c01m80kpcswub"
+path="res://.godot/imported/OilTanker.blend-03c700981f02340e3dc2aca20cc036f4.scn"
+
+[deps]
+
+source_file="res://Models/OilTanker.blend"
+dest_files=PackedStringArray("res://.godot/imported/OilTanker.blend-03c700981f02340e3dc2aca20cc036f4.scn")
+
+[params]
+
+dummy_value_ignore_me=0

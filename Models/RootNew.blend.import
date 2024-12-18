@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dr5g6v3ox5kke"
+path="res://.godot/imported/RootNew.blend-2572b2913605040b3a9fcf7f5eaa8d10.scn"
+
+[deps]
+
+source_file="res://Models/RootNew.blend"
+dest_files=PackedStringArray("res://.godot/imported/RootNew.blend-2572b2913605040b3a9fcf7f5eaa8d10.scn")
+
+[params]
+
+dummy_value_ignore_me=0

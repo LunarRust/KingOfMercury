@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bb8oaeqsmfibd"
+path="res://.godot/imported/MetalCyl.blend-198700dcfde63fdf7aa1d4d3b152a0f7.scn"
+
+[deps]
+
+source_file="res://Models/MetalCyl.blend"
+dest_files=PackedStringArray("res://.godot/imported/MetalCyl.blend-198700dcfde63fdf7aa1d4d3b152a0f7.scn")
+
+[params]
+
+dummy_value_ignore_me=0

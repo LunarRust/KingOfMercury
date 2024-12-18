@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://xrsq275xijjy"
+path="res://.godot/imported/SymbolMan.blend-d73c16964da9de33bea9500643f8b20c.scn"
+
+[deps]
+
+source_file="res://Models/SymbolMan.blend"
+dest_files=PackedStringArray("res://.godot/imported/SymbolMan.blend-d73c16964da9de33bea9500643f8b20c.scn")
+
+[params]
+
+dummy_value_ignore_me=0

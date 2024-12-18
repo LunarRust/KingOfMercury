@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://71ed5enuum7r"
+path="res://.godot/imported/FinnScream.ogg-3712a7c09c0120606122f73b986a1ced.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/FinnScream.ogg"
+dest_files=["res://.godot/imported/FinnScream.ogg-3712a7c09c0120606122f73b986a1ced.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://uimrxu5klfah"
+path="res://.godot/imported/OfficeChair.blend-54740a1c4705da1b6eb3a34e5123b57b.scn"
+
+[deps]
+
+source_file="res://Models/OfficeChair.blend"
+dest_files=PackedStringArray("res://.godot/imported/OfficeChair.blend-54740a1c4705da1b6eb3a34e5123b57b.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://o2akdrxp8xp1"
+path="res://.godot/imported/NPCSound10.ogg-9de70fd4382431573f2c8a5ecca51a57.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/NPCSound10.ogg"
+dest_files=["res://.godot/imported/NPCSound10.ogg-9de70fd4382431573f2c8a5ecca51a57.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

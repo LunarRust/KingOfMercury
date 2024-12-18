@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b5dduq86nra2y"
+path="res://.godot/imported/Squick2.ogg-dd34cfb1f32eeef17364cd6854797e32.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Squick2.ogg"
+dest_files=["res://.godot/imported/Squick2.ogg-dd34cfb1f32eeef17364cd6854797e32.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

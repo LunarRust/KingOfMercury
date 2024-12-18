@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://4c83dtdv4w40"
+path="res://.godot/imported/BigPipe2.blend-806a72bedb48bee5a6647769a19d65a0.scn"
+
+[deps]
+
+source_file="res://Models/BigPipe2.blend"
+dest_files=PackedStringArray("res://.godot/imported/BigPipe2.blend-806a72bedb48bee5a6647769a19d65a0.scn")
+
+[params]
+
+dummy_value_ignore_me=0

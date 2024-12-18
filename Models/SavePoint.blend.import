@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cyoj0csqxd4a8"
+path="res://.godot/imported/SavePoint.blend-ed44a01b16f201c5b378f14167cbf921.scn"
+
+[deps]
+
+source_file="res://Models/SavePoint.blend"
+dest_files=PackedStringArray("res://.godot/imported/SavePoint.blend-ed44a01b16f201c5b378f14167cbf921.scn")
+
+[params]
+
+dummy_value_ignore_me=0

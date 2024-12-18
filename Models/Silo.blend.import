@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://6glnd3mco7n6"
+path="res://.godot/imported/Silo.blend-5eff78ffb63af51c0ff638211bc56bd8.scn"
+
+[deps]
+
+source_file="res://Models/Silo.blend"
+dest_files=PackedStringArray("res://.godot/imported/Silo.blend-5eff78ffb63af51c0ff638211bc56bd8.scn")
+
+[params]
+
+dummy_value_ignore_me=0

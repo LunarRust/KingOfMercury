@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c5vpmkckihbo5"
+path="res://.godot/imported/BuildingMan.blend-753da8416898320426da5921c829c395.scn"
+
+[deps]
+
+source_file="res://Models/BuildingMan.blend"
+dest_files=PackedStringArray("res://.godot/imported/BuildingMan.blend-753da8416898320426da5921c829c395.scn")
+
+[params]
+
+dummy_value_ignore_me=0

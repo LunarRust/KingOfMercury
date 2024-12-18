@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bb67bgrowip25"
+path="res://.godot/imported/DNAstart.ogg-abfea81e4d1666f2648098ac6bfc4fcf.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/DNAstart.ogg"
+dest_files=["res://.godot/imported/DNAstart.ogg-abfea81e4d1666f2648098ac6bfc4fcf.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://por1kpkt1xqg"
+path="res://.godot/imported/powerline.blend-78e08291037ba52eaf2514e95939e66a.scn"
+
+[deps]
+
+source_file="res://Models/powerline.blend"
+dest_files=PackedStringArray("res://.godot/imported/powerline.blend-78e08291037ba52eaf2514e95939e66a.scn")
+
+[params]
+
+dummy_value_ignore_me=0

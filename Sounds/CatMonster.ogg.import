@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cx2kl11hbnuxs"
+path="res://.godot/imported/CatMonster.ogg-9213105d5589c124b062fb6a21c74a87.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/CatMonster.ogg"
+dest_files=["res://.godot/imported/CatMonster.ogg-9213105d5589c124b062fb6a21c74a87.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

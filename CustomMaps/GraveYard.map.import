@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://c6uvtr07iv8k6"
+path="res://.godot/imported/GraveYard.map-843c2da262c8fac4a4783421bd0e61b9.tres"
+
+[deps]
+
+source_file="res://CustomMaps/GraveYard.map"
+dest_files=["res://.godot/imported/GraveYard.map-843c2da262c8fac4a4783421bd0e61b9.tres"]
+
+[params]
+

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cwlfkcpvjtg5o"
+path="res://.godot/imported/WaterRun2.ogg-f881cf4010e211cfb113728180099c72.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/WaterRun2.ogg"
+dest_files=["res://.godot/imported/WaterRun2.ogg-f881cf4010e211cfb113728180099c72.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

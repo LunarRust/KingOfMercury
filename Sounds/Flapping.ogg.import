@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dwptmrp3q8mj4"
+path="res://.godot/imported/Flapping.ogg-4ea7a0817133ab5f050de53cabdfa80f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Flapping.ogg"
+dest_files=["res://.godot/imported/Flapping.ogg-4ea7a0817133ab5f050de53cabdfa80f.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c8p584rpivnpg"
+path="res://.godot/imported/FeaturesKun.blend-88e4743140855d6701739a389eb5a23e.scn"
+
+[deps]
+
+source_file="res://Models/FeaturesKun.blend"
+dest_files=PackedStringArray("res://.godot/imported/FeaturesKun.blend-88e4743140855d6701739a389eb5a23e.scn")
+
+[params]
+
+dummy_value_ignore_me=0

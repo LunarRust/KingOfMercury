@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://qoaj54why7s"
+path="res://.godot/imported/InvClose.ogg-2ab4b4a0e10e456485b6ac681f16cebb.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/InvClose.ogg"
+dest_files=["res://.godot/imported/InvClose.ogg-2ab4b4a0e10e456485b6ac681f16cebb.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

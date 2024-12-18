@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c4br5x0jhq5dd"
+path="res://.godot/imported/Teratoma.blend-168ac0015fe899b44c40cdc17c32da3f.scn"
+
+[deps]
+
+source_file="res://Models/Teratoma.blend"
+dest_files=PackedStringArray("res://.godot/imported/Teratoma.blend-168ac0015fe899b44c40cdc17c32da3f.scn")
+
+[params]
+
+dummy_value_ignore_me=0

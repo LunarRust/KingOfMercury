@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dcqjnifccfv37"
+path="res://.godot/imported/Old Man.blend-1c161ee05f49ee7b325bdc14c11d16ea.scn"
+
+[deps]
+
+source_file="res://Models/Old Man.blend"
+dest_files=PackedStringArray("res://.godot/imported/Old Man.blend-1c161ee05f49ee7b325bdc14c11d16ea.scn")
+
+[params]
+
+dummy_value_ignore_me=0

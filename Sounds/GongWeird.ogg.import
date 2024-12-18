@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bym17yw0c6mox"
+path="res://.godot/imported/GongWeird.ogg-db19d61f3caf6c02972bdd31858a5181.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/GongWeird.ogg"
+dest_files=["res://.godot/imported/GongWeird.ogg-db19d61f3caf6c02972bdd31858a5181.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://epbkjtt7cvgw"
+path="res://.godot/imported/FlameThrower.ogg-1342bfdd5b093ad9cb331a5db373942c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/FlameThrower.ogg"
+dest_files=["res://.godot/imported/FlameThrower.ogg-1342bfdd5b093ad9cb331a5db373942c.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

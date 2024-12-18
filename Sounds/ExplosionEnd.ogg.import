@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://4ojdot3dnplg"
+path="res://.godot/imported/ExplosionEnd.ogg-59ddd8ee72d7d8eb1c2c43cecbea4d2e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/ExplosionEnd.ogg"
+dest_files=["res://.godot/imported/ExplosionEnd.ogg-59ddd8ee72d7d8eb1c2c43cecbea4d2e.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

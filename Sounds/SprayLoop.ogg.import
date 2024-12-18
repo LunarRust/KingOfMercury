@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://1ulmaphmb3ta"
+path="res://.godot/imported/SprayLoop.ogg-bc40fae3dab2e122f681f5c9a3887117.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/SprayLoop.ogg"
+dest_files=["res://.godot/imported/SprayLoop.ogg-bc40fae3dab2e122f681f5c9a3887117.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

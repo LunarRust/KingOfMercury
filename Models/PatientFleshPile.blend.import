@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bg5cm8o43qism"
+path="res://.godot/imported/PatientFleshPile.blend-db71985af8887612694c8cd874039474.scn"
+
+[deps]
+
+source_file="res://Models/PatientFleshPile.blend"
+dest_files=PackedStringArray("res://.godot/imported/PatientFleshPile.blend-db71985af8887612694c8cd874039474.scn")
+
+[params]
+
+dummy_value_ignore_me=0

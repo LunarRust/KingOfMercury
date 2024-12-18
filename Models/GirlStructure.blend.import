@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cued1mav4d1ld"
+path="res://.godot/imported/GirlStructure.blend-4c6eb1adca6072b4ef6fe29edf8ad558.scn"
+
+[deps]
+
+source_file="res://Models/GirlStructure.blend"
+dest_files=PackedStringArray("res://.godot/imported/GirlStructure.blend-4c6eb1adca6072b4ef6fe29edf8ad558.scn")
+
+[params]
+
+dummy_value_ignore_me=0

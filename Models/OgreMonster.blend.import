@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://sdu1nsigrtyt"
+path="res://.godot/imported/OgreMonster.blend-1fb8ddc329a7e9e38062232524771f4d.scn"
+
+[deps]
+
+source_file="res://Models/OgreMonster.blend"
+dest_files=PackedStringArray("res://.godot/imported/OgreMonster.blend-1fb8ddc329a7e9e38062232524771f4d.scn")
+
+[params]
+
+dummy_value_ignore_me=0

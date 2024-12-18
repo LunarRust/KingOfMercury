@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://7em5q37tohb5"
+path="res://.godot/imported/FleshHill.blend-8e753b6d49df209a173be7877e279572.scn"
+
+[deps]
+
+source_file="res://Models/FleshHill.blend"
+dest_files=PackedStringArray("res://.godot/imported/FleshHill.blend-8e753b6d49df209a173be7877e279572.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bpb82ef84p7mb"
+path="res://.godot/imported/Thrait Exhibit.blend-0681783a5dc9ffc394b9b42e22277148.scn"
+
+[deps]
+
+source_file="res://Models/Thrait Exhibit.blend"
+dest_files=PackedStringArray("res://.godot/imported/Thrait Exhibit.blend-0681783a5dc9ffc394b9b42e22277148.scn")
+
+[params]
+
+dummy_value_ignore_me=0

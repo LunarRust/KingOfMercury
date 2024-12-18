@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://nhraj515soyx"
+path="res://.godot/imported/SizzleLoop.ogg-1ca7bf0688b5f271336395d459a3a764.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/SizzleLoop.ogg"
+dest_files=["res://.godot/imported/SizzleLoop.ogg-1ca7bf0688b5f271336395d459a3a764.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

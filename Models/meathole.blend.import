@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b5qu0mapii6ch"
+path="res://.godot/imported/meathole.blend-bfcf76bc10c8c075cffa94574671cd2e.scn"
+
+[deps]
+
+source_file="res://Models/meathole.blend"
+dest_files=PackedStringArray("res://.godot/imported/meathole.blend-bfcf76bc10c8c075cffa94574671cd2e.scn")
+
+[params]
+
+dummy_value_ignore_me=0

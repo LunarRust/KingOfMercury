@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=8 format=3 uid="uid://clop7yskmc57k"]
+
+[ext_resource type="Resource" path="res://addons/func_godot/fgd/phong_base.tres" id="1"]
+[ext_resource type="Resource" path="res://addons/func_godot/fgd/worldspawn.tres" id="2"]
+[ext_resource type="Resource" path="res://addons/func_godot/fgd/func_geo.tres" id="3"]
+[ext_resource type="Resource" path="res://addons/func_godot/fgd/func_detail.tres" id="4"]
+[ext_resource type="Resource" path="res://addons/func_godot/fgd/func_detail_illusionary.tres" id="5"]
+[ext_resource type="Resource" path="res://addons/func_godot/fgd/func_illusionary.tres" id="6"]
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="7"]
+
+[resource]
+script = ExtResource("7")
+export_file = false
+model_key_word_supported = true
+fgd_name = "FuncGodot"
+base_fgd_files = Array[Resource]([])
+entity_definitions = Array[Resource]([ExtResource("1"), ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6")])

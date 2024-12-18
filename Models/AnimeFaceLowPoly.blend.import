@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://5786u4gd5o82"
+path="res://.godot/imported/AnimeFaceLowPoly.blend-7f7c7b2db1fc823148c101b1c53e13dd.scn"
+
+[deps]
+
+source_file="res://Models/AnimeFaceLowPoly.blend"
+dest_files=PackedStringArray("res://.godot/imported/AnimeFaceLowPoly.blend-7f7c7b2db1fc823148c101b1c53e13dd.scn")
+
+[params]
+
+dummy_value_ignore_me=0

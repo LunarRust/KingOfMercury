@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dr0o4ahpq5yv7"
+path="res://.godot/imported/BelugaAttack3.ogg-6c6f2dd957a124957cceb729a1437a88.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/BelugaAttack3.ogg"
+dest_files=["res://.godot/imported/BelugaAttack3.ogg-6c6f2dd957a124957cceb729a1437a88.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

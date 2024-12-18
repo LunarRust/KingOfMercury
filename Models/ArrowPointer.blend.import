@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b2fnp5d76jncw"
+path="res://.godot/imported/ArrowPointer.blend-ee659509cdf7942fd1a6eed40df24193.scn"
+
+[deps]
+
+source_file="res://Models/ArrowPointer.blend"
+dest_files=PackedStringArray("res://.godot/imported/ArrowPointer.blend-ee659509cdf7942fd1a6eed40df24193.scn")
+
+[params]
+
+dummy_value_ignore_me=0

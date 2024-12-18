@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://o4jppc4o2ctr"
+path="res://.godot/imported/DNADIE.ogg-73d38ecae4e4402e5fe1637a2d63287a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/DNADIE.ogg"
+dest_files=["res://.godot/imported/DNADIE.ogg-73d38ecae4e4402e5fe1637a2d63287a.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

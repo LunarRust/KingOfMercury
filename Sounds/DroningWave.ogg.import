@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c2hh8h40jqkrb"
+path="res://.godot/imported/DroningWave.ogg-870f0110b587663afab88fdf50d684a3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/DroningWave.ogg"
+dest_files=["res://.godot/imported/DroningWave.ogg-870f0110b587663afab88fdf50d684a3.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

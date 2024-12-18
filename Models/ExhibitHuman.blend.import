@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c520h3cy1q38i"
+path="res://.godot/imported/ExhibitHuman.blend-92952826ea06f802bfbbe870b53d2e3f.scn"
+
+[deps]
+
+source_file="res://Models/ExhibitHuman.blend"
+dest_files=PackedStringArray("res://.godot/imported/ExhibitHuman.blend-92952826ea06f802bfbbe870b53d2e3f.scn")
+
+[params]
+
+dummy_value_ignore_me=0

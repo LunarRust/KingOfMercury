@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cx7ua6lxxlea"
+path="res://.godot/imported/Redbutton.blend-313534a833bbde8d9760f5a3f4a2016b.scn"
+
+[deps]
+
+source_file="res://Models/Redbutton.blend"
+dest_files=PackedStringArray("res://.godot/imported/Redbutton.blend-313534a833bbde8d9760f5a3f4a2016b.scn")
+
+[params]
+
+dummy_value_ignore_me=0

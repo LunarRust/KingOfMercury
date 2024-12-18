@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c0sstt2torsx"
+path="res://.godot/imported/BigSyringe.blend-bbce878ac0a2b5cfc0a1e210b5ecd30c.scn"
+
+[deps]
+
+source_file="res://Models/BigSyringe.blend"
+dest_files=PackedStringArray("res://.godot/imported/BigSyringe.blend-bbce878ac0a2b5cfc0a1e210b5ecd30c.scn")
+
+[params]
+
+dummy_value_ignore_me=0

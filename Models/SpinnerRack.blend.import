@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cf2g02o2lux3o"
+path="res://.godot/imported/SpinnerRack.blend-989894745a101f6790574d180b0eb325.scn"
+
+[deps]
+
+source_file="res://Models/SpinnerRack.blend"
+dest_files=PackedStringArray("res://.godot/imported/SpinnerRack.blend-989894745a101f6790574d180b0eb325.scn")
+
+[params]
+
+dummy_value_ignore_me=0

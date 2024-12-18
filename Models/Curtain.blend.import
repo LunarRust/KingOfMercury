@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://4yntjudw4myv"
+path="res://.godot/imported/Curtain.blend-554a7d9d24254224796b13b12b153e40.scn"
+
+[deps]
+
+source_file="res://Models/Curtain.blend"
+dest_files=PackedStringArray("res://.godot/imported/Curtain.blend-554a7d9d24254224796b13b12b153e40.scn")
+
+[params]
+
+dummy_value_ignore_me=0

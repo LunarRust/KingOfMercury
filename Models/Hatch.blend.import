@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b6adb2i5dl3od"
+path="res://.godot/imported/Hatch.blend-885cec1496a245b3aee9f00a227f2a16.scn"
+
+[deps]
+
+source_file="res://Models/Hatch.blend"
+dest_files=PackedStringArray("res://.godot/imported/Hatch.blend-885cec1496a245b3aee9f00a227f2a16.scn")
+
+[params]
+
+dummy_value_ignore_me=0

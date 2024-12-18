@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://x1igfe0rnv5g"
+path="res://.godot/imported/WeirdGear.blend-5640c1f40000c1195f512d50612ea626.scn"
+
+[deps]
+
+source_file="res://Models/WeirdGear.blend"
+dest_files=PackedStringArray("res://.godot/imported/WeirdGear.blend-5640c1f40000c1195f512d50612ea626.scn")
+
+[params]
+
+dummy_value_ignore_me=0

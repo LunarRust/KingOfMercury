@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ccyf8y5coog52"
+path="res://.godot/imported/ThraitAngry.ogg-8ef204d84cc8cd71d32ddb103761b5a1.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/ThraitAngry.ogg"
+dest_files=["res://.godot/imported/ThraitAngry.ogg-8ef204d84cc8cd71d32ddb103761b5a1.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

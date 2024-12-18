@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://lnnpqfwx70vs"
+path="res://.godot/imported/worldframe.blend-4368249c5a52e3c5a5585f20552e6f01.scn"
+
+[deps]
+
+source_file="res://Models/worldframe.blend"
+dest_files=PackedStringArray("res://.godot/imported/worldframe.blend-4368249c5a52e3c5a5585f20552e6f01.scn")
+
+[params]
+
+dummy_value_ignore_me=0

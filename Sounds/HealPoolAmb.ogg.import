@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dw6wtcsoyyeri"
+path="res://.godot/imported/HealPoolAmb.ogg-c6dab3cb17950889d80d312d63ed5166.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/HealPoolAmb.ogg"
+dest_files=["res://.godot/imported/HealPoolAmb.ogg-c6dab3cb17950889d80d312d63ed5166.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://d3l30la4l576r"
+path="res://.godot/imported/Beaker.blend-89a43b000634254a3625f49270c882c2.scn"
+
+[deps]
+
+source_file="res://Models/Beaker.blend"
+dest_files=PackedStringArray("res://.godot/imported/Beaker.blend-89a43b000634254a3625f49270c882c2.scn")
+
+[params]
+
+dummy_value_ignore_me=0

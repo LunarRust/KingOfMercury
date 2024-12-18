@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://8tw226rvpk2h"
+path="res://.godot/imported/DNAConsole.blend-9a0d7a221496b35c382836c1a09c3f33.scn"
+
+[deps]
+
+source_file="res://Models/DNAConsole.blend"
+dest_files=PackedStringArray("res://.godot/imported/DNAConsole.blend-9a0d7a221496b35c382836c1a09c3f33.scn")
+
+[params]
+
+dummy_value_ignore_me=0

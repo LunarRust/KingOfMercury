@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://murjo85p86jv"
+path="res://.godot/imported/Fire.ogg-b5d6e64e3ad968d8a50dea0e8687d5a3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Fire.ogg"
+dest_files=["res://.godot/imported/Fire.ogg-b5d6e64e3ad968d8a50dea0e8687d5a3.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

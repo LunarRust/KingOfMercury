@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://ct81g0ml3gth7"
+path="res://.godot/imported/Cactus.blend-7d656bd605d5606f5156a3d15e43f766.scn"
+
+[deps]
+
+source_file="res://Models/Cactus.blend"
+dest_files=PackedStringArray("res://.godot/imported/Cactus.blend-7d656bd605d5606f5156a3d15e43f766.scn")
+
+[params]
+
+dummy_value_ignore_me=0

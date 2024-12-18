@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dttjmpfl3o5l1"
+path="res://.godot/imported/LampPost.blend-3e9446c69dcc6a9bc7b6e4ac9e9bee99.scn"
+
+[deps]
+
+source_file="res://Models/LampPost.blend"
+dest_files=PackedStringArray("res://.godot/imported/LampPost.blend-3e9446c69dcc6a9bc7b6e4ac9e9bee99.scn")
+
+[params]
+
+dummy_value_ignore_me=0

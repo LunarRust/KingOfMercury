@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://nu8n8iu4u8yo"
+path="res://.godot/imported/FactoryHeadNew.blend-4ce473aca6902d52d6e0f3c108d9ebd7.scn"
+
+[deps]
+
+source_file="res://Models/FactoryHeadNew.blend"
+dest_files=PackedStringArray("res://.godot/imported/FactoryHeadNew.blend-4ce473aca6902d52d6e0f3c108d9ebd7.scn")
+
+[params]
+
+dummy_value_ignore_me=0

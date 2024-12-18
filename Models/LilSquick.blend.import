@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cht8utj4lsh35"
+path="res://.godot/imported/LilSquick.blend-9bf4f11eb5b3b4397db9b10741d385f9.scn"
+
+[deps]
+
+source_file="res://Models/LilSquick.blend"
+dest_files=PackedStringArray("res://.godot/imported/LilSquick.blend-9bf4f11eb5b3b4397db9b10741d385f9.scn")
+
+[params]
+
+dummy_value_ignore_me=0

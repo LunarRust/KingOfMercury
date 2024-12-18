@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://kx5v3l0coawv"
+path="res://.godot/imported/Grub.blend-4eca60e5053211f244a85a14a6cd4f3f.scn"
+
+[deps]
+
+source_file="res://Models/Grub.blend"
+dest_files=PackedStringArray("res://.godot/imported/Grub.blend-4eca60e5053211f244a85a14a6cd4f3f.scn")
+
+[params]
+
+dummy_value_ignore_me=0

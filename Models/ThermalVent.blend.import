@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://0ytewp82yivj"
+path="res://.godot/imported/ThermalVent.blend-c90b62a5dc53ad3e03bd6a9a3bd874cf.scn"
+
+[deps]
+
+source_file="res://Models/ThermalVent.blend"
+dest_files=PackedStringArray("res://.godot/imported/ThermalVent.blend-c90b62a5dc53ad3e03bd6a9a3bd874cf.scn")
+
+[params]
+
+dummy_value_ignore_me=0

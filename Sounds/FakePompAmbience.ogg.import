@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bcgqlydqnr2fs"
+path="res://.godot/imported/FakePompAmbience.ogg-38dad6c8d36be695c5385b4a6fcd6fae.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/FakePompAmbience.ogg"
+dest_files=["res://.godot/imported/FakePompAmbience.ogg-38dad6c8d36be695c5385b4a6fcd6fae.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

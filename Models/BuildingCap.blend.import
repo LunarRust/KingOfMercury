@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bxj56hx2hqj17"
+path="res://.godot/imported/BuildingCap.blend-62c3fbc252521eb11440f0fbc26c45f0.scn"
+
+[deps]
+
+source_file="res://Models/BuildingCap.blend"
+dest_files=PackedStringArray("res://.godot/imported/BuildingCap.blend-62c3fbc252521eb11440f0fbc26c45f0.scn")
+
+[params]
+
+dummy_value_ignore_me=0

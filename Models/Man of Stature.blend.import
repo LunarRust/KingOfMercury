@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cefk38itpydkp"
+path="res://.godot/imported/Man of Stature.blend-a3ad528aa52157251e5deb98a18f434c.scn"
+
+[deps]
+
+source_file="res://Models/Man of Stature.blend"
+dest_files=PackedStringArray("res://.godot/imported/Man of Stature.blend-a3ad528aa52157251e5deb98a18f434c.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b444bssfmcxhs"
+path="res://.godot/imported/Adobe2.blend-a87183178c772f59f6a187beaff69789.scn"
+
+[deps]
+
+source_file="res://Models/Adobe2.blend"
+dest_files=PackedStringArray("res://.godot/imported/Adobe2.blend-a87183178c772f59f6a187beaff69789.scn")
+
+[params]
+
+dummy_value_ignore_me=0

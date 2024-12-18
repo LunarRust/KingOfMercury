@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://h4rr0qlfkvfy"
+path="res://.godot/imported/MothSuffer.ogg-82238eca16c0427abb0aa72fa476ce59.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/MothSuffer.ogg"
+dest_files=["res://.godot/imported/MothSuffer.ogg-82238eca16c0427abb0aa72fa476ce59.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

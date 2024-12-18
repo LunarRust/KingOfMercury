@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://57oqdpyx1bm3"
+path="res://.godot/imported/BrokenRock.blend-5ce11cded19b62457e64339d1c729421.scn"
+
+[deps]
+
+source_file="res://Models/BrokenRock.blend"
+dest_files=PackedStringArray("res://.godot/imported/BrokenRock.blend-5ce11cded19b62457e64339d1c729421.scn")
+
+[params]
+
+dummy_value_ignore_me=0

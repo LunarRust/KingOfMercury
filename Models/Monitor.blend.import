@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://d3v5a02punyjp"
+path="res://.godot/imported/Monitor.blend-11e3eb0a110a48a17f6542dbaa85ea84.scn"
+
+[deps]
+
+source_file="res://Models/Monitor.blend"
+dest_files=PackedStringArray("res://.godot/imported/Monitor.blend-11e3eb0a110a48a17f6542dbaa85ea84.scn")
+
+[params]
+
+dummy_value_ignore_me=0

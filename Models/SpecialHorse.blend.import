@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://ctsupat845kya"
+path="res://.godot/imported/SpecialHorse.blend-85977ce098d1b6cb78fd977e17229194.scn"
+
+[deps]
+
+source_file="res://Models/SpecialHorse.blend"
+dest_files=PackedStringArray("res://.godot/imported/SpecialHorse.blend-85977ce098d1b6cb78fd977e17229194.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b4wcy3qk5oahg"
+path="res://.godot/imported/Feelers.blend-da7ee7f0a491ad81de92e4ad093d208b.scn"
+
+[deps]
+
+source_file="res://Models/Feelers.blend"
+dest_files=PackedStringArray("res://.godot/imported/Feelers.blend-da7ee7f0a491ad81de92e4ad093d208b.scn")
+
+[params]
+
+dummy_value_ignore_me=0

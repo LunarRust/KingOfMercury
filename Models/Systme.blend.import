@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bobggdgb2t3ja"
+path="res://.godot/imported/Systme.blend-694002835d0bbd0f4d94365187ebc708.scn"
+
+[deps]
+
+source_file="res://Models/Systme.blend"
+dest_files=PackedStringArray("res://.godot/imported/Systme.blend-694002835d0bbd0f4d94365187ebc708.scn")
+
+[params]
+
+dummy_value_ignore_me=0

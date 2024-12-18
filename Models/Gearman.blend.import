@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bq8sstkq2oh3y"
+path="res://.godot/imported/Gearman.blend-071941cc9c844e9dbcf76748b0770b57.scn"
+
+[deps]
+
+source_file="res://Models/Gearman.blend"
+dest_files=PackedStringArray("res://.godot/imported/Gearman.blend-071941cc9c844e9dbcf76748b0770b57.scn")
+
+[params]
+
+dummy_value_ignore_me=0

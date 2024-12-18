@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://ddgx3vp8qeian"
+path="res://.godot/imported/SmartFace.blend-d88a76d239a5ea264593dd038ba82a9d.scn"
+
+[deps]
+
+source_file="res://Models/SmartFace.blend"
+dest_files=PackedStringArray("res://.godot/imported/SmartFace.blend-d88a76d239a5ea264593dd038ba82a9d.scn")
+
+[params]
+
+dummy_value_ignore_me=0

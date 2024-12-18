@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dgixramxiyiyi"
+path="res://.godot/imported/Santa Red Eyes.ogg-c2d38404a20a37ffb0bfd3e75b905d20.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Santa Red Eyes.ogg"
+dest_files=["res://.godot/imported/Santa Red Eyes.ogg-c2d38404a20a37ffb0bfd3e75b905d20.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

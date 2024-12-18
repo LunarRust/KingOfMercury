@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b4qw6yiuynsue"
+path="res://.godot/imported/RedMan.blend-ec2d2e09b869ead751c6a4b377cc0c6c.scn"
+
+[deps]
+
+source_file="res://Models/RedMan.blend"
+dest_files=PackedStringArray("res://.godot/imported/RedMan.blend-ec2d2e09b869ead751c6a4b377cc0c6c.scn")
+
+[params]
+
+dummy_value_ignore_me=0

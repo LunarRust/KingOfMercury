@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bpue5xeo3f3cg"
+path="res://.godot/imported/ScreamerCell.blend-52d33a87dfab486fb32a86a432314415.scn"
+
+[deps]
+
+source_file="res://Models/ScreamerCell.blend"
+dest_files=PackedStringArray("res://.godot/imported/ScreamerCell.blend-52d33a87dfab486fb32a86a432314415.scn")
+
+[params]
+
+dummy_value_ignore_me=0

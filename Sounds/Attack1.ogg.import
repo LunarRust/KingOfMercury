@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ddccdfp38d2np"
+path="res://.godot/imported/Attack1.ogg-852a6ddd715992a26442499482c915f2.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Attack1.ogg"
+dest_files=["res://.godot/imported/Attack1.ogg-852a6ddd715992a26442499482c915f2.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://82c4oow1uegk"
+path="res://.godot/imported/AuroraRing.blend-3d86bed8f6c31d8bb5506a4fcce8a490.scn"
+
+[deps]
+
+source_file="res://Models/AuroraRing.blend"
+dest_files=PackedStringArray("res://.godot/imported/AuroraRing.blend-3d86bed8f6c31d8bb5506a4fcce8a490.scn")
+
+[params]
+
+dummy_value_ignore_me=0

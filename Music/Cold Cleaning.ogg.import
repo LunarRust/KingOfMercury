@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cqels461h2oq1"
+path="res://.godot/imported/Cold Cleaning.ogg-cb6967966e1944c19b8bba6dc824cedf.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music/Cold Cleaning.ogg"
+dest_files=["res://.godot/imported/Cold Cleaning.ogg-cb6967966e1944c19b8bba6dc824cedf.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

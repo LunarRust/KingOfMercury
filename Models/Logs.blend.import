@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cr8nu5uoqcsoh"
+path="res://.godot/imported/Logs.blend-2a771cd4fd95203a0ed6dbd3fa46a275.scn"
+
+[deps]
+
+source_file="res://Models/Logs.blend"
+dest_files=PackedStringArray("res://.godot/imported/Logs.blend-2a771cd4fd95203a0ed6dbd3fa46a275.scn")
+
+[params]
+
+dummy_value_ignore_me=0

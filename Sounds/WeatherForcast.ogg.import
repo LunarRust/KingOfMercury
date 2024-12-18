@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://iqorn22kuare"
+path="res://.godot/imported/WeatherForcast.ogg-39ea64d4020820d7c52bf17daa1f51fa.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/WeatherForcast.ogg"
+dest_files=["res://.godot/imported/WeatherForcast.ogg-39ea64d4020820d7c52bf17daa1f51fa.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

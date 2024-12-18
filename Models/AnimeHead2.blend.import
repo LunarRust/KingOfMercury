@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://vawirdewet6n"
+path="res://.godot/imported/AnimeHead2.blend-84d46950e11dc3486cd716e7c1bc3d01.scn"
+
+[deps]
+
+source_file="res://Models/AnimeHead2.blend"
+dest_files=PackedStringArray("res://.godot/imported/AnimeHead2.blend-84d46950e11dc3486cd716e7c1bc3d01.scn")
+
+[params]
+
+dummy_value_ignore_me=0

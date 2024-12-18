@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cyyedga6ypeiw"
+path="res://.godot/imported/Lower Lobe Clatter.ogg-1a560a93f6ea410204439dd0429ad257.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music/Lower Lobe Clatter.ogg"
+dest_files=["res://.godot/imported/Lower Lobe Clatter.ogg-1a560a93f6ea410204439dd0429ad257.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

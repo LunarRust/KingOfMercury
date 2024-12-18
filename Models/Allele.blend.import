@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dp5dovk3rx8tl"
+path="res://.godot/imported/Allele.blend-6a9356281d10a472c5ed14993f3c2940.scn"
+
+[deps]
+
+source_file="res://Models/Allele.blend"
+dest_files=PackedStringArray("res://.godot/imported/Allele.blend-6a9356281d10a472c5ed14993f3c2940.scn")
+
+[params]
+
+dummy_value_ignore_me=0

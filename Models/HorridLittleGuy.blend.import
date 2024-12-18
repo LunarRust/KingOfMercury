@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://3jvx2wyxwhcr"
+path="res://.godot/imported/HorridLittleGuy.blend-616e8f79915a77fb2a76d3b6d4dd3f87.scn"
+
+[deps]
+
+source_file="res://Models/HorridLittleGuy.blend"
+dest_files=PackedStringArray("res://.godot/imported/HorridLittleGuy.blend-616e8f79915a77fb2a76d3b6d4dd3f87.scn")
+
+[params]
+
+dummy_value_ignore_me=0

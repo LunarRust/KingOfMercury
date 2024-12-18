@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cq6vixd8bn1rn"
+path="res://.godot/imported/Birds.ogg-faf47761ef0835da1b20e7a1b18b1a08.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Birds.ogg"
+dest_files=["res://.godot/imported/Birds.ogg-faf47761ef0835da1b20e7a1b18b1a08.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

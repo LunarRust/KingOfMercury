@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dccur243l57lb"
+path="res://.godot/imported/Kids.ogg-8134b75b5b811eb3587c7202e0ac0920.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Kids.ogg"
+dest_files=["res://.godot/imported/Kids.ogg-8134b75b5b811eb3587c7202e0ac0920.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

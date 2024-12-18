@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://eo7l6d5xm1xl"
+path="res://.godot/imported/Stub.blend-2e5e0f23074329c46f2102bd5357965a.scn"
+
+[deps]
+
+source_file="res://Models/Stub.blend"
+dest_files=PackedStringArray("res://.godot/imported/Stub.blend-2e5e0f23074329c46f2102bd5357965a.scn")
+
+[params]
+
+dummy_value_ignore_me=0

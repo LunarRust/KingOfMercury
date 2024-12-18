@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://crdjr1d2cvgct"
+path="res://.godot/imported/Underwater.ogg-5292cfa115ab63008824f649904c4557.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Underwater.ogg"
+dest_files=["res://.godot/imported/Underwater.ogg-5292cfa115ab63008824f649904c4557.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

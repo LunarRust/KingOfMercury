@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://0fqbhvmpih5r"
+path="res://.godot/imported/Totaller.blend-6f5b0fab8cf20d83dba842201c6fc7b1.scn"
+
+[deps]
+
+source_file="res://Models/Totaller.blend"
+dest_files=PackedStringArray("res://.godot/imported/Totaller.blend-6f5b0fab8cf20d83dba842201c6fc7b1.scn")
+
+[params]
+
+dummy_value_ignore_me=0

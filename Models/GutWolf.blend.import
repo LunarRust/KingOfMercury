@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bve175cisks0r"
+path="res://.godot/imported/GutWolf.blend-94e6bd67ae38f6385ff1b5d5b0183151.scn"
+
+[deps]
+
+source_file="res://Models/GutWolf.blend"
+dest_files=PackedStringArray("res://.godot/imported/GutWolf.blend-94e6bd67ae38f6385ff1b5d5b0183151.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bcuqhwjhe5uii"
+path="res://.godot/imported/Chandelier.blend-0bcb6abab30265a74fbf95f136438264.scn"
+
+[deps]
+
+source_file="res://Models/Chandelier.blend"
+dest_files=PackedStringArray("res://.godot/imported/Chandelier.blend-0bcb6abab30265a74fbf95f136438264.scn")
+
+[params]
+
+dummy_value_ignore_me=0

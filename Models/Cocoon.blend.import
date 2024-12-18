@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://ca1evokx3mgnc"
+path="res://.godot/imported/Cocoon.blend-138f30aef199eaebacaf33c2831d0934.scn"
+
+[deps]
+
+source_file="res://Models/Cocoon.blend"
+dest_files=PackedStringArray("res://.godot/imported/Cocoon.blend-138f30aef199eaebacaf33c2831d0934.scn")
+
+[params]
+
+dummy_value_ignore_me=0

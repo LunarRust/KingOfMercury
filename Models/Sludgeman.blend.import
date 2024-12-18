@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cemsjkixuah20"
+path="res://.godot/imported/Sludgeman.blend-5b8d2689d5d6e2f61d00bfdcb91a93d7.scn"
+
+[deps]
+
+source_file="res://Models/Sludgeman.blend"
+dest_files=PackedStringArray("res://.godot/imported/Sludgeman.blend-5b8d2689d5d6e2f61d00bfdcb91a93d7.scn")
+
+[params]
+
+dummy_value_ignore_me=0

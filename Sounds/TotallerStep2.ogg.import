@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c5kmj043chyxs"
+path="res://.godot/imported/TotallerStep2.ogg-57a4cb1642961f4c9ec58da22d26b96b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/TotallerStep2.ogg"
+dest_files=["res://.godot/imported/TotallerStep2.ogg-57a4cb1642961f4c9ec58da22d26b96b.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

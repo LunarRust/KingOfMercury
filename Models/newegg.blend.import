@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bpvt3gtpkwrtp"
+path="res://.godot/imported/newegg.blend-297f54a9ce38272a196504ac0b770561.scn"
+
+[deps]
+
+source_file="res://Models/newegg.blend"
+dest_files=PackedStringArray("res://.godot/imported/newegg.blend-297f54a9ce38272a196504ac0b770561.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dh2llnqwnvmcj"
+path="res://.godot/imported/LunchTable.blend-20de2dfe8945137eff5a0cc3fa0e8767.scn"
+
+[deps]
+
+source_file="res://Models/LunchTable.blend"
+dest_files=PackedStringArray("res://.godot/imported/LunchTable.blend-20de2dfe8945137eff5a0cc3fa0e8767.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="NetRadiantCustomGamePackConfig" load_steps=5 format=3]
+
+[ext_resource type="Resource" uid="uid://crgpdahjaj" path="res://addons/func_godot/fgd/func_godot_fgd.tres" id="1"]
+[ext_resource type="Script" path="res://addons/func_godot/src/netradiant_custom/netradiant_custom_gamepack_config.gd" id="2"]
+[ext_resource type="Resource" uid="uid://f5erfnvbg6b7" path="res://addons/func_godot/game_config/netradiant_custom/netradiant_custom_shader_clip.tres" id="3"]
+[ext_resource type="Resource" uid="uid://cfhg30jclb4lw" path="res://addons/func_godot/game_config/netradiant_custom/netradiant_custom_shader_skip.tres" id="4"]
+
+[resource]
+script = ExtResource("2")
+export_file = false
+gamepack_name = "func_godot"
+game_name = "FuncGodot"
+base_game_path = ""
+fgd_file = ExtResource("1")
+netradiant_custom_shaders = [ExtResource("3"), ExtResource("4")]
+texture_types = PackedStringArray("png", "jpg", "jpeg", "bmp", "tga")
+model_types = PackedStringArray("glb", "gltf", "obj")
+sound_types = PackedStringArray("wav", "ogg")
+default_scale = "1.0"
+clip_texture = "textures/special/clip"
+skip_texture = "textures/special/skip"

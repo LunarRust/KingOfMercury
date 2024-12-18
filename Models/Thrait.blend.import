@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://copi71jpyccwi"
+path="res://.godot/imported/Thrait.blend-50cea05213a4622f2e321f5b4a00634b.scn"
+
+[deps]
+
+source_file="res://Models/Thrait.blend"
+dest_files=PackedStringArray("res://.godot/imported/Thrait.blend-50cea05213a4622f2e321f5b4a00634b.scn")
+
+[params]
+
+dummy_value_ignore_me=0

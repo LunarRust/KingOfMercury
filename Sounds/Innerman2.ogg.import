@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://xvet2s7580hi"
+path="res://.godot/imported/Innerman2.ogg-de96e96913562104d8d8d05a407caf3d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Innerman2.ogg"
+dest_files=["res://.godot/imported/Innerman2.ogg-de96e96913562104d8d8d05a407caf3d.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

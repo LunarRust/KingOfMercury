@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://i8eukd0kq4nk"
+path="res://.godot/imported/BirdHead.blend-0606cb3e99705038289c3238876e6fc9.scn"
+
+[deps]
+
+source_file="res://Models/BirdHead.blend"
+dest_files=PackedStringArray("res://.godot/imported/BirdHead.blend-0606cb3e99705038289c3238876e6fc9.scn")
+
+[params]
+
+dummy_value_ignore_me=0

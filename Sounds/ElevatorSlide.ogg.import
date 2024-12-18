@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bdt3u2074ce1n"
+path="res://.godot/imported/ElevatorSlide.ogg-f2bf655dbf7d9dc04800fac85fc4dc18.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/ElevatorSlide.ogg"
+dest_files=["res://.godot/imported/ElevatorSlide.ogg-f2bf655dbf7d9dc04800fac85fc4dc18.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

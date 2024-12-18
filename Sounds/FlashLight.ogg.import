@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://6wexyx8jhkym"
+path="res://.godot/imported/FlashLight.ogg-547db22e4adda55c672ca683e31835ba.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/FlashLight.ogg"
+dest_files=["res://.godot/imported/FlashLight.ogg-547db22e4adda55c672ca683e31835ba.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

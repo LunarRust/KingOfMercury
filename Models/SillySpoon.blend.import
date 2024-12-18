@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://euuwxfmyi4ku"
+path="res://.godot/imported/SillySpoon.blend-4a069f1fb614c9d216571d1673d69028.scn"
+
+[deps]
+
+source_file="res://Models/SillySpoon.blend"
+dest_files=PackedStringArray("res://.godot/imported/SillySpoon.blend-4a069f1fb614c9d216571d1673d69028.scn")
+
+[params]
+
+dummy_value_ignore_me=0

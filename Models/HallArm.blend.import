@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cank571a08ck4"
+path="res://.godot/imported/HallArm.blend-e5c9817cc9f0e9b81eb02c2462282a06.scn"
+
+[deps]
+
+source_file="res://Models/HallArm.blend"
+dest_files=PackedStringArray("res://.godot/imported/HallArm.blend-e5c9817cc9f0e9b81eb02c2462282a06.scn")
+
+[params]
+
+dummy_value_ignore_me=0

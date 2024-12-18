@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://od1mepodiekw"
+path="res://.godot/imported/Bad Chest Feel Don't Touch your Feet together (Vocal).ogg-a858925731c45b7366a875ca47c7bb05.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music/Bad Chest Feel Don't Touch your Feet together (Vocal).ogg"
+dest_files=["res://.godot/imported/Bad Chest Feel Don't Touch your Feet together (Vocal).ogg-a858925731c45b7366a875ca47c7bb05.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

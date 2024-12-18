@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dhiqes88bgp2l"
+path="res://.godot/imported/Biological1.ogg-897bd789e100188e8e2793a89749d068.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Biological1.ogg"
+dest_files=["res://.godot/imported/Biological1.ogg-897bd789e100188e8e2793a89749d068.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cqthi2lx7cnds"
+path="res://.godot/imported/MachineHead.ogg-c2161e9016ee54fdef57540f6a16a7ea.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/MachineHead.ogg"
+dest_files=["res://.godot/imported/MachineHead.ogg-c2161e9016ee54fdef57540f6a16a7ea.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b7dwk4pmqn55"
+path="res://.godot/imported/escapeglassbreak.ogg-f91a57367754c4e37884c5c052ac1d74.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/escapeglassbreak.ogg"
+dest_files=["res://.godot/imported/escapeglassbreak.ogg-f91a57367754c4e37884c5c052ac1d74.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

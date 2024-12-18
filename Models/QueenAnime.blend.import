@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c0brr6rcs7is5"
+path="res://.godot/imported/QueenAnime.blend-59a9c6ea6515c5a1987af73ce102e12a.scn"
+
+[deps]
+
+source_file="res://Models/QueenAnime.blend"
+dest_files=PackedStringArray("res://.godot/imported/QueenAnime.blend-59a9c6ea6515c5a1987af73ce102e12a.scn")
+
+[params]
+
+dummy_value_ignore_me=0

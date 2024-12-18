@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://d0i7rcmvtb2uy"
+path="res://.godot/imported/Syringe.blend-b167e243147eba72dec461d27ceeac0b.scn"
+
+[deps]
+
+source_file="res://Models/Syringe.blend"
+dest_files=PackedStringArray("res://.godot/imported/Syringe.blend-b167e243147eba72dec461d27ceeac0b.scn")
+
+[params]
+
+dummy_value_ignore_me=0

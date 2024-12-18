@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bjcxlemb8458c"
+path="res://.godot/imported/Flower.blend-3a2a5cc52ccfb5825e4b05dc7630b5ef.scn"
+
+[deps]
+
+source_file="res://Models/Flower.blend"
+dest_files=PackedStringArray("res://.godot/imported/Flower.blend-3a2a5cc52ccfb5825e4b05dc7630b5ef.scn")
+
+[params]
+
+dummy_value_ignore_me=0

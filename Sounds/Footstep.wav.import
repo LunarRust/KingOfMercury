@@ -1,0 +1,15 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ct5ssa0yauej4"
+path="res://.godot/imported/Footstep.wav-2d607de9132ba55c395d541d9cbe412e.sample"
+
+[deps]
+
+source_file="res://Sounds/Footstep.wav"
+dest_files=["res://.godot/imported/Footstep.wav-2d607de9132ba55c395d541d9cbe412e.sample"]
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dmf2w161mse51"
+path="res://.godot/imported/Taproot.blend-44353c20a5dae7fbcd93df8cb9e4f722.scn"
+
+[deps]
+
+source_file="res://Models/Taproot.blend"
+dest_files=PackedStringArray("res://.godot/imported/Taproot.blend-44353c20a5dae7fbcd93df8cb9e4f722.scn")
+
+[params]
+
+dummy_value_ignore_me=0

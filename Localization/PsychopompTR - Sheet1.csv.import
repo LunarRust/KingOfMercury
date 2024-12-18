@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://nyhgeq2qc1t7"
+
+[deps]
+
+files=["res://Localization/PsychopompTR - Sheet1.en.translation", "res://Localization/PsychopompTR - Sheet1.es.translation", "res://Localization/PsychopompTR - Sheet1.fr.translation", "res://Localization/PsychopompTR - Sheet1.ja.translation", "res://Localization/PsychopompTR - Sheet1.ka.translation", "res://Localization/PsychopompTR - Sheet1.pt.translation", "res://Localization/PsychopompTR - Sheet1.ru.translation", "res://Localization/PsychopompTR - Sheet1.uk.translation"]
+
+source_file="res://Localization/PsychopompTR - Sheet1.csv"
+dest_files=["res://Localization/PsychopompTR - Sheet1.en.translation", "res://Localization/PsychopompTR - Sheet1.es.translation", "res://Localization/PsychopompTR - Sheet1.fr.translation", "res://Localization/PsychopompTR - Sheet1.ja.translation", "res://Localization/PsychopompTR - Sheet1.ka.translation", "res://Localization/PsychopompTR - Sheet1.pt.translation", "res://Localization/PsychopompTR - Sheet1.ru.translation", "res://Localization/PsychopompTR - Sheet1.uk.translation"]
+
+[params]
+
+compress=true
+delimiter=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://be2pnmwm4wblo"
+path="res://.godot/imported/WeirdPlane.blend-bf65bd98cfe9ec334a2e36e43250497e.scn"
+
+[deps]
+
+source_file="res://Models/WeirdPlane.blend"
+dest_files=PackedStringArray("res://.godot/imported/WeirdPlane.blend-bf65bd98cfe9ec334a2e36e43250497e.scn")
+
+[params]
+
+dummy_value_ignore_me=0

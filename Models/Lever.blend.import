@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b8o66dyx5h03j"
+path="res://.godot/imported/Lever.blend-3a5ca329524a2364981c4a6b6ccd0da1.scn"
+
+[deps]
+
+source_file="res://Models/Lever.blend"
+dest_files=PackedStringArray("res://.godot/imported/Lever.blend-3a5ca329524a2364981c4a6b6ccd0da1.scn")
+
+[params]
+
+dummy_value_ignore_me=0

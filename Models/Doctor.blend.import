@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://csh4622c3x6py"
+path="res://.godot/imported/Doctor.blend-cb63d4b41324a1c8bf241bb4185c8286.scn"
+
+[deps]
+
+source_file="res://Models/Doctor.blend"
+dest_files=PackedStringArray("res://.godot/imported/Doctor.blend-cb63d4b41324a1c8bf241bb4185c8286.scn")
+
+[params]
+
+dummy_value_ignore_me=0

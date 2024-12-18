@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://crala3ickpauv"
+path="res://.godot/imported/PatientKill.ogg-78a87ff2c233ede49208b151db439f9f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/PatientKill.ogg"
+dest_files=["res://.godot/imported/PatientKill.ogg-78a87ff2c233ede49208b151db439f9f.oggvorbisstr"]
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cuhn4njy64p2"
+path="res://.godot/imported/Turbine.blend-53d7fb5b154f1f697d1de44f024bdfe0.scn"
+
+[deps]
+
+source_file="res://Models/Turbine.blend"
+dest_files=PackedStringArray("res://.godot/imported/Turbine.blend-53d7fb5b154f1f697d1de44f024bdfe0.scn")
+
+[params]
+
+dummy_value_ignore_me=0

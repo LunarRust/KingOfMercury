@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://xna8vgs0vtps"
+path="res://.godot/imported/DesertStatue.blend-e43e61df70735e618a650fe9b2a775f8.scn"
+
+[deps]
+
+source_file="res://Models/DesertStatue.blend"
+dest_files=PackedStringArray("res://.godot/imported/DesertStatue.blend-e43e61df70735e618a650fe9b2a775f8.scn")
+
+[params]
+
+dummy_value_ignore_me=0
