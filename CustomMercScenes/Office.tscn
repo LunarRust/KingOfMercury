@@ -1,6 +1,6 @@
 [gd_scene load_steps=331 format=3 uid="uid://bdhsoa6qy55pk"]
 
-[ext_resource type="Environment" uid="uid://b4i4ydutu3mra" path="res://CustomMercScenes/Office.tres" id="1_ch6ix"]
+[ext_resource type="Environment" path="res://default_env.tres" id="1_c6u3m"]
 [ext_resource type="Script" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_w2d4s"]
 [ext_resource type="Resource" uid="uid://ccjp1ksk00c7w" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="2_wgb00"]
 [ext_resource type="Material" path="res://textures/Carpet.tres" id="3_lb4jh"]
@@ -1261,7 +1261,7 @@ size = Vector3(0.450098, 0.498294, 0.210897)
 [node name="Office" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("1_ch6ix")
+environment = ExtResource("1_c6u3m")
 
 [node name="FuncGodotMap" type="Node3D" parent="."]
 transform = Transform3D(1, -0.000328653, 7.97206e-05, 0.000328646, 1, 8.64925e-05, -7.97485e-05, -8.64669e-05, 1, 0, 0, 0)

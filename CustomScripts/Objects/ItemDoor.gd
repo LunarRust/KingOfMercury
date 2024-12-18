@@ -32,6 +32,7 @@ func Item(item : String):
 		return false
 		
 		
+#TODO: Fix door spam bug
 func OpenDoor():
 	if moving:
 		await stopped
