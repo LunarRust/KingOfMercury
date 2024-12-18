@@ -2,16 +2,13 @@
 
 <!-- centre image  -->
 <p align="center">
-  <img src="addons/PlayerPrefs/assets/PlayerPrefs_Icon_1.png" />
+  <img src="Icon.png" />
 </p>
 
 ## Description
 
-This is a simple class that allows you to save and load data in a file. It is very easy to use and it is very useful for saving game data.
+King Of Mercury
 
-![Alt text](addons/PlayerPrefs/assets/1.png)
-
-## How to use
 
 ### Save data
 ```gdscript
@@ -69,11 +66,4 @@ func get_player():
 
 func get_player_base():
 	PlayerPrefs.get_base()
-```
-
-### Check Data
-Use Editor option to check saved preferences.
-![Alt text](addons/PlayerPrefs/assets/EditorOptioon.png)
-
-It will print the data in the console.
 
