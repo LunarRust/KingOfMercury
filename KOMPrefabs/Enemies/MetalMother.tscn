@@ -10,11 +10,12 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_47sql"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2nrro"]
+radius = 0.213869
+height = 1.09836
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g851q"]
 resource_name = "Material_001"
 cull_mode = 2
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("4_3oco5")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_bph2n"]
@@ -71,7 +72,6 @@ bind/8/pose = Transform3D(0.999573, 0.0291932, 0.000263977, 0.0291664, -0.99897,
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t2uah"]
 resource_name = "Material"
 cull_mode = 2
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("5_dqlwk")
 metallic = 0.740909
 roughness = 0.368182
