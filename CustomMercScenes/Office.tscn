@@ -3076,8 +3076,9 @@ omni_range = 1.753
 [node name="DoorGlass" parent="FrontDoor" instance=ExtResource("25_kxvpk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.3269, 1.51024, -0.46126)
 
-[node name="Behavior" parent="FrontDoor/DoorGlass" index="7"]
+[node name="Behavior" parent="FrontDoor/DoorGlass" index="7" node_paths=PackedStringArray("PartnerDoor")]
 Transmit = true
+PartnerDoor = NodePath("../../DoorGlass2")
 
 [node name="DoorGlass2" parent="FrontDoor" instance=ExtResource("25_kxvpk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.3269, 1.51024, 0.494351)
@@ -3105,9 +3106,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.985, -0.029, 0)
 [node name="DoorGlass" parent="AtriumDoor" instance=ExtResource("25_kxvpk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.3269, 1.51024, -0.46126)
 
-[node name="Behavior" parent="AtriumDoor/DoorGlass" index="7"]
+[node name="Behavior" parent="AtriumDoor/DoorGlass" index="7" node_paths=PackedStringArray("PartnerDoor")]
 RequireItem = true
 Transmit = true
+PartnerDoor = NodePath("../../DoorGlass2")
 
 [node name="DoorGlass2" parent="AtriumDoor" instance=ExtResource("25_kxvpk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.3269, 1.51024, 0.494351)
