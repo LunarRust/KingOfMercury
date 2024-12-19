@@ -7,7 +7,7 @@ extends Node
 @export var SoundEffect : AudioStream
 @export_category("Transmission")
 @export var Transmit : bool
-@export var TransmitTarget : StaticBody3D
+@export var PartnerDoor : StaticBody3D
 @export_category("Movement")
 @export var direction : Vector3
 @export var Duration : float
@@ -27,12 +27,13 @@ func Item(item : String):
 	if (item == ItemToMatch && !opened):
 		ItemUsed = true
 		OpenDoor()
+		PartnerDoor.get_child(7).OpenDoor()
 		return true
 	else:
 		return false
 		
 		
-#TODO: Fix door spam bug
+#TODO: Fix dsswdoor spam bug
 func OpenDoor():
 	if moving:
 		await stopped
@@ -48,7 +49,7 @@ func OpenDoor():
 		moving = true
 		if Transmit:
 			open.emit()
-			TransmitTarget.get_child(7).OpenDoor()
+			PartnerDoor.get_child(7).OpenDoor()
 			
 		
 	
@@ -66,7 +67,7 @@ func Close():
 		moving = true
 		if Transmit:
 			closed.emit()
-			TransmitTarget.get_child(7).Close()
+			PartnerDoor.get_child(7).Close()
 		
 
 func RemoteTriggerActivate():
