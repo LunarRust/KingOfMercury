@@ -27,7 +27,8 @@ func Item(item : String):
 	if (item == ItemToMatch && !opened):
 		ItemUsed = true
 		OpenDoor()
-		PartnerDoor.get_child(7).OpenDoor()
+		if PartnerDoor:
+			PartnerDoor.get_child(7).OpenDoor()
 		return true
 	else:
 		return false
