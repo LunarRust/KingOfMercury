@@ -42,7 +42,9 @@ func _ready():
 	if (TargetEntity == null):
 		print("Ouchie wawa! There's no defined player object for this enemy to chase! Trying to find one now.")
 		TargetEntity = get_tree().get_first_node_in_group("player")
-		KOMSignalBus.Activate_Pomp_Target.connect(TargetEnimies)
+		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Activate_Pomp_Target.connect(TargetEnimies)
+		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Activate_Player_Target.connect(TargetPlayer)
+		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Kill_pomp.connect(KillSelf)
 		active = true
 	else:
 		active = true
@@ -57,6 +59,7 @@ func _physics_process(delta):
 		if Tset:
 			SetTarget()
 		if Input.is_physical_key_pressed(KEY_6):
+			hostile = false
 			TargetEntity = get_tree().get_first_node_in_group("player")
 	
 
@@ -122,27 +125,40 @@ func handle_Move(delta):
 	modelRoot.global_rotation.y = lerp_angle(modelRoot.global_rotation.y, atan2(modelDir.x, modelDir.y), delta * 6)
 
 func Attack():
-	if (anim != null && HealthHandler.CoreHealthHandler.HP > 5):
+	if (anim != null && TargetEntity.has_node("HealthHandler") && HealthHandler.CoreHealthHandler.HP > 5):
 		animTrigger(attackName)
-	elif (anim != null && HealthHandler.CoreHealthHandler.HP < 5):
+	elif (anim != null && TargetEntity.has_node("HealthHandler") && HealthHandler.CoreHealthHandler.HP < 5):
 		animTrigger("AttackLow")
 	if (position.distance_to(TargetEntity.position) < 1.5 && TargetEntity.is_in_group("player")):
 		playerHealthInstance.notsostatichealth(attackPower)
-	if (position.distance_to(TargetEntity.position) < 1.5 && TargetEntity.is_in_group("PompTarget")):
-			if TargetEntity.has_node("NpcToNpcHealthHandler"):
-				TargetEntity.get_node("NpcToNpcHealthHandler").Hurt(1)
+	else:
+		if position.distance_to(TargetEntity.position) < 1.5 && TargetEntity.has_node("NpcToNpcHealthHandler"):
+			TargetEntity.get_node("NpcToNpcHealthHandler").Hurt(1)
+		elif position.distance_to(TargetEntity.position) < 1.5 && TargetEntity.has_node("HealthHandler"):
+			TargetEntity.get_node("HealthHandler").Hurt(1)
 	await get_tree().create_timer(1.0).timeout
 	pass
 func TargetLocator():
 	var NearestTarget
-	var PossibleTargets = get_tree().get_nodes_in_group("PompTarget")
-	if PossibleTargets:
-		NearestTarget = PossibleTargets[0]
-	for i in PossibleTargets:
-			if i.global_position.distance_to(self.global_position) < NearestTarget.global_position.distance_to(self.global_position):
-				NearestTarget = i
+	for i in get_all_children(get_tree().get_root()):
+		if "Innocent" in i:
+			if i.get("Hp") != 0:
+				print("possible target has innocent property")
+				if !i.get_parent().is_in_group("PompNPC"):
+					print("possible target is not Fellow PompNPC")
+					if NearestTarget == null:
+						NearestTarget = i
+					if i.global_position.distance_to(self.global_position) < NearestTarget.global_position.distance_to(self.global_position):
+						NearestTarget = i.get_parent()
 	Tset = false
+	print("new target: " + str(NearestTarget.name))
 	return NearestTarget
+
+func get_all_children(in_node, array := []):
+	array.push_back(in_node)
+	for child in in_node.get_children():
+		array = get_all_children(child, array)
+	return array
 
 func animTrigger(triggername : String):
 	animTree["parameters/conditions/" + triggername] = true;
@@ -153,5 +169,9 @@ func animTrigger(triggername : String):
 func TargetEnimies():
 	Tset = true
 	
+func KillSelf():
+	self.get_node("NpcToNpcHealthHandler").Hurt(99999)
+	
 func TargetPlayer():
+	hostile = false
 	TargetEntity = get_tree().get_first_node_in_group("player")

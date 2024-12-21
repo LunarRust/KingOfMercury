@@ -24,7 +24,6 @@ config/icon="res://Icon.png"
 PlayerPrefs="*res://addons/PlayerPrefs/PlayerPrefs.tscn"
 GLoot="*res://addons/gloot/gloot_autoload.gd"
 FpscInputMgr="*res://CustomPlayerController/scripts/fpsc_input_mgr.gd"
-KOMSignalBus="*res://CustomScripts/AutoLoads/KOMSignalBus.gd"
 
 [display]
 
