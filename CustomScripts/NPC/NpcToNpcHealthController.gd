@@ -10,6 +10,8 @@ var gib2 = PackedScene
 
 var dead : bool
 
+func _ready():
+	CoreHealthHandler = get_parent().get_node("HealthHandler")
 
 func _process(delta):
 	if CoreHealthHandler.HP < 1 && !dead:

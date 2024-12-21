@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://dq26m2l7pkuqp"]
+[gd_scene load_steps=24 format=3 uid="uid://dq26m2l7pkuqp"]
 
 [ext_resource type="Script" path="res://Scripts/DialogueSystem.cs" id="1_ah2rt"]
-[ext_resource type="AudioStream" uid="uid://ceeqgi6kqmdhw" path="res://Sounds/NPCSound1.ogg" id="2_th3oc"]
+[ext_resource type="AudioStream" uid="uid://ccykari10jirc" path="res://Sounds/NPCSound1.ogg" id="2_th3oc"]
 [ext_resource type="Script" path="res://Scripts/EnemyHealthHandler.cs" id="3_hc4hp"]
 [ext_resource type="Script" path="res://Scripts/InteractableObject.cs" id="4_fenti"]
+[ext_resource type="Script" path="res://CustomScripts/NPC/NpcToNpcHealthController.gd" id="4_ykm7c"]
 [ext_resource type="Script" path="res://Scripts/ThraitBabyBehavior.cs" id="5_vgugs"]
 [ext_resource type="PackedScene" uid="uid://cqy3386x3yi64" path="res://Models/ThraitBaby.blend" id="6_ytri3"]
 
@@ -264,7 +265,7 @@ gravity_scale = 0.0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_a2lqy")
 
-[node name="DialogueSystem" type="Node3D" parent="." node_paths=PackedStringArray("soundSource")]
+[node name="DialogueSystem" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 script = ExtResource("1_ah2rt")
 npcName = "Thrait Youngling"
@@ -273,7 +274,6 @@ It was real gross!!
 Everyone tells me that we used to eat all sorts of stuff, but now it's just rats and old hamburgers."
 LookDescription = "The Thrait child is no older than two years."
 TouchDescription = "You reach out to pat the Thrait child, but it lightly growls at you, showing some small but sharp teeth."
-soundSource = NodePath("")
 DialogueSound = ExtResource("2_th3oc")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
@@ -281,6 +281,11 @@ pitch_scale = 1.5
 
 [node name="HealthHandler" type="Node3D" parent="."]
 script = ExtResource("3_hc4hp")
+
+[node name="NpcToNpcHealthHandler" type="Node3D" parent="." node_paths=PackedStringArray("CoreHealthHandler")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("4_ykm7c")
+CoreHealthHandler = NodePath("")
 
 [node name="Interactable" type="Node" parent="."]
 script = ExtResource("4_fenti")
@@ -363,7 +368,7 @@ autoplay = "Idle"
 
 [node name="Behavior" type="Node" parent="." node_paths=PackedStringArray("thraits")]
 script = ExtResource("5_vgugs")
-thraits = [NodePath(""), NodePath("")]
+thraits = [null, null]
 
 [node name="ThraitBaby2" parent="." instance=ExtResource("6_ytri3")]
 transform = Transform3D(0.126, 0, 0, 0, 0.126, 0, 0, 0, 0.126, 0, -0.98, 0.139999)

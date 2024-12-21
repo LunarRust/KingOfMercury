@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://m63l1j7s5q72"]
+[gd_scene load_steps=7 format=3 uid="uid://tm7ippqqitkr"]
 
 [ext_resource type="Script" path="res://Scripts/DialogueSystem.cs" id="1_vi4fc"]
 [ext_resource type="Script" path="res://Scripts/EnemyHealthHandler.cs" id="2_0xy8e"]
+[ext_resource type="Script" path="res://CustomScripts/NPC/NpcToNpcHealthController.gd" id="3_gok5h"]
 [ext_resource type="Script" path="res://Scripts/FamilyBehavior.cs" id="3_qsy31"]
 [ext_resource type="PackedScene" uid="uid://buseoax8q1b7n" path="res://Models/Child.blend" id="4_no3eq"]
 
@@ -28,9 +29,13 @@ TouchDescription = "A surprisingly firm handshake."
 script = ExtResource("2_0xy8e")
 HP = 99999
 
-[node name="Behavior" type="Node" parent="." node_paths=PackedStringArray("desertDoor")]
+[node name="NpcToNpcHealthHandler" type="Node3D" parent="." node_paths=PackedStringArray("CoreHealthHandler")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("3_gok5h")
+CoreHealthHandler = NodePath("")
+
+[node name="Behavior" type="Node" parent="."]
 script = ExtResource("3_qsy31")
-desertDoor = NodePath("")
 
 [node name="Child" parent="." instance=ExtResource("4_no3eq")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, -1, 0.129662)

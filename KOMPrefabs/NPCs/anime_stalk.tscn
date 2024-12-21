@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://untrnqh2eqkn"]
+[gd_scene load_steps=12 format=3 uid="uid://untrnqh2eqkn"]
 
 [ext_resource type="Script" path="res://Scripts/DialogueSystem.cs" id="1_cxfha"]
-[ext_resource type="AudioStream" uid="uid://cpl623l5ks1at" path="res://Sounds/Itadakimasu.ogg" id="2_2r3nx"]
+[ext_resource type="AudioStream" uid="uid://kn7tcqpdwy3a" path="res://Sounds/Itadakimasu.ogg" id="2_2r3nx"]
 [ext_resource type="Script" path="res://Scripts/EnemyHealthHandler.cs" id="3_2of72"]
 [ext_resource type="PackedScene" uid="uid://b1hj5csrgmv67" path="res://Models/AnimeStalk.blend" id="4_101by"]
+[ext_resource type="Script" path="res://CustomScripts/NPC/NpcToNpcHealthController.gd" id="4_bn2tl"]
 [ext_resource type="Script" path="res://Models/AutoAnimate.cs" id="5_654pe"]
 [ext_resource type="Script" path="res://Scripts/InteractableObject.cs" id="6_rrbmv"]
 [ext_resource type="Script" path="res://Scripts/AnimeStalkBehavior.cs" id="7_1k6c2"]
@@ -18,7 +19,7 @@ transform = Transform3D(-0.866025, 9.77889e-09, 0.5, 0, 1, 0, -0.5, 2.98023e-08,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_hqa23")
 
-[node name="DialogueSystem" type="Node3D" parent="." node_paths=PackedStringArray("soundSource")]
+[node name="DialogueSystem" type="Node3D" parent="."]
 script = ExtResource("1_cxfha")
 npcName = "Kawaii Stalk"
 Dialogue = "Oh hello! My, aren't you a cute one.
@@ -28,7 +29,6 @@ LookDescription = "The double stalked thing looks at you with all of its eyes.
 It seems to beckon you."
 TouchDescription = "You try to touch the Stalked Thing, but it grabs your hand.
 You just barely manage to pull your hand free at the last moment."
-soundSource = NodePath("")
 DialogueSound = ExtResource("2_2r3nx")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
@@ -36,18 +36,21 @@ DialogueSound = ExtResource("2_2r3nx")
 [node name="HealthHandler" type="Node3D" parent="."]
 script = ExtResource("3_2of72")
 
+[node name="NpcToNpcHealthHandler" type="Node3D" parent="." node_paths=PackedStringArray("CoreHealthHandler")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("4_bn2tl")
+CoreHealthHandler = NodePath("")
+
 [node name="AnimeStalk" parent="." instance=ExtResource("4_101by")]
 transform = Transform3D(0.545, 0, 1.49012e-08, 0, 0.545, 0, -1.49012e-08, 0, 0.545, 0, -0.918545, 0)
 visible = false
 script = ExtResource("5_654pe")
 
-[node name="Interactable" type="Node" parent="." node_paths=PackedStringArray("BehaviorNode")]
+[node name="Interactable" type="Node" parent="."]
 script = ExtResource("6_rrbmv")
-BehaviorNode = NodePath("")
 
-[node name="Behavior" type="Node" parent="." node_paths=PackedStringArray("anim")]
+[node name="Behavior" type="Node" parent="."]
 script = ExtResource("7_1k6c2")
-anim = NodePath("")
 
 [node name="AnimeStalk3" parent="." instance=ExtResource("8_gh4w5")]
 transform = Transform3D(0.624168, 0, 1.19209e-07, 0, 0.624168, 0, -1.19209e-07, 0, 0.624168, -0.0168839, -0.628292, 0)

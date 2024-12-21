@@ -1,6 +1,7 @@
 extends TextureButton
 @export var Scene : PackedScene
-@export var LocationRelative : Vector3
+#@export var LocationRelative : Vector3
+@export var TargetLoc : RayCast3D
 
 
 func _on_pressed():
@@ -9,5 +10,6 @@ func _on_pressed():
 func create():
 	var node : Node = Scene.instantiate()
 	get_tree().current_scene.add_child(node)
-	node.position = get_tree().get_first_node_in_group("player").global_position + LocationRelative
+	node.global_position = TargetLoc.get_collision_point()
 	print(node.get_tree_string_pretty())
+	TargetLoc.get_collision_point()

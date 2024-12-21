@@ -16,6 +16,7 @@ extends CharacterBody3D
 
 
 @export_category("Attack Data")
+@export var AttackDistance : float = 1.5
 @export var attackThreshold : float = 1.5
 @export var attackPower : int = 1
 @export var aggroRange : int = 10
@@ -38,7 +39,7 @@ var Interactions = load("res://Scripts/Interactions.cs")
 var playerHealthInstance = playerHealth.new()
 
 func _ready():
-	nav_agent.target_desired_distance = FollowDistance
+	
 	if (TargetEntity == null):
 		print("Ouchie wawa! There's no defined player object for this enemy to chase! Trying to find one now.")
 		TargetEntity = get_tree().get_first_node_in_group("player")
@@ -46,6 +47,7 @@ func _ready():
 		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Activate_Player_Target.connect(TargetPlayer)
 		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Kill_pomp.connect(KillSelf)
 		active = true
+		nav_agent.target_desired_distance = FollowDistance
 	else:
 		active = true
 	pass
@@ -72,9 +74,9 @@ func active_handling(delta):
 	if (position.distance_to(TargetEntity.position) < aggroRange && !attacking && !hurt):
 		attacking = true
 
-	if (position.distance_to(TargetEntity.position) > 1.5 && attacking && !hurt):
+	if (position.distance_to(TargetEntity.position) > AttackDistance && attacking && !hurt):
 		handle_Move(delta)
-		if HealthHandler.CoreHealthHandler.HP > 5:
+		if HealthHandler.CoreHealthHandler.HP > 5 && !anim.current_animation == "Attack" && !anim.current_animation == "AttackLow":
 			animTrigger(walkName)
 		elif HealthHandler.CoreHealthHandler.HP <= 5:
 			animTrigger("WalkLow")
@@ -86,7 +88,7 @@ func active_handling(delta):
 		animTrigger("IdleLow")
 	
 
-	if (position.distance_to(TargetEntity.position) < 1.5):
+	if (position.distance_to(TargetEntity.position) < AttackDistance):
 		attackTimer += 1 * delta
 
 	if (attackTimer > attackThreshold && attacking && meleeAttack && hostile):
@@ -129,12 +131,12 @@ func Attack():
 		animTrigger(attackName)
 	elif (anim != null && TargetEntity.has_node("HealthHandler") && HealthHandler.CoreHealthHandler.HP < 5):
 		animTrigger("AttackLow")
-	if (position.distance_to(TargetEntity.position) < 1.5 && TargetEntity.is_in_group("player")):
+	if (position.distance_to(TargetEntity.position) < AttackDistance && TargetEntity.is_in_group("player")):
 		playerHealthInstance.notsostatichealth(attackPower)
 	else:
-		if position.distance_to(TargetEntity.position) < 1.5 && TargetEntity.has_node("NpcToNpcHealthHandler"):
+		if position.distance_to(TargetEntity.position) < AttackDistance && TargetEntity.has_node("NpcToNpcHealthHandler"):
 			TargetEntity.get_node("NpcToNpcHealthHandler").Hurt(1)
-		elif position.distance_to(TargetEntity.position) < 1.5 && TargetEntity.has_node("HealthHandler"):
+		elif position.distance_to(TargetEntity.position) < AttackDistance && TargetEntity.has_node("HealthHandler"):
 			TargetEntity.get_node("HealthHandler").Hurt(1)
 	await get_tree().create_timer(1.0).timeout
 	pass
@@ -142,14 +144,13 @@ func TargetLocator():
 	var NearestTarget
 	for i in get_all_children(get_tree().get_root()):
 		if "Innocent" in i:
-			if i.get("Hp") != 0:
-				print("possible target has innocent property")
-				if !i.get_parent().is_in_group("PompNPC"):
-					print("possible target is not Fellow PompNPC")
-					if NearestTarget == null:
-						NearestTarget = i
-					if i.global_position.distance_to(self.global_position) < NearestTarget.global_position.distance_to(self.global_position):
-						NearestTarget = i.get_parent()
+			#print("possible target has innocent property")
+			if !i.get_parent().is_in_group("PompNPC"):
+				#print("possible target is not Fellow PompNPC")
+				if NearestTarget == null:
+					NearestTarget = i.get_parent()
+				if i.get_parent().global_position.distance_to(self.global_position) < NearestTarget.get_parent().global_position.distance_to(self.global_position):
+					NearestTarget = i.get_parent()
 	Tset = false
 	print("new target: " + str(NearestTarget.name))
 	return NearestTarget

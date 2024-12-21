@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dvhw5ggxre7oi"]
+[gd_scene load_steps=10 format=3 uid="uid://dvhw5ggxre7oi"]
 
 [ext_resource type="Script" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_6fjcp"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem.cs" id="1_mfohj"]
 [ext_resource type="Resource" uid="uid://ccjp1ksk00c7w" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="2_f8y3g"]
-[ext_resource type="Script" path="res://Scripts/EnemyHealthHandler.cs" id="2_ksv17"]
 [ext_resource type="Material" uid="uid://bv3iokibj6cft" path="res://textures/Door03.tres" id="3_1hywq"]
 [ext_resource type="Script" path="res://Scripts/InteractableObject.cs" id="3_hossg"]
 
@@ -69,9 +68,6 @@ TouchDescription = "Locked."
 looking = false
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="FuncGodotMap/GenericDiologueBody"]
-
-[node name="HealthHandler" type="Node3D" parent="FuncGodotMap/GenericDiologueBody"]
-script = ExtResource("2_ksv17")
 
 [node name="Interactable" type="Node" parent="FuncGodotMap/GenericDiologueBody"]
 script = ExtResource("3_hossg")
