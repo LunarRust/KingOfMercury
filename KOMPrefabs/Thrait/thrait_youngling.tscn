@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=3 uid="uid://dq26m2l7pkuqp"]
 
 [ext_resource type="Script" path="res://Scripts/DialogueSystem.cs" id="1_ah2rt"]
-[ext_resource type="AudioStream" uid="uid://ccykari10jirc" path="res://Sounds/NPCSound1.ogg" id="2_th3oc"]
+[ext_resource type="AudioStream" uid="uid://dwuhiju4ce57n" path="res://KOMSounds/NPCSound1PitchUp.ogg" id="2_kp71r"]
 [ext_resource type="Script" path="res://Scripts/EnemyHealthHandler.cs" id="3_hc4hp"]
 [ext_resource type="Script" path="res://Scripts/InteractableObject.cs" id="4_fenti"]
 [ext_resource type="Script" path="res://CustomScripts/NPC/NpcToNpcHealthController.gd" id="4_ykm7c"]
@@ -274,7 +274,7 @@ It was real gross!!
 Everyone tells me that we used to eat all sorts of stuff, but now it's just rats and old hamburgers."
 LookDescription = "The Thrait child is no older than two years."
 TouchDescription = "You reach out to pat the Thrait child, but it lightly growls at you, showing some small but sharp teeth."
-DialogueSound = ExtResource("2_th3oc")
+DialogueSound = ExtResource("2_kp71r")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 pitch_scale = 1.5
@@ -282,10 +282,9 @@ pitch_scale = 1.5
 [node name="HealthHandler" type="Node3D" parent="."]
 script = ExtResource("3_hc4hp")
 
-[node name="NpcToNpcHealthHandler" type="Node3D" parent="." node_paths=PackedStringArray("CoreHealthHandler")]
+[node name="NpcToNpcHealthHandler" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("4_ykm7c")
-CoreHealthHandler = NodePath("")
 
 [node name="Interactable" type="Node" parent="."]
 script = ExtResource("4_fenti")
