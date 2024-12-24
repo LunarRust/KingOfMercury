@@ -13,14 +13,15 @@ var opened : bool
 func _on_area_entered(area):
 	if !OnVolumeExit:
 		print("area entered")
-		print("is Entrance: " + str(Entrance) + " and is opened: " + str(opened))
-		match opened:
-			true:
-				if Exit:
-					close()
-			false:
-				if Entrance:
-					open()
+		print("is Entrance: " + str(Entrance) + " and is opened: " + str(opened) + " and is moving: " + str(Target.get_child(ChildNumber).moving))
+		if !Target.get_child(ChildNumber).moving:
+			match opened:
+				true:
+					if Exit:
+						close()
+				false:
+					if Entrance:
+						open()
 			
 		
 func open():
@@ -42,13 +43,14 @@ func _on_behavior_closed():
 
 
 func _on_area_exited(area):
-	if OnVolumeExit:
-		print("area exited")
-		print("is Entrance: " + str(Entrance) + " and is opened: " + str(opened))
-		match opened:
-			true:
-				if Exit:
-					close()
-			false:
-				if Entrance:
-					open()
+	if !Target.get_child(ChildNumber).moving:
+		if OnVolumeExit:
+			print("area exited")
+			print("is Entrance: " + str(Entrance) + " and is opened: " + str(opened) + " and is moving: " + str(Target.get_child(ChildNumber).moving))
+			match opened:
+				true:
+					if Exit:
+						close()
+				false:
+					if Entrance:
+						open()
