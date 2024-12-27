@@ -152,7 +152,7 @@ func TargetLocator():
 				if i.get_parent().global_position.distance_to(self.global_position) < NearestTarget.get_parent().global_position.distance_to(self.global_position):
 					NearestTarget = i.get_parent()
 	Tset = false
-	print("new target: " + str(NearestTarget.name))
+	print_rich("new target: [color=red]" + (NearestTarget.name) + "[/color]")
 	return NearestTarget
 
 func get_all_children(in_node, array := []):

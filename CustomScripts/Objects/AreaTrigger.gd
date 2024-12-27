@@ -13,7 +13,7 @@ var opened : bool
 func _on_area_entered(area):
 	if !OnVolumeExit:
 		print("area entered")
-		print("is Entrance: " + str(Entrance) + " and is opened: " + str(opened) + " and is moving: " + str(Target.get_child(ChildNumber).moving))
+		print_rich("is Entrance: [color=red]" + str(Entrance) + "[/color] and is opened: [color=red]" + str(opened) + "[/color] and is moving: [color=red]" + str(Target.get_child(ChildNumber).moving) + "[/color]")
 		if !Target.get_child(ChildNumber).moving:
 			match opened:
 				true:
@@ -46,7 +46,7 @@ func _on_area_exited(area):
 	if !Target.get_child(ChildNumber).moving:
 		if OnVolumeExit:
 			print("area exited")
-			print("is Entrance: " + str(Entrance) + " and is opened: " + str(opened) + " and is moving: " + str(Target.get_child(ChildNumber).moving))
+			print_rich("is Entrance: [color=red]" + str(Entrance) + "[/color] and is opened: [color=red]" + str(opened) + "[/color] and is moving: [color=red]" + str(Target.get_child(ChildNumber).moving) + "[/color]")
 			match opened:
 				true:
 					if Exit:
