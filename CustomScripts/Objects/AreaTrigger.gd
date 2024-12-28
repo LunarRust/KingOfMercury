@@ -9,7 +9,7 @@ extends Node
 var opened : bool
 
 
-
+#TODO Fix Item gets door stuck while player is in AreaTrigger
 func _on_area_entered(area):
 	if !OnVolumeExit:
 		print("area entered")
