@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://dxt33nj37sopx"]
+[gd_scene load_steps=72 format=3 uid="uid://dxt33nj37sopx"]
 
 [ext_resource type="Script" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_yoeb4"]
 [ext_resource type="Resource" uid="uid://ccjp1ksk00c7w" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="2_2lxvt"]
@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://cijeyw4itr1lr" path="res://KOMSprites/Trees/Tree_2 (5).PNG" id="15_44d0x"]
 [ext_resource type="PackedScene" uid="uid://wtckr3mak6q8" path="res://KOMPrefabs/Thrait/thrait_woman.tscn" id="17_tmsj8"]
 [ext_resource type="PackedScene" uid="uid://dq26m2l7pkuqp" path="res://KOMPrefabs/Thrait/thrait_youngling.tscn" id="18_w6wq0"]
-[ext_resource type="AudioStream" uid="uid://dwuhiju4ce57n" path="res://KOMSounds/NPCSound1PitchUp.ogg" id="19_gmnid"]
 [ext_resource type="Texture2D" uid="uid://xc2tdf6fowil" path="res://Models/PsychopompPlayerModel_0.png" id="20_yst2y"]
 [ext_resource type="Texture2D" uid="uid://b6qg6mnltr7kv" path="res://Models/PsychopompPlayerModel_1.png" id="21_tkrdq"]
 [ext_resource type="PackedScene" uid="uid://6c2b3bf2v6k7" path="res://Models/Ferns.glb" id="22_dt0n0"]
@@ -5126,7 +5125,7 @@ bones/17/position = Vector3(-0.0789709, 0.256496, 0.100964)
 bones/18/rotation = Quaternion(0.47208, 0.0839593, 0.613529, 0.627434)
 bones/20/rotation = Quaternion(0.0751928, -0.0144963, -0.366565, 0.927236)
 
-[node name="Behavior" parent="Thrait Woman" index="6" node_paths=PackedStringArray("thraits")]
+[node name="Behavior" parent="Thrait Woman" index="7" node_paths=PackedStringArray("thraits")]
 thraits = [null]
 
 [node name="Thrait Youngling" parent="." instance=ExtResource("18_w6wq0")]
@@ -5137,12 +5136,11 @@ Dialogue = "Mom brought me here to visit Mommy.. I still miss her...	"
 LookDescription = "The child has an expression far too old for someone so young."
 TouchDescription = "You reach out to pat the Thrait child, it lets you, it dosen't have the will to tell you to stop."
 soundSource = NodePath("../AudioStreamPlayer3D")
-DialogueSound = ExtResource("19_gmnid")
 
 [node name="HealthHandler" parent="Thrait Youngling" index="3"]
 Innocent = true
 
-[node name="Behavior" parent="Thrait Youngling" index="6" node_paths=PackedStringArray("thraits")]
+[node name="Behavior" parent="Thrait Youngling" index="7" node_paths=PackedStringArray("thraits")]
 thraits = [null, null]
 
 [node name="CreepyPomp" type="Node3D" parent="."]
