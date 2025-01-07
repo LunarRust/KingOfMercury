@@ -67,9 +67,9 @@ func _physics_process(delta):
 
 func active_handling(delta):
 	if (TargetEntity == null):
+		hostile = false
 		print("Ouchie wawa! There's no target for this enemy to chase! Trying to find one now.")
 		TargetEntity = get_tree().get_first_node_in_group("player")
-		hostile = false
 	#print("velocity less than 1: " + str(velocity.length() < 1.0) + " " + str(velocity.length()))
 	if (position.distance_to(TargetEntity.position) < aggroRange && !attacking && !hurt):
 		attacking = true
@@ -99,8 +99,8 @@ func active_handling(delta):
 		animTree["parameters/Normal2D/blend_position"] = velocity.length() / speed
 	
 func SetTarget():
-		hostile = true
 		TargetEntity = TargetLocator()
+		hostile = true
 
 func update_target_location(target_location):
 	nav_agent.target_position = target_location
