@@ -217,7 +217,14 @@ func ItemLocator():
 	print_rich("new target: [color=red]" + (NearestTarget.name) + "[/color]")
 	TargetIsCreature = false
 	TargetIsItem = true
-	return NearestTarget
+	for i in get_all_children(NearestTarget):
+		if self.get_node("InventoryGrid").can_add_item(create_item(i.get_node("Behavior").ItemID)):
+			return NearestTarget
+		else:
+			print("Inventory is full!")
+			animTrigger("Shrug")
+			return TargetLocator("player")
+	
 
 func LocateItem():
 	!hostile
@@ -234,7 +241,12 @@ func animTrigger(triggername : String):
 	await get_tree().create_timer(0.1).timeout
 	animTree["parameters/conditions/" + triggername] = false;
 	
-	
+func create_item(prototype_id: String) -> InventoryItem:
+	var item: InventoryItem = InventoryItem.new()
+	item.protoset = InvManager.inv.item_protoset
+	item.prototype_id = prototype_id
+	return item
+
 func TargetEnimies():
 	Tset = true
 	

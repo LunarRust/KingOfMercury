@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://g11gm2f3bpdf"]
 
-[ext_resource type="Script" path="res://Scripts/ItemPickup.gd" id="1"]
+[ext_resource type="Script" path="res://CustomScripts/Objects/NpcCompatItemPickup.gd" id="1_q2frc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ctim5"]
 
@@ -15,4 +15,4 @@ shape = SubResource("BoxShape3D_ctim5")
 mesh = SubResource("SphereMesh_8j30y")
 
 [node name="Behavior" type="Node" parent="."]
-script = ExtResource("1")
+script = ExtResource("1_q2frc")

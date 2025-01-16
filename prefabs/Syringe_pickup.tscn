@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://chlkqbr5e5lkd"]
 
-[ext_resource type="Script" path="res://Scripts/ItemPickup.gd" id="1"]
+[ext_resource type="Script" path="res://CustomScripts/Objects/NpcCompatItemPickup.gd" id="1_owxpm"]
 [ext_resource type="Script" path="res://Scripts/RotatingObject.cs" id="2"]
 [ext_resource type="PackedScene" uid="uid://d0i7rcmvtb2uy" path="res://Models/Syringe.blend" id="3"]
 
@@ -14,7 +14,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.271321, 0)
 shape = SubResource("BoxShape3D_d7sm0")
 
 [node name="Behavior" type="Node" parent="."]
-script = ExtResource("1")
+script = ExtResource("1_owxpm")
 ItemID = "Syringe1"
 
 [node name="ModelRoot" type="Node3D" parent="."]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cgmbpk6kr6rnm"]
 
-[ext_resource type="Script" path="res://Scripts/ItemPickup.gd" id="1"]
+[ext_resource type="Script" path="res://CustomScripts/Objects/NpcCompatItemPickup.gd" id="1_e2ug2"]
 [ext_resource type="Script" path="res://Scripts/RotatingObject.cs" id="2"]
 [ext_resource type="PackedScene" uid="uid://dd6kmd3xe62sg" path="res://Models/Key.blend" id="3"]
 [ext_resource type="PackedScene" uid="uid://behqwycjgai3q" path="res://Models/NewKey.blend" id="4"]
@@ -15,7 +15,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.180661, 0)
 shape = SubResource("BoxShape3D_d7sm0")
 
 [node name="Behavior" type="Node" parent="."]
-script = ExtResource("1")
+script = ExtResource("1_e2ug2")
 ItemID = "Key01"
 
 [node name="ModelRoot" type="Node3D" parent="."]

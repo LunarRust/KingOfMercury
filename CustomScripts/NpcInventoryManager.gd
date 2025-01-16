@@ -2,7 +2,7 @@ extends Node3D
 class_name NpcInventoryManager
 
 @export var inv : Inventory
-static var inventoryInstance
+static var inventoryInstance : Inventory
 @export var invCtrl : CtrlInventoryGrid
 static var instance
 static var itemArray : Dictionary
@@ -20,7 +20,7 @@ func _ready():
 	itemName.text = ""
 	itemDescription.text = ""
 	camCast = get_viewport().get_camera_3d()
-	inventoryInstance = get_tree().get_first_node_in_group("PompNPC").get_node("InventoryManager") 
+	inventoryInstance = inv 
 	instance = self;
 	CreateInventory()
 	pass
