@@ -6,6 +6,7 @@ extends CharacterBody3D
 @export var animTree : AnimationTree
 @export var modelRoot : Node3D
 @export var HealthHandler : Node3D
+@export var InvManager : Node3D
 var TargetEntity
 
 @export_category("Characteristics")
@@ -38,6 +39,7 @@ var TargetIsCreature : bool = true
 var playerHealth = load("res://Scripts/PlayerHealthHandler.cs")
 var playerMover = load("res://Scripts/MoverTest.cs")
 var Interactions = load("res://Scripts/Interactions.cs")
+var InteractableObject = load("res://Scripts/InteractableObject.cs")
 var playerHealthInstance = playerHealth.new()
 
 func _ready():
@@ -72,7 +74,7 @@ func active_handling(delta):
 	if (TargetEntity == null):
 		hostile = false
 		print("Ouchie wawa! There's no target for this enemy to chase! Trying to find one now.")
-		TargetEntity = get_tree().get_first_node_in_group("player")
+		TargetEntity = TargetLocator("player")
 		TargetIsCreature = true
 	#print("velocity less than 1: " + str(velocity.length() < 1.0) + " " + str(velocity.length()))
 	if TargetIsCreature:
@@ -115,7 +117,7 @@ func active_handling(delta):
 		if (position.distance_to(TargetEntity.position) < AttackDistance):
 			attackTimer += 1 * delta
 
-		if (attackTimer > attackThreshold):
+		if (attackTimer > attackThreshold && position.distance_to(TargetEntity.position) < AttackDistance):
 			GrabItem()
 			attackTimer = 0
 	
@@ -167,24 +169,37 @@ func Attack():
 	pass
 	
 func GrabItem():
+	var BehaviorNode
 	if (anim != null && HealthHandler.CoreHealthHandler.HP > 5):
 		animTrigger("Touch")
 	elif (anim != null && HealthHandler.CoreHealthHandler.HP < 5):
 		animTrigger("TouchLow")
 	await get_tree().create_timer(1.0).timeout
+	for i in get_all_children(TargetEntity):
+		if (i.has_method("Touch")):
+			i.Touch("AmNpc")
 	pass
 
-func TargetLocator():
+func TargetLocator(SpefTarget = "default"):
 	var NearestTarget
-	for i in get_all_children(get_tree().get_root()):
-		if "Innocent" in i:
-			#print("possible target has innocent property")
-			if !i.get_parent().is_in_group("PompNPC"):
+	if SpefTarget != "default":
+		for i in get_all_children(get_tree().get_root()):
+			if i.is_in_group(SpefTarget):
 				#print("possible target is not Fellow PompNPC")
 				if NearestTarget == null:
-					NearestTarget = i.get_parent()
-				if i.get_parent().global_position.distance_to(self.global_position) < NearestTarget.get_parent().global_position.distance_to(self.global_position):
-					NearestTarget = i.get_parent()
+					NearestTarget = i
+				if i.global_position.distance_to(self.global_position) < NearestTarget.global_position.distance_to(self.global_position):
+					NearestTarget = i
+	else:
+		for i in get_all_children(get_tree().get_root()):
+			if "Innocent" in i:
+				#print("possible target has innocent property")
+				if !i.get_parent().is_in_group("PompNPC"):
+					#print("possible target is not Fellow PompNPC")
+					if NearestTarget == null:
+						NearestTarget = i.get_parent()
+					if i.get_parent().global_position.distance_to(self.global_position) < NearestTarget.get_parent().global_position.distance_to(self.global_position):
+						NearestTarget = i.get_parent()
 	Tset = false
 	print_rich("new target: [color=red]" + (NearestTarget.name) + "[/color]")
 	TargetIsCreature = true
