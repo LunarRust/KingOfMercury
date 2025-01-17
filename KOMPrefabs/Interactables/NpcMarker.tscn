@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://7urwdtc8q3q2"]
+
+[ext_resource type="Script" path="res://CustomScripts/MouseInteraction/AttachToMouse3D.gd" id="1_g4vsn"]
+[ext_resource type="Texture2D" uid="uid://csot0bf157121" path="res://Sprites/PsychopompInHouse.png" id="2_6vb3l"]
+
+[node name="NpcMarker" type="Node3D"]
+script = ExtResource("1_g4vsn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.909876, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.588393, 0)
+texture = ExtResource("2_6vb3l")
