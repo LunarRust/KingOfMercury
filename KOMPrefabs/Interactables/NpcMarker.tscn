@@ -3,10 +3,8 @@
 [ext_resource type="Script" path="res://CustomScripts/MouseInteraction/AttachToMouse3D.gd" id="1_g4vsn"]
 [ext_resource type="Texture2D" uid="uid://csot0bf157121" path="res://Sprites/PsychopompInHouse.png" id="2_6vb3l"]
 
-[node name="NpcMarker" type="Node3D"]
+[node name="NpcMarker" type="MeshInstance3D" groups=["NpcMarker"]]
 script = ExtResource("1_g4vsn")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.909876, 0)

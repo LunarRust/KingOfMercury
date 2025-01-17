@@ -68,6 +68,9 @@ func _physics_process(delta):
 		if Input.is_physical_key_pressed(KEY_6):
 			hostile = false
 			TargetEntity = get_tree().get_first_node_in_group("player")
+		if Input.is_mouse_button_pressed(2):
+			hostile = false
+			TargetEntity = TargetLocator("NpcMarker")
 		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel").set_text("Target is: [color=red]" + str(TargetEntity.name) + "[/color]")
 
 func active_handling(delta):
@@ -184,12 +187,13 @@ func TargetLocator(SpefTarget = "default"):
 	var NearestTarget
 	if SpefTarget != "default":
 		for i in get_all_children(get_tree().get_root()):
-			if i.is_in_group(SpefTarget):
-				#print("possible target is not Fellow PompNPC")
-				if NearestTarget == null:
-					NearestTarget = i
-				if i.global_position.distance_to(self.global_position) < NearestTarget.global_position.distance_to(self.global_position):
-					NearestTarget = i
+			if !i.is_in_group("PompNPC"):
+				if i.is_in_group(SpefTarget):
+					#print("possible target is not Fellow PompNPC")
+					if NearestTarget == null:
+						NearestTarget = i
+					if i.global_position.distance_to(self.global_position) < NearestTarget.global_position.distance_to(self.global_position):
+						NearestTarget = i
 	else:
 		for i in get_all_children(get_tree().get_root()):
 			if "Innocent" in i:
@@ -201,10 +205,17 @@ func TargetLocator(SpefTarget = "default"):
 					if i.get_parent().global_position.distance_to(self.global_position) < NearestTarget.get_parent().global_position.distance_to(self.global_position):
 						NearestTarget = i.get_parent()
 	Tset = false
-	print_rich("new target: [color=red]" + (NearestTarget.name) + "[/color]")
-	TargetIsCreature = true
-	TargetIsItem = false
-	return NearestTarget
+	if NearestTarget != null:
+		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel").set_text("Target is: [color=red]" + str(TargetEntity.name) + "[/color]")
+		print_rich("new target: [color=red]" + (NearestTarget.name) + "[/color]")
+		TargetIsCreature = true
+		TargetIsItem = false
+		return NearestTarget
+	else:
+		NearestTarget = self
+		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel").set_text("Target is: [color=red]" + str(TargetEntity.name) + "[/color]")
+		print_rich("new target: [color=red] NULL" + "[/color]")
+		return NearestTarget
 
 func ItemLocator():
 	var NearestTarget

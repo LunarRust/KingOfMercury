@@ -4,6 +4,7 @@
 extends Node3D
 class_name RayCastSystem
 
+
 const RAY_LENGTH := 1000
 
 """
@@ -22,12 +23,8 @@ output_dict = {
 """
 # Returns raycast result after it hits an object in the world.
 # @return Dictionary or null
-func _do_raycast_on_mouse_position(collision_mask: int = 0b00000000_00000000_00000000_00000001):
+func _do_raycast_on_mouse_position(space_state,cam,mousepos,collision_mask: int = 0b00000000_00000000_00000000_00000001):
 	# Raycast related code
-	var space_state = get_world_3d().direct_space_state
-	var cam = get_viewport().get_camera_3d()
-	var mousepos = get_viewport().get_mouse_position()
-
 	var origin = cam.project_ray_origin(mousepos)
 	var end = origin + cam.project_ray_normal(mousepos) * RAY_LENGTH
 	var query = PhysicsRayQueryParameters3D.create(origin, end)
@@ -46,8 +43,8 @@ func _do_raycast_on_mouse_position(collision_mask: int = 0b00000000_00000000_000
 
 # Gets ray-cast hit position from camera to world.
 # @return Vector3 or null
-func get_mouse_world_position(collision_mask: int = 0b00000000_00000000_00000000_00000001):
-	var raycast_result = _do_raycast_on_mouse_position(collision_mask)
+func get_mouse_world_position(space_state,cam,mousepos,collision_mask: int = 0b00000000_00000000_00000000_00000001):
+	var raycast_result = _do_raycast_on_mouse_position(space_state,cam,mousepos,collision_mask)
 	if raycast_result:
 		return raycast_result.position
 	return null
@@ -55,8 +52,8 @@ func get_mouse_world_position(collision_mask: int = 0b00000000_00000000_00000000
 
 # Gets ray-cast hit object from camera to world.
 # @return Object or null
-func get_raycast_hit_object(collision_mask: int = 0b00000000_00000000_00000000_00000001):
-	var raycast_result = _do_raycast_on_mouse_position(collision_mask)
+func get_raycast_hit_object(space_state,cam,mousepos,collision_mask: int = 0b00000000_00000000_00000000_00000001):
+	var raycast_result = _do_raycast_on_mouse_position(space_state,cam,mousepos,collision_mask)
 	if raycast_result:
 		return raycast_result.collider
 	return null
