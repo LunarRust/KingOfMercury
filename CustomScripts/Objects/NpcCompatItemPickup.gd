@@ -8,11 +8,11 @@ var used : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	inv = InventoryManager.inventoryInstance
-	NpcInv = get_tree().get_first_node_in_group("PompNPC").get_node("InventoryGrid")
 	pass # Replace with function body.
 
 
 func Touch(AmNpc = false):
+	NpcInv = get_tree().get_first_node_in_group("PompNPC").get_node("InventoryGrid")
 	if AmNpc && NpcInv != null:
 		if (!used):
 			if NpcInv.can_add_item(create_item(ItemID)):
