@@ -9,6 +9,7 @@ extends CharacterBody3D
 @export var InvManager : Node3D
 @export var DebugLabelParent : Node3D
 var TargetEntity
+var DoLookAt : bool = false
 
 @export_category("Characteristics")
 @export var hostile : bool = true
@@ -74,8 +75,10 @@ func _physics_process(delta):
 			TargetEntity = TargetLocator("player")
 		if Input.is_mouse_button_pressed(2):
 			hostile = false
+			DoLookAt = false
 			TargetEntity = TargetLocator("NpcMarker",1.2)
 		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel").set_text("Target is: [color=red]" + str(TargetEntity.name) + "[/color]")
+		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel2").set_text("Attack Timer: [color=red]" + str(snapped(attackTimer,0.01)) + "[/color]")
 		
 		
 
@@ -87,6 +90,8 @@ func active_handling(delta):
 		TargetIsCreature = true
 	#print("velocity less than 1: " + str(velocity.length() < 1.0) + " " + str(velocity.length()))
 	if TargetIsCreature:
+		if !TargetEntity.is_in_group("player") && !TargetEntity.is_in_group("PompNPC"):
+			hostile = true
 		if (position.distance_to(TargetEntity.position) < aggroRange && !attacking && !hurt):
 			attacking = true
 		if (position.distance_to(TargetEntity.position) > MaxDistance && attacking && !hurt):
@@ -98,7 +103,7 @@ func active_handling(delta):
 		if (position.distance_to(TargetEntity.position) < MaxDistance):
 			attackTimer += 1 * delta
 
-		if (attackTimer > attackThreshold && attacking && meleeAttack && hostile):
+		if (attackTimer > attackThreshold && attacking && hostile):
 			Attack()
 			attackTimer = 0
 			
@@ -135,14 +140,16 @@ func active_handling(delta):
 		animTree["parameters/Normal2D/blend_position"] = velV2
 	DebugLabelParent.get_child(0).text = ("Speed:  " +  str(speed))
 	DebugLabelParent.get_child(2).text =("velocity: " +  str(velV2.y))
-	#
-	# TODO: Implement Head Tracking
-	#
+
+	
 	var current_direction := self.transform.basis.z
 	var target_direction := to_local(TargetEntity.position).normalized()
 	var vec1 = self.position
 	var vec2 = TargetEntity.position
-	velV2.x = clamp((target_direction.x),-1,1)
+	if DoLookAt:
+		velV2.x = find_rotation_to()
+	else:
+		velV2.x = 0
 	#velV2.y = (snapped(self.get_velocity().length(),0.1)) * 0.1
 	DebugLabelParent.get_child(1).text = ("Blend X: " +  str(velV2.x))
 	#DebugLabelParent.get_child(2).text = ("Facing Target: " +  str(target_direction))
@@ -213,8 +220,10 @@ func TargetLocator(SpefTarget = "default",MaxDist = MaxDistanceDef):
 		MaxDistance = MaxDistanceDef
 	if SpefTarget != "default":
 		NearestTarget = find_closest_or_furthest(self,SpefTarget)
+		DoLookAt = true
 	else:
 		NearestTarget = find_closest_or_furthest(self)
+		DoLookAt = true
 	Tset = false
 	if NearestTarget != null:
 		print_rich("new target: [color=red]" + (NearestTarget.name) + "[/color]")
@@ -224,10 +233,12 @@ func TargetLocator(SpefTarget = "default",MaxDist = MaxDistanceDef):
 	else:
 		NearestTarget = self
 		print_rich("new target: [color=red] NULL" + "[/color]")
+		DoLookAt = false
 		return NearestTarget
 
 func ItemLocator():
 	var NearestTarget
+	DoLookAt = true
 	NearestTarget = find_closest_or_furthest(self,"default",true)
 	print_rich("new target: [color=red]" + (NearestTarget.name) + "[/color]")
 	TargetIsCreature = false
@@ -264,6 +275,7 @@ func create_item(prototype_id: String) -> InventoryItem:
 	return item
 
 func TargetEnimies():
+	hostile
 	Tset = true
 	
 func KillSelf():
@@ -328,13 +340,45 @@ func find_closest_or_furthest(node: Object,group_name = "default",item = false, 
 		return return_node
 		
 
-func calc_angles_between(node1 : Node3D, node2 : Node3D):
-	var normalized_forward_vector_node1 = node1.global_position.normalized()
-	var vector_node1_to_node2 = node1.global_position - node2.global_position
-	var normalized_vector_node1_to_node2 = vector_node1_to_node2.normalized()
-	var dot_product = normalized_forward_vector_node1.dot(normalized_vector_node1_to_node2)
-	var calculated_angle = rad_to_deg(acos(dot_product))*2
-	return calculated_angle
+func find_rotation_to(degree = false):
+	var pos1 = self.global_transform.origin
+	var pos2 = TargetEntity.global_transform.origin
+	pos2.y = 2
+	# Calculate the direction vector from node1 to node2 and normalize it
+	var direction_to_node2 = (pos2 - pos1).normalized()
+	if (pos2 - pos1).length_squared() < 0.0001:
+		print("Nodes are too close; angle may be inaccurate.")
+	# Get the forward vector of node1 (assumes the forward vector is along the z-axis)
+	var forward_vector = modelRoot.global_transform.basis.z.normalized()
+
+	# Debug: Print vectors to ensure correctness
+	print("Forward Vector: ", forward_vector)
+	print("Direction to Node2: ", direction_to_node2)
+
+	# Calculate the angle between the forward vector and the direction vector
+	var angle = forward_vector.angle_to(direction_to_node2)
+
+	# Use cross product to determine the angle's sign (relative to the Y-axis)
+	var cross_product = forward_vector.cross(direction_to_node2)
+
+	# Debug: Print cross product to verify sign determination
+	print("Cross Product: ", cross_product)
+
+	# Adjust angle based on the cross product's Y-component
+	if cross_product.y < 0:
+			angle = -angle
+
+	# Convert the angle to degrees (if needed)
+	var angle_degrees = rad_to_deg(angle)
+	if(degree):
+		return angle_degrees
+	else:
+		return angle
+	
+func get_angle_between_nodes(node_a, node_b):
+		var forward_a = node_a.global_transform.basis.z
+		var forward_b = node_b.global_transform.basis.z
+		return forward_a.angle_to(forward_b) 
 	
 func check_if_facing(target, threshold): 
 	var facing_dir = global_transform.basis.z
