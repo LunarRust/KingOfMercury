@@ -1,5 +1,7 @@
 extends Node3D
 var RCS : RayCastSystem = RayCastSystem.new()
+@export var Sprite : Sprite3D
+var degree : float
 var active : bool = false
 var space_state
 var cam
@@ -21,6 +23,10 @@ func _physics_process(delta):
 	
 
 func _process(delta):
+	++degree
+	Sprite.rotate(Vector3.UP,degree)
+	if degree >= 360:
+		degree = 0
 	if Input.is_mouse_button_pressed(2):
 		active = true
 	else:

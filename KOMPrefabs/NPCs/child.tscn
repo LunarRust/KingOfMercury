@@ -14,7 +14,7 @@ transform = Transform3D(-1, 0, 1.19209e-07, 0, 1, 0, -1.19209e-07, 0, -1, -26.5,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_a2lqy")
 
-[node name="DialogueSystem" type="Node3D" parent="."]
+[node name="DialogueSystem" type="Node3D" parent="." node_paths=PackedStringArray("soundSource")]
 script = ExtResource("1_vi4fc")
 npcName = "Child"
 Dialogue = "Everyone loves puppets. Especially puppets themselves.
@@ -22,17 +22,17 @@ Oh good, it's you! I was getting so bored here! I'll meet you there.
 Heh, by the way, what do you think about Puppets?"
 LookDescription = "The child smiles at you. There are more folds under their eyes than there should be."
 TouchDescription = "A surprisingly firm handshake."
+soundSource = NodePath("../AudioStreamPlayer3D")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 
 [node name="HealthHandler" type="Node3D" parent="."]
 script = ExtResource("2_0xy8e")
-HP = 99999
 
 [node name="NpcToNpcHealthHandler" type="Node3D" parent="." node_paths=PackedStringArray("CoreHealthHandler")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("3_gok5h")
-CoreHealthHandler = NodePath("")
+CoreHealthHandler = NodePath("../HealthHandler")
 
 [node name="Behavior" type="Node" parent="."]
 script = ExtResource("3_qsy31")

@@ -14,7 +14,7 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hqa23"]
 
 [node name="Anime Stalk" type="StaticBody3D"]
-transform = Transform3D(-0.866025, 9.77889e-09, 0.5, 0, 1, 0, -0.5, 2.98023e-08, -0.866025, -2.40474, 1.92604, 19.4841)
+transform = Transform3D(-0.866025, 9.77889e-09, 0.5, 0, 1, 0, -0.5, 2.98023e-08, -0.866025, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_hqa23")
@@ -37,20 +37,22 @@ DialogueSound = ExtResource("2_2r3nx")
 script = ExtResource("3_2of72")
 
 [node name="NpcToNpcHealthHandler" type="Node3D" parent="." node_paths=PackedStringArray("CoreHealthHandler")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.648e-08, 0.294819, -1.47525e-08)
 script = ExtResource("4_bn2tl")
-CoreHealthHandler = NodePath("")
+CoreHealthHandler = NodePath("../HealthHandler")
 
 [node name="AnimeStalk" parent="." instance=ExtResource("4_101by")]
 transform = Transform3D(0.545, 0, 1.49012e-08, 0, 0.545, 0, -1.49012e-08, 0, 0.545, 0, -0.918545, 0)
 visible = false
 script = ExtResource("5_654pe")
 
-[node name="Interactable" type="Node" parent="."]
+[node name="Interactable" type="Node" parent="." node_paths=PackedStringArray("BehaviorNode")]
 script = ExtResource("6_rrbmv")
+BehaviorNode = NodePath("../Behavior")
 
-[node name="Behavior" type="Node" parent="."]
+[node name="Behavior" type="Node" parent="." node_paths=PackedStringArray("anim")]
 script = ExtResource("7_1k6c2")
+anim = NodePath("../AnimeStalk3/AnimationPlayer")
 
 [node name="AnimeStalk3" parent="." instance=ExtResource("8_gh4w5")]
 transform = Transform3D(0.624168, 0, 1.19209e-07, 0, 0.624168, 0, -1.19209e-07, 0, 0.624168, -0.0168839, -0.628292, 0)
