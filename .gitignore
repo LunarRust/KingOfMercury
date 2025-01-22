@@ -4,6 +4,7 @@ addons/
 
 # Godot-specific ignores
 *.import
+*.cs
 .import/
 export.cfg
 export_presets.cfg

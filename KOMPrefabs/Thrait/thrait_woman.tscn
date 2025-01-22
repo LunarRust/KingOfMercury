@@ -11,7 +11,7 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0xcfd"]
 
 [node name="Thrait Woman" type="StaticBody3D"]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 61.5, 3, -3.5)
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_0xcfd")
@@ -34,7 +34,7 @@ script = ExtResource("3_vdlcr")
 [node name="NpcToNpcHealthHandler" type="Node3D" parent="." node_paths=PackedStringArray("CoreHealthHandler")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("4_fxjlu")
-CoreHealthHandler = NodePath("")
+CoreHealthHandler = NodePath("../HealthHandler")
 
 [node name="Interactable" type="Node" parent="."]
 script = ExtResource("4_v4p6n")
