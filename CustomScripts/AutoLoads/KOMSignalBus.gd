@@ -8,4 +8,8 @@ signal Item_Grab
 signal Light_Toggle
 signal Light_Off
 signal Light_On
+signal NavToPoint(id : int)
+
+@export_category("Data Handles")
+@export var PompNpcInstances : Array
 # ... add any other signals you may want.

@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bfi7rk6kntbbc"]
+[gd_scene load_steps=11 format=3 uid="uid://jy8x8s03u4ar"]
 
-[ext_resource type="Script" path="res://CustomScripts/MouseInteraction/AttachToMouse3D.gd" id="1_g4vsn"]
-[ext_resource type="Texture2D" uid="uid://da8neu2a6q8s4" path="res://Sprites/PsychopompInHouseSheet.png" id="2_csibs"]
-[ext_resource type="AudioStream" uid="uid://j5mbsy824nnd" path="res://Sounds/2DStep2.ogg" id="2_uuwnf"]
-[ext_resource type="AudioStream" uid="uid://c3d7quhlnw8o" path="res://Sounds/2DStep1.ogg" id="3_8m25n"]
+[ext_resource type="Script" path="res://CustomScripts/NPC/AutoNavManager.gd" id="1_3nxdc"]
+[ext_resource type="AudioStream" uid="uid://j5mbsy824nnd" path="res://Sounds/2DStep2.ogg" id="2_8mqkw"]
+[ext_resource type="AudioStream" uid="uid://c3d7quhlnw8o" path="res://Sounds/2DStep1.ogg" id="3_461y2"]
+[ext_resource type="Texture2D" uid="uid://da8neu2a6q8s4" path="res://Sprites/PsychopompInHouseSheet.png" id="4_eg4dt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_egcki"]
 
@@ -109,11 +109,11 @@ tracks/4/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("2_uuwnf")
+"stream": ExtResource("2_8mqkw")
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("3_8m25n")
+"stream": ExtResource("3_461y2")
 }],
 "times": PackedFloat32Array(0.4, 0.8)
 }
@@ -187,11 +187,11 @@ tracks/4/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("2_uuwnf")
+"stream": ExtResource("2_8mqkw")
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("3_8m25n")
+"stream": ExtResource("3_461y2")
 }],
 "times": PackedFloat32Array(0.4, 0.8)
 }
@@ -204,48 +204,51 @@ _data = {
 "Walk": SubResource("Animation_k7yia")
 }
 
-[node name="NpcMarker" type="StaticBody3D" node_paths=PackedStringArray("CharParent") groups=["NpcMarker"]]
+[node name="NavNode" type="Node3D" groups=["NavNode"]]
+script = ExtResource("1_3nxdc")
+
+[node name="NavMark" type="StaticBody3D" parent="."]
 collision_layer = 8
 collision_mask = 8
-script = ExtResource("1_g4vsn")
-CharParent = NodePath("SpriteParent/CharSprite")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavMark"]
 transform = Transform3D(-0.74, 0, 8.82147e-08, 0, 0.74, 0, -8.82147e-08, 0, -0.74, 0, 0.757715, 0)
 shape = SubResource("CapsuleShape3D_egcki")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavMark"]
 transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, 0, 0.0769139, 0)
 visible = false
 mesh = SubResource("BoxMesh_fr7nv")
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
+[node name="RayCast3D" type="RayCast3D" parent="NavMark"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.909876, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NavMark"]
 libraries = {
 "": SubResource("AnimationLibrary_saesi")
 }
 autoplay = "Walk"
 
-[node name="SpriteParent" type="Node3D" parent="."]
+[node name="SpriteParent" type="Node3D" parent="NavMark"]
 transform = Transform3D(0.485, 0, 0, 0, 0.485, 0, 0, 0, 0.485, 0, 0.618197, 0)
+visible = false
 
-[node name="SpotLight3D" type="SpotLight3D" parent="SpriteParent"]
+[node name="SpotLight3D" type="SpotLight3D" parent="NavMark/SpriteParent"]
 transform = Transform3D(2.06186, 0, 0, 0, -9.01266e-08, 2.06186, 0, -2.06186, -9.01266e-08, 0, 1.84887, 0)
 visible = false
 light_energy = 1.315
 spot_range = 1.788
 spot_angle = 23.47
 
-[node name="CharSprite" type="Sprite3D" parent="SpriteParent"]
+[node name="CharSprite" type="Sprite3D" parent="NavMark/SpriteParent"]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0, 0)
 billboard = 2
 shaded = true
 alpha_cut = 3
 texture_filter = 0
-texture = ExtResource("2_csibs")
+texture = ExtResource("4_eg4dt")
 hframes = 3
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="NavMark"]
+visible = false
 max_distance = 3.0

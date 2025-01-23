@@ -1,4 +1,4 @@
-[gd_scene load_steps=133 format=3 uid="uid://bnsf0wmclcn8f"]
+[gd_scene load_steps=136 format=3 uid="uid://bnsf0wmclcn8f"]
 
 [ext_resource type="Script" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_edl00"]
 [ext_resource type="Resource" uid="uid://ccjp1ksk00c7w" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="2_o302f"]
@@ -11,12 +11,13 @@
 [ext_resource type="Material" path="res://textures/Grass1.tres" id="8_8tdxy"]
 [ext_resource type="Environment" uid="uid://dvbsbhb67hpin" path="res://CustomMercScenes/innout.tres" id="9_iiab8"]
 [ext_resource type="Material" path="res://textures/Window.tres" id="9_ij6kp"]
-[ext_resource type="PackedScene" uid="uid://dfnd2drrmwkyf" path="res://KOMPrefabs/Enemies/PompNpc.tscn" id="10_g40kn"]
+[ext_resource type="PackedScene" uid="uid://dfnd2drrmwkyf" path="res://KOMPrefabs/NPCs/PompNpc.tscn" id="10_g40kn"]
 [ext_resource type="Material" uid="uid://su30u7c7tupt" path="res://KOMTextures/glass.tres" id="12_y4s1n"]
 [ext_resource type="Script" path="res://CustomScripts/AutoLoads/NpcSceneRules.gd" id="14_ynhoq"]
 [ext_resource type="PackedScene" uid="uid://2p8rl2gpbnxv" path="res://KOMPrefabs/DoorGlass.tscn" id="15_e6u2e"]
 [ext_resource type="PackedScene" uid="uid://bjwu2ait6stxh" path="res://KOMPrefabs/Interactables/AreaTrigger.tscn" id="16_g5cp3"]
 [ext_resource type="PackedScene" uid="uid://wtckr3mak6q8" path="res://KOMPrefabs/Thrait/thrait_woman.tscn" id="17_tslhm"]
+[ext_resource type="Script" path="res://CustomScripts/Objects/In'nOut/RegisterCon.gd" id="18_1ps68"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5xqcj"]
 vertices = PackedVector3Array(-9.5, 6.5, -8.5, -9.5, 6.5, 8.75, 8.5, 6.5, 8.75, 8.5, 6.5, -8.5, -1.5, 1.5, -7.25, -0.5, 1.5, -7.5, -0.5, 1.5, -8.25, -9.25, 1.5, -8.25, 0, 1.5, 1, 0.5, 1.5, -1.25, -0.25, 1.5, -1.25, 0, 1.5, 1, -0.25, 1.5, -1.25, -1.5, 1.5, -2.5, -4.25, 1.5, -2.25, -4.25, 1.5, 1, -5.5, 1.5, -2.5, -1.5, 1.5, -2.5, -1.5, 1.5, -7.25, -9.25, 1.5, -8.25, -9.25, 1.5, -2.75, -5.5, 1.5, -2.5, -4.25, 1.5, -2.25, -1.5, 1.5, -2.5, -0.5, 1.5, -8.25, -0.5, 1.5, -7.5, 0.75, 1.5, -7.25, 15.5, 1.5, -3.5, 15.75, 1.5, -1.75, 18.5, 1.5, -2, 18.5, 1.5, -8.25, 15.5, 1.5, -3.5, 18.5, 1.5, -8.25, -0.5, 1.5, -8.25, 0.75, 1.5, -7.25, 0.75, 1.5, -7.25, 0.75, 1.5, -3.5, 15.5, 1.5, -3.5, -2.75, 1.5, 4.25, -2.75, 1.5, 2.75, -5.25, 1.5, 2.75, -7, 1.5, 4.25, -9.25, 1.5, 8.5, -7.25, 1.5, 7.25, -7, 1.5, 4.25, -7, 1.5, 4.25, -5.25, 1.5, 2.75, -6, 1.5, 2, -6, 1.5, -2.25, -5.5, 1.5, -2.5, -9.25, 1.5, -2.75, -2.25, 1.5, 8.5, -2.25, 1.5, 7.5, -7.25, 1.5, 7.25, -9.25, 1.5, 8.5, -6, 1.5, 2, -6, 1.5, -2.25, -9.25, 1.5, -2.75, -9.25, 1.5, 8.5, -7, 1.5, 4.25, 15.75, 1.5, -1.75, 15.75, 1.5, 9.5, 18.5, 1.5, 9.5, 18.5, 1.5, -2, -0.5, 1.5, 8.5, -0.25, 1.5, 9.5, 0.5, 1.5, 9.5, 0.75, 1.5, 8.5, 0, 1.5, 7, -0.5, 1.5, 7.5, -2.75, 1.5, 2.75, -2.75, 1.5, 4.25, 0, 1.5, 4.5, 0.25, 1.5, 2.75, -0.5, 1.5, 7.5, -2.25, 1.5, 7.5, -2.25, 1.5, 8.5, -0.5, 1.5, 8.5, 0.75, 1.5, 1.25, 0.25, 1.5, 2.75, 0, 1.5, 4.5, 0.5, 1.5, -1.25, 0, 1.5, 1, 0.75, 1.5, 1.25, 8.5, 1.5, -1.25, 0, 1.5, 4.5, 0, 1.5, 7, 0.75, 1.5, 8.5, 8.5, 1.5, 8.5, 8.5, 1.5, -1.25, 0.75, 1.5, 1.25, 10.75, 1.5, 9.25, 9.75, 1.5, 10, 12.5, 1.5, 10.25, 12.75, 1.5, 9.5, 10.75, 1.5, 9.25, 12.75, 1.5, 9.5, 13.5, 1.5, 9.5, 13.5, 1.5, -1.25, 10.75, 1.5, -1.25, 0.75, 1.5, 10.75, 0.5, 1.5, 9.5, -0.25, 1.5, 9.5, -0.75, 1.5, 10.75, 12.5, 1.5, 26.5, 9.25, 1.5, 10.75, 0.75, 1.5, 10.75, 12.5, 1.5, 10.25, 9.75, 1.5, 10, 9.25, 1.5, 10.75, 12.5, 1.5, 26.5, 0.75, 1.5, 10.75, -0.75, 1.5, 10.75, -12.5, 1.5, 26.5, 12.5, 1.5, 26.5, -0.75, 1.5, 10.75, -12.5, 1.5, 10.5, -12.5, 1.5, 26.5)
@@ -449,6 +450,10 @@ points = PackedVector3Array(-11, 1.625, -3, -11, 1, -3, -10, 1, -3, -10, 1.625, 
 [sub_resource type="BoxMesh" id="BoxMesh_flnee"]
 lightmap_size_hint = Vector2i(14, 21)
 material = ExtResource("12_y4s1n")
+
+[sub_resource type="BoxMesh" id="BoxMesh_u0lml"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mwgd3"]
 
 [node name="Innout" type="Node3D"]
 
@@ -901,10 +906,76 @@ Dialogue = "In'n'Out Yummoy"
 LookDescription = "HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY HUNGRY "
 TouchDescription = "The Thrait Woman feels like delicious french fires."
 
+[node name="Behavior" parent="Thrait Woman" index="7" node_paths=PackedStringArray("thraits")]
+thraits = [null]
+
+[node name="FrontDoor" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.48719, 1.48682, 9.20931)
+
+[node name="DoorGlass" parent="FrontDoor" instance=ExtResource("15_e6u2e")]
+
+[node name="Behavior" parent="FrontDoor/DoorGlass" index="7" node_paths=PackedStringArray("PartnerDoor")]
+Transmit = true
+PartnerDoor = NodePath("../../DoorGlass2")
+Duration = 1.0
+
+[node name="DoorGlass2" parent="FrontDoor" instance=ExtResource("15_e6u2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.999356)
+
+[node name="Behavior" parent="FrontDoor/DoorGlass2" index="7" node_paths=PackedStringArray("PartnerDoor")]
+PartnerDoor = NodePath("../../DoorGlass")
+direction = Vector3(0, 0, 1)
+Duration = 1.0
+
+[node name="AreaTrigger" parent="FrontDoor" node_paths=PackedStringArray("Target") instance=ExtResource("16_g5cp3")]
+transform = Transform3D(7.50035, 0, 0, 0, 1, 0, -2.84217e-14, 0, 1.24666, 0.912859, 0.416683, 0.585333)
+Target = NodePath("../DoorGlass")
+ChildNumber = 7
+Entrance = true
+Exit = true
+OnVolumeExit = true
+OnVolumeEntered = true
+
+[node name="CollisionShape3D" parent="FrontDoor/AreaTrigger" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0893202, 0.153205, -0.0552983)
+
+[node name="Table1" type="Node3D" parent="." groups=["Table1"]]
+transform = Transform3D(0.342225, 0, 0, 0, 0.342225, 0, 0, 0, 0.342225, -6.96122, 2.03928, -4.40698)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Table1"]
+mesh = SubResource("BoxMesh_u0lml")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Table1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Table1/StaticBody3D"]
+shape = SubResource("BoxShape3D_mwgd3")
+
+[node name="Behavior" type="Node" parent="Table1"]
+
+[node name="Register" type="Node3D" parent="."]
+transform = Transform3D(0.585, 0, 0, 0, 0.585, 0, 0, 0, 0.585, 1.47516, 1.88109, -2.54529)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Register"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Register/StaticBody3D"]
+shape = SubResource("BoxShape3D_mwgd3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Register/StaticBody3D"]
+mesh = SubResource("BoxMesh_u0lml")
+skeleton = NodePath("../..")
+
+[node name="Behavior" type="Node" parent="Register/StaticBody3D"]
+script = ExtResource("18_1ps68")
+
 [connection signal="closed" from="DriveThru/DoorGlass/Behavior" to="DriveThru/AreaTrigger" method="_on_behavior_closed"]
 [connection signal="open" from="DriveThru/DoorGlass/Behavior" to="DriveThru/AreaTrigger" method="_on_behavior_open"]
+[connection signal="closed" from="FrontDoor/DoorGlass/Behavior" to="FrontDoor/AreaTrigger" method="_on_behavior_closed"]
+[connection signal="open" from="FrontDoor/DoorGlass/Behavior" to="FrontDoor/AreaTrigger" method="_on_behavior_open"]
 
 [editable path="DriveThru/DoorGlass"]
 [editable path="DriveThru/AreaTrigger"]
 [editable path="Thrait Woman"]
 [editable path="Thrait Woman/Thrait"]
+[editable path="FrontDoor/DoorGlass"]
+[editable path="FrontDoor/DoorGlass2"]
+[editable path="FrontDoor/AreaTrigger"]
