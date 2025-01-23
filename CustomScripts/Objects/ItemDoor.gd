@@ -27,7 +27,7 @@ func Item(item : String):
 	if (item == ItemToMatch && !opened):
 		ItemUsed = true
 		OpenDoor()
-		if PartnerDoor:
+		if PartnerDoor != null:
 			PartnerDoor.get_child(7).OpenDoor()
 		return true
 	else:
@@ -50,7 +50,8 @@ func OpenDoor():
 		moving = true
 		if Transmit:
 			open.emit()
-			PartnerDoor.get_child(7).OpenDoor()
+			if PartnerDoor != null:
+				PartnerDoor.get_child(7).OpenDoor()
 			
 		
 	
@@ -68,7 +69,8 @@ func Close():
 		moving = true
 		if Transmit:
 			closed.emit()
-			PartnerDoor.get_child(7).Close()
+			if PartnerDoor != null:
+				PartnerDoor.get_child(7).Close()
 		
 
 func RemoteTriggerActivate():

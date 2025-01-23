@@ -1,6 +1,7 @@
 extends Node3D
 var RCS : RayCastSystem = RayCastSystem.new()
 var active : bool = false
+@export var CharParent : Node3D
 var space_state
 var cam
 var mousepos
@@ -22,7 +23,24 @@ func _physics_process(delta):
 
 func _process(delta):
 	if Input.is_mouse_button_pressed(2):
+		fade_in(CharParent,0.05)
 		active = true
 	else:
+		fade_out(CharParent,1)
 		active = false
 	
+	
+func fade_out(node : Node3D,fade_duration : float):
+	var tween = get_tree().create_tween()
+	tween.tween_property(node, "modulate:a", 0, fade_duration)
+	tween.play()
+	await tween.finished
+	tween.kill()
+
+func fade_in(node : Node3D,fade_duration : float):
+	var tween = get_tree().create_tween()
+	tween.tween_property(node, "modulate:a", 1, fade_duration)
+	tween.play()
+	await tween.finished
+	tween.kill()
+

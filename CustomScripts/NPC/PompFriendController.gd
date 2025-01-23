@@ -17,3 +17,7 @@ func _on_kill_button_pressed():
 
 func _on_item_grab_pressed():
 	get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").emit_signal("Item_Grab")
+
+
+func _on_flash_light_button_pressed():
+	get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").emit_signal("Light_Toggle")

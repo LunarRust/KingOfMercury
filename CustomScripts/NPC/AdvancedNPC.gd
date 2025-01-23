@@ -7,6 +7,7 @@ extends CharacterBody3D
 @export var modelRoot : Node3D
 @export var HealthHandler : Node3D
 @export var InvManager : Node3D
+@export var FlashLight : SpotLight3D
 @export var DebugLabelParent : Node3D
 var TargetEntity
 var DoLookAt : bool = false
@@ -22,6 +23,8 @@ var MaxDistance : float
 
 @export_category("Attack Data")
 @export var attackThreshold : float = 1.5
+@export var AttackDistance : float = 2
+var AttackDistanceDefault : float
 @export var attackPower : int = 1
 @export var aggroRange : int = 10
 @export var walkName = "Walk"
@@ -37,6 +40,7 @@ var TargetIsItem : bool = false
 var TargetIsCreature : bool = true
 var velV2 : Vector2
 var forwardVel : float
+@onready var SoundSource : AudioStreamPlayer3D = self.get_node("AudioStreamPlayer3D")
 
 
 
@@ -46,8 +50,11 @@ var Interactions = load("res://Scripts/Interactions.cs")
 var InteractableObject = load("res://Scripts/InteractableObject.cs")
 var playerHealthInstance = playerHealth.new()
 
+var LightSound = preload("res://Sounds/FlashLight.ogg")
+
 func _ready():
 	MaxDistance = MaxDistanceDef
+	AttackDistanceDefault = AttackDistance
 	speed = MaxSpeed
 	if (TargetEntity == null):
 		print("Ouchie wawa! There's no defined player object for this enemy to chase! Trying to find one now.")
@@ -56,13 +63,15 @@ func _ready():
 		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Activate_Player_Target.connect(TargetPlayer)
 		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Kill_pomp.connect(KillSelf)
 		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Item_Grab.connect(LocateItem)
+		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Light_Toggle.connect(FlashLightToggle)
+		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Light_On.connect(FlashLightOn)
+		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Light_Off.connect(FlashLightOff)
 		active = true
 		nav_agent.target_desired_distance = MaxDistance
 	else:
 		active = true
-	pass
+	CheckGlobals()
 		
-
 func _physics_process(delta):
 	if (active):
 		if Input.is_physical_key_pressed(KEY_5):
@@ -78,7 +87,7 @@ func _physics_process(delta):
 			DoLookAt = false
 			TargetEntity = TargetLocator("NpcMarker",1.2)
 		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel").set_text("Target is: [color=red]" + str(TargetEntity.name) + "[/color]")
-		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel2").set_text("Attack Timer: [color=red]" + str(snapped(attackTimer,0.01)) + "[/color]")
+		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel2").set_text("Distance: [color=red]" + str(snapped(nav_agent.distance_to_target(),0.01)) + "[/color]")
 		
 		
 
@@ -87,6 +96,7 @@ func active_handling(delta):
 		hostile = false
 		print("Ouchie wawa! There's no target for this enemy to chase! Trying to find one now.")
 		TargetEntity = TargetLocator("player")
+		DoLookAt = true
 		TargetIsCreature = true
 	#print("velocity less than 1: " + str(velocity.length() < 1.0) + " " + str(velocity.length()))
 	if TargetIsCreature:
@@ -100,7 +110,7 @@ func active_handling(delta):
 			velocity = velocity.lerp(Vector3.ZERO, delta)
 			animTree["parameters/Normal2D/4/blend_position"] = float(HealthHandler.CoreHealthHandler.HP)
 			
-		if (position.distance_to(TargetEntity.position) < MaxDistance):
+		if (position.distance_to(TargetEntity.position) < AttackDistance):
 			attackTimer += 1 * delta
 
 		if (attackTimer > attackThreshold && attacking && hostile):
@@ -120,69 +130,60 @@ func active_handling(delta):
 		if (attackTimer > attackThreshold && position.distance_to(TargetEntity.position) < MaxDistance):
 			GrabItem()
 			attackTimer = 0
-			
+	
+	###
+	### Calculations based on speed and velocity
+	###
+	@warning_ignore("shadowed_variable")
 	var forwardVel = abs(velocity.dot(transform.basis.z)) + abs(velocity.dot(transform.basis.x))
 	forwardVel = forwardVel
 	if (position.distance_to(TargetEntity.position) < MaxDistance + 1.5):
 		speed = (nav_agent.distance_to_target() - 1)
 	else:
-		speed = (nav_agent.distance_to_target())
+		speed = (nav_agent.distance_to_target()) + 0.286
 	if speed >= MaxSpeed:
 		speed = MaxSpeed
-		
-	#velV2.x = 0s #abs(calc_angles_between(self,TargetEntity))
+	if (nav_agent.distance_to_target() < MaxDistance + 3.5 && nav_agent.distance_to_target() > MaxDistance):
+		if speed < 0.57:
+			speed = 0.57
+	
 	velV2.y = forwardVel - 0.5
-	if velV2.y < 0.3:
-		velV2.y += 0.186
 	if velV2.y < 0:
 		velV2.y = 0
+	
 	if (animTree != null):
 		animTree["parameters/Normal2D/blend_position"] = velV2
-	DebugLabelParent.get_child(0).text = ("Speed:  " +  str(speed))
-	DebugLabelParent.get_child(2).text =("velocity: " +  str(velV2.y))
-
 	
-	var current_direction := self.transform.basis.z
-	var target_direction := to_local(TargetEntity.position).normalized()
-	var vec1 = self.position
-	var vec2 = TargetEntity.position
 	if DoLookAt:
 		velV2.x = find_rotation_to()
 	else:
 		velV2.x = 0
-	#velV2.y = (snapped(self.get_velocity().length(),0.1)) * 0.1
 	DebugLabelParent.get_child(1).text = ("Blend X: " +  str(velV2.x))
-	#DebugLabelParent.get_child(2).text = ("Facing Target: " +  str(target_direction))
-	#if (animTree != null):
-		#animTree["parameters/Normal2D/blend_position"] = velV2
+	DebugLabelParent.get_child(0).text = ("Speed:  " +  str(speed))
+	DebugLabelParent.get_child(2).text =("velocity: " +  str(velV2.y))
 
-	
+	if speed > 1.2:
+		AttackDistance = 3
+	else:
+		AttackDistance = AttackDistanceDefault
 
 func update_target_location(target_location):
 	nav_agent.target_position = target_location
 	
 func handle_Move(delta):
-	
 	var direction = Vector3()
 	nav_agent.target_position = TargetEntity.global_position
 	direction = nav_agent.get_next_path_position() - global_position
 	direction = direction.normalized()
 	velocity = velocity.lerp(direction * speed, delta * acceleration)
 	#velocity = velocity.move_toward(direction * speed, .25)
-	
-	
-
 	var lookTarget = Vector3(global_position.x + velocity.x, global_position.y, global_position.z + velocity.z)
-
 	var targetPos: Vector2 = Vector2(lookTarget.x, lookTarget.z)
 	var modelPos : Vector2 = Vector2(modelRoot.global_position.x, modelRoot.global_position.z)
-
 	if(!nav_agent.is_target_reachable() && velocity.length() / speed < .3):
 		targetPos = Vector2(TargetEntity.global_position.x, TargetEntity.global_position.z)
-
 	var modelDir = -(modelPos - targetPos)
-	modelRoot.global_rotation.y = lerp_angle(modelRoot.global_rotation.y, atan2(modelDir.x, modelDir.y), delta * 6)
-	
+	modelRoot.global_rotation.y = lerp_angle(modelRoot.global_rotation.y, atan2(modelDir.x, modelDir.y), delta * 4)
 	move_and_slide()
 
 func Attack():
@@ -190,18 +191,17 @@ func Attack():
 		animTrigger(attackName)
 	elif (anim != null && TargetEntity.has_node("HealthHandler") && HealthHandler.CoreHealthHandler.HP < 5):
 		animTrigger("AttackLow")
-	if (position.distance_to(TargetEntity.position) < MaxDistance && TargetEntity.is_in_group("player")):
+	if (position.distance_to(TargetEntity.position) < AttackDistance && TargetEntity.is_in_group("player")):
 		playerHealthInstance.notsostatichealth(attackPower)
 	else:
-		if position.distance_to(TargetEntity.position) < MaxDistance && TargetEntity.has_node("NpcToNpcHealthHandler"):
+		if position.distance_to(TargetEntity.position) < AttackDistance && TargetEntity.has_node("NpcToNpcHealthHandler"):
 			TargetEntity.get_node("NpcToNpcHealthHandler").Hurt(1)
-		elif position.distance_to(TargetEntity.position) < MaxDistance && TargetEntity.has_node("HealthHandler"):
+		elif position.distance_to(TargetEntity.position) < AttackDistance && TargetEntity.has_node("HealthHandler"):
 			TargetEntity.get_node("HealthHandler").Hurt(1)
 	await get_tree().create_timer(1.0).timeout
 	pass
 	
 func GrabItem():
-	var BehaviorNode
 	if (anim != null && HealthHandler.CoreHealthHandler.HP > 5):
 		animTrigger("Touch")
 	elif (anim != null && HealthHandler.CoreHealthHandler.HP < 5):
@@ -211,6 +211,36 @@ func GrabItem():
 		if (i.has_method("Touch")):
 			i.Touch("AmNpc")
 	pass
+
+func FlashLightToggle():
+	animTrigger("Flashlight");
+	SoundSource.stream = LightSound
+	SoundSource.play()
+	if FlashLight.visible:
+		FlashLight.visible = false
+	else:
+		FlashLight.visible = true
+	print_rich("Flashlight toggled: [color=red]" + str(FlashLight.visible) + "[/color]")
+	
+func FlashLightOff():
+	animTrigger("Flashlight");
+	SoundSource.stream = LightSound
+	SoundSource.play()
+	FlashLight.visible = false
+	print_rich("Flashlight toggled: [color=red]" + "OFF" + "[/color]")
+	
+func FlashLightOn():
+	animTrigger("Flashlight");
+	SoundSource.stream = LightSound
+	SoundSource.play()
+	FlashLight.visible = true
+	print_rich("Flashlight toggled: [color=red]" + "ON" + "[/color]")
+	
+func CheckGlobals():
+	if get_tree().get_first_node_in_group("NpcSceneRules") != null:
+		if !get_tree().get_first_node_in_group("NpcSceneRules").FlashLightsEnabled:
+			if FlashLight.visible:
+				FlashLightOff()
 
 func TargetLocator(SpefTarget = "default",MaxDist = MaxDistanceDef):
 	var NearestTarget
@@ -231,29 +261,40 @@ func TargetLocator(SpefTarget = "default",MaxDist = MaxDistanceDef):
 		TargetIsItem = false
 		return NearestTarget
 	else:
+		hostile = false
 		NearestTarget = self
 		print_rich("new target: [color=red] NULL" + "[/color]")
 		DoLookAt = false
+		animTrigger("Shrug")
 		return NearestTarget
 
 func ItemLocator():
 	var NearestTarget
 	DoLookAt = true
 	NearestTarget = find_closest_or_furthest(self,"default",true)
-	print_rich("new target: [color=red]" + (NearestTarget.name) + "[/color]")
-	TargetIsCreature = false
-	TargetIsItem = true
-	for i in get_all_children(NearestTarget):
-		if self.get_node("InventoryGrid").can_add_item(create_item(i.get_node("Behavior").ItemID)):
-			return NearestTarget
-		else:
-			print("Inventory is full!")
-			animTrigger("Shrug")
-			return TargetLocator("player")
-	
+	if NearestTarget != null:
+		print_rich("new target: [color=red]" + (NearestTarget.name) + "[/color]")
+		TargetIsCreature = false
+		TargetIsItem = true
+		for i in get_all_children(NearestTarget):
+			if self.get_node("InventoryGrid").can_add_item(create_item(i.get_node("Behavior").ItemID)):
+				return NearestTarget
+			else:
+				print("Inventory is full!")
+				animTrigger("Shrug")
+				DoLookAt = false
+				NearestTarget = self
+				return NearestTarget
+	else:
+		print("Item is Null!")
+		animTrigger("Shrug")
+		hostile = false
+		DoLookAt = false
+		NearestTarget = self
+		return NearestTarget
 
 func LocateItem():
-	!hostile
+	hostile = false
 	TargetEntity = ItemLocator()
 	
 func get_all_children(in_node, array := []):
@@ -261,7 +302,6 @@ func get_all_children(in_node, array := []):
 	for child in in_node.get_children():
 		array = get_all_children(child, array)
 	return array
-	
 
 func animTrigger(triggername : String):
 	animTree["parameters/conditions/" + triggername] = true;
@@ -275,7 +315,6 @@ func create_item(prototype_id: String) -> InventoryItem:
 	return item
 
 func TargetEnimies():
-	hostile
 	Tset = true
 	
 func KillSelf():
@@ -285,9 +324,11 @@ func TargetPlayer():
 	hostile = false
 	TargetIsCreature = true
 	TargetIsItem = false
+	DoLookAt = true
 	TargetEntity = get_tree().get_first_node_in_group("player")
 	
 func find_closest_or_furthest(node: Object,group_name = "default",item = false, get_closest:= true) -> Object:
+	@warning_ignore("unassigned_variable")
 	var PossibleTargets : Array
 	if group_name == "default" && item == false:
 		for i in get_all_children(get_tree().get_root()):
@@ -296,19 +337,23 @@ func find_closest_or_furthest(node: Object,group_name = "default",item = false, 
 					if !i.get_parent().is_in_group("player") && !i.is_in_group("player"):
 						if !i.get_parent().is_in_group("PompNPC"):
 							PossibleTargets.append(i.get_parent())
-		var target_group = PossibleTargets
-		var distance_away = node.global_transform.origin.distance_to(target_group[0].global_transform.origin)
-		var return_node = target_group[0]
-		for index in target_group.size():
-			var distance = node.global_transform.origin.distance_to(target_group[index].global_transform.origin)
-			if get_closest == true && distance < distance_away:
-				distance_away = distance
-				return_node = target_group[index]
-			elif get_closest == false && distance > distance_away:
-				distance_away = distance
-				return_node = target_group[index]
-		return return_node
-	elif item == false:
+		if !PossibleTargets.is_empty():
+			var target_group = PossibleTargets
+			var distance_away = node.global_transform.origin.distance_to(target_group[0].global_transform.origin)
+			var return_node = target_group[0]
+			for index in target_group.size():
+				var distance = node.global_transform.origin.distance_to(target_group[index].global_transform.origin)
+				if get_closest == true && distance < distance_away:
+					distance_away = distance
+					return_node = target_group[index]
+				elif get_closest == false && distance > distance_away:
+					distance_away = distance
+					return_node = target_group[index]
+			return return_node
+		else:
+			animTrigger("Shrug")
+			return null
+	if item == false:
 		var target_group = get_tree().get_nodes_in_group(group_name)
 		var distance_away = node.global_transform.origin.distance_to(target_group[0].global_transform.origin)
 		var return_node = target_group[0]
@@ -326,19 +371,25 @@ func find_closest_or_furthest(node: Object,group_name = "default",item = false, 
 			for i in get_all_children(get_tree().get_root()):
 				if "ItemID" in i:
 					PossibleTargets.append(i.get_parent())
-		var target_group = PossibleTargets
-		var distance_away = node.global_transform.origin.distance_to(target_group[0].global_transform.origin)
-		var return_node = target_group[0]
-		for index in target_group.size():
-			var distance = node.global_transform.origin.distance_to(target_group[index].global_transform.origin)
-			if get_closest == true && distance < distance_away:
-				distance_away = distance
-				return_node = target_group[index]
-			elif get_closest == false && distance > distance_away:
-				distance_away = distance
-				return_node = target_group[index]
-		return return_node
-		
+			if !PossibleTargets.is_empty():
+				var target_group = PossibleTargets
+				var distance_away = node.global_transform.origin.distance_to(target_group[0].global_transform.origin)
+				var return_node = target_group[0]
+				for index in target_group.size():
+					var distance = node.global_transform.origin.distance_to(target_group[index].global_transform.origin)
+					if get_closest == true && distance < distance_away:
+						distance_away = distance
+						return_node = target_group[index]
+					elif get_closest == false && distance > distance_away:
+						distance_away = distance
+						return_node = target_group[index]
+				return return_node
+			else:
+				animTrigger("Shrug")
+				return null
+		else:
+			animTrigger("Shrug")
+			return null
 
 func find_rotation_to(degree = false):
 	var pos1 = self.global_transform.origin
@@ -346,43 +397,17 @@ func find_rotation_to(degree = false):
 	pos2.y = 2
 	# Calculate the direction vector from node1 to node2 and normalize it
 	var direction_to_node2 = (pos2 - pos1).normalized()
-	if (pos2 - pos1).length_squared() < 0.0001:
-		print("Nodes are too close; angle may be inaccurate.")
-	# Get the forward vector of node1 (assumes the forward vector is along the z-axis)
 	var forward_vector = modelRoot.global_transform.basis.z.normalized()
-
-	# Debug: Print vectors to ensure correctness
-	print("Forward Vector: ", forward_vector)
-	print("Direction to Node2: ", direction_to_node2)
-
 	# Calculate the angle between the forward vector and the direction vector
 	var angle = forward_vector.angle_to(direction_to_node2)
-
 	# Use cross product to determine the angle's sign (relative to the Y-axis)
 	var cross_product = forward_vector.cross(direction_to_node2)
-
-	# Debug: Print cross product to verify sign determination
-	print("Cross Product: ", cross_product)
-
 	# Adjust angle based on the cross product's Y-component
 	if cross_product.y < 0:
 			angle = -angle
-
 	# Convert the angle to degrees (if needed)
 	var angle_degrees = rad_to_deg(angle)
 	if(degree):
 		return angle_degrees
 	else:
 		return angle
-	
-func get_angle_between_nodes(node_a, node_b):
-		var forward_a = node_a.global_transform.basis.z
-		var forward_b = node_b.global_transform.basis.z
-		return forward_a.angle_to(forward_b) 
-	
-func check_if_facing(target, threshold): 
-	var facing_dir = global_transform.basis.z
-	var my_pos = global_transform.origin 
-	if abs(my_pos.direction_to(target.global_transform.origin).x - facing_dir.x) < threshold:
-		if abs(my_pos.direction_to(target.global_transform.origin).y - facing_dir.y) < threshold:
-			return true

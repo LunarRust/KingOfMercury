@@ -6,12 +6,13 @@ extends Node
 @export var Entrance : bool
 @export var Exit : bool
 @export var OnVolumeExit : bool
+@export var OnVolumeEntered : bool
 var opened : bool
 
 
 #TODO Item gets door stuck while player is in AreaTrigger
 func _on_area_entered(area):
-	if !OnVolumeExit:
+	if OnVolumeEntered:
 		print("area entered")
 		print_rich("is Entrance: [color=red]" + str(Entrance) + "[/color] and is opened: [color=red]" + str(opened) + "[/color] and is moving: [color=red]" + str(Target.get_child(ChildNumber).moving) + "[/color]")
 		if !Target.get_child(ChildNumber).moving:
@@ -22,6 +23,9 @@ func _on_area_entered(area):
 				false:
 					if Entrance:
 						open()
+	else:
+		await get_tree().create_timer((Target.get_child(ChildNumber).Duration) + 0.1).timeout
+		_on_area_entered(area)
 			
 		
 func open():
@@ -54,3 +58,6 @@ func _on_area_exited(area):
 				false:
 					if Entrance:
 						open()
+	else:
+		await get_tree().create_timer((Target.get_child(ChildNumber).Duration) + 0.1).timeout
+		_on_area_exited(area)
