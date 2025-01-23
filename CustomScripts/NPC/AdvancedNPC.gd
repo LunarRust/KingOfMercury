@@ -40,6 +40,9 @@ var TargetIsItem : bool = false
 var TargetIsCreature : bool = true
 var velV2 : Vector2
 var forwardVel : float
+var PointNavActive : bool
+var InstID
+var SignalBusKOM
 @onready var SoundSource : AudioStreamPlayer3D = self.get_node("AudioStreamPlayer3D")
 
 
@@ -53,19 +56,23 @@ var playerHealthInstance = playerHealth.new()
 var LightSound = preload("res://Sounds/FlashLight.ogg")
 
 func _ready():
+	InstID = self.get_instance_id()
+	SignalBusKOM = get_tree().get_first_node_in_group("player").get_node("KOMSignalBus")
+	SignalBusKOM.PompNpcInstances.append(InstID)
 	MaxDistance = MaxDistanceDef
 	AttackDistanceDefault = AttackDistance
 	speed = MaxSpeed
 	if (TargetEntity == null):
 		print("Ouchie wawa! There's no defined player object for this enemy to chase! Trying to find one now.")
 		TargetEntity = get_tree().get_first_node_in_group("player")
-		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Activate_Pomp_Target.connect(TargetEnimies)
-		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Activate_Player_Target.connect(TargetPlayer)
-		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Kill_pomp.connect(KillSelf)
-		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Item_Grab.connect(LocateItem)
-		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Light_Toggle.connect(FlashLightToggle)
-		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Light_On.connect(FlashLightOn)
-		get_tree().get_first_node_in_group("player").get_node("KOMSignalBus").Light_Off.connect(FlashLightOff)
+		SignalBusKOM.Activate_Pomp_Target.connect(TargetEnimies)
+		SignalBusKOM.Activate_Player_Target.connect(TargetPlayer)
+		SignalBusKOM.Kill_pomp.connect(KillSelf)
+		SignalBusKOM.Item_Grab.connect(LocateItem)
+		SignalBusKOM.Light_Toggle.connect(FlashLightToggle)
+		SignalBusKOM.Light_On.connect(FlashLightOn)
+		SignalBusKOM.Light_Off.connect(FlashLightOff)
+		SignalBusKOM.NavToPoint.connect(NavToPoint)
 		active = true
 		nav_agent.target_desired_distance = MaxDistance
 	else:
@@ -241,6 +248,10 @@ func CheckGlobals():
 		if !get_tree().get_first_node_in_group("NpcSceneRules").FlashLightsEnabled:
 			if FlashLight.visible:
 				FlashLightOff()
+				
+func NavToPoint(id : int):
+	if id == InstID:
+		TargetEntity = TargetLocator("NavMark" + str(InstID))
 
 func TargetLocator(SpefTarget = "default",MaxDist = MaxDistanceDef):
 	var NearestTarget
@@ -318,6 +329,7 @@ func TargetEnimies():
 	Tset = true
 	
 func KillSelf():
+	SignalBusKOM.PompNpcInstances.erase(InstID)
 	self.get_node("NpcToNpcHealthHandler").Hurt(99999)
 	
 func TargetPlayer():

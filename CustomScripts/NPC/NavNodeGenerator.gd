@@ -6,30 +6,31 @@ extends Node
 @export var Property : String
 @export var SourceProperty: Node
 @export var Value : String
+var id
 var ScenePack
-var active = false
+var start : bool = false
 var Spawned = false
 var textboxDest
 
 
 func _ready():
-	active = true
+	start = true
+	pass
 	
 func _process(delta):
-		if active && !Spawned:
-			Spawned = true
-			Packload()
+	if start == true:
+		if self.get_parent().active:
+			if !Spawned:
+				Spawned = true
+				Packload()
 
 	
 func create():
+	id = self.get_parent().InstID
 	var node : Node = ScenePack.instantiate()
 	get_tree().current_scene.add_child(node)
 	node.global_position = TargetLoc.get_collision_point()
-	if Property != null:
-		if node.Property:
-			print(str(node.Property))
-			node.Property = SourceProperty.Value
-			print(str(node.Property))
+	node.InstID = id
 				
 	print(node.get_tree_string_pretty())
 	#TargetLoc.get_collision_point()

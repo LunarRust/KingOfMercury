@@ -23,9 +23,9 @@ func _on_area_entered(area):
 				false:
 					if Entrance:
 						open()
-	else:
-		await get_tree().create_timer((Target.get_child(ChildNumber).Duration) + 0.1).timeout
-		_on_area_entered(area)
+		else:
+			await get_tree().create_timer((Target.get_child(ChildNumber).Duration) + 0.1).timeout
+			_on_area_entered(area)
 			
 		
 func open():
@@ -47,17 +47,17 @@ func _on_behavior_closed():
 
 
 func _on_area_exited(area):
-	if !Target.get_child(ChildNumber).moving:
 		if OnVolumeExit:
 			print("area exited")
 			print_rich("is Entrance: [color=red]" + str(Entrance) + "[/color] and is opened: [color=red]" + str(opened) + "[/color] and is moving: [color=red]" + str(Target.get_child(ChildNumber).moving) + "[/color]")
-			match opened:
-				true:
-					if Exit:
-						close()
-				false:
-					if Entrance:
-						open()
-	else:
-		await get_tree().create_timer((Target.get_child(ChildNumber).Duration) + 0.1).timeout
-		_on_area_exited(area)
+			if !Target.get_child(ChildNumber).moving:
+				match opened:
+					true:
+						if Exit:
+							close()
+					false:
+						if Entrance:
+							open()
+			else:
+				await get_tree().create_timer((Target.get_child(ChildNumber).Duration) + 0.1).timeout
+				_on_area_exited(area)
