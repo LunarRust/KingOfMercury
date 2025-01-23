@@ -6,6 +6,7 @@ addons/
 *.import
 *.cs
 .import/
+CustomMaps/autosave/
 export.cfg
 export_presets.cfg
 
