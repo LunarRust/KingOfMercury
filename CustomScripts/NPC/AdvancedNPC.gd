@@ -6,6 +6,8 @@ extends CharacterBody3D
 @export var animTree : AnimationTree
 @export var modelRoot : Node3D
 @export var HealthHandler : Node3D
+@export var PompBehavior : Node
+@export var DialogueSystem : Node3D
 @export var InvManager : Node3D
 @export var FlashLight : SpotLight3D
 @export var DebugLabelParent : Node3D
@@ -33,16 +35,19 @@ var AttackDistanceDefault : float
 
 var attackTimer : float
 var attacking : bool = false
-var active : bool = false
+var running : bool = false
 var hurt : bool = false
 var Tset : bool = false
 var TargetIsItem : bool = false
 var TargetIsCreature : bool = true
 var velV2 : Vector2
 var forwardVel : float
-var PointNavActive : bool
+var PointNavrunning : bool
 var InstID
 var SignalBusKOM
+var NavNodeTarget : Node
+var player
+var ActionOnArrive : int = 0
 @onready var SoundSource : AudioStreamPlayer3D = self.get_node("AudioStreamPlayer3D")
 
 
@@ -58,6 +63,7 @@ var LightSound = preload("res://Sounds/FlashLight.ogg")
 func _ready():
 	InstID = self.get_instance_id()
 	SignalBusKOM = get_tree().get_first_node_in_group("player").get_node("KOMSignalBus")
+	player = get_tree().get_first_node_in_group("player")
 	SignalBusKOM.PompNpcInstances.append(InstID)
 	MaxDistance = MaxDistanceDef
 	AttackDistanceDefault = AttackDistance
@@ -73,17 +79,18 @@ func _ready():
 		SignalBusKOM.Light_On.connect(FlashLightOn)
 		SignalBusKOM.Light_Off.connect(FlashLightOff)
 		SignalBusKOM.NavToPoint.connect(NavToPoint)
-		active = true
+		running = true
 		nav_agent.target_desired_distance = MaxDistance
 	else:
-		active = true
+		running = true
 	CheckGlobals()
+	
 		
 func _physics_process(delta):
-	if (active):
+	if (running):
 		if Input.is_physical_key_pressed(KEY_5):
 			TargetEntity = TargetLocator()
-		active_handling(delta)
+		running_handling(delta)
 		if Tset:
 			TargetEntity = TargetLocator()
 		if Input.is_physical_key_pressed(KEY_6):
@@ -94,11 +101,12 @@ func _physics_process(delta):
 			DoLookAt = false
 			TargetEntity = TargetLocator("NpcMarker",1.2)
 		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel").set_text("Target is: [color=red]" + str(TargetEntity.name) + "[/color]")
-		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel2").set_text("Distance: [color=red]" + str(snapped(nav_agent.distance_to_target(),0.01)) + "[/color]")
+		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel2").set_text("AttackTimer: [color=red]" + str(snapped(attackTimer,0.01)) + "[/color]")
+		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel3").set_text("Distance: [color=red]" + str(snapped(position.distance_to(TargetEntity.position),0.01)) + "[/color]")
 		
 		
 
-func active_handling(delta):
+func running_handling(delta):
 	if (TargetEntity == null):
 		hostile = false
 		print("Ouchie wawa! There's no target for this enemy to chase! Trying to find one now.")
@@ -119,10 +127,24 @@ func active_handling(delta):
 			
 		if (position.distance_to(TargetEntity.position) < AttackDistance):
 			attackTimer += 1 * delta
-
+		if position.distance_to(TargetEntity.position) < AttackDistance && ActionOnArrive != 0:
+			ArrivalAction(ActionOnArrive)
+		if attackTimer > attackThreshold:
+			if NavNodeTarget != null:
+				if NavNodeTarget.is_in_group("KillNPC") && TargetEntity.name == "NavNode":
+					attackTimer = 0
+					var currentMark = get_tree().get_first_node_in_group("NavMark" + str(InstID))
+					currentMark.queue_free()
+					if NavNodeTarget.is_in_group("Respawn"):
+						SignalBusKOM.emit_signal("CreateNpc")
+					KillSelf()
+			
 		if (attackTimer > attackThreshold && attacking && hostile):
 			Attack()
 			attackTimer = 0
+		if attackTimer > attackThreshold:
+			attackTimer = 0
+		
 			
 	if TargetIsItem:
 		if (position.distance_to(TargetEntity.position) > MaxDistance && !hurt):
@@ -162,10 +184,10 @@ func active_handling(delta):
 		animTree["parameters/Normal2D/blend_position"] = velV2
 	
 	if DoLookAt:
-		velV2.x = find_rotation_to()
+		velV2.x = find_rotation_to(self,player)
 	else:
 		velV2.x = 0
-	DebugLabelParent.get_child(1).text = ("Blend X: " +  str(velV2.x))
+	DebugLabelParent.get_child(1).text = ("InstanceID " +  str(InstID))
 	DebugLabelParent.get_child(0).text = ("Speed:  " +  str(speed))
 	DebugLabelParent.get_child(2).text =("velocity: " +  str(velV2.y))
 
@@ -249,9 +271,30 @@ func CheckGlobals():
 			if FlashLight.visible:
 				FlashLightOff()
 				
-func NavToPoint(id : int):
+func NavToPoint(id : int,doLook : bool,NavNodeTargetFromSignalBus : Node,distance : float,Action : int):
+	NavNodeTarget = NavNodeTargetFromSignalBus
+	ActionOnArrive = Action
 	if id == InstID:
-		TargetEntity = TargetLocator("NavMark" + str(InstID))
+		TargetEntity = TargetLocator("NavMark" + str(InstID),distance)
+	if doLook == true:
+		DoLookAt = true
+	else:
+		DoLookAt = false
+
+func ArrivalAction(action : int):
+	match action:
+		1:
+			PompBehavior.Talk()
+			ActionOnArrive = 0
+		2:
+			PompBehavior.Touch()
+			ActionOnArrive = 0
+		3:
+			PompBehavior.Look()
+			ActionOnArrive = 0
+		4:
+			HealthHandler.Hurt(1)
+			ActionOnArrive = 0
 
 func TargetLocator(SpefTarget = "default",MaxDist = MaxDistanceDef):
 	var NearestTarget
@@ -403,9 +446,9 @@ func find_closest_or_furthest(node: Object,group_name = "default",item = false, 
 			animTrigger("Shrug")
 			return null
 
-func find_rotation_to(degree = false):
-	var pos1 = self.global_transform.origin
-	var pos2 = TargetEntity.global_transform.origin
+func find_rotation_to(node1 : Node3D,node2 : Node3D,degree = false):
+	var pos1 = node1.global_transform.origin
+	var pos2 = node2.global_transform.origin
 	pos2.y = 2
 	# Calculate the direction vector from node1 to node2 and normalize it
 	var direction_to_node2 = (pos2 - pos1).normalized()

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://wtckr3mak6q8"]
 
 [ext_resource type="Script" path="res://Scripts/DialogueSystem.cs" id="1_n7kor"]
-[ext_resource type="AudioStream" uid="uid://ceeqgi6kqmdhw" path="res://Sounds/NPCSound1.ogg" id="2_fe6yc"]
+[ext_resource type="AudioStream" uid="uid://ccykari10jirc" path="res://Sounds/NPCSound1.ogg" id="2_fe6yc"]
 [ext_resource type="Script" path="res://Scripts/EnemyHealthHandler.cs" id="3_vdlcr"]
 [ext_resource type="Script" path="res://CustomScripts/NPC/NpcToNpcHealthController.gd" id="4_fxjlu"]
 [ext_resource type="Script" path="res://Scripts/InteractableObject.cs" id="4_v4p6n"]

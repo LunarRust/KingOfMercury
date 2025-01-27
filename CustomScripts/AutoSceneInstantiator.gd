@@ -3,9 +3,6 @@ extends Node
 @export var textbox : LineEdit
 #@export var LocationRelative : Vector3
 @export var TargetLoc : RayCast3D
-@export var Property : String
-@export var SourceProperty: Node
-@export var Value : String
 var ScenePack
 var active = false
 var Spawned = false
@@ -25,12 +22,6 @@ func create():
 	var node : Node = ScenePack.instantiate()
 	get_tree().current_scene.add_child(node)
 	node.global_position = TargetLoc.get_collision_point()
-	if Property != null:
-		if node.Property:
-			print(str(node.Property))
-			node.Property = SourceProperty.Value
-			print(str(node.Property))
-				
 	print(node.get_tree_string_pretty())
 	#TargetLoc.get_collision_point()
 	

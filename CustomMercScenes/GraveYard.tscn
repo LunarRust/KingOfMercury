@@ -5096,11 +5096,10 @@ shape = SubResource("BoxShape3D_dkp3w")
 [node name="Thrait Woman" parent="." instance=ExtResource("17_tmsj8")]
 transform = Transform3D(0.748134, 0, 0.663548, 0, 1, 0, -0.663548, 0, 0.748134, 7.99483, 2.00675, 0.81973)
 
-[node name="DialogueSystem" parent="Thrait Woman" index="1" node_paths=PackedStringArray("soundSource")]
+[node name="DialogueSystem" parent="Thrait Woman" index="1"]
 Dialogue = "Please be respectful during your visit here. These people have earned a peaceful rest..."
 LookDescription = "The Thrait woman looks back at you solemnly, with wetted eyes."
 TouchDescription = "you reach out to soothe her, but she bats your hand away. She clearly wants to be alone right now."
-soundSource = NodePath("../AudioStreamPlayer3D")
 
 [node name="Skeleton3D" parent="Thrait Woman/Thrait/ThraitArm" index="0"]
 bones/1/rotation = Quaternion(0.148926, -9.14159e-11, -3.4889e-08, 0.988848)

@@ -9,8 +9,7 @@ extends Node
 @export var follow : bool
 #@export var PlayerObject : MeshInstance3D
 
-var dialogueSystem : CSharpScript = preload("res://Scripts/DialogueSystem.cs")
-var InteractionButton : CSharpScript = preload("res://Scripts/InteractionButton.cs")
+var InteractionButton = load("res://Scripts/InteractionButton.cs")
 @onready var DialogueBox = get_tree().get_first_node_in_group("player").get_node("UI Overlay/CanvasLayer/DialogueParent/DialogueBox")
 
 func StartAttack(name : StringName):
@@ -26,6 +25,7 @@ func Touch():
 
 func Talk():
 	AnimTrigger("Talk")
+	self.get_parent().DialogueSystem.DialogueProcessing()
 	
 func Hurt():
 	AnimTrigger("Hurt")
