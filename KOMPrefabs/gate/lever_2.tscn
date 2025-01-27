@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bh1c510gwvq0n" path="res://Models/textures/LeverText.png" id="1_4r0e6"]
 [ext_resource type="Script" path="res://CustomScripts/Objects/gate/GateLever.gd" id="2_chvqu"]
-[ext_resource type="AudioStream" uid="uid://51g5apmcby1j" path="res://Sounds/Lever.ogg" id="3_156g8"]
+[ext_resource type="AudioStream" uid="uid://dtsxu3riubgll" path="res://Sounds/Lever.ogg" id="3_156g8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kc7sx"]
 resource_name = "Lever"
