@@ -5,6 +5,7 @@ addons/
 # Godot-specific ignores
 *.import
 *.cs
+*.csproj
 .import/
 CustomMaps/autosave/
 export.cfg
