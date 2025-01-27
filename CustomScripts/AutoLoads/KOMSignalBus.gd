@@ -8,7 +8,8 @@ signal Item_Grab
 signal Light_Toggle
 signal Light_Off
 signal Light_On
-signal NavToPoint(id : int)
+signal NavToPoint(id : int,doLook : bool,NavNodeTarget : Node,distance : float,ActionOnArrive : int)
+signal CreateNpc
 
 @export_category("Data Handles")
 @export var PompNpcInstances : Array
