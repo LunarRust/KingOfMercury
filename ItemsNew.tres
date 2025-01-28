@@ -23,27 +23,27 @@ json_data = "[
         \"usable\": \"true\",
         \"width\": 1
     },
-	    {
-        \"id\": \"Syringe1\",
-        \"name\": \"Red Syringe\",
-        \"image\": \"res://Sprites/Items/Syringe1.png\",
+    {
         \"description\": \"An unknown syringe, with an unknown bright red fluid in it.\",
-        \"height\": 2,
-        \"width\": 1,
-        \"usable\": \"true\",
         \"health\": 3,
-        \"mana\": -2,
-    },
-	    {
-        \"id\": \"Syringe2\",
-        \"name\": \"Purple Syringe\",
-        \"image\": \"res://Sprites/Items/Syringe2.png\",
-        \"description\": \"An unknown syringe, with some sort of purple stuff in it?\",
         \"height\": 2,
-        \"width\": 1,
+        \"id\": \"Syringe1\",
+        \"image\": \"res://Sprites/Items/Syringe1.png\",
+        \"mana\": -2,
+        \"name\": \"Red Syringe\",
         \"usable\": \"true\",
+        \"width\": 1
+    },
+    {
+        \"description\": \"An unknown syringe, with some sort of purple stuff in it?\",
         \"health\": -2,
+        \"height\": 2,
+        \"id\": \"Syringe2\",
+        \"image\": \"res://Sprites/Items/Syringe2.png\",
         \"mana\": 2,
+        \"name\": \"Purple Syringe\",
+        \"usable\": \"true\",
+        \"width\": 1
     },
     {
         \"description\": \"A rusted, but very special key.\",
@@ -117,4 +117,13 @@ json_data = "[
         \"usable\": \"false\",
         \"width\": 2
     },
+    {
+        \"description\": \"Fresh, hand-cut potatoes prepared in 100% sunflower oil\",
+        \"health\": 3,
+        \"height\": 1,
+        \"id\": \"Fries\",
+        \"image\": \"res://KOMSprites/innout/fries.png\",
+        \"usable\": \"true\",
+        \"width\": 2
+    }
 ]"

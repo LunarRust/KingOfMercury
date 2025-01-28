@@ -1,8 +1,8 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dt1vc57aflwkv"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dbmhhjvxafqa"]
 
-[ext_resource type="Texture2D" uid="uid://d2tpd7l4vf1tk" path="res://Sprites/World/DNASIGN4.png" id="1_kgpia"]
+[ext_resource type="Texture2D" uid="uid://cyg2snr1w5xw5" path="res://addons/func_godot/textures/default_texture.png" id="1"]
 
 [resource]
-albedo_texture = ExtResource("1_kgpia")
+albedo_texture = ExtResource("1")
 metallic_specular = 0.0
 texture_filter = 2

@@ -22,6 +22,7 @@ skeleton = NodePath("")
 
 [node name="SpriteParent" type="Node3D" parent="."]
 transform = Transform3D(0.485, 0, 0, 0, 0.485, 0, 0, 0, 0.485, 0, 0.618197, 0)
+visible = false
 
 [node name="CharSprite" type="Sprite3D" parent="SpriteParent"]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0, 0)

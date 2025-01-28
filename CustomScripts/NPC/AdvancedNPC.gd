@@ -12,7 +12,9 @@ extends CharacterBody3D
 @export var FlashLight : SpotLight3D
 @export var DebugLabelParent : Node3D
 var TargetEntity
+var PreviousTarget
 var DoLookAt : bool = false
+var LookTarget : Node3D
 
 @export_category("Characteristics")
 @export var hostile : bool = true
@@ -79,6 +81,7 @@ func _ready():
 		SignalBusKOM.Light_On.connect(FlashLightOn)
 		SignalBusKOM.Light_Off.connect(FlashLightOff)
 		SignalBusKOM.NavToPoint.connect(NavToPoint)
+		SignalBusKOM.ItemSpef.connect(NavToItem)
 		running = true
 		nav_agent.target_desired_distance = MaxDistance
 	else:
@@ -111,6 +114,7 @@ func running_handling(delta):
 		hostile = false
 		print("Ouchie wawa! There's no target for this enemy to chase! Trying to find one now.")
 		TargetEntity = TargetLocator("player")
+		LookTarget = TargetEntity
 		DoLookAt = true
 		TargetIsCreature = true
 	#print("velocity less than 1: " + str(velocity.length() < 1.0) + " " + str(velocity.length()))
@@ -173,8 +177,8 @@ func running_handling(delta):
 	if speed >= MaxSpeed:
 		speed = MaxSpeed
 	if (nav_agent.distance_to_target() < MaxDistance + 3.5 && nav_agent.distance_to_target() > MaxDistance):
-		if speed < 0.57:
-			speed = 0.57
+		if speed < 0.58:
+			speed = 0.58
 	
 	velV2.y = forwardVel - 0.5
 	if velV2.y < 0:
@@ -184,7 +188,7 @@ func running_handling(delta):
 		animTree["parameters/Normal2D/blend_position"] = velV2
 	
 	if DoLookAt:
-		velV2.x = find_rotation_to(self,player)
+		velV2.x = find_rotation_to(self,LookTarget)
 	else:
 		velV2.x = 0
 	DebugLabelParent.get_child(1).text = ("InstanceID " +  str(InstID))
@@ -239,6 +243,10 @@ func GrabItem():
 	for i in get_all_children(TargetEntity):
 		if (i.has_method("Touch")):
 			i.Touch("AmNpc")
+	hostile = false
+	TargetIsItem = false
+	TargetEntity = PreviousTarget
+	LookTarget = player
 	pass
 
 func FlashLightToggle():
@@ -271,15 +279,26 @@ func CheckGlobals():
 			if FlashLight.visible:
 				FlashLightOff()
 				
-func NavToPoint(id : int,doLook : bool,NavNodeTargetFromSignalBus : Node,distance : float,Action : int):
+func NavToPoint(id : int,doLook : bool,NavNodeTargetFromSignalBus : Node,distance : float,Action : int,LookTargetFromBus : String):
 	NavNodeTarget = NavNodeTargetFromSignalBus
 	ActionOnArrive = Action
 	if id == InstID:
 		TargetEntity = TargetLocator("NavMark" + str(InstID),distance)
 	if doLook == true:
+		if LookTargetFromBus == "default":
+			LookTarget = NavNodeTargetFromSignalBus
+		else:
+			LookTarget = find_closest_or_furthest(self,LookTargetFromBus)
 		DoLookAt = true
 	else:
 		DoLookAt = false
+		
+func NavToItem(id : int,NavNodeTargetFromSignalBus : Node,Action : int):
+	NavNodeTarget = NavNodeTargetFromSignalBus
+	ActionOnArrive = Action
+	MaxDistance = 1
+	if id == InstID:
+		TargetEntity = ItemLocator()
 
 func ArrivalAction(action : int):
 	match action:
@@ -295,6 +314,8 @@ func ArrivalAction(action : int):
 		4:
 			HealthHandler.Hurt(1)
 			ActionOnArrive = 0
+		0:
+			pass
 
 func TargetLocator(SpefTarget = "default",MaxDist = MaxDistanceDef):
 	var NearestTarget
@@ -304,15 +325,18 @@ func TargetLocator(SpefTarget = "default",MaxDist = MaxDistanceDef):
 		MaxDistance = MaxDistanceDef
 	if SpefTarget != "default":
 		NearestTarget = find_closest_or_furthest(self,SpefTarget)
+		LookTarget = NearestTarget
 		DoLookAt = true
 	else:
 		NearestTarget = find_closest_or_furthest(self)
+		LookTarget = player
 		DoLookAt = true
 	Tset = false
 	if NearestTarget != null:
 		print_rich("new target: [color=red]" + (NearestTarget.name) + "[/color]")
 		TargetIsCreature = true
 		TargetIsItem = false
+		PreviousTarget = TargetEntity
 		return NearestTarget
 	else:
 		hostile = false
@@ -320,6 +344,7 @@ func TargetLocator(SpefTarget = "default",MaxDist = MaxDistanceDef):
 		print_rich("new target: [color=red] NULL" + "[/color]")
 		DoLookAt = false
 		animTrigger("Shrug")
+		PreviousTarget = TargetEntity
 		return NearestTarget
 
 func ItemLocator():
@@ -332,12 +357,14 @@ func ItemLocator():
 		TargetIsItem = true
 		for i in get_all_children(NearestTarget):
 			if self.get_node("InventoryGrid").can_add_item(create_item(i.get_node("Behavior").ItemID)):
+				LookTarget = NearestTarget
 				return NearestTarget
 			else:
 				print("Inventory is full!")
 				animTrigger("Shrug")
 				DoLookAt = false
 				NearestTarget = self
+				PreviousTarget = TargetEntity
 				return NearestTarget
 	else:
 		print("Item is Null!")
@@ -345,6 +372,7 @@ func ItemLocator():
 		hostile = false
 		DoLookAt = false
 		NearestTarget = self
+		PreviousTarget = TargetEntity
 		return NearestTarget
 
 func LocateItem():
