@@ -4,15 +4,12 @@
 [ext_resource type="Script" path="res://CustomScripts/Objects/In'nOut/RegisterCon.gd" id="2_xxd42"]
 [ext_resource type="AudioStream" uid="uid://cwu83yi6qfjwb" path="res://Sounds/tick3.ogg" id="3_pdmdl"]
 [ext_resource type="Script" path="res://CustomScripts/Objects/In'nOut/MenuGrabber.gd" id="4_kpyi6"]
+[ext_resource type="Curve" uid="uid://iwl6freusb4t" path="res://KOMResources/Curves/CamGrabberCurve.tres" id="5_4wvn6"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_v3qml"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s47yy"]
 size = Vector3(3.12469, 2.60184, 0.765625)
-
-[sub_resource type="Curve" id="Curve_vu1sg"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.446341, 0.740242), 1.58767, 1.58767, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 3
 
 [node name="CamGrabber" type="StaticBody3D"]
 transform = Transform3D(-0.7, 0, -1.05697e-07, 0, 0.7, 0, 1.05697e-07, 0, -0.7, 0, 0, 0)
@@ -44,9 +41,13 @@ shape = SubResource("BoxShape3D_s47yy")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1.42857, 0, 2.84217e-14, 0, 1.42857, 0, -2.84217e-14, 0, 1.42857, 2.38419e-07, 0.268545, 1.17346)
 
-[node name="Behavior" type="Node" parent="."]
+[node name="Behavior" type="Node" parent="." node_paths=PackedStringArray("MenuCam", "UIToShow", "CollisionShape", "MeshInstance")]
 script = ExtResource("4_kpyi6")
-CamCurve = SubResource("Curve_vu1sg")
+MenuCam = NodePath("../Camera3D")
+UIToShow = NodePath("../CanvasLayer")
+CamCurve = ExtResource("5_4wvn6")
+CollisionShape = NodePath("../CollisionShape3D")
+MeshInstance = NodePath("../MeshInstance3D")
 
 [node name="SoundSource" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_pdmdl")

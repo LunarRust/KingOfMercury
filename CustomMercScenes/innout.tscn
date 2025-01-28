@@ -4853,7 +4853,7 @@ size = Vector3(0.898865, 0.203552, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_v3qml"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s47yy"]
-size = Vector3(3.21567, 2.60184, 0.0859375)
+size = Vector3(3.43115, 2.60184, 0.0859375)
 
 [sub_resource type="Curve" id="Curve_vu1sg"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.446341, 0.740242), 1.58767, 1.58767, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -5287,45 +5287,49 @@ shape = SubResource("ConvexPolygonShape3D_folaq")
 transform = Transform3D(1, 0, -2.13163e-14, 0, 1, 0, 2.13163e-14, 0, 1, 14.0041, 2.04636, -6.45034)
 
 [node name="Skeleton3D" parent="PlayerObject/Player Model/PompRig" index="0"]
-bones/0/position = Vector3(3.09516e-09, 0.873973, -0.158666)
+bones/0/position = Vector3(1.89717e-09, 0.884037, -0.158666)
 bones/1/rotation = Quaternion(-0.0628926, 0.000945223, 0.00010601, 0.99802)
-bones/2/rotation = Quaternion(-0.12694, -0.0929672, -0.00739829, 0.987516)
-bones/3/rotation = Quaternion(-0.00206253, -0.000134272, -0.000424818, 0.999998)
+bones/2/rotation = Quaternion(-0.111677, -0.0664185, -0.00459462, 0.991512)
+bones/3/rotation = Quaternion(-0.00205341, -0.000123936, -0.000425138, 0.999998)
 bones/4/rotation = Quaternion(0.0298244, 2.17346e-15, 7.11069e-09, 0.999555)
-bones/5/rotation = Quaternion(0.164415, -0.159468, 0.0299766, 0.972954)
-bones/6/position = Vector3(0.0545652, 0.0798815, 0.0816364)
-bones/7/position = Vector3(0.0229282, 0.0751564, 0.100347)
-bones/13/position = Vector3(-0.000508866, 0.0731988, -0.0167939)
-bones/14/position = Vector3(-0.0574203, 0.0816727, 0.0816044)
-bones/15/position = Vector3(-0.022821, 0.0751751, 0.100325)
-bones/16/position = Vector3(0.0447865, 0.14441, 0.0369137)
-bones/16/scale = Vector3(0.714708, 0.714708, 0.714708)
-bones/17/position = Vector3(0.0694304, 0.121735, 0.0647615)
-bones/18/position = Vector3(-0.0694304, 0.121735, 0.0647615)
-bones/19/position = Vector3(-0.0767608, 0.139584, 0.0237725)
-bones/19/scale = Vector3(0.714773, 0.714773, 0.714773)
-bones/20/position = Vector3(0.000236277, 0.0851592, 0.0935954)
-bones/21/position = Vector3(0.0689676, 0.169019, 0.0462502)
-bones/22/position = Vector3(-0.0692389, 0.176297, 0.0449736)
+bones/5/rotation = Quaternion(0.164169, -0.108039, 0.0202667, 0.980288)
+bones/6/position = Vector3(0.0545822, 0.0799319, 0.0816191)
+bones/7/position = Vector3(0.0229018, 0.075131, 0.100355)
+bones/13/position = Vector3(-0.000297961, 0.0734439, -0.0159884)
+bones/14/position = Vector3(-0.0563019, 0.0810799, 0.0816995)
+bones/15/position = Vector3(-0.0228198, 0.0751454, 0.100338)
+bones/16/position = Vector3(0.0447304, 0.144414, 0.0369406)
+bones/16/scale = Vector3(0.714725, 0.714726, 0.714726)
+bones/17/position = Vector3(0.0694359, 0.121771, 0.0647508)
+bones/18/position = Vector3(-0.0694359, 0.121771, 0.0647508)
+bones/19/position = Vector3(-0.0768085, 0.139573, 0.0237451)
+bones/19/scale = Vector3(0.714776, 0.714776, 0.714776)
+bones/20/position = Vector3(0.000184073, 0.0853531, 0.0935193)
+bones/21/position = Vector3(0.069111, 0.172416, 0.0454455)
+bones/22/position = Vector3(-0.0693245, 0.177983, 0.0443957)
 bones/22/rotation = Quaternion(0.574497, -0.00427106, -0.0029976, 0.81849)
 bones/23/rotation = Quaternion(-0.535559, -0.441949, -0.458366, 0.554759)
-bones/24/rotation = Quaternion(-0.394682, 0.662217, -0.464485, 0.43583)
-bones/25/rotation = Quaternion(0.0951012, -0.116107, 0.000708905, 0.988673)
-bones/28/position = Vector3(0.00333272, 0.131266, -0.0413224)
-bones/28/rotation = Quaternion(-0.390461, -0.664414, 0.465807, 0.434878)
-bones/29/rotation = Quaternion(0.0976321, 0.11432, 0.00402224, 0.988627)
+bones/24/rotation = Quaternion(-0.386083, 0.640125, -0.486224, 0.452511)
+bones/25/rotation = Quaternion(0.0584007, -0.108087, 0.000718918, 0.992424)
+bones/28/position = Vector3(0.0032947, 0.131263, -0.0413241)
+bones/28/rotation = Quaternion(-0.380576, -0.642613, 0.4879, 0.451846)
+bones/29/rotation = Quaternion(0.0623006, 0.105475, 0.00578424, 0.992452)
 bones/30/rotation = Quaternion(-0.00711013, -0.0729187, 0.0929765, 0.992969)
-bones/35/rotation = Quaternion(0.975522, -4.01248e-08, 3.51199e-07, 0.219901)
-bones/36/rotation = Quaternion(0.236802, 2.58972e-09, 2.84751e-08, 0.971558)
-bones/37/rotation = Quaternion(-0.601818, 1.90409e-07, -2.86969e-07, 0.798634)
-bones/40/rotation = Quaternion(0.976188, -6.96583e-08, 1.14831e-07, 0.216927)
-bones/41/rotation = Quaternion(0.230543, -3.91457e-09, -3.32614e-08, 0.973062)
-bones/42/rotation = Quaternion(-0.601818, -1.90409e-07, 2.86969e-07, 0.798634)
+bones/35/rotation = Quaternion(0.97908, -3.42209e-08, 3.51823e-07, 0.203475)
+bones/36/rotation = Quaternion(0.189191, 1.32567e-09, 2.67546e-08, 0.98194)
+bones/37/rotation = Quaternion(-0.583825, 1.93567e-07, -2.7839e-07, 0.811879)
+bones/40/rotation = Quaternion(0.980394, -6.67871e-08, 1.16148e-07, 0.197049)
+bones/41/rotation = Quaternion(0.190804, -2.55948e-09, -3.3393e-08, 0.981628)
+bones/42/rotation = Quaternion(-0.583825, -1.93567e-07, 2.7839e-07, 0.811879)
 
 [node name="AnimationTree" parent="PlayerObject" index="11"]
 libraries = {
 "": SubResource("AnimationLibrary_17qq7")
 }
+
+[node name="AutoSpawer" parent="PlayerObject" index="15" node_paths=PackedStringArray("TargetLoc")]
+TargetLoc = NodePath("../..")
+LocOffset = Vector3(5, 500, 5)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(4.29315, 0, 0, 0, 0.678013, 0, 0, 0, 0.203195, -2.57722, 2.32738, 1.75745)
@@ -5484,13 +5488,9 @@ transform = Transform3D(-0.7, 0, -1.05697e-07, 0, 0.7, 0, 1.05697e-07, 0, -0.7, 
 [node name="CollisionShape3D" parent="RegisterGrabber" index="2"]
 transform = Transform3D(1, 0, 3.56692e-12, 0, 1, 0, -3.56692e-12, 0, 1, -0.00407314, -0.255341, 0.117188)
 
-[node name="Behavior" parent="RegisterGrabber" index="4" node_paths=PackedStringArray("PlayerCam", "MenuCam", "head", "UIToShow", "CollisionShape", "MeshInstance")]
+[node name="Behavior" parent="RegisterGrabber" index="4" node_paths=PackedStringArray("PlayerCam", "head")]
 PlayerCam = NodePath("../../PlayerObject/Head/SpringArm3D Z/MainCamera")
-MenuCam = NodePath("../Camera3D")
 head = NodePath("../../PlayerObject/Head")
-UIToShow = NodePath("../CanvasLayer")
-CollisionShape = NodePath("../CollisionShape3D")
-MeshInstance = NodePath("../MeshInstance3D")
 
 [node name="Sketchfab_Scene" parent="RegisterGrabber" instance=ExtResource("22_se4gb")]
 transform = Transform3D(-6.9064e-08, 0, -1.58, 0, 1.58, 0, 1.58, 0, -6.9064e-08, 0, -0.31476, 0)
@@ -5548,6 +5548,7 @@ transform = Transform3D(-1.97491e-07, 0, 0.7, 0, 0.7, 0, -0.7, 0, -1.97491e-07, 
 
 [node name="CanvasLayer" type="CanvasLayer" parent="DriveThruParent/DriveThruGrabber"]
 layer = 2
+visible = false
 
 [node name="DriveThruButton" type="TextureButton" parent="DriveThruParent/DriveThruGrabber/CanvasLayer" node_paths=PackedStringArray("DriveThruDoorBehavior")]
 anchors_preset = 8
@@ -5555,9 +5556,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 251.0
+offset_left = 263.0
 offset_top = -33.0
-offset_right = 283.0
+offset_right = 295.0
 offset_bottom = 31.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -5575,7 +5576,7 @@ visible = false
 mesh = SubResource("BoxMesh_v3qml")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DriveThruParent/DriveThruGrabber"]
-transform = Transform3D(1, 0, 3.58114e-12, 0, 1, 0, -3.58114e-12, 0, 1, -0.115742, 0.354496, -0.49641)
+transform = Transform3D(1, 0, 3.58114e-12, 0, 1, 0, -3.58114e-12, 0, 1, -0.00800133, 0.354496, -0.496408)
 shape = SubResource("BoxShape3D_s47yy")
 
 [node name="Camera3D" type="Camera3D" parent="DriveThruParent/DriveThruGrabber"]
