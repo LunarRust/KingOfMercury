@@ -125,5 +125,12 @@ json_data = "[
         \"image\": \"res://KOMSprites/innout/fries.png\",
         \"usable\": \"true\",
         \"width\": 2
+    },
+    {
+        \"description\": \"100% american beef. no additives, fillers or preservatives\",
+        \"height\": 2,
+        \"id\": \"Burger\",
+        \"image\": \"res://KOMSprites/innout/In-N-Out-Burger.png\",
+        \"width\": 2
     }
 ]"
