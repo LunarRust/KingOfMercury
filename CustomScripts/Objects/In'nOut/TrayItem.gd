@@ -1,32 +1,52 @@
 extends Node
+@export var Scene : PackedScene
+@export var TargetLoc : Node3D
+@export var distance : float
+var ScenePack
 var currentID
 var currentMark
 var currentNPC
 var SignalBusKOM
 @export var NavNodeTarget : Node
-@export var SoundSource : AudioStreamPlayer
-@export var sound : AudioStream
-@export var PosRefrence : Node3D
-# Called when the node enters the scene tree for the first time.
+
+
 func _ready():
 	SignalBusKOM = get_tree().get_first_node_in_group("player").get_node("KOMSignalBus")
-	pass # Replace with function body.
 
-
-
-func Task():
-	currentNPC = find_closest_or_furthest(PosRefrence,"PompNPC")
-	currentID = currentNPC.InstID
-	currentMark = get_tree().get_first_node_in_group("NavMark" + str(currentID))
-	print_rich("Register Current ID: [color=red]" + str(currentID) + "[/color]")
-	for i in get_all_children(get_tree().get_root()):
-		if i.is_in_group("PompNPC"):
-			if i.InstID == currentID:
-				SignalBusKOM.emit_signal("NavToPoint",currentID,false,NavNodeTarget,1,0,"default")
+func Item(item : String):
+	match item:
+		"Fries":
+			Scene = load("res://KOMPrefabs/Items/Fries_pickup.tscn") as PackedScene
+			Packload()
+			return true
+		_:
+			return false
 	
-	currentMark.global_position = NavNodeTarget.global_position
-	currentMark = null
-	currentID = null
+			
+
+# Called when the node enters the scene tree for the first time.
+func Packload():
+		var node : Node = Scene.instantiate()
+		get_tree().current_scene.add_child(node)
+		node.global_position = TargetLoc.global_position
+		print(node.get_tree_string_pretty())
+		
+		NavNodeTarget = node
+		await get_tree().create_timer(0.1).timeout
+
+		currentNPC = find_closest_or_furthest(self.get_parent(),"PompNPC")
+		currentID = currentNPC.InstID
+		currentMark = get_tree().get_first_node_in_group("NavMark" + str(currentID))
+		currentNPC.MaxSpeed = 2
+		print_rich("Spawner Current ID: [color=red]" + str(currentID) + "[/color]")
+		for i in get_all_children(get_tree().get_root()):
+			if i.is_in_group("PompNPC"):
+				if i.InstID == currentID:
+					SignalBusKOM.emit_signal("ItemSpef",currentID,NavNodeTarget,0)
+		
+		currentMark.global_position = NavNodeTarget.global_position
+		currentMark = null
+		currentID = null
 
 func find_closest_or_furthest(node: Object,group_name,get_closest:= true) -> Object:
 	@warning_ignore("unassigned_variable")
@@ -35,6 +55,7 @@ func find_closest_or_furthest(node: Object,group_name,get_closest:= true) -> Obj
 		if i.is_class("Node3D"):
 			if i.is_in_group(group_name):
 				PossibleTargets.append(i)
+				print(str(PossibleTargets))
 	if !PossibleTargets.is_empty():
 		var target_group = PossibleTargets
 		var distance_away = node.global_transform.origin.distance_to(target_group[0].global_transform.origin)
@@ -57,8 +78,3 @@ func get_all_children(in_node, array := []):
 		array = get_all_children(child, array)
 	return array
 
-
-func _on_pressed():
-	SoundSource.stream = sound
-	SoundSource.play()
-	Task()

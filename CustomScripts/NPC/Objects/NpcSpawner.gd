@@ -2,6 +2,7 @@ extends Node
 @export var Scene : PackedScene
 @export var TargetLoc : RayCast3D
 @export var distance : float
+@export var SpawnOnLoad : bool = false 
 var ScenePack
 var currentID
 var currentMark
@@ -11,6 +12,9 @@ var SignalBusKOM
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	SignalBusKOM = get_tree().get_first_node_in_group("player").get_node("KOMSignalBus")
+	await get_tree().create_timer(0.3).timeout
+	if SpawnOnLoad:
+		Packload()
 
 func Packload():
 		var node : Node = Scene.instantiate()
@@ -29,7 +33,7 @@ func Packload():
 		for i in get_all_children(get_tree().get_root()):
 			if i.is_in_group("PompNPC"):
 				if i.InstID == currentID:
-					SignalBusKOM.emit_signal("NavToPoint",currentID,true,NavNodeTarget,distance,1)
+					SignalBusKOM.emit_signal("NavToPoint",currentID,true,NavNodeTarget,distance,1,"player")
 		
 		currentMark.global_position = NavNodeTarget.global_position
 		currentMark = null
