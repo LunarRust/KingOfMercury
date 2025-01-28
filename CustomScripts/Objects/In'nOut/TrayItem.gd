@@ -19,6 +19,10 @@ func Item(item : String):
 			Scene = load("res://KOMPrefabs/Items/Fries_pickup.tscn") as PackedScene
 			Packload()
 			return true
+		"Burger":
+			Scene = load("res://KOMPrefabs/Items/Burger_pickup.tscn") as PackedScene
+			Packload()
+			return true
 		_:
 			return false
 	

@@ -220,10 +220,8 @@ func handle_Move(delta):
 	move_and_slide()
 
 func Attack():
-	if (anim != null && TargetEntity.has_node("HealthHandler") && HealthHandler.CoreHealthHandler.HP > 5):
+	if (anim != null && TargetEntity.has_node("HealthHandler")):
 		animTrigger(attackName)
-	elif (anim != null && TargetEntity.has_node("HealthHandler") && HealthHandler.CoreHealthHandler.HP < 5):
-		animTrigger("AttackLow")
 	if (position.distance_to(TargetEntity.position) < AttackDistance && TargetEntity.is_in_group("player")):
 		playerHealthInstance.notsostatichealth(attackPower)
 	else:
@@ -235,10 +233,8 @@ func Attack():
 	pass
 	
 func GrabItem():
-	if (anim != null && HealthHandler.CoreHealthHandler.HP > 5):
+	if (anim != null):
 		animTrigger("Touch")
-	elif (anim != null && HealthHandler.CoreHealthHandler.HP < 5):
-		animTrigger("TouchLow")
 	await get_tree().create_timer(1.0).timeout
 	for i in get_all_children(TargetEntity):
 		if (i.has_method("Touch")):
