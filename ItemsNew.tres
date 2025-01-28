@@ -127,7 +127,7 @@ json_data = "[
         \"width\": 2
     },
     {
-        \"description\": \"100% american beef. no additives, fillers or preservatives\",
+        \"description\": \"Two American beef patties, with hand-leafed lettuce, tomato, spread, with or without onions, stacked high on a freshly baked bun.\",
         \"height\": 2,
         \"id\": \"Burger\",
         \"image\": \"res://KOMSprites/innout/In-N-Out-Burger.png\",
