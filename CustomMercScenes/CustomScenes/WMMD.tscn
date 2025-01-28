@@ -565,38 +565,6 @@ offset_bottom = 34.0
 script = ExtResource("9_5ig80")
 destination = "t_pupa"
 
-[node name="Transient 4" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 0, 0.454902, 1)
-position = Vector2(-100, 327)
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_ha46u")
-autoplay = "default"
-frame = 15
-frame_progress = 0.909682
-script = ExtResource("2_7hioc")
-Time = 3.0
-tweenPosition = true
-endPosition = Vector2(0, 10)
-
-[node name="TrnsLabel" type="RichTextLabel" parent="Transient 4"]
-offset_left = -41.0
-offset_top = 23.0
-offset_right = 49.0
-offset_bottom = 60.0
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("7_fuxsr")
-theme_override_font_sizes/normal_font_size = 10
-bbcode_enabled = true
-text = "[wave]Transient Location"
-
-[node name="TextureButton" type="TextureButton" parent="Transient 4"]
-offset_left = -33.0
-offset_top = -30.0
-offset_right = 32.0
-offset_bottom = 34.0
-script = ExtResource("9_5ig80")
-destination = "t_call"
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("16_rj35a")
 volume_db = -11.556
@@ -733,3 +701,37 @@ offset_right = 32.0
 offset_bottom = 34.0
 script = ExtResource("14_uxeiw")
 destination = "CustomMercScenes/Office"
+
+[node name="innout" type="AnimatedSprite2D" parent="Custom Location Parent"]
+modulate = Color(1, 0, 0.454902, 1)
+position = Vector2(267, 302)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ha46u")
+autoplay = "default"
+frame = 15
+frame_progress = 0.909682
+script = ExtResource("2_7hioc")
+Time = 3.0
+tweenPosition = true
+endPosition = Vector2(0, 10)
+
+[node name="TrnsLabel" type="RichTextLabel" parent="Custom Location Parent/innout"]
+offset_left = -14.0
+offset_top = 26.5
+offset_right = 76.0
+offset_bottom = 63.5
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("7_fuxsr")
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "[wave]In'n'Out
+"
+
+[node name="TextureButton" type="TextureButton" parent="Custom Location Parent/innout"]
+offset_left = -33.0
+offset_top = -30.0
+offset_right = 32.0
+offset_bottom = 34.0
+script = ExtResource("14_uxeiw")
+destination = "CustomMercScenes/innout"
+sceneLoader = "res://Scenes/TipSceneLoader.tscn"

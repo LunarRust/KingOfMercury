@@ -2,7 +2,8 @@ extends Node
 @export var Scene : PackedScene
 @export var textbox : LineEdit
 #@export var LocationRelative : Vector3
-@export var TargetLoc : RayCast3D
+@export var TargetLoc : Node3D
+@export var LocOffset : Vector3
 var ScenePack
 var active = false
 var Spawned = false
@@ -21,7 +22,11 @@ func _process(delta):
 func create():
 	var node : Node = ScenePack.instantiate()
 	get_tree().current_scene.add_child(node)
-	node.global_position = TargetLoc.get_collision_point()
+	if TargetLoc is RayCast3D:
+		node.global_position = TargetLoc.get_collision_point()
+	else:
+		node.global_position = TargetLoc.global_position
+	node.position += LocOffset
 	print(node.get_tree_string_pretty())
 	#TargetLoc.get_collision_point()
 	
@@ -34,6 +39,9 @@ func Packload():
 	else:
 		var node : Node = Scene.instantiate()
 		get_tree().current_scene.add_child(node)
-		node.global_position = TargetLoc.get_collision_point()
+		if TargetLoc is RayCast3D:
+			node.global_position = TargetLoc.get_collision_point()
+		else:
+			node.global_position = TargetLoc.global_position
+		node.position += LocOffset
 		print(node.get_tree_string_pretty())
-		TargetLoc.get_collision_point()

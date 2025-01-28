@@ -1,18 +1,20 @@
 extends Node
+@export_category("Assignments")
 @export var PlayerCam : Camera3D
 @export var MenuCam : Camera3D
+@export var head : Node3D
 @export var UIToShow : CanvasLayer
 @export var CamCurve : Curve
-@export var delay : float
 @export var CollisionShape : CollisionShape3D
 @export var MeshInstance : MeshInstance3D
+@export_category("Funcs to run")
+@export var Function = {}
 var used : bool = false
 var t = 0.0
 var MenuCamCurrentTransform
 var PlayerCamCurrentTransform
 var playerObject : Node3D
-@export var head : Node3D
-@export var camera : Camera3D
+
 var hudmanager = load("res://prefabs/hudmanager.cs")
 
 func _ready():
@@ -26,6 +28,12 @@ func _ready():
 func Touch():
 	MenuCamCurrentTransform = MenuCam.global_transform
 	PlayerCamCurrentTransform = PlayerCam.global_transform
+	
+	if !Function.is_empty():
+		for i in Function:
+			var object = Function.keys()[i]
+			var method =  Function.values()[i]
+			object.method()
 	
 	print("Lever Touched!")
 	if(!used):
@@ -41,13 +49,13 @@ func _process(delta):
 			hudmanager.ShowHUD()
 			UIToShow.hide()
 			t = 0
-			MeshInstance.global_position.y = MeshInstance.global_position.y - 5
-			CollisionShape.global_position.y = CollisionShape.global_position.y - 5
+			MeshInstance.global_position.y = MeshInstance.global_position.y - 500
+			CollisionShape.global_position.y = CollisionShape.global_position.y - 500
 			PlayerCam.global_transform = PlayerCam.get_parent().global_transform
 			var tween
 			tween = create_tween()
 			tween.set_parallel()
-			tween.tween_property(camera, "rotation", Vector3.ZERO, 0.5).set_trans(Tween.TRANS_QUAD)
+			tween.tween_property(PlayerCam, "rotation", Vector3.ZERO, 0.5).set_trans(Tween.TRANS_QUAD)
 			tween.tween_property(head, "rotation", Vector3.ZERO, 0.5).set_trans(Tween.TRANS_QUAD)
 			#sPlayerCam.make_current()
 			
@@ -57,15 +65,9 @@ func _process(delta):
 	
 	
 func _OpenGate():
-	MeshInstance.global_position.y = MeshInstance.global_position.y + 5
-	CollisionShape.global_position.y = CollisionShape.global_position.y + 5
-	#playerObject.set_process(false)
-	#MenuCam.set_process(true)
-	#MenuCam.make_current()
+	MeshInstance.global_position.y = MeshInstance.global_position.y + 500
+	CollisionShape.global_position.y = CollisionShape.global_position.y + 500
 	hudmanager.HideHUD()
 	UIToShow.show()
 	print("Lever flipped!")
 	used = true
-	await get_tree().create_timer(delay).timeout
-	
-	pass
