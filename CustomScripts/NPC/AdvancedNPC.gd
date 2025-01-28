@@ -177,8 +177,8 @@ func running_handling(delta):
 	if speed >= MaxSpeed:
 		speed = MaxSpeed
 	if (nav_agent.distance_to_target() < MaxDistance + 3.5 && nav_agent.distance_to_target() > MaxDistance):
-		if speed < 0.58:
-			speed = 0.58
+		if speed < 0.8:
+			speed = 0.8
 	
 	velV2.y = forwardVel - 0.5
 	if velV2.y < 0:

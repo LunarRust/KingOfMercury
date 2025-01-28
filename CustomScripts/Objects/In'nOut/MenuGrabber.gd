@@ -1,18 +1,21 @@
 extends Node
+@export_category("Assignments")
 @export var PlayerCam : Camera3D
 @export var MenuCam : Camera3D
+@export var head : Node3D
 @export var UIToShow : CanvasLayer
 @export var CamCurve : Curve
 @export var delay : float
 @export var CollisionShape : CollisionShape3D
 @export var MeshInstance : MeshInstance3D
+@export_category("Funcs to run")
+@export var Function = {}
 var used : bool = false
 var t = 0.0
 var MenuCamCurrentTransform
 var PlayerCamCurrentTransform
 var playerObject : Node3D
-@export var head : Node3D
-@export var camera : Camera3D
+
 var hudmanager = load("res://prefabs/hudmanager.cs")
 
 func _ready():
@@ -47,7 +50,7 @@ func _process(delta):
 			var tween
 			tween = create_tween()
 			tween.set_parallel()
-			tween.tween_property(camera, "rotation", Vector3.ZERO, 0.5).set_trans(Tween.TRANS_QUAD)
+			tween.tween_property(PlayerCam, "rotation", Vector3.ZERO, 0.5).set_trans(Tween.TRANS_QUAD)
 			tween.tween_property(head, "rotation", Vector3.ZERO, 0.5).set_trans(Tween.TRANS_QUAD)
 			#sPlayerCam.make_current()
 			

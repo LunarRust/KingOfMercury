@@ -2,6 +2,7 @@ extends Node
 
 
 @export var Target : StaticBody3D
+@export var DoorBehavior : Node
 @export var ChildNumber : int
 @export var Entrance : bool
 @export var Exit : bool
@@ -15,7 +16,7 @@ func _on_area_entered(area):
 	if OnVolumeEntered:
 		print("area entered")
 		print_rich("is Entrance: [color=red]" + str(Entrance) + "[/color] and is opened: [color=red]" + str(opened) + "[/color] and is moving: [color=red]" + str(Target.get_child(ChildNumber).moving) + "[/color]")
-		if !Target.get_child(ChildNumber).moving:
+		if !DoorBehavior.moving:
 			match opened:
 				true:
 					if Exit:
@@ -50,7 +51,7 @@ func _on_area_exited(area):
 		if OnVolumeExit:
 			print("area exited")
 			print_rich("is Entrance: [color=red]" + str(Entrance) + "[/color] and is opened: [color=red]" + str(opened) + "[/color] and is moving: [color=red]" + str(Target.get_child(ChildNumber).moving) + "[/color]")
-			if !Target.get_child(ChildNumber).moving:
+			if !DoorBehavior.moving:
 				match opened:
 					true:
 						if Exit:
