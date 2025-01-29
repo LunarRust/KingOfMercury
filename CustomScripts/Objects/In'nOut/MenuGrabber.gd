@@ -33,7 +33,7 @@ func Touch():
 		for i in Function:
 			var object = Function.keys()[i]
 			var method =  Function.values()[i]
-			object.method()
+			object.method
 	
 	print("Lever Touched!")
 	if(!used):
