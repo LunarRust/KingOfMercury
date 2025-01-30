@@ -3,12 +3,17 @@ extends Node
 @export var PlayerCam : Camera3D
 @export var MenuCam : Camera3D
 @export var head : Node3D
-@export var UIToShow : CanvasLayer
+@export var CanvasToShow : CanvasLayer
 @export var CamCurve : Curve
 @export var CollisionShape : CollisionShape3D
 @export var MeshInstance : MeshInstance3D
-@export_category("Funcs to run")
-@export var Function = {}
+@export var PlayerInvManager : Node3D
+@export var MenuInvCtlGrid : CtrlInventoryGridEx
+@export var UIToShow : Array[Node2D] = []
+
+
+var PlayerInvCtlGrid
+
 var used : bool = false
 var t = 0.0
 var MenuCamCurrentTransform
@@ -22,6 +27,8 @@ func _ready():
 	MenuCam.set_process(false)
 	PlayerCam = get_viewport().get_camera_3d()
 	playerObject = get_tree().get_first_node_in_group("player") as Node3D
+	
+	PlayerInvCtlGrid = PlayerInvManager.invCtrl
 	MenuCamCurrentTransform = MenuCam.global_transform
 	PlayerCamCurrentTransform = PlayerCam.global_transform
 	
@@ -29,16 +36,11 @@ func Touch():
 	MenuCamCurrentTransform = MenuCam.global_transform
 	PlayerCamCurrentTransform = PlayerCam.global_transform
 	
-	if !Function.is_empty():
-		for i in Function:
-			var object = Function.keys()[i]
-			var method =  Function.values()[i]
-			object.method()
 	
-	print("Lever Touched!")
+	print("CamGrab Touched!")
 	if(!used):
-		_OpenGate()
-	pass
+		CameraGrab()
+	
 	
 func _process(delta):
 	if used:
@@ -46,8 +48,11 @@ func _process(delta):
 			used = false
 			#MenuCam.set_process(false)
 			playerObject.set_process(true)
-			hudmanager.ShowHUD()
-			UIToShow.hide()
+			PlayerInvManager.invCtrl = PlayerInvCtlGrid
+			CanvasToShow.hide()
+			if !UIToShow.is_empty():
+				for i in UIToShow:
+					i.hide()
 			t = 0
 			MeshInstance.global_position.y = MeshInstance.global_position.y - 500
 			CollisionShape.global_position.y = CollisionShape.global_position.y - 500
@@ -64,10 +69,13 @@ func _process(delta):
 		PlayerCam.global_transform = PlayerCamCurrentTransform.interpolate_with(MenuCamCurrentTransform,CamCurve.sample(t))
 	
 	
-func _OpenGate():
+func CameraGrab():
 	MeshInstance.global_position.y = MeshInstance.global_position.y + 500
 	CollisionShape.global_position.y = CollisionShape.global_position.y + 500
-	hudmanager.HideHUD()
-	UIToShow.show()
+	CanvasToShow.show()
+	PlayerInvManager.invCtrl = MenuInvCtlGrid
+	if !UIToShow.is_empty():
+		for i in UIToShow:
+			i.show()
 	print("Lever flipped!")
 	used = true

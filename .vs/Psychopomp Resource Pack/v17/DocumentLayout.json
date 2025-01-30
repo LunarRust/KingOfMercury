@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BEE26FC1-E2F9-4EF7-80D7-6A02E36FBCCF}|Psychopomp Resource Pack.csproj|c:\\users\\je0976317\\godotprojects\\kingofmercury\\scripts\\interactionbuttonmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEE26FC1-E2F9-4EF7-80D7-6A02E36FBCCF}|Psychopomp Resource Pack.csproj|solutionrelative:scripts\\interactionbuttonmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InteractionButtonMaster.cs",
+              "DocumentMoniker": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\InteractionButtonMaster.cs",
+              "RelativeDocumentMoniker": "Scripts\\InteractionButtonMaster.cs",
+              "ToolTip": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\InteractionButtonMaster.cs",
+              "RelativeToolTip": "Scripts\\InteractionButtonMaster.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T16:40:16.644Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
