@@ -7,9 +7,7 @@ extends Node
 @export var CamCurve : Curve
 @export var CollisionShape : CollisionShape3D
 @export var MeshInstance : MeshInstance3D
-@export var PlayerInvManager : Node3D
-@export var MenuInvCtlGrid : CtrlInventoryGridEx
-@export var UIToShow : Array[Node2D] = []
+@export var UIToToggle : Array[Node2D] = []
 
 
 var PlayerInvCtlGrid
@@ -28,7 +26,8 @@ func _ready():
 	PlayerCam = get_viewport().get_camera_3d()
 	playerObject = get_tree().get_first_node_in_group("player") as Node3D
 	
-	PlayerInvCtlGrid = PlayerInvManager.invCtrl
+	await get_tree().create_timer(0.3).timeout
+	
 	MenuCamCurrentTransform = MenuCam.global_transform
 	PlayerCamCurrentTransform = PlayerCam.global_transform
 	
@@ -48,11 +47,13 @@ func _process(delta):
 			used = false
 			#MenuCam.set_process(false)
 			playerObject.set_process(true)
-			PlayerInvManager.invCtrl = PlayerInvCtlGrid
 			CanvasToShow.hide()
-			if !UIToShow.is_empty():
-				for i in UIToShow:
-					i.hide()
+			if !UIToToggle.is_empty():
+				for i in UIToToggle:
+					print_rich("Showing: [color=red]" + str(i.name) + "[/color]")
+					i.show()
+			else:
+				print("No UI to show!")
 			t = 0
 			MeshInstance.global_position.y = MeshInstance.global_position.y - 500
 			CollisionShape.global_position.y = CollisionShape.global_position.y - 500
@@ -73,9 +74,11 @@ func CameraGrab():
 	MeshInstance.global_position.y = MeshInstance.global_position.y + 500
 	CollisionShape.global_position.y = CollisionShape.global_position.y + 500
 	CanvasToShow.show()
-	PlayerInvManager.invCtrl = MenuInvCtlGrid
-	if !UIToShow.is_empty():
-		for i in UIToShow:
-			i.show()
+	if !UIToToggle.is_empty():
+		for i in UIToToggle:
+			print_rich("Hiding: [color=red]" + str(i.name) + "[/color]")
+			i.hide()
+	else:
+		print("No UI to hide!")
 	print("Lever flipped!")
 	used = true

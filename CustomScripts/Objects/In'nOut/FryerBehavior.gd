@@ -1,44 +1,153 @@
 extends Node
 @export var FryBasketAnim : AnimationTree
 @export var FryerSound : AudioStreamPlayer
-var up = true
-var model
+var up = false
+var ItemInBasket : bool = false
+var ItemInBasketName : String
+var RecivedItem : String
 @export var TargetLoc : Node3D
-@export var Models : Array[Resource]
-
-
-func Item(item : String):
-	match item:
-		"Fries":
-			model = Models[0] as PackedScene
-			Packload()
-			return true
-		"Burger":
-			model = Models[1] as PackedScene
-			Packload()
-			return true
-		_:
-			return false
-
-
-func Packload():
-	var node : Node = model.instantiate()
-	get_tree().current_scene.add_child(node)
-	if TargetLoc is RayCast3D:
-		node.global_position = TargetLoc.get_collision_point()
-	else:
-		node.global_position = TargetLoc.global_position
-	print(node.get_tree_string_pretty())
-
-func Touch():
-	FryerSound.play()
-	if up:
-		animTrigger("Down")
-		up = false
-	else:
-		animTrigger("Up")
-		up = true
+@export var SpriteObject : Sprite3D
+@export var AnimatedSpriteObject : AnimatedSprite3D
+@export var Sprites : Array[Resource]
+@export var DebugLabels : Node3D
+var inv : Inventory
+var NpcInv : Inventory
+var used : bool = false
+var Cooking : bool = false
+var CookTime : float
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	inv = InventoryManager.inventoryInstance
+	animTrigger("Down")
+	up = false
+	pass # Replace with function body.
 	
+
+func create_item(prototype_id: String) -> InventoryItem:
+	var item: InventoryItem = InventoryItem.new()
+	item.protoset = NpcInv.item_protoset
+	item.prototype_id = prototype_id
+	return item
+
+func _process(delta):
+	DebugLabels.get_child(0).set_text("Basket up: " + str(up))
+	DebugLabels.get_child(1).set_text("Has Item: " + str(ItemInBasket))
+	DebugLabels.get_child(2).set_text("Cook Time: " + str(snapped(CookTime,0.01)))
+	if Input.is_physical_key_pressed(KEY_SPACE):
+		animTrigger("Down")
+		if ItemInBasket:
+			Cooking = true
+		up = false
+	if Cooking:
+		CookTime += delta
+	if CookTime >= 30:
+		AnimatedSpriteObject.show()
+		SpriteObject.hide()
+	else:
+		AnimatedSpriteObject.hide()
+		if ItemInBasket:
+			SpriteObject.show()
+		
+func Item(item : String):
+	if up:
+		match item:
+			"FFries":
+				SpriteObject.texture = Sprites[2]
+				print_rich("Showing: [color=red]" + str(SpriteObject.name) + "[/color]")
+				ItemInBasket = true
+				RecivedItem = "FFries"
+				ItemInBasketName = "Fries"
+				SpriteObject.show()
+				return true
+			"Burger":
+				SpriteObject.texture = Sprites[1]
+				print_rich("Showing: [color=red]" + str(SpriteObject.name) + "[/color]")
+				ItemInBasket = true
+				RecivedItem = "Burger"
+				ItemInBasketName = "Burger"
+				SpriteObject.show()
+				return true
+			"Fries":
+				SpriteObject.texture = Sprites[0]
+				print_rich("Showing: [color=red]" + str(SpriteObject.name) + "[/color]")
+				ItemInBasket = true
+				RecivedItem = "Fries"
+				ItemInBasketName = "Fries"
+				SpriteObject.show()
+				return true
+			_:
+				return false
+	else:
+		return false
+
+func Touch(AmNpc = false):
+	if !ItemInBasket || up:
+		FryerSound.play()
+		if up:
+			animTrigger("Down")
+			if ItemInBasket:
+				Cooking = true
+			up = false
+		else:
+			animTrigger("Up")
+			Cooking = false
+			up = true
+	else:
+		NpcInv = get_tree().get_first_node_in_group("PompNPC").get_node("InventoryGrid")
+		if AmNpc && NpcInv != null:
+			if CookTime >= 10:
+				if NpcInv.can_add_item(create_item(ItemInBasketName)):
+					var newItem = NpcInv.create_and_add_item(ItemInBasketName)
+					if (newItem != null):
+						newItem.set_property("CookTime", CookTime)
+						if newItem.get_property("name","FFries") && CookTime >= 50:
+							newItem.set_property("image","res://KOMSprites/innout/friesBurnt.png")
+							newItem.set_property("name",str("burnt " + name))
+						SpriteObject.hide()
+						animTrigger("Up")
+						up = true
+						ItemInBasket = false
+						Cooking = false
+						CookTime = 0.0
+					else:
+						print("Cannot Add Item, not enough Room")
+			else:
+				if NpcInv.can_add_item(create_item(RecivedItem)):
+					var newItem = NpcInv.create_and_add_item(RecivedItem)
+					if (newItem != null):
+						newItem.set_property("CookTime", CookTime)
+					SpriteObject.hide()
+					animTrigger("Up")
+					up = true
+					ItemInBasket = false
+					Cooking = false
+		else :
+			if CookTime >= 10:
+				var newItem = inv.create_and_add_item(ItemInBasketName)
+				if (newItem != null):
+					newItem.set_property("CookTime", CookTime)
+					if newItem.get_property("name","FFries") && CookTime >= 50:
+						newItem.set_property("image","res://KOMSprites/innout/friesBurnt.png")
+						newItem.set_property("name",str("burnt " + newItem.name))
+					SpriteObject.hide()
+					animTrigger("Up")
+					up = true
+					ItemInBasket = false
+					Cooking = false
+					CookTime = 0.0
+				else:
+					print("Cannot Add Item, not enough Room")
+			else:
+				if inv.can_add_item(create_item(RecivedItem)):
+					var newItem = inv.create_and_add_item(RecivedItem)
+					if (newItem != null):
+						newItem.set_property("CookTime", CookTime)
+					SpriteObject.hide()
+					animTrigger("Up")
+					up = true
+					ItemInBasket = false
+					Cooking = false
+				
 
 func animTrigger(triggername : String):
 	FryBasketAnim["parameters/conditions/" + triggername] = true;
