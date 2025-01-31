@@ -1,29 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://clak8qk3qyhik"]
+[gd_scene load_steps=5 format=3 uid="uid://drcoate2elxi7"]
 
-[ext_resource type="Script" path="res://CustomScripts/Objects/NpcCompatItemPickup.gd" id="1_met4v"]
-[ext_resource type="Script" path="res://Scripts/RotatingObject.cs" id="2_i4gop"]
-[ext_resource type="Texture2D" uid="uid://b2j0kt7ppsv7a" path="res://KOMSprites/innout/In-N-Out-Burger.png" id="3_2onjn"]
+[ext_resource type="Script" path="res://CustomScripts/Objects/NpcCompatItemPickup.gd" id="1_r7rf3"]
+[ext_resource type="Script" path="res://Scripts/RotatingObject.cs" id="2_o2of8"]
+[ext_resource type="Texture2D" uid="uid://bote0nnsinsvg" path="res://KOMSprites/innout/FryPile.png" id="3_1bn2u"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d7sm0"]
 size = Vector3(0.446385, 0.812319, 0.210897)
 
-[node name="Burger Pickup" type="StaticBody3D"]
+[node name="Fresh Fries Pickup" type="StaticBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.271321, 0)
 shape = SubResource("BoxShape3D_d7sm0")
 
 [node name="Behavior" type="Node" parent="."]
-script = ExtResource("1_met4v")
-ItemID = "Burger"
+script = ExtResource("1_r7rf3")
+ItemID = "FFries"
 
 [node name="ModelRoot" type="Node3D" parent="."]
-script = ExtResource("2_i4gop")
+script = ExtResource("2_o2of8")
 
 [node name="Sprite3D" type="Sprite3D" parent="ModelRoot"]
-transform = Transform3D(0.265, 0, 0, 0, 0.265, 0, 0, 0, 0.265, 0, 0.28998, 0)
+transform = Transform3D(0.19, 0, 0, 0, 0.19, 0, 0, 0, 0.19, 0, 0.28998, 0)
 shaded = true
-texture = ExtResource("3_2onjn")
+texture = ExtResource("3_1bn2u")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.636349, 0)

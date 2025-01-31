@@ -118,6 +118,7 @@ json_data = "[
         \"width\": 2
     },
     {
+        \"CookTime\": 0,
         \"description\": \"Fresh, hand-cut potatoes prepared in 100% sunflower oil\",
         \"health\": 3,
         \"height\": 1,
@@ -127,10 +128,23 @@ json_data = "[
         \"width\": 2
     },
     {
+        \"CookTime\": 0,
         \"description\": \"Two American beef patties, with hand-leafed lettuce, tomato, spread, with or without onions, stacked high on a freshly baked bun.\",
         \"height\": 2,
         \"id\": \"Burger\",
         \"image\": \"res://KOMSprites/innout/In-N-Out-Burger.png\",
+        \"name\": \"Burger\",
+        \"width\": 2
+    },
+    {
+        \"CookTime\": 0,
+        \"description\": \"Fresh, hand-cut potatoes\",
+        \"health\": -1,
+        \"height\": 1,
+        \"id\": \"FFries\",
+        \"image\": \"res://KOMSprites/innout/FryPile.png\",
+        \"name\": \"FFries\",
+        \"usable\": \"true\",
         \"width\": 2
     }
 ]"
