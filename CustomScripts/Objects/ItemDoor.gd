@@ -39,7 +39,7 @@ func OpenDoor():
 	if moving:
 		await stopped
 	if !opened:
-		print("Door is moving: " + str(TweenClose.is_running()))
+		#print("Door is moving: " + str(TweenClose.is_running()))
 		opened = true 
 		%SoundSource.stream = SoundEffect
 		%SoundSource.play()
@@ -59,7 +59,7 @@ func Close():
 	if moving:
 		await stopped
 	if opened:
-		print("Door is moving: " + str(TweenOpen.is_running()))
+		#print("Door is moving: " + str(TweenOpen.is_running()))
 		opened = false 
 		%SoundSource.stream = SoundEffect
 		%SoundSource.play()
@@ -74,7 +74,7 @@ func Close():
 		
 
 func RemoteTriggerActivate():
-	print("Does door Require Item: " + str(RequireItem) + " and has Item been used: " + str(ItemUsed))
+	#print("Does door Require Item: " + str(RequireItem) + " and has Item been used: " + str(ItemUsed))
 	if RequireItem:
 		if ItemUsed:
 			OpenDoor()
@@ -82,7 +82,7 @@ func RemoteTriggerActivate():
 		OpenDoor()
 	
 func RemoteTriggerDeactivate():
-	print("Does door Require Item: " + str(RequireItem) + " and has Item been used: " + str(ItemUsed))
+	#print("Does door Require Item: " + str(RequireItem) + " and has Item been used: " + str(ItemUsed))
 	if RequireItem:
 		if ItemUsed:
 			Close()
@@ -90,13 +90,13 @@ func RemoteTriggerDeactivate():
 		Close()
 
 func on_tweenclose_finished():
-	print("Door finished Moving!")
+	#print("Door finished Moving!")
 	stopped.emit()
 	moving = false
 	
 func on_tweenopen_finished():
 	stopped.emit()
-	print("Door finished Moving!")
+	#print("Door finished Moving!")
 	moving = false
 
 
