@@ -19,26 +19,40 @@ var RelevantItems : Dictionary
 var InvSize : Vector2i
 var InvFreeSpace
 var RandList : Array
-# Called when the node enters the scene tree for the first time.
+
+#####
+#TODO Script Makes game stutter every time Inventory is generated. Can this be improved?
+#####
+
 func _ready():
 	InvSize = inv._constraint_manager.get_grid_constraint().size
 	InvFreeSpace = InvSize.x * InvSize.y
 	InvItemsList = Protoset._prototypes
-	ItemGen()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	Labels.get_child(1).set_text("Free Space:[color=red] " + str(InvFreeSpace) + "[/color]")
+	Generate()
 	
 	
-func ItemGen():
-	print_rich("InvItemsList:[color=red] " + str(InvItemsList) + "[/color]")
-	RandList = generate_sum_array(InvFreeSpace,1,4)
+func Generate():
+	inv.clear()
+	ItemListGen()
+	for i in RelevantItems:
+		var count = 1
+		var InvFull = false
+		while count <= RelevantItems[i] && InvFull == false:
+			count += 1
+			if inv.can_add_item(create_item(i)):
+				print("adding: " + str(i))
+				inv.create_and_add_item(i)
+			else:
+				InvFull = true
+				
+func ItemListGen():
+	#print_rich("InvItemsList:[color=red] " + str(InvItemsList) + "[/color]")
+	RandList = generate_sum_array(InvFreeSpace,1,3)
 	var iterant = -1
 	for i in ItemCounts:
 		iterant += 1
 		ItemCounts[i] = RandList[iterant]
-	print_rich("InvCounts:[color=red] " + str(ItemCounts) + "[/color]")
+	#print_rich("InvCounts:[color=red] " + str(ItemCounts) + "[/color]")
 	for i in InvItemsList:
 		for ii in ItemCounts.size():
 			if i == ItemCounts.keys()[ii]:
@@ -46,7 +60,7 @@ func ItemGen():
 				RelevantItems[i] = ItemCounts.values()[ii]
 			
 	Labels.get_child(2).set_text("Items:[color=red] " + str(RelevantItems) + "[/color]")
-	print_rich("Items:[color=red] " + str(RelevantItems) + "[/color]")
+	#print_rich("Items:[color=red] " + str(RelevantItems) + "[/color]")
 	pass
 
 func generate_sum_array(maxSum, factor, maxNumber):
@@ -65,3 +79,9 @@ func generate_sum_array(maxSum, factor, maxNumber):
 			array.append(n)
 
 	return array
+
+func create_item(prototype_id: String) -> InventoryItem:
+	var item: InventoryItem = InventoryItem.new()
+	item.protoset = inv.item_protoset
+	item.prototype_id = prototype_id
+	return item

@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://bskjfuj6mke3u"]
+[gd_scene load_steps=57 format=3 uid="uid://bskjfuj6mke3u"]
 
 [ext_resource type="Texture2D" uid="uid://lgt33gnqe66k" path="res://Sprites/MapBack1new.png" id="1_itacc"]
 [ext_resource type="Script" path="res://Scripts/Tweener2D.cs" id="2_7hioc"]
@@ -23,6 +23,9 @@
 [ext_resource type="Texture2D" uid="uid://cy2vqc8pk5ygw" path="res://Sprites/UI/Fullscreen1.png" id="20_h8drn"]
 [ext_resource type="Texture2D" uid="uid://be3jf3qr3gbmy" path="res://Sprites/UI/Fullscreen2.png" id="21_riyiw"]
 [ext_resource type="Script" path="res://Scripts/Fullscreen.gd" id="22_hwsui"]
+[ext_resource type="Material" uid="uid://cf6k4tebafvvq" path="res://KOMShaders/CornerVoid.tres" id="25_grxvy"]
+[ext_resource type="PackedScene" uid="uid://c0ylp55wubpr8" path="res://KOMMaterials/green.tscn" id="25_m8tu7"]
+[ext_resource type="Texture2D" uid="uid://0eyk37hoo024" path="res://KOMMaterials/green.PNG" id="26_4eiso"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5mmss"]
 shader = ExtResource("3_6r8c3")
@@ -735,3 +738,21 @@ offset_bottom = 34.0
 script = ExtResource("14_uxeiw")
 destination = "CustomMercScenes/innout"
 sceneLoader = "res://Scenes/TipSceneLoader.tscn"
+
+[node name="Node2D" type="Node2D" parent="."]
+visible = false
+position = Vector2(289, 196)
+scale = Vector2(3.69275, 3.42308)
+
+[node name="Green" parent="Node2D" instance=ExtResource("25_m8tu7")]
+position = Vector2(0, 0)
+scale = Vector2(1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Green"]
+modulate = Color(1, 1, 1, 0.2)
+material = ExtResource("25_grxvy")
+position = Vector2(58.493, 20.4494)
+scale = Vector2(1.76718, 1.44663)
+texture = ExtResource("26_4eiso")
+
+[editable path="Node2D/Green"]

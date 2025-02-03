@@ -24,7 +24,6 @@ var speed : float
 @export var MaxDistanceDef : float = 1.5
 var MaxDistance : float
 
-
 @export_category("Attack Data")
 @export var attackThreshold : float = 1.5
 @export var AttackDistance : float = 2
@@ -117,7 +116,7 @@ func running_handling(delta):
 		LookTarget = TargetEntity
 		DoLookAt = true
 		TargetIsCreature = true
-	#print("velocity less than 1: " + str(velocity.length() < 1.0) + " " + str(velocity.length()))
+		
 	if TargetIsCreature:
 		if !TargetEntity.is_in_group("player") && !TargetEntity.is_in_group("PompNPC"):
 			hostile = true
@@ -127,7 +126,6 @@ func running_handling(delta):
 			handle_Move(delta)
 		elif !hurt:
 			velocity = velocity.lerp(Vector3.ZERO, delta)
-			animTree["parameters/Normal2D/4/blend_position"] = float(HealthHandler.CoreHealthHandler.HP)
 			
 		if (position.distance_to(TargetEntity.position) < AttackDistance):
 			attackTimer += 1 * delta
@@ -155,7 +153,6 @@ func running_handling(delta):
 			handle_Move(delta)
 		elif !hurt:
 			velocity = velocity.lerp(Vector3.ZERO, delta)
-			animTree["parameters/Normal2D/4/blend_position"] = float(HealthHandler.CoreHealthHandler.HP)
 			
 		if (position.distance_to(TargetEntity.position) < MaxDistance):
 			attackTimer += 1 * delta
@@ -164,6 +161,8 @@ func running_handling(delta):
 			GrabItem()
 			attackTimer = 0
 	
+	
+	####MOVEMENT HANDLING####
 	###
 	### Calculations based on speed and velocity
 	###
@@ -186,6 +185,7 @@ func running_handling(delta):
 	
 	if (animTree != null):
 		animTree["parameters/Normal2D/blend_position"] = velV2
+		animTree["parameters/Normal2D/4/blend_position"] = float(HealthHandler.CoreHealthHandler.HP)
 	
 	if DoLookAt:
 		velV2.x = find_rotation_to(self,LookTarget)
@@ -199,6 +199,7 @@ func running_handling(delta):
 		AttackDistance = 3
 	else:
 		AttackDistance = AttackDistanceDefault
+	
 
 func update_target_location(target_location):
 	nav_agent.target_position = target_location
@@ -218,6 +219,10 @@ func handle_Move(delta):
 	var modelDir = -(modelPos - targetPos)
 	modelRoot.global_rotation.y = lerp_angle(modelRoot.global_rotation.y, atan2(modelDir.x, modelDir.y), delta * 4)
 	move_and_slide()
+###########################
+	
+	
+####INTERACTION METHODS####
 
 func Attack():
 	if (anim != null && TargetEntity.has_node("HealthHandler")):
@@ -230,7 +235,6 @@ func Attack():
 		elif position.distance_to(TargetEntity.position) < AttackDistance && TargetEntity.has_node("HealthHandler"):
 			TargetEntity.get_node("HealthHandler").Hurt(1)
 	await get_tree().create_timer(1.0).timeout
-	pass
 	
 func GrabItem():
 	if (anim != null):
@@ -243,7 +247,9 @@ func GrabItem():
 	TargetIsItem = false
 	TargetEntity = PreviousTarget
 	LookTarget = player
-	pass
+	#########################
+
+####CHECK AND PERFORM SELF-PARAMS####
 
 func FlashLightToggle():
 	animTrigger("Flashlight");
@@ -274,6 +280,8 @@ func CheckGlobals():
 		if !get_tree().get_first_node_in_group("NpcSceneRules").FlashLightsEnabled:
 			if FlashLight.visible:
 				FlashLightOff()
+
+###################################
 				
 func NavToPoint(id : int,doLook : bool,NavNodeTargetFromSignalBus : Node,distance : float,Action : int,LookTargetFromBus : String):
 	NavNodeTarget = NavNodeTargetFromSignalBus
@@ -375,17 +383,6 @@ func LocateItem():
 	hostile = false
 	TargetEntity = ItemLocator()
 	
-func get_all_children(in_node, array := []):
-	array.push_back(in_node)
-	for child in in_node.get_children():
-		array = get_all_children(child, array)
-	return array
-
-func animTrigger(triggername : String):
-	animTree["parameters/conditions/" + triggername] = true;
-	await get_tree().create_timer(0.1).timeout
-	animTree["parameters/conditions/" + triggername] = false;
-	
 func create_item(prototype_id: String) -> InventoryItem:
 	var item: InventoryItem = InventoryItem.new()
 	item.protoset = InvManager.inv.item_protoset
@@ -469,6 +466,17 @@ func find_closest_or_furthest(node: Object,group_name = "default",item = false, 
 		else:
 			animTrigger("Shrug")
 			return null
+			
+func animTrigger(triggername : String):
+	animTree["parameters/conditions/" + triggername] = true;
+	await get_tree().create_timer(0.1).timeout
+	animTree["parameters/conditions/" + triggername] = false;
+	
+func get_all_children(in_node, array := []):
+	array.push_back(in_node)
+	for child in in_node.get_children():
+		array = get_all_children(child, array)
+	return array
 
 func find_rotation_to(node1 : Node3D,node2 : Node3D,degree = false):
 	var pos1 = node1.global_transform.origin
