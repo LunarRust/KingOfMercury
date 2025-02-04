@@ -1,5 +1,6 @@
 extends Node
 @export var FlashLightsEnabled : bool = true
+@export var InventoryVisible : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

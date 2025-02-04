@@ -9,8 +9,7 @@ var NpcInventory
 @export var SoundPositive : AudioStream
 @export var SoundNegative : AudioStream
 @export var PosRefrence : Node3D
-@export var FoodList : Dictionary
-@export var NeededAmounts : Array[int]
+@export var ItemGen : Node
 var NeededTotal : int
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -30,27 +29,27 @@ func NpcInvCheck():
 				for ii in i.get_children():
 					if ii.name == "InventoryGrid":
 						NpcInventory = ii
-	for i in FoodList.keys():
-		FoodList[i] = 0
+	for i in ItemGen.RelevantItems.keys():
+		ItemGen.RelevantItems[i] = 0
 	
 	for i in NpcInventory.get_children():
 		var iterant = -1
 		if "prototype_id" in i:
-			for ii in FoodList.size():
+			for ii in ItemGen.RelevantItems.size():
 				iterant += 1
-				print("ItemID is: " + str(i.prototype_id) + " " + "FoodList Key is: " + str(FoodList.keys()[iterant]))
-				if i.prototype_id == FoodList.keys()[iterant]:
+				print("ItemID is: " + str(i.prototype_id) + " " + "ItemGen.RelevantItems Key is: " + str(ItemGen.RelevantItems.keys()[iterant]))
+				if i.prototype_id == ItemGen.RelevantItems.keys()[iterant]:
 					print("Match!")
-					FoodList[FoodList.keys()[iterant]] += 1
-					print(str(FoodList.values()))
-	var TotalItems = 0
-	for i in FoodList.size():
-		if FoodList.values()[i] >= NeededAmounts[i]:
+					ItemGen.RelevantItems[ItemGen.RelevantItems.keys()[iterant]] += 1
+					print(str(ItemGen.RelevantItems.values()))
+	var TotalItems = 1
+	for i in ItemGen.RelevantItems:
+		if ItemGen.RelevantItems[i] <= ItemGen.ItemCounts[i]:
 			TotalItems += 1
 		else:
-			print(str("not enough " + str(FoodList.values()[i])))
-	for i in NeededAmounts:
-		NeededTotal += NeededAmounts[i]
+			print(str("not enough " + str(ItemGen.RelevantItems[i])))
+	for i in ItemGen.ItemCounts:
+		NeededTotal += ItemGen.ItemCounts[i]
 		
 	print(str(TotalItems) + " " + str(NeededTotal))
 	if TotalItems >= NeededTotal:
@@ -107,6 +106,7 @@ func _on_pressed():
 	if NpcInvCheck() == true:
 		SoundSource.stream = SoundPositive
 		SoundSource.play()
+		ItemGen.Clear()
 		Task()
 	else:
 		SoundSource.stream = SoundNegative

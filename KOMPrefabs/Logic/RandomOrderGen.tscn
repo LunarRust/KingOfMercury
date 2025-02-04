@@ -1,35 +1,18 @@
-[gd_scene load_steps=13 format=3 uid="uid://cf08hharkb570"]
+[gd_scene load_steps=7 format=3 uid="uid://cf08hharkb570"]
 
 [ext_resource type="Script" path="res://CustomScripts/Objects/In'nOut/RandomOrderGen.gd" id="1_8cgtl"]
 [ext_resource type="Script" path="res://addons/gloot/core/inventory_grid.gd" id="2_qyvix"]
 [ext_resource type="Resource" uid="uid://1vk2qehuhumm" path="res://ItemsNew.tres" id="3_4lwhx"]
-[ext_resource type="Script" path="res://CustomMercScenes/CustomScenes/3dgui/gui_3d.gd" id="4_5hh0q"]
 [ext_resource type="Script" path="res://addons/gloot/ui/ctrl_inventory_grid_ex.gd" id="4_lwdvg"]
 [ext_resource type="Texture2D" uid="uid://bo7ngnq4uajfs" path="res://Sprites/Items/Generic.png" id="5_ovvm5"]
-[ext_resource type="FontFile" uid="uid://dku4ohp5rmpr5" path="res://Fonts/DBStylez.ttf" id="5_w7slh"]
 [ext_resource type="Script" path="res://addons/gloot/core/inventory_item.gd" id="6_f56l7"]
-
-[sub_resource type="QuadMesh" id="1"]
-size = Vector2(3, 2)
-
-[sub_resource type="ViewportTexture" id="2"]
-viewport_path = NodePath("SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="3"]
-resource_local_to_scene = true
-transparency = 1
-shading_mode = 0
-albedo_texture = SubResource("2")
-
-[sub_resource type="BoxShape3D" id="4"]
-size = Vector3(3, 2, 0.1)
 
 [node name="RandomOrderGen" type="Node" node_paths=PackedStringArray("inv", "invCtrl", "Labels")]
 process_mode = 3
 script = ExtResource("1_8cgtl")
-inv = NodePath("GUIPanel3D2/SubViewport/InventoryGrid")
-invCtrl = NodePath("GUIPanel3D2/SubViewport/CtrlInventoryGridEx")
-Labels = NodePath("GUIPanel3D2/SubViewport/CtrlInventoryGridEx/Labels")
+inv = NodePath("InventoryGrid")
+invCtrl = NodePath("CtrlInventoryGridEx")
+Labels = NodePath("CtrlInventoryGridEx/Labels")
 Protoset = ExtResource("3_4lwhx")
 ItemCounts = {
 "Burger": 0,
@@ -51,42 +34,19 @@ properties = {
 "grid_position": Vector2i(2, 0)
 }
 
-[node name="GUIPanel3D2" type="Node3D" parent="."]
-process_mode = 3
-script = ExtResource("4_5hh0q")
-
-[node name="SubViewport" type="SubViewport" parent="GUIPanel3D2"]
-transparent_bg = true
-gui_embed_subwindows = true
-size = Vector2i(560, 360)
-render_target_update_mode = 4
-
-[node name="DebugLabel" type="RichTextLabel" parent="GUIPanel3D2/SubViewport"]
-z_index = 5
-offset_left = -11.0
-offset_top = 8.0
-offset_right = 728.0
-offset_bottom = 150.0
-theme_override_colors/default_color = Color(0.320416, 0.418491, 0.657654, 1)
-theme_override_fonts/normal_font = ExtResource("5_w7slh")
-theme_override_font_sizes/normal_font_size = 79
-bbcode_enabled = true
-text = "[shake rate=20] 
-TEST ENEMIES"
-
-[node name="Button" type="Button" parent="GUIPanel3D2/SubViewport"]
+[node name="Button" type="Button" parent="."]
 offset_left = 333.0
 offset_top = 130.0
 offset_right = 413.0
 offset_bottom = 161.0
 text = "Generate"
 
-[node name="InventoryGrid" type="Node" parent="GUIPanel3D2/SubViewport"]
+[node name="InventoryGrid" type="Node" parent="."]
 script = ExtResource("2_qyvix")
 size = Vector2i(5, 2)
 item_protoset = ExtResource("3_4lwhx")
 
-[node name="CtrlInventoryGridEx" type="Control" parent="GUIPanel3D2/SubViewport"]
+[node name="CtrlInventoryGridEx" type="Control" parent="."]
 custom_minimum_size = Vector2(168, 66)
 layout_direction = 1
 layout_mode = 3
@@ -103,9 +63,9 @@ selection_color = Color(0.492188, 0.414063, 0, 1)
 inventory_path = NodePath("../InventoryGrid")
 default_item_texture = ExtResource("5_ovvm5")
 
-[node name="Labels" type="Node2D" parent="GUIPanel3D2/SubViewport/CtrlInventoryGridEx"]
+[node name="Labels" type="Node2D" parent="CtrlInventoryGridEx"]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="GUIPanel3D2/SubViewport/CtrlInventoryGridEx/Labels"]
+[node name="RichTextLabel" type="RichTextLabel" parent="CtrlInventoryGridEx/Labels"]
 offset_left = -14.0
 offset_top = -24.0
 offset_right = 149.0
@@ -113,28 +73,17 @@ offset_bottom = 16.0
 bbcode_enabled = true
 text = "Order Gen Inventory"
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="GUIPanel3D2/SubViewport/CtrlInventoryGridEx/Labels"]
+[node name="RichTextLabel2" type="RichTextLabel" parent="CtrlInventoryGridEx/Labels"]
 offset_top = 69.0
 offset_right = 135.0
 offset_bottom = 109.0
 bbcode_enabled = true
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="GUIPanel3D2/SubViewport/CtrlInventoryGridEx/Labels"]
+[node name="RichTextLabel3" type="RichTextLabel" parent="CtrlInventoryGridEx/Labels"]
 offset_left = -304.0
 offset_top = -184.0
 offset_right = 114.0
 offset_bottom = -144.0
 bbcode_enabled = true
 
-[node name="Quad" type="MeshInstance3D" parent="GUIPanel3D2"]
-mesh = SubResource("1")
-surface_material_override/0 = SubResource("3")
-
-[node name="Area3D" type="Area3D" parent="GUIPanel3D2/Quad"]
-collision_layer = 2
-input_capture_on_drag = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GUIPanel3D2/Quad/Area3D"]
-shape = SubResource("4")
-
-[connection signal="pressed" from="GUIPanel3D2/SubViewport/Button" to="." method="Generate"]
+[connection signal="pressed" from="Button" to="." method="Generate"]
