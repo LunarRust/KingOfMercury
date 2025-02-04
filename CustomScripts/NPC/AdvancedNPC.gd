@@ -277,9 +277,13 @@ func FlashLightOn():
 	
 func CheckGlobals():
 	if get_tree().get_first_node_in_group("NpcSceneRules") != null:
-		if !get_tree().get_first_node_in_group("NpcSceneRules").FlashLightsEnabled:
+		var NpcRules = get_tree().get_first_node_in_group("NpcSceneRules")
+		if !NpcRules.FlashLightsEnabled:
 			if FlashLight.visible:
 				FlashLightOff()
+		if !NpcRules.InventoryVisible:
+			self.get_node("CtrlInventoryGridEx").hide()
+				
 
 ###################################
 				

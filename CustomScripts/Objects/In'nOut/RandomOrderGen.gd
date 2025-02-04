@@ -31,6 +31,9 @@ func _ready():
 	Generate()
 	
 	
+func Clear():
+	inv.clear()
+	
 func Generate():
 	inv.clear()
 	ItemListGen()
@@ -44,6 +47,18 @@ func Generate():
 				inv.create_and_add_item(i)
 			else:
 				InvFull = true
+				
+	for i in ItemCounts:
+		ItemCounts[i] = 0
+		print(str(ItemCounts))
+	var ItemsInInv = inv.get_items()
+	print(str(ItemsInInv))
+	print(str(RelevantItems))
+	for i in ItemsInInv:
+		#var id = str(ItemsInInv[i].prototype_id)
+		if  RelevantItems[i.prototype_id]:
+			print(str(i.prototype_id) + " " + str(RelevantItems[i.prototype_id]))
+			ItemCounts[i.prototype_id] += 1
 				
 func ItemListGen():
 	#print_rich("InvItemsList:[color=red] " + str(InvItemsList) + "[/color]")
@@ -59,6 +74,7 @@ func ItemListGen():
 				print(str(i) + " matches " + str(ItemCounts.keys()[ii]))
 				RelevantItems[i] = ItemCounts.values()[ii]
 			
+	
 	Labels.get_child(2).set_text("Items:[color=red] " + str(RelevantItems) + "[/color]")
 	#print_rich("Items:[color=red] " + str(RelevantItems) + "[/color]")
 	pass
