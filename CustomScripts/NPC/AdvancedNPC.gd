@@ -1,3 +1,4 @@
+@icon("res://Sprites/iconsmile128Gold.png")
 extends CharacterBody3D
 
 @export_category("Assignments")
