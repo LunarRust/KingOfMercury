@@ -3,6 +3,7 @@ var currentID
 var currentMark
 var currentNPC
 var SignalBusKOM
+var SignalBusInnOut
 var NpcInventory
 @export var NavNodeTarget : Node
 @export var SoundSource : AudioStreamPlayer
@@ -14,6 +15,7 @@ var NeededTotal : int
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	SignalBusKOM = get_tree().get_first_node_in_group("player").get_node("KOMSignalBus")
+	SignalBusInnOut = get_tree().get_first_node_in_group("InnOutSignalBus")
 	pass # Replace with function body.
 
 
@@ -29,10 +31,12 @@ func NpcInvCheck():
 				for ii in i.get_children():
 					if ii.name == "InventoryGrid":
 						NpcInventory = ii
-	for i in ItemGen.RelevantItems.keys():
+	for i in ItemGen.RelevantItems:
 		ItemGen.RelevantItems[i] = 0
+	print(str(ItemGen.RelevantItems))
 	
-	for i in NpcInventory.get_children():
+	var ItemsInInv = NpcInventory.get_items()
+	for i in ItemsInInv:
 		var iterant = -1
 		if "prototype_id" in i:
 			for ii in ItemGen.RelevantItems.size():
@@ -42,15 +46,18 @@ func NpcInvCheck():
 					print("Match!")
 					ItemGen.RelevantItems[ItemGen.RelevantItems.keys()[iterant]] += 1
 					print(str(ItemGen.RelevantItems.values()))
-	var TotalItems = 1
+	var TotalItems = 0
 	for i in ItemGen.RelevantItems:
-		if ItemGen.RelevantItems[i] <= ItemGen.ItemCounts[i]:
-			TotalItems += 1
-		else:
-			print(str("not enough " + str(ItemGen.RelevantItems[i])))
+		if ItemGen.RelevantItems[i] != 0:
+			print(str(ItemGen.ItemCounts))
+			if ItemGen.RelevantItems[i] <= ItemGen.ItemCounts[i]:
+				TotalItems += ItemGen.RelevantItems[i]
+			else:
+				print(str("not enough " + str(ItemGen.RelevantItems[i])))
 	for i in ItemGen.ItemCounts:
 		NeededTotal += ItemGen.ItemCounts[i]
 		
+	print(str(ItemGen.RelevantItems))
 	print(str(TotalItems) + " " + str(NeededTotal))
 	if TotalItems >= NeededTotal:
 		return true
@@ -109,5 +116,6 @@ func _on_pressed():
 		ItemGen.Clear()
 		Task()
 	else:
+		currentNPC.animTrigger("Shrug")
 		SoundSource.stream = SoundNegative
 		SoundSource.play()

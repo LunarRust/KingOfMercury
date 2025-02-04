@@ -30,9 +30,9 @@ var MaxDistance : float
 var AttackDistanceDefault : float
 @export var attackPower : int = 1
 @export var aggroRange : int = 10
-@export var walkName = "Walk"
-@export var attackName = "Attack"
-@export var meleeAttack : bool = true
+var walkName = "Walk"
+var attackName = "Attack"
+var meleeAttack : bool = true
 
 var attackTimer : float
 var attacking : bool = false
@@ -41,6 +41,7 @@ var hurt : bool = false
 var Tset : bool = false
 var TargetIsItem : bool = false
 var TargetIsCreature : bool = true
+var TargetReached : bool = false
 var velV2 : Vector2
 var forwardVel : float
 var PointNavrunning : bool
@@ -92,7 +93,6 @@ func _physics_process(delta):
 	if (running):
 		if Input.is_physical_key_pressed(KEY_5):
 			TargetEntity = TargetLocator()
-		running_handling(delta)
 		if Tset:
 			TargetEntity = TargetLocator()
 		if Input.is_physical_key_pressed(KEY_6):
@@ -105,7 +105,7 @@ func _physics_process(delta):
 		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel").set_text("Target is: [color=red]" + str(TargetEntity.name) + "[/color]")
 		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel2").set_text("AttackTimer: [color=red]" + str(snapped(attackTimer,0.01)) + "[/color]")
 		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel3").set_text("Distance: [color=red]" + str(snapped(position.distance_to(TargetEntity.position),0.01)) + "[/color]")
-		
+		running_handling(delta)
 		
 
 func running_handling(delta):
@@ -127,10 +127,12 @@ func running_handling(delta):
 		elif !hurt:
 			velocity = velocity.lerp(Vector3.ZERO, delta)
 			
-		if (position.distance_to(TargetEntity.position) < AttackDistance):
-			attackTimer += 1 * delta
 		if position.distance_to(TargetEntity.position) < AttackDistance && ActionOnArrive != 0:
 			ArrivalAction(ActionOnArrive)
+			if NavNodeTarget != null:
+				if NavNodeTarget.is_in_group("ExecOnReached"):
+						if !TargetReached:
+							NavNodeTarget.Reached()
 		if attackTimer > attackThreshold:
 			if NavNodeTarget != null:
 				if NavNodeTarget.is_in_group("KillNPC") && TargetEntity.name == "NavNode":
@@ -140,12 +142,18 @@ func running_handling(delta):
 					if NavNodeTarget.is_in_group("Respawn"):
 						SignalBusKOM.emit_signal("CreateNpc")
 					KillSelf()
-			
+				
 		if (attackTimer > attackThreshold && attacking && hostile):
 			Attack()
 			attackTimer = 0
 		if attackTimer > attackThreshold:
 			attackTimer = 0
+		if (position.distance_to(TargetEntity.position) < AttackDistance):
+			attackTimer += 1 * delta
+			TargetReached = true
+		else:
+			TargetReached = false
+		
 		
 			
 	if TargetIsItem:
@@ -153,10 +161,8 @@ func running_handling(delta):
 			handle_Move(delta)
 		elif !hurt:
 			velocity = velocity.lerp(Vector3.ZERO, delta)
-			
 		if (position.distance_to(TargetEntity.position) < MaxDistance):
 			attackTimer += 1 * delta
-
 		if (attackTimer > attackThreshold && position.distance_to(TargetEntity.position) < MaxDistance):
 			GrabItem()
 			attackTimer = 0
@@ -164,7 +170,8 @@ func running_handling(delta):
 	
 	####MOVEMENT HANDLING####
 	###
-	### Calculations based on speed and velocity
+	### Calculations based on speed, velocity and Distance to nav target
+	### Uses these values to determine animation blend positions
 	###
 	@warning_ignore("shadowed_variable")
 	var forwardVel = abs(velocity.dot(transform.basis.z)) + abs(velocity.dot(transform.basis.x))
@@ -178,15 +185,12 @@ func running_handling(delta):
 	if (nav_agent.distance_to_target() < MaxDistance + 3.5 && nav_agent.distance_to_target() > MaxDistance):
 		if speed < 0.8:
 			speed = 0.8
-	
 	velV2.y = forwardVel - 0.5
 	if velV2.y < 0:
 		velV2.y = 0
-	
 	if (animTree != null):
 		animTree["parameters/Normal2D/blend_position"] = velV2
 		animTree["parameters/Normal2D/4/blend_position"] = float(HealthHandler.CoreHealthHandler.HP)
-	
 	if DoLookAt:
 		velV2.x = find_rotation_to(self,LookTarget)
 	else:
@@ -194,7 +198,6 @@ func running_handling(delta):
 	DebugLabelParent.get_child(1).text = ("InstanceID " +  str(InstID))
 	DebugLabelParent.get_child(0).text = ("Speed:  " +  str(speed))
 	DebugLabelParent.get_child(2).text =("velocity: " +  str(velV2.y))
-
 	if speed > 1.2:
 		AttackDistance = 3
 	else:
@@ -323,6 +326,8 @@ func ArrivalAction(action : int):
 			HealthHandler.Hurt(1)
 			ActionOnArrive = 0
 		0:
+			pass
+		_:
 			pass
 
 func TargetLocator(SpefTarget = "default",MaxDist = MaxDistanceDef):

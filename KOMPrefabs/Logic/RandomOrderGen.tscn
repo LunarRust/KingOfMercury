@@ -35,6 +35,7 @@ properties = {
 }
 
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_left = 333.0
 offset_top = 130.0
 offset_right = 413.0

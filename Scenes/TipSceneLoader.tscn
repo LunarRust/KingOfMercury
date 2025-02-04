@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Scripts/scene_loader.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://h613quhoual4" path="res://Sprites/HUDFACESHEETM1.png" id="2"]
-[ext_resource type="Script" path="res://Scenes/AppearOnPress.gd" id="2_ytiof"]
+[ext_resource type="Script" path="res://CustomScripts/Logic/AppearOnPress.gd" id="2_ytiof"]
 [ext_resource type="Texture2D" uid="uid://crd0tcmhgc1vc" path="res://Sprites/UI/Mercury tip.png" id="3"]
 [ext_resource type="Script" path="res://Scripts/SpriteShake.cs" id="4"]
-[ext_resource type="AudioStream" uid="uid://b6u3qkb0mte27" path="res://Sounds/Pickup.ogg" id="4_i0n53"]
+[ext_resource type="AudioStream" uid="uid://cnohmfrk4pxtj" path="res://Sounds/Pickup.ogg" id="4_i0n53"]
 [ext_resource type="Script" path="res://Scripts/Tweener2D.cs" id="5"]
 [ext_resource type="Script" path="res://RandomSizeTween.cs" id="6"]
 [ext_resource type="FontFile" uid="uid://dku4ohp5rmpr5" path="res://Fonts/DBStylez.ttf" id="7"]
