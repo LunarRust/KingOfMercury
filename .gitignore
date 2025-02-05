@@ -3,6 +3,7 @@
 addons/
 
 # Godot-specific ignores
+Icon.png.import
 *.import
 *.cs
 *.csproj
