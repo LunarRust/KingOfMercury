@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://cqy3386x3yi64" path="res://Models/ThraitBaby.blend" id="6_ytri3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a2lqy"]
+radius = 0.316168
+height = 1.30179
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ge8d"]
 resource_name = "Material.008"
@@ -259,13 +261,13 @@ _data = {
 }
 
 [node name="Thrait Youngling" type="RigidBody3D"]
-transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 51.5356, 0, 2.6703)
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 0, 0, 0)
 gravity_scale = 0.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_a2lqy")
 
-[node name="DialogueSystem" type="Node3D" parent="."]
+[node name="DialogueSystem" type="Node3D" parent="." node_paths=PackedStringArray("soundSource")]
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 script = ExtResource("1_ah2rt")
 npcName = "Thrait Youngling"
@@ -274,6 +276,7 @@ It was real gross!!
 Everyone tells me that we used to eat all sorts of stuff, but now it's just rats and old hamburgers."
 LookDescription = "The Thrait child is no older than two years."
 TouchDescription = "You reach out to pat the Thrait child, but it lightly growls at you, showing some small but sharp teeth."
+soundSource = NodePath("../AudioStreamPlayer3D")
 DialogueSound = ExtResource("2_kp71r")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
@@ -286,8 +289,9 @@ script = ExtResource("3_hc4hp")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("4_ykm7c")
 
-[node name="Interactable" type="Node" parent="."]
+[node name="Interactable" type="Node" parent="." node_paths=PackedStringArray("BehaviorNode")]
 script = ExtResource("4_fenti")
+BehaviorNode = NodePath("../Behavior")
 
 [node name="ThraitBaby" type="Node3D" parent="."]
 transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0, -1, 0.135705)
@@ -370,7 +374,7 @@ script = ExtResource("5_vgugs")
 thraits = [null, null]
 
 [node name="ThraitBaby2" parent="." instance=ExtResource("6_ytri3")]
-transform = Transform3D(0.126, 0, 0, 0, 0.126, 0, 0, 0, 0.126, 0, -0.98, 0.139999)
+transform = Transform3D(0.126, 0, 0, 0, 0.126, 0, 0, 0, 0.126, -3.72529e-09, -0.98, 0.139999)
 
 [node name="Skeleton3D" parent="ThraitBaby2/BabyArm" index="0"]
 bones/0/rotation = Quaternion(0.274148, 1.14642e-07, 3.2681e-08, 0.961687)
