@@ -25,14 +25,15 @@ var RandList : Array
 #####
 
 func _ready():
+	get_tree().get_first_node_in_group("InnOutSignalBus").OrderGen.connect(Generate)
 	InvSize = inv._constraint_manager.get_grid_constraint().size
 	InvFreeSpace = InvSize.x * InvSize.y
 	InvItemsList = Protoset._prototypes
-	Generate()
 	
 	
 func Clear():
 	inv.clear()
+	
 	
 func Generate():
 	inv.clear()

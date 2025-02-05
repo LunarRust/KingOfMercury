@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://c756vofx3l2qw"]
 
-[ext_resource type="Script" path="res://Scenes/AppearOnPress.gd" id="1_51u5v"]
-[ext_resource type="AudioStream" uid="uid://b6u3qkb0mte27" path="res://Sounds/Pickup.ogg" id="2_esn8v"]
+[ext_resource type="Script" path="res://CustomScripts/Logic/AppearOnPress.gd" id="1_51u5v"]
+[ext_resource type="AudioStream" uid="uid://cnohmfrk4pxtj" path="res://Sounds/Pickup.ogg" id="2_esn8v"]
 [ext_resource type="Script" path="res://Scenes/ButtonPlayer.gd" id="3_uihp8"]
 [ext_resource type="Texture2D" uid="uid://rrmmw1e2tjdp" path="res://Sprites/UI/ButtonMenu.png" id="4_atpyg"]
 [ext_resource type="Texture2D" uid="uid://bod7c6qoku143" path="res://Sprites/UI/ButtonMenu2.png" id="5_rnq6d"]

@@ -20,15 +20,20 @@ func Touch(AmNpc = false):
 				if (newItem != null):
 					used = true
 					self.get_parent().queue_free()
-				else:
-					print("Cannot Add Item, not enough Room")
+					return true
+			else:
+				print("Cannot Add Item, not enough Room")
+				return false
+			
 	elif (!used):
 		var newItem = inv.create_and_add_item(ItemID)
 		if (newItem != null):
 			used = true
 			self.get_parent().queue_free()
+			return true
 		else:
 			print("Cannot Add Item, not enough Room")
+			return false
 
 func create_item(prototype_id: String) -> InventoryItem:
 	var item: InventoryItem = InventoryItem.new()

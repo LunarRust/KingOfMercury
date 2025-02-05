@@ -23,8 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://be3jf3qr3gbmy" path="res://Sprites/UI/Fullscreen2.png" id="21"]
 [ext_resource type="Script" path="res://Scripts/Fullscreen.gd" id="22"]
 [ext_resource type="Script" path="res://Scripts/TrnsHandler.gd" id="23"]
-[ext_resource type="Script" path="res://Scenes/AppearOnPress.gd" id="24_0wigk"]
-[ext_resource type="AudioStream" uid="uid://b6u3qkb0mte27" path="res://Sounds/Pickup.ogg" id="25_so364"]
+[ext_resource type="Script" path="res://CustomScripts/Logic/AppearOnPress.gd" id="24_0wigk"]
+[ext_resource type="AudioStream" uid="uid://cnohmfrk4pxtj" path="res://Sounds/Pickup.ogg" id="25_so364"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5mmss"]
 shader = ExtResource("3")

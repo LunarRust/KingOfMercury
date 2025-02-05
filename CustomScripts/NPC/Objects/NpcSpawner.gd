@@ -2,6 +2,7 @@ extends Node
 @export var Scene : PackedScene
 @export var TargetLoc : RayCast3D
 @export var distance : float
+@export var ArrivalAction : int = 0
 @export var SpawnOnLoad : bool = false 
 var ScenePack
 var currentID
@@ -33,7 +34,7 @@ func Packload():
 		for i in get_all_children(get_tree().get_root()):
 			if i.is_in_group("PompNPC"):
 				if i.InstID == currentID:
-					SignalBusKOM.emit_signal("NavToPoint",currentID,true,NavNodeTarget,distance,1,"player")
+					SignalBusKOM.emit_signal("NavToPoint",currentID,true,NavNodeTarget,distance,ArrivalAction,"player")
 		
 		currentMark.global_position = NavNodeTarget.global_position
 		currentMark = null
