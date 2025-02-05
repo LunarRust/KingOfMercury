@@ -5,29 +5,51 @@ var active : bool = false
 var space_state
 var cam
 var mousepos
+var NpcRules
+var CheckRules : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if Input.is_mouse_button_pressed(2):
-		active = true
+	if get_tree().get_first_node_in_group("NpcSceneRules") != null:
+		CheckRules = true
+		NpcRules = get_tree().get_first_node_in_group("NpcSceneRules")
+		if NpcRules.AllowPlayerControl == true:
+			if Input.is_mouse_button_pressed(2):
+				active = true
 		pass # Replace with function body.
 	else:
 		active = false
 	
 func _physics_process(delta):
 	if active:
-		space_state = get_world_3d().direct_space_state
-		cam = get_viewport().get_camera_3d()
-		mousepos = get_viewport().get_mouse_position()
-		self.global_position = RCS.get_mouse_world_position(space_state,cam,mousepos)
+		if CheckRules == true:
+			if NpcRules.AllowPlayerControl == true:
+				space_state = get_world_3d().direct_space_state
+				cam = get_viewport().get_camera_3d()
+				mousepos = get_viewport().get_mouse_position()
+				self.global_position = RCS.get_mouse_world_position(space_state,cam,mousepos)
+		else:
+			space_state = get_world_3d().direct_space_state
+			cam = get_viewport().get_camera_3d()
+			mousepos = get_viewport().get_mouse_position()
+			self.global_position = RCS.get_mouse_world_position(space_state,cam,mousepos)
 	
 
 func _process(delta):
-	if Input.is_mouse_button_pressed(2):
-		fade_in(CharParent,0.05)
-		active = true
+	if CheckRules == true:
+			if NpcRules.AllowPlayerControl == true:
+				if Input.is_mouse_button_pressed(2):
+					fade_in(CharParent,0.05)
+					active = true
+				else:
+					fade_out(CharParent,1)
+					active = false
 	else:
-		fade_out(CharParent,1)
-		active = false
+		if Input.is_mouse_button_pressed(2):
+			fade_in(CharParent,0.05)
+			active = true
+		else:
+			fade_out(CharParent,1)
+			active = false
 	
 	
 func fade_out(node : Node3D,fade_duration : float):

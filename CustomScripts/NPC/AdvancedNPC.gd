@@ -35,6 +35,7 @@ var walkName = "Walk"
 var attackName = "Attack"
 var meleeAttack : bool = true
 
+var AllowPlayerCon : bool = true
 var attackTimer : float
 var attacking : bool = false
 var running : bool = false
@@ -71,20 +72,20 @@ func _ready():
 	MaxDistance = MaxDistanceDef
 	AttackDistanceDefault = AttackDistance
 	speed = MaxSpeed
+	SignalBusKOM.Activate_Pomp_Target.connect(TargetEnimies)
+	SignalBusKOM.Activate_Player_Target.connect(TargetPlayer)
+	SignalBusKOM.Kill_pomp.connect(KillSelf)
+	SignalBusKOM.Item_Grab.connect(LocateItem)
+	SignalBusKOM.Light_Toggle.connect(FlashLightToggle)
+	SignalBusKOM.Light_On.connect(FlashLightOn)
+	SignalBusKOM.Light_Off.connect(FlashLightOff)
+	SignalBusKOM.NavToPoint.connect(NavToPoint)
+	SignalBusKOM.ItemSpef.connect(NavToItem)
+	nav_agent.target_desired_distance = MaxDistance
 	if (TargetEntity == null):
 		print("Ouchie wawa! There's no defined player object for this enemy to chase! Trying to find one now.")
 		TargetEntity = get_tree().get_first_node_in_group("player")
-		SignalBusKOM.Activate_Pomp_Target.connect(TargetEnimies)
-		SignalBusKOM.Activate_Player_Target.connect(TargetPlayer)
-		SignalBusKOM.Kill_pomp.connect(KillSelf)
-		SignalBusKOM.Item_Grab.connect(LocateItem)
-		SignalBusKOM.Light_Toggle.connect(FlashLightToggle)
-		SignalBusKOM.Light_On.connect(FlashLightOn)
-		SignalBusKOM.Light_Off.connect(FlashLightOff)
-		SignalBusKOM.NavToPoint.connect(NavToPoint)
-		SignalBusKOM.ItemSpef.connect(NavToItem)
 		running = true
-		nav_agent.target_desired_distance = MaxDistance
 	else:
 		running = true
 	CheckGlobals()
@@ -92,17 +93,18 @@ func _ready():
 		
 func _physics_process(delta):
 	if (running):
-		if Input.is_physical_key_pressed(KEY_5):
-			TargetEntity = TargetLocator()
-		if Tset:
-			TargetEntity = TargetLocator()
-		if Input.is_physical_key_pressed(KEY_6):
-			hostile = false
-			TargetEntity = TargetLocator("player")
-		if Input.is_mouse_button_pressed(2):
-			hostile = false
-			DoLookAt = false
-			TargetEntity = TargetLocator("NpcMarker",1.2)
+		if AllowPlayerCon:
+			if Input.is_physical_key_pressed(KEY_5):
+				TargetEntity = TargetLocator()
+			if Tset:
+				TargetEntity = TargetLocator()
+			if Input.is_physical_key_pressed(KEY_6):
+				hostile = false
+				TargetEntity = TargetLocator("player")
+			if Input.is_mouse_button_pressed(2):
+				hostile = false
+				DoLookAt = false
+				TargetEntity = TargetLocator("NpcMarker",1.2)
 		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel").set_text("Target is: [color=red]" + str(TargetEntity.name) + "[/color]")
 		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel2").set_text("AttackTimer: [color=red]" + str(snapped(attackTimer,0.01)) + "[/color]")
 		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel3").set_text("Distance: [color=red]" + str(snapped(position.distance_to(TargetEntity.position),0.01)) + "[/color]")
@@ -288,6 +290,10 @@ func CheckGlobals():
 				FlashLightOff()
 		if !NpcRules.InventoryVisible:
 			self.get_node("CtrlInventoryGridEx").hide()
+		if NpcRules.AllowPlayerControl == true:
+			AllowPlayerCon = true
+		else:
+			AllowPlayerCon = false
 				
 
 ###################################

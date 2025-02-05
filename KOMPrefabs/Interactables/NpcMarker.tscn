@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://CustomScripts/MouseInteraction/AttachToMouse3D.gd" id="1_g4vsn"]
 [ext_resource type="Texture2D" uid="uid://da8neu2a6q8s4" path="res://Sprites/PsychopompInHouseSheet.png" id="2_csibs"]
-[ext_resource type="AudioStream" uid="uid://csujfrs8e4680" path="res://Sounds/2DStep2.ogg" id="2_uuwnf"]
-[ext_resource type="AudioStream" uid="uid://c8ol0c64tlngb" path="res://Sounds/2DStep1.ogg" id="3_8m25n"]
+[ext_resource type="AudioStream" uid="uid://j5mbsy824nnd" path="res://Sounds/2DStep2.ogg" id="2_uuwnf"]
+[ext_resource type="AudioStream" uid="uid://c3d7quhlnw8o" path="res://Sounds/2DStep1.ogg" id="3_8m25n"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_egcki"]
 
