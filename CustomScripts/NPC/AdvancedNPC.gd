@@ -189,13 +189,14 @@ func running_handling(delta):
 	velV2.y = forwardVel - 0.5
 	if velV2.y < 0:
 		velV2.y = 0
-	if (animTree != null):
-		animTree["parameters/Normal2D/blend_position"] = velV2
-		animTree["parameters/Normal2D/4/blend_position"] = float(HealthHandler.CoreHealthHandler.HP)
 	if DoLookAt:
 		velV2.x = find_rotation_to(self,LookTarget)
 	else:
 		velV2.x = 0
+	if (animTree != null):
+		animTree["parameters/Normal2D/blend_position"] = velV2
+		animTree["parameters/Normal2D/4/blend_position"] = float(HealthHandler.CoreHealthHandler.HP)
+	
 	DebugLabelParent.get_child(1).text = ("InstanceID " +  str(InstID))
 	DebugLabelParent.get_child(0).text = ("Speed:  " +  str(speed))
 	DebugLabelParent.get_child(2).text =("velocity: " +  str(velV2.y))

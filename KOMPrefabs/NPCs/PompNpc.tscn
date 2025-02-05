@@ -2738,6 +2738,7 @@ tracks/47/keys = PackedFloat32Array(0, 1, 0.197, 0.009, -0.084, 0.977)
 [sub_resource type="Animation" id="Animation_j1lum"]
 resource_name = "Shrug"
 length = 1.33333
+loop_mode = 1
 tracks/0/type = "rotation_3d"
 tracks/0/imported = true
 tracks/0/enabled = false
@@ -5339,7 +5340,7 @@ states/Walk/position = Vector2(700, 213)
 "states/Walk 2/node" = SubResource("AnimationNodeAnimation_nd8mm")
 "states/Walk 2/position" = Vector2(550, 263)
 transitions = ["Start", "Normal2D", SubResource("AnimationNodeStateMachineTransition_mbyqs"), "Attack", "Normal2D", SubResource("AnimationNodeStateMachineTransition_uj3gr"), "Normal2D", "Death", SubResource("AnimationNodeStateMachineTransition_mb51m"), "Talk", "Normal2D", SubResource("AnimationNodeStateMachineTransition_s6gkv"), "Normal2D", "Talk", SubResource("AnimationNodeStateMachineTransition_ao5lk"), "Touch", "Normal2D", SubResource("AnimationNodeStateMachineTransition_wgnio"), "Normal2D", "Touch", SubResource("AnimationNodeStateMachineTransition_2lnii"), "Normal2D", "Attack", SubResource("AnimationNodeStateMachineTransition_wl2dl"), "Hurt", "Normal2D", SubResource("AnimationNodeStateMachineTransition_7aqr0"), "Shrug", "Normal2D", SubResource("AnimationNodeStateMachineTransition_vh7an"), "Normal2D", "Shrug", SubResource("AnimationNodeStateMachineTransition_sx071"), "Normal2D", "Walk", SubResource("AnimationNodeStateMachineTransition_v3re0"), "Walk", "Normal2D", SubResource("AnimationNodeStateMachineTransition_m8q76"), "Normal2D", "Hurt", SubResource("AnimationNodeStateMachineTransition_g20r0"), "IdleLowHealth", "Attack 2", SubResource("AnimationNodeStateMachineTransition_nc4kf"), "Attack 2", "IdleLowHealth", SubResource("AnimationNodeStateMachineTransition_4rp1m"), "Walk 2", "IdleLowHealth", SubResource("AnimationNodeStateMachineTransition_qjmwh"), "IdleLowHealth", "Walk 2", SubResource("AnimationNodeStateMachineTransition_3138f"), "Normal2D", "Walk 2", SubResource("AnimationNodeStateMachineTransition_rypnw"), "Walk 2", "Normal2D", SubResource("AnimationNodeStateMachineTransition_nvaat"), "Walk", "IdleLowHealth", SubResource("AnimationNodeStateMachineTransition_fcbcr"), "Normal2D", "IdleLowHealth", SubResource("AnimationNodeStateMachineTransition_ncstq"), "Hurt", "IdleLowHealth", SubResource("AnimationNodeStateMachineTransition_ng778"), "IdleLowHealth", "Hurt", SubResource("AnimationNodeStateMachineTransition_g2rpd"), "Walk", "Attack", SubResource("AnimationNodeStateMachineTransition_jdvhy"), "Attack", "Walk", SubResource("AnimationNodeStateMachineTransition_6gotd"), "IdleLowHealth", "Touch 2", SubResource("AnimationNodeStateMachineTransition_ud8yg"), "Touch 2", "IdleLowHealth", SubResource("AnimationNodeStateMachineTransition_cssx1"), "Normal2D", "Flashlight", SubResource("AnimationNodeStateMachineTransition_cyjco"), "Flashlight", "Normal2D", SubResource("AnimationNodeStateMachineTransition_q2vuu")]
-graph_offset = Vector2(-204, -1.3727)
+graph_offset = Vector2(-183, -42.3727)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_trvpb"]
 resource_name = "Lit"
