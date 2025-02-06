@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://CustomScripts/NPC/AdvancedNPC.gd" id="1_cqd2p"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem.cs" id="2_fa0x6"]
-[ext_resource type="Texture2D" uid="uid://b74g3ver3xs8l" path="res://Sprites/Faces/Psychopomp FaceSprite3.png" id="3_4bj1b"]
+[ext_resource type="Texture2D" uid="uid://dlxwxvfcxaciw" path="res://Sprites/Faces/Psychopomp FaceSprite3.png" id="3_4bj1b"]
 [ext_resource type="Script" path="res://Scripts/EnemyHealthHandler.cs" id="4_w558x"]
 [ext_resource type="Script" path="res://CustomScripts/NPC/NpcToNpcHealthController.gd" id="5_cewev"]
 [ext_resource type="Script" path="res://CustomScripts/NPC/PompBehavior.gd" id="6_c1t4u"]
@@ -6133,7 +6133,7 @@ spot_range = 8.0
 libraries = {
 "": SubResource("AnimationLibrary_17qq7")
 }
-blend_times = [&"Attack", &"Hurt", 0.2, &"Attack", &"Touch", 0.2, &"Attack", &"Walk", 0.5, &"Attack", &"Idle", 0.5, &"Attack", &"Talk", 0.2, &"Attack", &"Shrug", 0.2, &"Idle", &"Touch", 0.2, &"Idle", &"Walk", 0.5, &"Idle", &"Attack", 0.3, &"Idle", &"Idle", 0.5, &"Idle", &"Talk", 0.2, &"Idle", &"Shrug", 0.2]
+blend_times = [&"Attack", &"Shrug", 0.2, &"Attack", &"Walk", 0.5, &"Attack", &"Idle", 0.5, &"Attack", &"Talk", 0.2, &"Attack", &"Touch", 0.2, &"Attack", &"Hurt", 0.2, &"Idle", &"Shrug", 0.2, &"Idle", &"Attack", 0.3, &"Idle", &"Walk", 0.5, &"Idle", &"Idle", 0.5, &"Idle", &"Talk", 0.2, &"Idle", &"Touch", 0.2]
 
 [node name="Sprite3D" type="Sprite3D" parent="VenusModel"]
 transform = Transform3D(-1.18672, -1.03747e-07, 4.53491e-15, 0, -5.18733e-08, -1.18672, 1.03747e-07, -1.18672, 5.18733e-08, 0, 0.811643, 0.264255)
