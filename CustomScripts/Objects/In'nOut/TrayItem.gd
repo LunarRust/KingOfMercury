@@ -39,7 +39,10 @@ func Packload():
 		await get_tree().create_timer(0.1).timeout
 
 		currentNPC = find_closest_or_furthest(self.get_parent(),"PompNPC")
-		currentID = currentNPC.InstID
+		if currentNPC != null:
+			currentID = currentNPC.InstID
+		else:
+			currentID = 0
 		currentMark = get_tree().get_first_node_in_group("NavMark" + str(currentID))
 		currentNPC.MaxSpeed = 2
 		print_rich("Spawner Current ID: [color=red]" + str(currentID) + "[/color]")
