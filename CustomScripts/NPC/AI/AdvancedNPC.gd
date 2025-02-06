@@ -418,7 +418,9 @@ func TargetPlayer():
 	TargetIsCreature = true
 	TargetIsItem = false
 	DoLookAt = true
+	LookTarget = self
 	TargetEntity = get_tree().get_first_node_in_group("player")
+	LookTarget = TargetEntity
 	
 func find_closest_or_furthest(node: Object,group_name = "default",item = false, get_closest:= true) -> Object:
 	@warning_ignore("unassigned_variable")

@@ -20,7 +20,7 @@ func StartAttack(name : StringName):
 func Look():
 	AnimTrigger("Shrug")
 
-func Touch():
+func Touch(AmNpc = false):
 	AnimTrigger("Touch")
 
 func Talk():
