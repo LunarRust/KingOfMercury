@@ -105,9 +105,9 @@ func _physics_process(delta):
 				hostile = false
 				DoLookAt = false
 				TargetEntity = TargetLocator("NpcMarker",1.2)
-		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel").set_text("Target is: [color=red]" + str(TargetEntity.name) + "[/color]")
-		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel2").set_text("AttackTimer: [color=red]" + str(snapped(attackTimer,0.01)) + "[/color]")
-		get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel3").set_text("Distance: [color=red]" + str(snapped(position.distance_to(TargetEntity.position),0.01)) + "[/color]")
+		#get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel").set_text("Target is: [color=red]" + str(TargetEntity.name) + "[/color]")
+		#get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel2").set_text("AttackTimer: [color=red]" + str(snapped(attackTimer,0.01)) + "[/color]")
+		#get_tree().get_first_node_in_group("PompNpcStats").get_node("TargetLabel3").set_text("Distance: [color=red]" + str(snapped(position.distance_to(TargetEntity.position),0.01)) + "[/color]")
 		running_handling(delta)
 		
 
