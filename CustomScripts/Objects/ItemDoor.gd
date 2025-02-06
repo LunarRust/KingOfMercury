@@ -22,6 +22,8 @@ var ItemUsed: bool = false
 signal stopped
 	
 func Item(item : String):
+	TweenClose.set_parallel()
+	TweenOpen.set_parallel()
 	print("Trying Key")
 	print("Does " + item + " equal " + ItemToMatch)
 	if (item == ItemToMatch && !opened):
@@ -44,6 +46,7 @@ func OpenDoor():
 		%SoundSource.stream = SoundEffect
 		%SoundSource.play()
 		TweenOpen = get_tree().create_tween()
+		TweenOpen.set_parallel()
 		TweenOpen.connect("finished", on_tweenopen_finished)
 		#TweenOpen.new()
 		TweenOpen.tween_property(get_parent(), "position", direction,Duration).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE).as_relative()
@@ -65,6 +68,7 @@ func Close():
 		%SoundSource.play()
 		TweenClose = get_tree().create_tween()
 		TweenClose.connect("finished", on_tweenclose_finished)
+		TweenClose.set_parallel()
 		TweenClose.tween_property(get_parent(), "position", -direction,Duration).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE).as_relative()
 		moving = true
 		if Transmit:
