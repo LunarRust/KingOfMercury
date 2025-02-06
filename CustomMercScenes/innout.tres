@@ -1,9 +1,9 @@
 [gd_resource type="Environment" load_steps=3 format=3 uid="uid://dvbsbhb67hpin"]
 
-[ext_resource type="Material" uid="uid://6u1h1lc8jyl5" path="res://KOMMaterials/texas.tres" id="1_6bkjs"]
+[ext_resource type="Material" uid="uid://ck8coatthetty" path="res://KOMMaterials/fuckywucky.tres" id="1_35mo8"]
 
 [sub_resource type="Sky" id="Sky_823r6"]
-sky_material = ExtResource("1_6bkjs")
+sky_material = ExtResource("1_35mo8")
 
 [resource]
 background_mode = 2
