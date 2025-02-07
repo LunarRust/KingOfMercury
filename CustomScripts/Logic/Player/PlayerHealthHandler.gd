@@ -1,4 +1,4 @@
-class_name	 PlayerHealthHandler
+class_name PlayerHealthHandler
 extends Node
 var health : int = 9
 var mana : int = 16
@@ -7,6 +7,7 @@ var dead : bool = false
 @export var playerAnim : AnimationTree
 @export var playerBody : MeshInstance3D
 @export var playerObject : MeshInstance3D
+@export var CameraShaker : Node3D
 @export var skin1 : BaseMaterial3D
 @export var skin2 : BaseMaterial3D
 @export var skin3 : BaseMaterial3D
@@ -22,12 +23,13 @@ var instance : PlayerHealthHandler
 @export var soundSource : AudioStreamPlayer
 
 var Fader = load("res://addons/UniversalFade/Fade.gd")
-var MoverTestC = load("res://Scripts/MoverTest.cs")
+var MoverTestC = load("res://Scripts/MoverTest.cs") as Script
 var MoverTest = MoverTestC.new()
-var CameraShakeC = load("res://CustomScripts/Libraries/CameraShake.gd")
-var CameraShake = CameraShakeC.new()
+#var CameraShaker = preload("res://Scripts/CameraShake.cs") as Script
+#var camshake = CameraShaker.new()
 var HudManage = load("res://prefabs/hudmanager.cs")
-var CamCast = load("res://Scripts/CameraCast.cs")
+var CamCastC = load("res://Scripts/CameraCast.cs")
+var CamCast = CamCastC.new()
 var usedHeal : bool
 
 # Called when the node enters the scene tree for the first time.
@@ -58,7 +60,7 @@ func changeHealth(amount : int):
 	if amount < 0:
 		if playerAnim != null:
 			AnimTrigger("Hurt")
-		CameraShake.Shake(0.1)
+		CameraShaker.Shake(0.1)
 		soundSource.stream = load("res://Sounds/Hurt1.ogg")
 		soundSource.play()
 	elif amount > 0:
@@ -116,10 +118,10 @@ func Death():
 	dead = true
 	HudManage.HideHUD()
 	get_viewport().get_camera_3d().position -= Vector3.UP
-	CamCast.instance.rotation = Vector3(0,0,1.5)
+	CamCast.rotation = Vector3(0,0,1.5)
 	await get_tree().create_timer(4.199999809265137).timeout
 	Fade.crossfade_prepare(3,"WeirdWipe",false,false)
-	get_tree().change_scene_to_packed(load("res://Scripts/GameOver.tscn") as PackedScene)
+	get_tree().change_scene_to_packed(load("res://Scenes/GameOver.tscn") as PackedScene)
 	Fade.crossfade_execute()
 	dead = false
 	print("You died, womp womp!")

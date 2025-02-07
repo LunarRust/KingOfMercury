@@ -7951,7 +7951,7 @@ bones/41/rotation = Quaternion(0.355653, -8.22507e-09, -3.24652e-08, 0.934618)
 bones/42/rotation = Quaternion(-0.657301, -1.79679e-07, 3.13425e-07, 0.753628)
 
 [node name="AnimationPlayer" parent="PompNPC3/VenusModel" index="2"]
-blend_times = [&"Attack", &"Shrug", 0.2, &"Attack", &"Walk", 0.5, &"Attack", &"Idle", 0.5, &"Attack", &"Talk", 0.2, &"Attack", &"Touch", 0.2, &"Attack", &"Hurt", 0.2, &"Idle", &"Shrug", 0.2, &"Idle", &"Attack", 0.3, &"Idle", &"Walk", 0.5, &"Idle", &"Idle", 0.5, &"Idle", &"Talk", 0.2, &"Idle", &"Touch", 0.2]
+blend_times = [&"Attack", &"Shrug", 0.2, &"Attack", &"Walk", 0.5, &"Attack", &"Touch", 0.2, &"Attack", &"Talk", 0.2, &"Attack", &"Hurt", 0.2, &"Attack", &"Idle", 0.5, &"Idle", &"Shrug", 0.2, &"Idle", &"Attack", 0.3, &"Idle", &"Walk", 0.5, &"Idle", &"Touch", 0.2, &"Idle", &"Talk", 0.2, &"Idle", &"Idle", 0.5]
 
 [node name="DebugLabels" parent="PompNPC3" index="14"]
 transform = Transform3D(1, 0, 3.72529e-09, 0, 1, 0, -3.72529e-09, 0, 1, 0, 0, 0)

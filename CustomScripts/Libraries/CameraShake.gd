@@ -1,7 +1,8 @@
+class_name CamShakeGD
 extends Node3D
 @export var shakeDuration : float = 0.1
 @export var shakeAmount : float = 0.2
-var cam : Camera3D
+@export var cam : Camera3D
 var shakeStrength : float = 0
 var shakeDecay : float = 1
 
@@ -25,7 +26,7 @@ func Shake(power : float,decay : float = 1):
 	shakeStrength = power
 	
 func shakeNew(delta,power : float = 1,length : float = 1):
-	var camera3D : Camera3D = get_viewport().get_camera_3d()
+	var camera3D = cam
 	var rotation : Vector3 = camera3D.rotation
 	var num : float = length
 	var num2 : float = power
