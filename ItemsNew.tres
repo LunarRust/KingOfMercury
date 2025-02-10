@@ -143,7 +143,17 @@ json_data = "[
         \"height\": 1,
         \"id\": \"FFries\",
         \"image\": \"res://KOMSprites/innout/FryPile.png\",
-        \"name\": \"FFries\",
+        \"name\": \"Fresh Fries\",
+        \"usable\": \"true\",
+        \"width\": 2
+    },
+    {
+        \"description\": \"Ethically sourced raw meat\",
+        \"health\": -5,
+        \"height\": 1,
+        \"id\": \"RawPatty\",
+        \"image\": \"res://KOMSprites/innout/raw-patty.png\",
+        \"name\": \"Raw Patty\",
         \"usable\": \"true\",
         \"width\": 2
     }

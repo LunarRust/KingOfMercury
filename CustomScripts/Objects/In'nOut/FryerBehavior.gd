@@ -40,18 +40,18 @@ func _process(delta):
 		up = false
 	if Cooking:
 		CookTime += delta
-	if CookTime >= 30:
-		AnimatedSpriteObject.show()
-		SpriteObject.hide()
-	else:
-		AnimatedSpriteObject.hide()
-		if ItemInBasket:
-			SpriteObject.show()
+		if CookTime >= 30:
+			AnimatedSpriteObject.show()
+			SpriteObject.hide()
+		else:
+			AnimatedSpriteObject.hide()
+			if ItemInBasket:
+				SpriteObject.show()
 		
 func Item(item : String):
 	if up:
 		match item:
-			"FFries":
+			"Fresh Fries":
 				SpriteObject.texture = Sprites[2]
 				print_rich("Showing: [color=red]" + str(SpriteObject.name) + "[/color]")
 				ItemInBasket = true
