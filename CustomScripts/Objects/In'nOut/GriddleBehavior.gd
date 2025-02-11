@@ -111,10 +111,7 @@ func Touch(AmNpc = false):
 			if ItemOnSpatula:
 				Cooking = true
 			up = false
-		else:
-			animTrigger("Up")
-			Cooking = false
-			up = true
+		
 	else:
 		if CookTime >= 15:
 			if get_tree().get_first_node_in_group("PompNPC") != null:
