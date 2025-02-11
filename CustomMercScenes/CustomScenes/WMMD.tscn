@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://bskjfuj6mke3u"]
+[gd_scene load_steps=56 format=3 uid="uid://bskjfuj6mke3u"]
 
 [ext_resource type="Texture2D" uid="uid://lgt33gnqe66k" path="res://Sprites/MapBack1new.png" id="1_itacc"]
 [ext_resource type="Script" path="res://Scripts/Tweener2D.cs" id="2_7hioc"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://dgl6r7ahs626j" path="res://Sprites/TrnsSheet1.png" id="15_f8elg"]
 [ext_resource type="Texture2D" uid="uid://ca1nof60oyjyn" path="res://KOMSprites/Gravestone_01.png" id="15_pk7cl"]
 [ext_resource type="AudioStream" uid="uid://2lovkjkbv2a4" path="res://Music/UnderSkinSkies.ogg" id="16_rj35a"]
-[ext_resource type="Script" path="res://Scripts/game_progress.gd" id="17_kts5x"]
 [ext_resource type="Script" path="res://Scripts/SaveButton.gd" id="18_38pm7"]
 [ext_resource type="Script" path="res://CustomScripts/2DSceneChange.gd" id="20_g3e4r"]
 [ext_resource type="Texture2D" uid="uid://cy2vqc8pk5ygw" path="res://Sprites/UI/Fullscreen1.png" id="20_h8drn"]
@@ -573,10 +572,8 @@ stream = ExtResource("16_rj35a")
 volume_db = -11.556
 autoplay = true
 
-[node name="Progression" type="Node" parent="."]
-script = ExtResource("17_kts5x")
-
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_left = 863.0
 offset_top = 2.0
 offset_right = 957.0
@@ -603,6 +600,7 @@ Dest = "Scenes/DebugMenu"
 unique_name_in_owner = true
 
 [node name="FullscreenButton" type="TextureButton" parent="."]
+visible = false
 offset_left = 923.0
 offset_top = 37.0
 offset_right = 955.0
@@ -610,8 +608,6 @@ offset_bottom = 69.0
 texture_normal = ExtResource("20_h8drn")
 texture_pressed = ExtResource("21_riyiw")
 script = ExtResource("22_hwsui")
-
-[node name="TrnsHandler" type="Node" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_4bkj6")
@@ -636,7 +632,8 @@ theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("7_fuxsr")
 theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
-text = "[center][wave]1. Somewhere"
+text = "[center][wave] Debug Room
+"
 
 [node name="TextureButton" type="TextureButton" parent="Custom Location Parent/Somewhere"]
 offset_left = -253.0

@@ -1,103 +1,103 @@
-[gd_scene load_steps=158 format=3 uid="uid://b8m5ivibdr7ru"]
+[gd_scene load_steps=157 format=3 uid="uid://cvdfk0p6gjdfs"]
 
-[ext_resource type="Script" path="res://Scripts/MoverTest.cs" id="1"]
-[ext_resource type="Texture2D" uid="uid://bofd4xxv6rmbl" path="res://Sprites/DownArrow.png" id="2"]
-[ext_resource type="Script" path="res://Scripts/CameraCast.cs" id="3"]
-[ext_resource type="Script" path="res://Scripts/CameraShake.cs" id="4"]
-[ext_resource type="AudioStream" uid="uid://ct5ssa0yauej4" path="res://Sounds/Footstep.wav" id="5"]
-[ext_resource type="Material" uid="uid://nk5prdh13401" path="res://PSX.tres" id="6"]
-[ext_resource type="Script" path="res://prefabs/hudmanager.cs" id="7"]
-[ext_resource type="Texture2D" uid="uid://i22sptxj8tse" path="res://Sprites/UI/HurtOverlay.png" id="8"]
-[ext_resource type="Texture2D" uid="uid://dtbief4giwoo" path="res://Sprites/UI/CustomUI/UIBaseAnimated.png" id="9_ra0tw"]
-[ext_resource type="Script" path="res://UISystem.cs" id="10"]
-[ext_resource type="Texture2D" uid="uid://dwaai7jw4qdjr" path="res://Sprites/HUDFACESHEET.png" id="11"]
-[ext_resource type="Texture2D" uid="uid://d0xe5p1yx5ggi" path="res://Sprites/CompassNSEW.png" id="12"]
-[ext_resource type="Script" path="res://Scripts/CompassArrow.cs" id="13"]
-[ext_resource type="Texture2D" uid="uid://bs3vk6f87r1s4" path="res://Sprites/CompassArrow.png" id="14"]
-[ext_resource type="Script" path="res://Scripts/Tweener2D.cs" id="15"]
-[ext_resource type="Texture2D" uid="uid://j4efkjdf64wi" path="res://Sprites/UI/Hammer.png" id="16"]
-[ext_resource type="Script" path="res://CustomScripts/Logic/Player/PlayerHealthHandler.gd" id="17_b0t2y"]
-[ext_resource type="Material" uid="uid://bw78j1pb1yth8" path="res://Material/PlayerSkin.tres" id="18"]
-[ext_resource type="Material" path="res://Material/PlayerSkin2.tres" id="19"]
-[ext_resource type="Material" path="res://Material/PlayerSkin3.tres" id="20"]
-[ext_resource type="Texture2D" uid="uid://b17g2ddaals12" path="res://Sprites/UI/CustomUI/HealthBar.png" id="21_7ktxi"]
-[ext_resource type="Texture2D" uid="uid://cfjs2kyoi5ttb" path="res://Sprites/UI/CustomUI/BarMask.png" id="22_jkuup"]
-[ext_resource type="Shader" path="res://Shaders/Scroll2D.gdshader" id="23"]
-[ext_resource type="Texture2D" uid="uid://eyx20omen4vm" path="res://textures/Noise.png" id="24"]
-[ext_resource type="Texture2D" uid="uid://cfg6y2f7m2reg" path="res://Sprites/UI/CustomUI/ManaBar.png" id="25_g6tx6"]
-[ext_resource type="AudioStream" uid="uid://cwgv7jpdutu0x" path="res://Sounds/Death.ogg" id="26"]
-[ext_resource type="Texture2D" uid="uid://co8uojq13rdxg" path="res://Sprites/UI/Hotbar.png" id="27"]
-[ext_resource type="Script" path="res://Scripts/PlayerHealthHandler.cs" id="27_ai77e"]
-[ext_resource type="Script" path="res://Scripts/InteractionButtonMaster.cs" id="28"]
-[ext_resource type="Texture2D" uid="uid://dott0ddy3rq5x" path="res://Sprites/Eye1.png" id="29"]
-[ext_resource type="Texture2D" uid="uid://cgjvgyrqogqhs" path="res://Sprites/Eye2.png" id="30"]
-[ext_resource type="Texture2D" uid="uid://ct1aiwwywc3s4" path="res://Sprites/Eye3.png" id="31"]
-[ext_resource type="Script" path="res://Scripts/InteractionButton.cs" id="32"]
-[ext_resource type="AudioStream" uid="uid://bjglubaamcjg4" path="res://Sounds/tick2.ogg" id="33"]
-[ext_resource type="FontFile" uid="uid://dku4ohp5rmpr5" path="res://Fonts/DBStylez.ttf" id="34"]
-[ext_resource type="Texture2D" uid="uid://cq1g0r5ketc72" path="res://Sprites/Speak1.png" id="35"]
-[ext_resource type="Texture2D" uid="uid://bn030tg8lovt0" path="res://Sprites/Speak2.png" id="36"]
-[ext_resource type="Texture2D" uid="uid://fpjyw8ttbo8r" path="res://Sprites/Speak3.png" id="37"]
-[ext_resource type="Texture2D" uid="uid://kfcx3jcdj4ch" path="res://Sprites/Touch1.png" id="38"]
-[ext_resource type="Texture2D" uid="uid://tg4oq0hyqob" path="res://Sprites/Touch2.png" id="39"]
-[ext_resource type="Texture2D" uid="uid://det8lqyjr0j53" path="res://Sprites/Touch3.png" id="40"]
-[ext_resource type="Texture2D" uid="uid://b2liegp0rygoe" path="res://Sprites/Hammer1.png" id="41"]
-[ext_resource type="Texture2D" uid="uid://c3u4fnhdbcvh6" path="res://Sprites/Hammer2.png" id="42"]
-[ext_resource type="Texture2D" uid="uid://ca2hvj0tkm5nl" path="res://Sprites/Hammer3.png" id="43"]
-[ext_resource type="Texture2D" uid="uid://tprra8w4fh0e" path="res://Sprites/UI/Blip.png" id="44"]
-[ext_resource type="Texture2D" uid="uid://btvpb7n6x5kgn" path="res://Sprites/Inv1.png" id="45"]
-[ext_resource type="Texture2D" uid="uid://dh07prd0atxwf" path="res://Sprites/Inv2.png" id="46"]
-[ext_resource type="Texture2D" uid="uid://bcbwi430lcfi1" path="res://Sprites/Inv3.png" id="47"]
-[ext_resource type="Script" path="res://CustomScripts/Logic/Player/InventoryButton.gd" id="47_8vagb"]
-[ext_resource type="Texture2D" uid="uid://bdprua1xq1wim" path="res://Sprites/UI/Gear.png" id="49"]
-[ext_resource type="Script" path="res://prefabs/InventoryManager.gd" id="50"]
-[ext_resource type="Texture2D" uid="uid://dt5ok0wh0v7h7" path="res://Sprites/UI/GearCrus.png" id="50_p30vr"]
-[ext_resource type="Texture2D" uid="uid://0i4iha5ir3i1" path="res://Sprites/UI/ButtonEmpty.png" id="51"]
-[ext_resource type="FontFile" uid="uid://1mk6dr4ng8sv" path="res://Fonts/GlasstownNbpRegular-RyMM.ttf" id="52"]
-[ext_resource type="Script" path="res://addons/gloot/core/inventory_grid.gd" id="53"]
-[ext_resource type="Resource" uid="uid://1vk2qehuhumm" path="res://ItemsNew.tres" id="54"]
-[ext_resource type="Script" path="res://addons/gloot/core/inventory_item.gd" id="54_p0oqx"]
-[ext_resource type="Script" path="res://addons/gloot/ui/ctrl_inventory_grid_ex.gd" id="55"]
-[ext_resource type="Texture2D" uid="uid://bo7ngnq4uajfs" path="res://Sprites/Items/Generic.png" id="56"]
-[ext_resource type="Texture2D" uid="uid://cy2vqc8pk5ygw" path="res://Sprites/UI/Fullscreen1.png" id="57"]
-[ext_resource type="Texture2D" uid="uid://be3jf3qr3gbmy" path="res://Sprites/UI/Fullscreen2.png" id="58"]
-[ext_resource type="Script" path="res://Scripts/Fullscreen.gd" id="59"]
-[ext_resource type="Texture2D" uid="uid://bof065382w2pb" path="res://Sprites/UI/GlobeButton1.png" id="60"]
-[ext_resource type="Texture2D" uid="uid://cmpj3v4140gc0" path="res://Sprites/UI/GlobeButton2.png" id="61"]
-[ext_resource type="Script" path="res://Scripts/LanguageButton.cs" id="62"]
-[ext_resource type="FontFile" uid="uid://dc2g2wno6tfur" path="res://Fonts/DBStylezButtons.ttf" id="63"]
-[ext_resource type="Texture2D" uid="uid://blvh4wr7lpjma" path="res://Sprites/UI/Flashlight1.png" id="64"]
-[ext_resource type="Texture2D" uid="uid://blcb86m67vhwu" path="res://Sprites/UI/Flashlight3.png" id="65"]
-[ext_resource type="Texture2D" uid="uid://b140iif6mdmye" path="res://Sprites/UI/Flashlight2.png" id="66"]
-[ext_resource type="Script" path="res://Scripts/FlashLight.cs" id="67"]
-[ext_resource type="AudioStream" uid="uid://6wexyx8jhkym" path="res://Sounds/FlashLight.ogg" id="68"]
-[ext_resource type="Texture2D" uid="uid://neas634pjtgp" path="res://Sprites/UI/EmptyButton.png" id="69"]
-[ext_resource type="Script" path="res://Scripts/Usebutton.cs" id="70"]
-[ext_resource type="Script" path="res://CustomScripts/SceneInstantiator.gd" id="70_4koob"]
-[ext_resource type="Script" path="res://Scenes/TPSUnlocker.gd" id="71"]
-[ext_resource type="Script" path="res://CustomScripts/Logic/AppearOnPress.gd" id="71_qffgh"]
-[ext_resource type="PackedScene" uid="uid://dfnd2drrmwkyf" path="res://KOMPrefabs/NPCs/PompNpc.tscn" id="71_vi2ho"]
-[ext_resource type="Texture2D" uid="uid://ck3g65wtfufno" path="res://Sprites/UI/iconsmile128Gold.png" id="71_xtk0u"]
-[ext_resource type="Texture2D" uid="uid://4rl20qwu2v3u" path="res://Sprites/UI/View1.png" id="72"]
-[ext_resource type="Script" path="res://Scripts/TravelButton.gd" id="72_e4lsp"]
-[ext_resource type="AudioStream" uid="uid://cxje01fdrdex0" path="res://Sounds/tick4.ogg" id="72_y68jy"]
-[ext_resource type="Texture2D" uid="uid://dvctn6ru26fyl" path="res://Sprites/UI/View2.png" id="73"]
-[ext_resource type="Script" path="res://Scripts/ViewButton.cs" id="74"]
-[ext_resource type="Texture2D" uid="uid://ym8xvbx2r8dx" path="res://Sprites/UI/InventoryCursor.png" id="75"]
-[ext_resource type="Script" path="res://Scripts/InventoryCursor.cs" id="76"]
-[ext_resource type="Texture2D" uid="uid://d08uqmhpg2wkn" path="res://Sprites/DialogueBox.png" id="77"]
-[ext_resource type="Script" path="res://Scripts/DialogueBox.cs" id="78"]
-[ext_resource type="Texture2D" uid="uid://be70mwavslv7m" path="res://Sprites/Faces/Psychopomp FaceSprite.png" id="79"]
-[ext_resource type="Texture2D" uid="uid://h1qhsfsy30ya" path="res://Sprites/UI/X.png" id="80"]
-[ext_resource type="Script" path="res://Scripts/XButton.cs" id="81"]
-[ext_resource type="Script" path="res://Scripts/CursorFollower.cs" id="82"]
-[ext_resource type="PackedScene" uid="uid://c04kuoputmjkn" path="res://Models/PsychopompPlayerModel.blend" id="83"]
-[ext_resource type="Texture2D" uid="uid://dd0v6opyk4v0e" path="res://Models/textures/PompTexture.png" id="84"]
-[ext_resource type="Script" path="res://Scripts/FpsCounter.cs" id="85"]
-[ext_resource type="Script" path="res://CustomScripts/NPC/PompFriendController.gd" id="93_lb8ch"]
-[ext_resource type="Script" path="res://CustomScripts/AutoLoads/KOMSignalBus.gd" id="94_u8mxq"]
-[ext_resource type="PackedScene" uid="uid://br1yim6ld7iqo" path="res://KOMPrefabs/NPCs/NpcObjects/auto_spawer.tscn" id="95_toqkf"]
-[ext_resource type="Script" path="res://CustomScripts/Libraries/CameraShake.gd" id="96_431ph"]
+[ext_resource type="Script" path="res://Scripts/MoverTest.cs" id="1_jm8hk"]
+[ext_resource type="Texture2D" uid="uid://bofd4xxv6rmbl" path="res://Sprites/DownArrow.png" id="2_ifr1t"]
+[ext_resource type="Script" path="res://Scripts/CameraCast.cs" id="3_hkj78"]
+[ext_resource type="Script" path="res://Scripts/CameraShake.cs" id="4_u7l1g"]
+[ext_resource type="AudioStream" uid="uid://ct5ssa0yauej4" path="res://Sounds/Footstep.wav" id="5_qerm0"]
+[ext_resource type="Material" uid="uid://nk5prdh13401" path="res://PSX.tres" id="6_spel8"]
+[ext_resource type="Script" path="res://prefabs/hudmanager.cs" id="7_6hy5k"]
+[ext_resource type="Texture2D" uid="uid://i22sptxj8tse" path="res://Sprites/UI/HurtOverlay.png" id="8_sbru4"]
+[ext_resource type="Texture2D" uid="uid://neas634pjtgp" path="res://Sprites/UI/EmptyButton.png" id="9_06m03"]
+[ext_resource type="Texture2D" uid="uid://0i4iha5ir3i1" path="res://Sprites/UI/ButtonEmpty.png" id="10_snexc"]
+[ext_resource type="Script" path="res://CustomScripts/SceneInstantiator.gd" id="11_kjqsd"]
+[ext_resource type="FontFile" uid="uid://dku4ohp5rmpr5" path="res://Fonts/DBStylez.ttf" id="12_rfwjx"]
+[ext_resource type="Texture2D" uid="uid://dtbief4giwoo" path="res://Sprites/UI/CustomUI/UIBaseAnimated.png" id="13_vjm2y"]
+[ext_resource type="Script" path="res://UISystem.cs" id="14_v35k4"]
+[ext_resource type="Texture2D" uid="uid://dwaai7jw4qdjr" path="res://Sprites/HUDFACESHEET.png" id="15_5fqge"]
+[ext_resource type="Texture2D" uid="uid://j4efkjdf64wi" path="res://Sprites/UI/Hammer.png" id="16_0uupe"]
+[ext_resource type="Script" path="res://CustomScripts/Logic/Player/PlayerHealthHandler.gd" id="17_hglnb"]
+[ext_resource type="Material" uid="uid://bw78j1pb1yth8" path="res://Material/PlayerSkin.tres" id="18_stf0n"]
+[ext_resource type="Material" path="res://Material/PlayerSkin2.tres" id="19_kfh78"]
+[ext_resource type="Material" path="res://Material/PlayerSkin3.tres" id="20_uq0cw"]
+[ext_resource type="Texture2D" uid="uid://b17g2ddaals12" path="res://Sprites/UI/CustomUI/HealthBar.png" id="21_hd31a"]
+[ext_resource type="Texture2D" uid="uid://cfjs2kyoi5ttb" path="res://Sprites/UI/CustomUI/BarMask.png" id="22_w0fmd"]
+[ext_resource type="Shader" path="res://Shaders/Scroll2D.gdshader" id="23_b4hxp"]
+[ext_resource type="Texture2D" uid="uid://eyx20omen4vm" path="res://textures/Noise.png" id="24_ijsbd"]
+[ext_resource type="Texture2D" uid="uid://cfg6y2f7m2reg" path="res://Sprites/UI/CustomUI/ManaBar.png" id="25_t5gx5"]
+[ext_resource type="AudioStream" uid="uid://cwgv7jpdutu0x" path="res://Sounds/Death.ogg" id="26_fbdeo"]
+[ext_resource type="Script" path="res://Scripts/PlayerHealthHandler.cs" id="27_tly4j"]
+[ext_resource type="Texture2D" uid="uid://dott0ddy3rq5x" path="res://Sprites/Eye1.png" id="28_v7xo4"]
+[ext_resource type="Texture2D" uid="uid://cgjvgyrqogqhs" path="res://Sprites/Eye2.png" id="29_g7qtl"]
+[ext_resource type="Texture2D" uid="uid://ct1aiwwywc3s4" path="res://Sprites/Eye3.png" id="30_en8bo"]
+[ext_resource type="Script" path="res://CustomScripts/Logic/Player/InteractionButton.gd" id="31_d45m3"]
+[ext_resource type="AudioStream" uid="uid://bjglubaamcjg4" path="res://Sounds/tick2.ogg" id="32_x2c8s"]
+[ext_resource type="Texture2D" uid="uid://cq1g0r5ketc72" path="res://Sprites/Speak1.png" id="33_noqxq"]
+[ext_resource type="Texture2D" uid="uid://bn030tg8lovt0" path="res://Sprites/Speak2.png" id="34_6vfug"]
+[ext_resource type="Texture2D" uid="uid://fpjyw8ttbo8r" path="res://Sprites/Speak3.png" id="35_b0bqu"]
+[ext_resource type="Texture2D" uid="uid://kfcx3jcdj4ch" path="res://Sprites/Touch1.png" id="36_bxmro"]
+[ext_resource type="Texture2D" uid="uid://tg4oq0hyqob" path="res://Sprites/Touch2.png" id="37_hi06r"]
+[ext_resource type="Texture2D" uid="uid://det8lqyjr0j53" path="res://Sprites/Touch3.png" id="38_3d8no"]
+[ext_resource type="Texture2D" uid="uid://b2liegp0rygoe" path="res://Sprites/Hammer1.png" id="39_t8q71"]
+[ext_resource type="Texture2D" uid="uid://c3u4fnhdbcvh6" path="res://Sprites/Hammer2.png" id="40_q47re"]
+[ext_resource type="Texture2D" uid="uid://ca2hvj0tkm5nl" path="res://Sprites/Hammer3.png" id="41_tsx20"]
+[ext_resource type="Texture2D" uid="uid://co8uojq13rdxg" path="res://Sprites/UI/Hotbar.png" id="42_76eo4"]
+[ext_resource type="Script" path="res://Scripts/InteractionButtonMaster.cs" id="43_81hre"]
+[ext_resource type="Texture2D" uid="uid://tprra8w4fh0e" path="res://Sprites/UI/Blip.png" id="44_3xjbn"]
+[ext_resource type="Texture2D" uid="uid://btvpb7n6x5kgn" path="res://Sprites/Inv1.png" id="45_ph10s"]
+[ext_resource type="Texture2D" uid="uid://dh07prd0atxwf" path="res://Sprites/Inv2.png" id="46_ks3a1"]
+[ext_resource type="Texture2D" uid="uid://bcbwi430lcfi1" path="res://Sprites/Inv3.png" id="47_ne3an"]
+[ext_resource type="Script" path="res://CustomScripts/Logic/Player/InventoryButton.gd" id="48_gy7tc"]
+[ext_resource type="Texture2D" uid="uid://dt5ok0wh0v7h7" path="res://Sprites/UI/GearCrus.png" id="49_1ndb4"]
+[ext_resource type="Script" path="res://CustomScripts/Logic/Player/KOMInventoryManager.gd" id="50_ydqh7"]
+[ext_resource type="FontFile" uid="uid://1mk6dr4ng8sv" path="res://Fonts/GlasstownNbpRegular-RyMM.ttf" id="51_1i8tm"]
+[ext_resource type="Script" path="res://CustomScripts/Logic/Player/MouseCaster.gd" id="51_rtsws"]
+[ext_resource type="Script" path="res://addons/gloot/core/inventory_grid.gd" id="52_v4dqg"]
+[ext_resource type="Resource" uid="uid://1vk2qehuhumm" path="res://ItemsNew.tres" id="53_cdcim"]
+[ext_resource type="Script" path="res://addons/gloot/core/inventory_item.gd" id="54_ginas"]
+[ext_resource type="Script" path="res://addons/gloot/ui/ctrl_inventory_grid_ex.gd" id="55_6iaah"]
+[ext_resource type="Texture2D" uid="uid://bo7ngnq4uajfs" path="res://Sprites/Items/Generic.png" id="56_qi3uw"]
+[ext_resource type="Texture2D" uid="uid://cy2vqc8pk5ygw" path="res://Sprites/UI/Fullscreen1.png" id="57_45l8m"]
+[ext_resource type="Texture2D" uid="uid://be3jf3qr3gbmy" path="res://Sprites/UI/Fullscreen2.png" id="58_4x5dc"]
+[ext_resource type="Script" path="res://Scripts/Fullscreen.gd" id="59_4pbbw"]
+[ext_resource type="Texture2D" uid="uid://bof065382w2pb" path="res://Sprites/UI/GlobeButton1.png" id="60_0mxty"]
+[ext_resource type="Texture2D" uid="uid://cmpj3v4140gc0" path="res://Sprites/UI/GlobeButton2.png" id="61_o0gou"]
+[ext_resource type="Script" path="res://Scripts/LanguageButton.cs" id="62_uwq7b"]
+[ext_resource type="FontFile" uid="uid://dc2g2wno6tfur" path="res://Fonts/DBStylezButtons.ttf" id="63_ybam7"]
+[ext_resource type="Texture2D" uid="uid://blvh4wr7lpjma" path="res://Sprites/UI/Flashlight1.png" id="64_ea0yv"]
+[ext_resource type="Texture2D" uid="uid://blcb86m67vhwu" path="res://Sprites/UI/Flashlight3.png" id="65_rvxt0"]
+[ext_resource type="Texture2D" uid="uid://b140iif6mdmye" path="res://Sprites/UI/Flashlight2.png" id="66_bic7y"]
+[ext_resource type="Script" path="res://Scripts/FlashLight.cs" id="67_jkxc1"]
+[ext_resource type="AudioStream" uid="uid://6wexyx8jhkym" path="res://Sounds/FlashLight.ogg" id="68_2a51e"]
+[ext_resource type="Script" path="res://Scripts/Usebutton.cs" id="69_62jd1"]
+[ext_resource type="Script" path="res://CustomScripts/Logic/AppearOnPress.gd" id="70_h6pp7"]
+[ext_resource type="Script" path="res://Scripts/TravelButton.gd" id="71_fi7vn"]
+[ext_resource type="AudioStream" uid="uid://cxje01fdrdex0" path="res://Sounds/tick4.ogg" id="72_g5mrj"]
+[ext_resource type="Script" path="res://Scenes/TPSUnlocker.gd" id="73_os4y1"]
+[ext_resource type="Texture2D" uid="uid://4rl20qwu2v3u" path="res://Sprites/UI/View1.png" id="74_ocuuc"]
+[ext_resource type="Texture2D" uid="uid://dvctn6ru26fyl" path="res://Sprites/UI/View2.png" id="75_wuoc3"]
+[ext_resource type="Script" path="res://Scripts/ViewButton.cs" id="76_mimt2"]
+[ext_resource type="Texture2D" uid="uid://ym8xvbx2r8dx" path="res://Sprites/UI/InventoryCursor.png" id="77_62t7j"]
+[ext_resource type="Script" path="res://Scripts/InventoryCursor.cs" id="78_3y37l"]
+[ext_resource type="Texture2D" uid="uid://d0xe5p1yx5ggi" path="res://Sprites/CompassNSEW.png" id="79_c5y55"]
+[ext_resource type="Script" path="res://Scripts/CompassArrow.cs" id="80_xttg5"]
+[ext_resource type="Texture2D" uid="uid://bs3vk6f87r1s4" path="res://Sprites/CompassArrow.png" id="81_4d13e"]
+[ext_resource type="Script" path="res://Scripts/Tweener2D.cs" id="82_iiwr0"]
+[ext_resource type="PackedScene" uid="uid://dfnd2drrmwkyf" path="res://KOMPrefabs/NPCs/PompNpc.tscn" id="83_r03ox"]
+[ext_resource type="Texture2D" uid="uid://ck3g65wtfufno" path="res://Sprites/UI/iconsmile128Gold.png" id="84_g33xn"]
+[ext_resource type="Script" path="res://CustomScripts/NPC/PompFriendController.gd" id="85_axcye"]
+[ext_resource type="Texture2D" uid="uid://d08uqmhpg2wkn" path="res://Sprites/DialogueBox.png" id="86_myms0"]
+[ext_resource type="Script" path="res://Scripts/DialogueBox.cs" id="87_c02mq"]
+[ext_resource type="Texture2D" uid="uid://be70mwavslv7m" path="res://Sprites/Faces/Psychopomp FaceSprite.png" id="88_snhl5"]
+[ext_resource type="Texture2D" uid="uid://h1qhsfsy30ya" path="res://Sprites/UI/X.png" id="89_i5wes"]
+[ext_resource type="Script" path="res://Scripts/XButton.cs" id="90_k35p4"]
+[ext_resource type="Texture2D" uid="uid://bdprua1xq1wim" path="res://Sprites/UI/Gear.png" id="91_7xt08"]
+[ext_resource type="Script" path="res://Scripts/CursorFollower.cs" id="92_n2ac4"]
+[ext_resource type="PackedScene" uid="uid://c04kuoputmjkn" path="res://Models/PsychopompPlayerModel.blend" id="93_onmhp"]
+[ext_resource type="Script" path="res://Scripts/FpsCounter.cs" id="95_d1ryd"]
+[ext_resource type="Script" path="res://CustomScripts/AutoLoads/KOMSignalBus.gd" id="96_mvfvh"]
+[ext_resource type="PackedScene" uid="uid://br1yim6ld7iqo" path="res://KOMPrefabs/NPCs/NpcObjects/auto_spawer.tscn" id="97_fh4f1"]
+[ext_resource type="Script" path="res://CustomScripts/Libraries/CameraShake.gd" id="98_vhcjj"]
 
 [sub_resource type="Animation" id="Animation_ayy83"]
 resource_name = "Attack"
@@ -153,7 +153,7 @@ _data = {
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q865t"]
-shader = ExtResource("23")
+shader = ExtResource("23_b4hxp")
 shader_parameter/speed = 0.03
 
 [sub_resource type="Animation" id="Animation_jgyvx"]
@@ -169,7 +169,7 @@ tracks/0/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("26")
+"stream": ExtResource("26_fbdeo")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -371,12 +371,6 @@ turbulence_enabled = true
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_elxiq"]
 radius = 0.183445
 height = 1.62767
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m7fw2"]
-albedo_texture = ExtResource("84")
-emission_enabled = true
-emission_texture = ExtResource("84")
-disable_receive_shadows = true
 
 [sub_resource type="Animation" id="Animation_nb0op"]
 resource_name = "Attack"
@@ -4858,7 +4852,7 @@ graph_offset = Vector2(-207, -99)
 [node name="PlayerObject" type="MeshInstance3D" node_paths=PackedStringArray("soundSource", "castBase", "camera", "head", "playerAnim") groups=["player"]]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.5, 0, 0.5)
 cast_shadow = 0
-script = ExtResource("1")
+script = ExtResource("1_jm8hk")
 soundSource = NodePath("3DSound")
 castBase = NodePath("Basis Mover")
 camera = NodePath("Head/SpringArm3D Z/MainCamera")
@@ -4870,7 +4864,7 @@ playerAnim = NodePath("AnimationTree")
 [node name="Sprite3D" type="Sprite3D" parent="Basis Mover"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.316063, -0.214324)
 visible = false
-texture = ExtResource("2")
+texture = ExtResource("2_ifr1t")
 
 [node name="Head" type="Node3D" parent="."]
 
@@ -4885,7 +4879,7 @@ cull_mask = 1048559
 current = true
 fov = 70.0
 far = 700.0
-script = ExtResource("3")
+script = ExtResource("3_hkj78")
 playerAnim = NodePath("../../../AnimationTree")
 anim = NodePath("../../../UI Overlay/CanvasLayer/UIPARENT/UI/Hammer/AnimationPlayer")
 soundSource = NodePath("../../../UI Overlay/CanvasLayer/2DSound")
@@ -4899,7 +4893,7 @@ shadow_enabled = true
 [node name="AudioListener3D" type="AudioListener3D" parent="Head/SpringArm3D Z/MainCamera"]
 
 [node name="CameraShaker" type="Node3D" parent="Head/SpringArm3D Z/MainCamera" node_paths=PackedStringArray("cam")]
-script = ExtResource("4")
+script = ExtResource("4_u7l1g")
 cam = NodePath("..")
 
 [node name="Position1" type="Node3D" parent="Head"]
@@ -4909,10 +4903,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49012e-07, 0.371, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42, 0.371, -0.045)
 
 [node name="3DSound" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("5")
+stream = ExtResource("5_qerm0")
 
 [node name="UI Overlay" type="SubViewportContainer" parent="."]
-material = ExtResource("6")
+material = ExtResource("6_spel8")
 offset_right = 40.0
 offset_bottom = 40.0
 stretch = true
@@ -4924,7 +4918,7 @@ size = Vector2i(40, 40)
 render_target_update_mode = 4
 
 [node name="CanvasLayer" type="CanvasLayer" parent="UI Overlay" node_paths=PackedStringArray("backupFilter")]
-script = ExtResource("7")
+script = ExtResource("7_6hy5k")
 backupFilter = NodePath("../../DitherFilter2")
 
 [node name="Hurt Overlay" type="Sprite2D" parent="UI Overlay/CanvasLayer"]
@@ -4932,10 +4926,10 @@ process_mode = 4
 modulate = Color(1, 1, 1, 0)
 top_level = true
 position = Vector2(480, 270)
-texture = ExtResource("8")
+texture = ExtResource("8_sbru4")
 
 [node name="DitherFilter" type="ColorRect" parent="UI Overlay/CanvasLayer"]
-material = ExtResource("6")
+material = ExtResource("6_spel8")
 offset_right = 969.0
 offset_bottom = 538.0
 mouse_filter = 2
@@ -4964,12 +4958,12 @@ offset_left = 93.0
 offset_top = 43.0
 offset_right = 184.0
 offset_bottom = 62.0
-texture_normal = ExtResource("69")
-texture_pressed = ExtResource("69")
-texture_hover = ExtResource("51")
+texture_normal = ExtResource("9_06m03")
+texture_pressed = ExtResource("9_06m03")
+texture_hover = ExtResource("10_snexc")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("70_4koob")
+script = ExtResource("11_kjqsd")
 textbox = NodePath("../LineEdit")
 TargetLoc = NodePath("../../../../../RayCast3D")
 
@@ -4980,7 +4974,7 @@ offset_top = 2.0
 offset_right = 70.0
 offset_bottom = 25.0
 theme_override_colors/font_color = Color(0.494118, 0.415686, 0, 1)
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 text = "Spawn"
 
 [node name="UI" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT"]
@@ -4989,12 +4983,12 @@ offset = Vector2(480, 270)
 
 [node name="Base" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI" node_paths=PackedStringArray("faceSprite")]
 z_index = -2
-texture = ExtResource("9_ra0tw")
+texture = ExtResource("13_vjm2y")
 offset = Vector2(480, 270)
 hframes = 3
 vframes = 4
 frame = 1
-script = ExtResource("10")
+script = ExtResource("14_v35k4")
 faceSprite = NodePath("Psychopompface")
 
 [node name="Psychopompface" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/Base"]
@@ -5002,12 +4996,12 @@ modulate = Color(1, 1, 1, 0.443137)
 z_index = 2
 position = Vector2(149, 389)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("11")
+texture = ExtResource("15_5fqge")
 hframes = 4
 
 [node name="Hammer" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI"]
 z_index = -3
-texture = ExtResource("16")
+texture = ExtResource("16_0uupe")
 offset = Vector2(480, 270)
 hframes = 4
 vframes = 4
@@ -5018,15 +5012,15 @@ libraries = {
 }
 
 [node name="HealthHandler" type="Node2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI" node_paths=PackedStringArray("manaTimer", "playerAnim", "playerBody", "playerObject", "CameraShaker", "InvButton", "healthBar", "manaBar", "lowHealthOverlay", "faceSprite", "label", "manaLabel", "deathAnim", "soundSource") groups=["PlayerHealthHandler"]]
-script = ExtResource("17_b0t2y")
+script = ExtResource("17_hglnb")
 manaTimer = NodePath("Timer")
 playerAnim = NodePath("../../../../../AnimationTree")
 playerBody = NodePath("../../../../../Player Model/PompRig/Skeleton3D/Body")
 playerObject = NodePath("../../../../..")
 CameraShaker = NodePath("../../../../../CameraShake")
-skin1 = ExtResource("18")
-skin2 = ExtResource("19")
-skin3 = ExtResource("20")
+skin1 = ExtResource("18_stf0n")
+skin2 = ExtResource("19_kfh78")
+skin3 = ExtResource("20_uq0cw")
 InvButton = NodePath("../HotbarParent/Hotbar/HotBarContentsParent/Inventory Button")
 healthBar = NodePath("HealthBar")
 manaBar = NodePath("ManaBar")
@@ -5040,7 +5034,7 @@ soundSource = NodePath("../../../2DSound")
 [node name="HealthBar" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HealthHandler"]
 z_index = -1
 position = Vector2(845, 407)
-texture = ExtResource("21_7ktxi")
+texture = ExtResource("21_hd31a")
 hframes = 4
 vframes = 3
 
@@ -5050,17 +5044,17 @@ clip_children = 1
 texture_filter = 1
 position = Vector2(4.00005, 12.5)
 scale = Vector2(1.19149, 1.15642)
-texture = ExtResource("22_jkuup")
+texture = ExtResource("22_w0fmd")
 
 [node name="Noise" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HealthHandler/HealthBar/Mask"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_q865t")
-texture = ExtResource("24")
+texture = ExtResource("24_ijsbd")
 
 [node name="ManaBar" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HealthHandler"]
 z_index = -1
 position = Vector2(876, 293)
-texture = ExtResource("25_g6tx6")
+texture = ExtResource("25_t5gx5")
 hframes = 4
 vframes = 3
 
@@ -5069,13 +5063,13 @@ clip_children = 1
 texture_filter = 1
 position = Vector2(-10.5, 9.00023)
 scale = Vector2(1.20745, 1.13967)
-texture = ExtResource("22_jkuup")
+texture = ExtResource("22_w0fmd")
 flip_h = true
 
 [node name="Noise" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HealthHandler/ManaBar/Mask"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_q865t")
-texture = ExtResource("24")
+texture = ExtResource("24_ijsbd")
 
 [node name="DeathAnim" type="AnimationPlayer" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HealthHandler"]
 libraries = {
@@ -5093,13 +5087,13 @@ autoplay = "HealthAnim"
 
 [node name="HealthHandler2" type="Node2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI" node_paths=PackedStringArray("manaTimer", "playerAnim", "playerBody", "healthBar", "manaBar", "lowHealthOverlay", "faceSprite", "label", "manaLabel", "deathAnim", "soundSource")]
 visible = false
-script = ExtResource("27_ai77e")
+script = ExtResource("27_tly4j")
 manaTimer = NodePath("Timer")
 playerAnim = NodePath("../../../../../AnimationTree")
 playerBody = NodePath("../../../../../Player Model/PompRig/Skeleton3D/Body")
-skin1 = ExtResource("18")
-skin2 = ExtResource("19")
-skin3 = ExtResource("20")
+skin1 = ExtResource("18_stf0n")
+skin2 = ExtResource("19_kfh78")
+skin3 = ExtResource("20_uq0cw")
 healthBar = NodePath("../HealthHandler/HealthBar")
 manaBar = NodePath("ManaBar")
 lowHealthOverlay = NodePath("../../../Hurt Overlay")
@@ -5112,7 +5106,7 @@ soundSource = NodePath("../../../2DSound")
 [node name="HealthBar" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HealthHandler2"]
 z_index = -1
 position = Vector2(845, 407)
-texture = ExtResource("21_7ktxi")
+texture = ExtResource("21_hd31a")
 hframes = 4
 vframes = 3
 
@@ -5122,17 +5116,17 @@ clip_children = 1
 texture_filter = 1
 position = Vector2(4.00005, 12.5)
 scale = Vector2(1.19149, 1.15642)
-texture = ExtResource("22_jkuup")
+texture = ExtResource("22_w0fmd")
 
 [node name="Noise" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HealthHandler2/HealthBar/Mask"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_q865t")
-texture = ExtResource("24")
+texture = ExtResource("24_ijsbd")
 
 [node name="ManaBar" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HealthHandler2"]
 z_index = -1
 position = Vector2(876, 293)
-texture = ExtResource("25_g6tx6")
+texture = ExtResource("25_t5gx5")
 hframes = 4
 vframes = 3
 
@@ -5141,13 +5135,13 @@ clip_children = 1
 texture_filter = 1
 position = Vector2(-10.5, 9.00023)
 scale = Vector2(1.20745, 1.13967)
-texture = ExtResource("22_jkuup")
+texture = ExtResource("22_w0fmd")
 flip_h = true
 
 [node name="Noise" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HealthHandler2/ManaBar/Mask"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_q865t")
-texture = ExtResource("24")
+texture = ExtResource("24_ijsbd")
 
 [node name="DeathAnim" type="AnimationPlayer" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HealthHandler2"]
 libraries = {
@@ -5172,17 +5166,17 @@ offset_top = 462.0
 offset_right = 316.0
 offset_bottom = 494.0
 scale = Vector2(1.3, 1.3)
-texture_normal = ExtResource("29")
-texture_pressed = ExtResource("30")
-texture_hover = ExtResource("31")
-script = ExtResource("32")
+texture_normal = ExtResource("28_v7xo4")
+texture_pressed = ExtResource("29_g7qtl")
+texture_hover = ExtResource("30_en8bo")
+script = ExtResource("31_d45m3")
 buttonMode = 1
-cursorSprite = ExtResource("29")
+cursorSprite = ExtResource("28_v7xo4")
 particle = NodePath("../../../../CursorFollower/GPUParticles2D")
 soundSource = NodePath("../../../../2DSound")
-clickSound = ExtResource("33")
+clickSound = ExtResource("32_x2c8s")
 blipSprite = NodePath("../../HotbarParent/Hotbar/HotBarContentsParent/Blip")
-keyCode = 49
+KeyCode = 49
 
 [node name="Label" type="Label" parent="UI Overlay/CanvasLayer/UIPARENT/UI/UIButtonParent/LookButton"]
 modulate = Color(1, 1, 1, 0.407843)
@@ -5192,7 +5186,7 @@ offset_top = 1.0
 offset_right = 2.0
 offset_bottom = 16.0
 theme_override_colors/font_color = Color(0.382813, 0.707031, 0.894531, 1)
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 theme_override_font_sizes/font_size = 11
 text = "1"
 
@@ -5203,17 +5197,17 @@ offset_top = 466.0
 offset_right = 423.0
 offset_bottom = 498.0
 scale = Vector2(1.3, 1.3)
-texture_normal = ExtResource("35")
-texture_pressed = ExtResource("36")
-texture_hover = ExtResource("37")
-script = ExtResource("32")
+texture_normal = ExtResource("33_noqxq")
+texture_pressed = ExtResource("34_6vfug")
+texture_hover = ExtResource("35_b0bqu")
+script = ExtResource("31_d45m3")
 buttonMode = 2
-cursorSprite = ExtResource("35")
+cursorSprite = ExtResource("33_noqxq")
 particle = NodePath("../../../../CursorFollower/GPUParticles2D")
 soundSource = NodePath("../../../../2DSound")
-clickSound = ExtResource("33")
+clickSound = ExtResource("32_x2c8s")
 blipSprite = NodePath("../../HotbarParent/Hotbar/HotBarContentsParent/Blip")
-keyCode = 50
+KeyCode = 50
 
 [node name="Label" type="Label" parent="UI Overlay/CanvasLayer/UIPARENT/UI/UIButtonParent/SpeakButton"]
 modulate = Color(1, 1, 1, 0.407843)
@@ -5223,7 +5217,7 @@ offset_top = 2.0
 offset_right = 4.0
 offset_bottom = 17.0
 theme_override_colors/font_color = Color(0.382813, 0.707031, 0.894531, 1)
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 theme_override_font_sizes/font_size = 11
 text = "2"
 
@@ -5234,17 +5228,17 @@ offset_top = 462.0
 offset_right = 535.0
 offset_bottom = 494.0
 scale = Vector2(1.3, 1.3)
-texture_normal = ExtResource("38")
-texture_pressed = ExtResource("39")
-texture_hover = ExtResource("40")
-script = ExtResource("32")
+texture_normal = ExtResource("36_bxmro")
+texture_pressed = ExtResource("37_hi06r")
+texture_hover = ExtResource("38_3d8no")
+script = ExtResource("31_d45m3")
 buttonMode = 3
-cursorSprite = ExtResource("38")
+cursorSprite = ExtResource("36_bxmro")
 particle = NodePath("../../../../CursorFollower/GPUParticles2D")
 soundSource = NodePath("../../../../2DSound")
-clickSound = ExtResource("33")
+clickSound = ExtResource("32_x2c8s")
 blipSprite = NodePath("../../HotbarParent/Hotbar/HotBarContentsParent/Blip")
-keyCode = 51
+KeyCode = 51
 
 [node name="Label" type="Label" parent="UI Overlay/CanvasLayer/UIPARENT/UI/UIButtonParent/TouchButton"]
 modulate = Color(1, 1, 1, 0.407843)
@@ -5254,7 +5248,7 @@ offset_top = 6.0
 offset_right = 2.0
 offset_bottom = 21.0
 theme_override_colors/font_color = Color(0.382813, 0.707031, 0.894531, 1)
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 theme_override_font_sizes/font_size = 11
 text = "3"
 
@@ -5265,17 +5259,17 @@ offset_top = 462.0
 offset_right = 638.0
 offset_bottom = 494.0
 scale = Vector2(1.3, 1.3)
-texture_normal = ExtResource("41")
-texture_pressed = ExtResource("42")
-texture_hover = ExtResource("43")
-script = ExtResource("32")
+texture_normal = ExtResource("39_t8q71")
+texture_pressed = ExtResource("40_q47re")
+texture_hover = ExtResource("41_tsx20")
+script = ExtResource("31_d45m3")
 buttonMode = 4
-cursorSprite = ExtResource("41")
+cursorSprite = ExtResource("39_t8q71")
 particle = NodePath("../../../../CursorFollower/GPUParticles2D")
 soundSource = NodePath("../../../../2DSound")
-clickSound = ExtResource("33")
+clickSound = ExtResource("32_x2c8s")
 blipSprite = NodePath("../../HotbarParent/Hotbar/HotBarContentsParent/Blip")
-keyCode = 52
+KeyCode = 52
 
 [node name="Label" type="Label" parent="UI Overlay/CanvasLayer/UIPARENT/UI/UIButtonParent/AttackButton"]
 modulate = Color(1, 1, 1, 0.407843)
@@ -5285,7 +5279,7 @@ offset_top = 2.0
 offset_right = 1.0
 offset_bottom = 17.0
 theme_override_colors/font_color = Color(0.761719, 0.257813, 0.257813, 1)
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 theme_override_font_sizes/font_size = 11
 text = "4"
 
@@ -5295,8 +5289,8 @@ rotation = 3.14159
 
 [node name="Hotbar" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent" node_paths=PackedStringArray("buttons", "blipSprite")]
 position = Vector2(480, 563)
-texture = ExtResource("27")
-script = ExtResource("28")
+texture = ExtResource("42_76eo4")
+script = ExtResource("43_81hre")
 buttons = [NodePath("../../UIButtonParent/LookButton"), NodePath("../../UIButtonParent/SpeakButton"), NodePath("../../UIButtonParent/TouchButton"), NodePath("../../UIButtonParent/AttackButton")]
 blipSprite = NodePath("HotBarContentsParent/Blip")
 
@@ -5309,7 +5303,7 @@ visible = false
 modulate = Color(0.384314, 0.709804, 0.898039, 1)
 position = Vector2(-123, -71)
 scale = Vector2(0.527482, 0.527482)
-texture = ExtResource("44")
+texture = ExtResource("44_3xjbn")
 
 [node name="Inventory Button" type="TextureButton" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent" node_paths=PackedStringArray("HotBar", "Gear1", "Gear2", "soundSource", "PlayerHealthHandler", "label", "manalabel")]
 texture_filter = 1
@@ -5317,10 +5311,10 @@ offset_left = -20.9999
 offset_top = 259.0
 offset_right = 11.0001
 offset_bottom = 291.0
-texture_normal = ExtResource("45")
-texture_pressed = ExtResource("46")
-texture_hover = ExtResource("47")
-script = ExtResource("47_8vagb")
+texture_normal = ExtResource("45_ph10s")
+texture_pressed = ExtResource("46_ks3a1")
+texture_hover = ExtResource("47_ne3an")
+script = ExtResource("48_gy7tc")
 HotBar = NodePath("../..")
 Gear1 = NodePath("../Gear1")
 Gear2 = NodePath("../Gear2")
@@ -5335,7 +5329,7 @@ offset_top = 129.0
 offset_right = 125.0
 offset_bottom = 155.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 text = "00"
 
 [node name="HP Label" type="Label" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent"]
@@ -5344,7 +5338,7 @@ offset_top = 129.0
 offset_right = 81.0
 offset_bottom = 148.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 text = "HP"
 
 [node name="SN Number" type="Label" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent"]
@@ -5353,7 +5347,7 @@ offset_top = 129.0
 offset_right = -34.0
 offset_bottom = 155.0
 theme_override_colors/font_color = Color(0.870588, 0.192157, 0.721569, 1)
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 text = "00"
 
 [node name="SN Label" type="Label" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent"]
@@ -5362,34 +5356,38 @@ offset_top = 129.0
 offset_right = -77.0
 offset_bottom = 148.0
 theme_override_colors/font_color = Color(0.870588, 0.192157, 0.721569, 1)
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 text = "ST"
 
 [node name="Gear1" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent"]
 z_index = -1
 position = Vector2(170, 84)
 scale = Vector2(0.33, 0.33)
-texture = ExtResource("50_p30vr")
+texture = ExtResource("49_1ndb4")
 
 [node name="Gear2" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent"]
 z_index = -1
 position = Vector2(-168, 84)
 scale = Vector2(0.33, 0.33)
-texture = ExtResource("50_p30vr")
+texture = ExtResource("49_1ndb4")
 
-[node name="InventoryManager" type="Node3D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent" node_paths=PackedStringArray("inv", "invCtrl", "itemName", "itemDescription", "health_handler")]
+[node name="InventoryManager" type="Node3D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent" node_paths=PackedStringArray("inv", "invCtrl", "itemName", "itemDescription", "health_handler", "MouseCasting")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -480, -560, 0)
-script = ExtResource("50")
+script = ExtResource("50_ydqh7")
 inv = NodePath("../InventoryGrid")
 invCtrl = NodePath("../CtrlInventoryGridEx")
 itemName = NodePath("../ItemName")
 itemDescription = NodePath("../ItemDescription")
 health_handler = NodePath("../../../../HealthHandler")
+MouseCasting = NodePath("MouseCaster")
+
+[node name="MouseCaster" type="Node3D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent/InventoryManager"]
+script = ExtResource("51_rtsws")
 
 [node name="Sprite2D" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent"]
 position = Vector2(49.5043, 189.5)
 scale = Vector2(0.79294, 1.20313)
-texture = ExtResource("51")
+texture = ExtResource("10_snexc")
 
 [node name="ItemName" type="Label" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent"]
 offset_left = -48.9987
@@ -5397,7 +5395,7 @@ offset_top = 153.999
 offset_right = 2.00131
 offset_bottom = 171.999
 theme_override_colors/font_color = Color(0.494118, 0.415686, 0, 1)
-theme_override_fonts/font = ExtResource("52")
+theme_override_fonts/font = ExtResource("51_1i8tm")
 text = "Name
 "
 
@@ -5407,32 +5405,32 @@ offset_top = 174.0
 offset_right = 146.0
 offset_bottom = 219.0
 theme_override_colors/font_color = Color(0.494118, 0.415686, 0, 1)
-theme_override_fonts/font = ExtResource("52")
+theme_override_fonts/font = ExtResource("51_1i8tm")
 text = "Description"
 autowrap_mode = 3
 text_overrun_behavior = 1
 
 [node name="InventoryGrid" type="Node" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent"]
-script = ExtResource("53")
+script = ExtResource("52_v4dqg")
 size = Vector2i(6, 4)
-item_protoset = ExtResource("54")
+item_protoset = ExtResource("53_cdcim")
 
 [node name="_Node_112146" type="Node" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent/InventoryGrid"]
-script = ExtResource("54_p0oqx")
-protoset = ExtResource("54")
+script = ExtResource("54_ginas")
+protoset = ExtResource("53_cdcim")
 prototype_id = "RawPatty"
 
 [node name="_Node_112303" type="Node" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent/InventoryGrid"]
-script = ExtResource("54_p0oqx")
-protoset = ExtResource("54")
+script = ExtResource("54_ginas")
+protoset = ExtResource("53_cdcim")
 prototype_id = "RawPatty"
 properties = {
 "grid_position": Vector2i(0, 1)
 }
 
 [node name="_Node_112496" type="Node" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent/InventoryGrid"]
-script = ExtResource("54_p0oqx")
-protoset = ExtResource("54")
+script = ExtResource("54_ginas")
+protoset = ExtResource("53_cdcim")
 prototype_id = "RawPatty"
 properties = {
 "grid_position": Vector2i(0, 2)
@@ -5447,31 +5445,31 @@ offset_left = -98.0
 offset_top = -9.0
 offset_right = 104.0
 offset_bottom = 125.0
-script = ExtResource("55")
+script = ExtResource("55_6iaah")
 item_spacing = 2
 grid_color = Color(0.494118, 0.415686, 0, 1)
 draw_selections = true
 selection_color = Color(0.492188, 0.414063, 0, 1)
 inventory_path = NodePath("../InventoryGrid")
-default_item_texture = ExtResource("56")
+default_item_texture = ExtResource("56_qi3uw")
 
 [node name="FullscreenButton" type="TextureButton" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent"]
 offset_left = 107.0
 offset_top = 93.0
 offset_right = 139.0
 offset_bottom = 125.0
-texture_normal = ExtResource("57")
-texture_pressed = ExtResource("58")
-script = ExtResource("59")
+texture_normal = ExtResource("57_45l8m")
+texture_pressed = ExtResource("58_4x5dc")
+script = ExtResource("59_4pbbw")
 
 [node name="Language Button" type="TextureButton" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent"]
 offset_left = 107.0
 offset_top = 54.0
 offset_right = 139.0
 offset_bottom = 86.0
-texture_normal = ExtResource("60")
-texture_pressed = ExtResource("61")
-script = ExtResource("62")
+texture_normal = ExtResource("60_0mxty")
+texture_pressed = ExtResource("61_o0gou")
+script = ExtResource("62_uwq7b")
 languages = PackedStringArray("en", "ja", "ru", "pt", "fr")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent/Language Button"]
@@ -5480,7 +5478,7 @@ offset_top = -31.0
 offset_right = 48.0
 offset_bottom = -1.0
 theme_override_colors/default_color = Color(0.494118, 0.415686, 0, 1)
-theme_override_fonts/normal_font = ExtResource("63")
+theme_override_fonts/normal_font = ExtResource("63_ybam7")
 text = "English"
 scroll_active = false
 
@@ -5489,27 +5487,27 @@ offset_left = -150.0
 offset_top = 93.0
 offset_right = -102.0
 offset_bottom = 125.0
-texture_normal = ExtResource("64")
-texture_pressed = ExtResource("65")
-texture_hover = ExtResource("66")
-script = ExtResource("67")
+texture_normal = ExtResource("64_ea0yv")
+texture_pressed = ExtResource("65_rvxt0")
+texture_hover = ExtResource("66_bic7y")
+script = ExtResource("67_jkxc1")
 flashlight = NodePath("../../../../../../../../Head/SpringArm3D Z/MainCamera/FlashLightFPS")
 flashlight2 = NodePath("../../../../../../../../FlashLightTPS")
 playerAnim = NodePath("../../../../../../../../AnimationTree")
 soundSource = NodePath("../../../../../../2DSound")
-sound = ExtResource("68")
+sound = ExtResource("68_2a51e")
 
 [node name="Usebutton" type="TextureButton" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent"]
 offset_left = -42.0
 offset_top = 128.0
 offset_right = 49.0
 offset_bottom = 147.0
-texture_normal = ExtResource("69")
-texture_pressed = ExtResource("69")
-texture_hover = ExtResource("51")
+texture_normal = ExtResource("9_06m03")
+texture_pressed = ExtResource("9_06m03")
+texture_hover = ExtResource("10_snexc")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("70")
+script = ExtResource("69_62jd1")
 
 [node name="Label" type="Label" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent/Usebutton"]
 layout_mode = 0
@@ -5518,13 +5516,13 @@ offset_top = 1.0
 offset_right = 73.0
 offset_bottom = 24.0
 theme_override_colors/font_color = Color(0.494118, 0.415686, 0, 1)
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 text = "use"
 
 [node name="ReturnParent" type="Node2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent" node_paths=PackedStringArray("SoundEffect", "OtherNodes")]
 visible = false
 position = Vector2(60, 232)
-script = ExtResource("71_qffgh")
+script = ExtResource("70_h6pp7")
 key = 4194335
 SoundEffect = NodePath("AudioStreamPlayer")
 OtherNodes = [NodePath(".")]
@@ -5534,12 +5532,12 @@ offset_left = -5.0
 offset_top = -77.0
 offset_right = 86.0
 offset_bottom = -58.0
-texture_normal = ExtResource("69")
-texture_pressed = ExtResource("69")
-texture_hover = ExtResource("51")
+texture_normal = ExtResource("9_06m03")
+texture_pressed = ExtResource("9_06m03")
+texture_hover = ExtResource("10_snexc")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("72_e4lsp")
+script = ExtResource("71_fi7vn")
 destination = "title_screen"
 
 [node name="Label" type="Label" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent/ReturnParent/ReturnButton"]
@@ -5549,16 +5547,16 @@ offset_top = 3.0
 offset_right = 82.0
 offset_bottom = 26.0
 theme_override_colors/font_color = Color(0.494118, 0.415686, 0, 1)
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 theme_override_font_sizes/font_size = 12
 text = "return to title"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent/ReturnParent"]
-stream = ExtResource("72_y68jy")
+stream = ExtResource("72_g5mrj")
 volume_db = -7.0
 
 [node name="Checker" type="Node2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent"]
-script = ExtResource("71")
+script = ExtResource("73_os4y1")
 checker = true
 
 [node name="View Button" type="TextureButton" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent/Checker" node_paths=PackedStringArray("viewPos1", "viewPos2", "cameraParent", "uiElements", "uiElements2", "uiHammer")]
@@ -5566,9 +5564,9 @@ offset_left = -135.0
 offset_top = 54.0
 offset_right = -103.0
 offset_bottom = 86.0
-texture_normal = ExtResource("72")
-texture_pressed = ExtResource("73")
-script = ExtResource("74")
+texture_normal = ExtResource("74_ocuuc")
+texture_pressed = ExtResource("75_wuoc3")
+script = ExtResource("76_mimt2")
 viewPos1 = NodePath("../../../../../../../../../Head/Position1")
 viewPos2 = NodePath("../../../../../../../../../Head/Position2")
 cameraParent = NodePath("../../../../../../../../../Head/SpringArm3D Z")
@@ -5578,8 +5576,8 @@ uiHammer = NodePath("../../../../../Hammer")
 
 [node name="InventoryCursor" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar/HotBarContentsParent"]
 position = Vector2(-122, -78.475)
-texture = ExtResource("75")
-script = ExtResource("76")
+texture = ExtResource("77_62t7j")
+script = ExtResource("78_3y37l")
 
 [node name="CompassArrow2" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar" node_paths=PackedStringArray("playerNode")]
 modulate = Color(0.517647, 0.517647, 0.517647, 1)
@@ -5588,8 +5586,8 @@ texture_filter = 1
 position = Vector2(108.08, 34.0799)
 rotation = 3.14159
 scale = Vector2(1.3, 1.3)
-texture = ExtResource("12")
-script = ExtResource("13")
+texture = ExtResource("79_c5y55")
+script = ExtResource("80_xttg5")
 playerNode = NodePath("../../../../../../../Head/SpringArm3D Z/MainCamera")
 
 [node name="CompassArrow" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/HotbarParent/Hotbar"]
@@ -5598,8 +5596,8 @@ texture_filter = 1
 position = Vector2(108.08, 34.0799)
 rotation = -0.103553
 scale = Vector2(0.65, 0.9)
-texture = ExtResource("14")
-script = ExtResource("15")
+texture = ExtResource("81_4d13e")
+script = ExtResource("82_iiwr0")
 Time = 0.5
 tweenRotation = true
 endrotation = 0.2
@@ -5614,7 +5612,7 @@ scale = Vector2(0.8, 0.8)
 position = Vector2(-4.69499, -7.69463)
 rotation = -1.5708
 scale = Vector2(0.65, 0.65)
-texture = ExtResource("27")
+texture = ExtResource("42_76eo4")
 
 [node name="PompFriendParent" type="Node2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons"]
 position = Vector2(-8.07206, 9.29887)
@@ -5626,13 +5624,13 @@ offset_left = -6.99952
 offset_top = -99.0
 offset_right = 44.0005
 offset_bottom = -50.0
-texture_normal = ExtResource("69")
-texture_pressed = ExtResource("69")
-texture_hover = ExtResource("51")
+texture_normal = ExtResource("9_06m03")
+texture_pressed = ExtResource("9_06m03")
+texture_hover = ExtResource("10_snexc")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("70_4koob")
-Scene = ExtResource("71_vi2ho")
+script = ExtResource("11_kjqsd")
+Scene = ExtResource("83_r03ox")
 TargetLoc = NodePath("../../../../../../../../RayCast3D")
 
 [node name="Label" type="Label" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons/PompFriendParent/PompFriendButton"]
@@ -5643,17 +5641,17 @@ offset_top = 3.0
 offset_right = 82.0
 offset_bottom = 26.0
 theme_override_colors/font_color = Color(0.494118, 0.415686, 0, 1)
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 theme_override_font_sizes/font_size = 12
 text = "return to title"
 
 [node name="Sprite2D" type="Sprite2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons/PompFriendParent/PompFriendButton"]
 position = Vector2(24.9999, 24.0001)
 scale = Vector2(0.29, 0.29)
-texture = ExtResource("71_xtk0u")
+texture = ExtResource("84_g33xn")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons/PompFriendParent"]
-stream = ExtResource("72_y68jy")
+stream = ExtResource("72_g5mrj")
 volume_db = -7.0
 
 [node name="AttackEnemy" type="Node2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons"]
@@ -5666,12 +5664,12 @@ offset_left = -5.0
 offset_top = -77.0
 offset_right = 86.0
 offset_bottom = -58.0
-texture_normal = ExtResource("69")
-texture_pressed = ExtResource("69")
-texture_hover = ExtResource("51")
+texture_normal = ExtResource("9_06m03")
+texture_pressed = ExtResource("9_06m03")
+texture_hover = ExtResource("10_snexc")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("93_lb8ch")
+script = ExtResource("85_axcye")
 
 [node name="Label" type="Label" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons/AttackEnemy/AttackButton"]
 layout_mode = 0
@@ -5680,12 +5678,12 @@ offset_top = 3.0
 offset_right = 82.0
 offset_bottom = 26.0
 theme_override_colors/font_color = Color(0.494118, 0.415686, 0, 1)
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 theme_override_font_sizes/font_size = 12
 text = "Attack Enemy"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons/AttackEnemy"]
-stream = ExtResource("72_y68jy")
+stream = ExtResource("72_g5mrj")
 volume_db = -7.0
 
 [node name="FollowPlayer" type="Node2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons"]
@@ -5698,12 +5696,12 @@ offset_left = -5.0
 offset_top = -77.0
 offset_right = 86.0
 offset_bottom = -58.0
-texture_normal = ExtResource("69")
-texture_pressed = ExtResource("69")
-texture_hover = ExtResource("51")
+texture_normal = ExtResource("9_06m03")
+texture_pressed = ExtResource("9_06m03")
+texture_hover = ExtResource("10_snexc")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("93_lb8ch")
+script = ExtResource("85_axcye")
 
 [node name="Label" type="Label" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons/FollowPlayer/PlayerButton"]
 layout_mode = 0
@@ -5712,12 +5710,12 @@ offset_top = 3.0
 offset_right = 82.0
 offset_bottom = 26.0
 theme_override_colors/font_color = Color(0.494118, 0.415686, 0, 1)
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 theme_override_font_sizes/font_size = 12
 text = "Follow Player"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons/FollowPlayer"]
-stream = ExtResource("72_y68jy")
+stream = ExtResource("72_g5mrj")
 volume_db = -7.0
 
 [node name="KillPomps" type="Node2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons"]
@@ -5730,12 +5728,12 @@ offset_left = -5.0
 offset_top = -77.0
 offset_right = 86.0
 offset_bottom = -58.0
-texture_normal = ExtResource("69")
-texture_pressed = ExtResource("69")
-texture_hover = ExtResource("51")
+texture_normal = ExtResource("9_06m03")
+texture_pressed = ExtResource("9_06m03")
+texture_hover = ExtResource("10_snexc")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("93_lb8ch")
+script = ExtResource("85_axcye")
 
 [node name="Label" type="Label" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons/KillPomps/KillButton"]
 layout_mode = 0
@@ -5744,12 +5742,12 @@ offset_top = 3.0
 offset_right = 82.0
 offset_bottom = 26.0
 theme_override_colors/font_color = Color(0.494118, 0.415686, 0, 1)
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 theme_override_font_sizes/font_size = 12
 text = "Kill All"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons/KillPomps"]
-stream = ExtResource("72_y68jy")
+stream = ExtResource("72_g5mrj")
 volume_db = -7.0
 
 [node name="KillPomps2" type="Node2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons"]
@@ -5762,12 +5760,12 @@ offset_left = -5.0
 offset_top = -77.0
 offset_right = 86.0
 offset_bottom = -58.0
-texture_normal = ExtResource("69")
-texture_pressed = ExtResource("69")
-texture_hover = ExtResource("51")
+texture_normal = ExtResource("9_06m03")
+texture_pressed = ExtResource("9_06m03")
+texture_hover = ExtResource("10_snexc")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("93_lb8ch")
+script = ExtResource("85_axcye")
 
 [node name="Label" type="Label" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons/KillPomps2/ItemGrab"]
 layout_mode = 0
@@ -5776,12 +5774,12 @@ offset_top = 4.73152
 offset_right = 82.4502
 offset_bottom = 27.7315
 theme_override_colors/font_color = Color(0.494118, 0.415686, 0, 1)
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 theme_override_font_sizes/font_size = 9
 text = "Take Nearest Item"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons/KillPomps2"]
-stream = ExtResource("72_y68jy")
+stream = ExtResource("72_g5mrj")
 volume_db = -7.0
 
 [node name="FlashLightButton" type="TextureButton" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/ExtraButtons"]
@@ -5791,10 +5789,10 @@ offset_right = -34.4713
 offset_bottom = 24.8378
 rotation = 1.62316
 scale = Vector2(1.51227, 0.995641)
-texture_normal = ExtResource("64")
-texture_pressed = ExtResource("65")
-texture_hover = ExtResource("66")
-script = ExtResource("93_lb8ch")
+texture_normal = ExtResource("64_ea0yv")
+texture_pressed = ExtResource("65_rvxt0")
+texture_hover = ExtResource("66_bic7y")
+script = ExtResource("85_axcye")
 
 [node name="PompNpcStats" type="Node2D" parent="UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent" groups=["PompNpcStats"]]
 visible = false
@@ -5828,7 +5826,7 @@ bbcode_enabled = true
 
 [node name="DialogueParent" type="Node2D" parent="UI Overlay/CanvasLayer"]
 z_index = 6
-script = ExtResource("15")
+script = ExtResource("82_iiwr0")
 Time = 7.0
 tweenPosition = true
 endPosition = Vector2(0, 20)
@@ -5837,9 +5835,9 @@ endPosition = Vector2(0, 20)
 unique_name_in_owner = true
 visible = false
 texture_filter = 1
-texture = ExtResource("77")
+texture = ExtResource("86_myms0")
 offset = Vector2(480, 270)
-script = ExtResource("78")
+script = ExtResource("87_c02mq")
 
 [node name="NameText" type="Label" parent="UI Overlay/CanvasLayer/DialogueParent/DialogueBox"]
 modulate = Color(0.658824, 0.658824, 0.658824, 1)
@@ -5848,7 +5846,7 @@ offset_left = 172.0
 offset_top = 29.0
 offset_right = 534.0
 offset_bottom = 48.0
-theme_override_fonts/font = ExtResource("34")
+theme_override_fonts/font = ExtResource("12_rfwjx")
 text = "NAME:"
 autowrap_mode = 3
 
@@ -5858,22 +5856,22 @@ offset_top = 59.0
 offset_right = 701.0
 offset_bottom = 140.0
 theme_override_colors/default_color = Color(0.613281, 0.5625, 0.605469, 1)
-theme_override_fonts/normal_font = ExtResource("34")
+theme_override_fonts/normal_font = ExtResource("12_rfwjx")
 bbcode_enabled = true
 text = "Dialogue goes here."
 
 [node name="FaceSprite" type="Sprite2D" parent="UI Overlay/CanvasLayer/DialogueParent/DialogueBox"]
 position = Vector2(749, 98)
 scale = Vector2(0.65625, 0.65625)
-texture = ExtResource("79")
+texture = ExtResource("88_snhl5")
 
 [node name="X Button" type="TextureButton" parent="UI Overlay/CanvasLayer/DialogueParent/DialogueBox"]
 offset_left = 124.0
 offset_top = 141.0
 offset_right = 156.0
 offset_bottom = 173.0
-texture_normal = ExtResource("80")
-script = ExtResource("81")
+texture_normal = ExtResource("89_i5wes")
+script = ExtResource("90_k35p4")
 
 [node name="Gear1" type="Sprite2D" parent="UI Overlay/CanvasLayer/DialogueParent/DialogueBox"]
 visible = false
@@ -5881,8 +5879,8 @@ modulate = Color(0.666667, 0.639216, 0.760784, 1)
 z_index = -1
 position = Vector2(828, 94)
 scale = Vector2(0.675, 0.675)
-texture = ExtResource("49")
-script = ExtResource("15")
+texture = ExtResource("91_7xt08")
+script = ExtResource("82_iiwr0")
 Time = 5.0
 tweenRotation = true
 endrotation = 2.0
@@ -5893,19 +5891,19 @@ modulate = Color(0.666667, 0.639216, 0.760784, 1)
 z_index = -1
 position = Vector2(135, 94)
 scale = Vector2(0.675, 0.675)
-texture = ExtResource("49")
-script = ExtResource("15")
+texture = ExtResource("91_7xt08")
+script = ExtResource("82_iiwr0")
 Time = 5.0
 tweenRotation = true
 endrotation = -2.0
 
 [node name="CursorFollower" type="Node2D" parent="UI Overlay/CanvasLayer"]
 position = Vector2(834, 345)
-script = ExtResource("82")
+script = ExtResource("92_n2ac4")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="UI Overlay/CanvasLayer/CursorFollower"]
 process_material = SubResource("ParticleProcessMaterial_dvdt2")
-texture = ExtResource("29")
+texture = ExtResource("28_v7xo4")
 local_coords = true
 
 [node name="2DSound" type="AudioStreamPlayer" parent="UI Overlay/CanvasLayer"]
@@ -5919,7 +5917,7 @@ shape = SubResource("CapsuleShape3D_elxiq")
 
 [node name="DitherFilter2" type="ColorRect" parent="."]
 visible = false
-material = ExtResource("6")
+material = ExtResource("6_spel8")
 offset_right = 970.0
 offset_bottom = 548.0
 mouse_filter = 2
@@ -5934,100 +5932,85 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 0, 0, 0)
 
-[node name="Player Model" parent="." instance=ExtResource("83")]
+[node name="Player Model" parent="." instance=ExtResource("93_onmhp")]
 transform = Transform3D(-0.842657, 0, 7.36673e-08, 0, 0.842657, 0, -7.36673e-08, 0, -0.842657, 0, -1, 0)
 
 [node name="Skeleton3D" parent="Player Model/PompRig" index="0"]
-bones/0/position = Vector3(1.20002e-08, 0.799163, -0.158666)
-bones/0/rotation = Quaternion(0.12582, 2.36524e-07, 2.99977e-08, 0.992053)
+bones/0/position = Vector3(1.32335e-08, 0.790196, -0.158666)
 bones/1/rotation = Quaternion(-0.0628926, 0.000945223, 0.00010601, 0.99802)
-bones/2/rotation = Quaternion(-0.12142, -0.0529514, -0.0139217, 0.99109)
-bones/3/rotation = Quaternion(-0.00211926, -0.000198559, -0.000422827, 0.999998)
-bones/4/rotation = Quaternion(0.0298244, 2.17283e-15, 7.11069e-09, 0.999555)
+bones/2/rotation = Quaternion(-0.104961, -0.00350698, -0.0158034, 0.994345)
+bones/3/rotation = Quaternion(-0.0021342, -0.000215496, -0.000422302, 0.999998)
+bones/4/rotation = Quaternion(0.0298244, 2.17346e-15, 7.11069e-09, 0.999555)
 bones/4/scale = Vector3(1, 1, 1)
-bones/5/rotation = Quaternion(0.166934, -0.173038, 0.0513441, 0.969306)
-bones/6/position = Vector3(0.0544594, 0.0795678, 0.0817439)
+bones/5/rotation = Quaternion(0.165787, -0.105481, 0.0376792, 0.97978)
+bones/6/position = Vector3(0.0544316, 0.0794851, 0.0817723)
 bones/6/rotation = Quaternion(0.574667, -4.35862e-08, 1.99083e-07, 0.818388)
 bones/6/scale = Vector3(1, 1, 1)
-bones/7/position = Vector3(0.0230919, 0.075314, 0.100298)
-bones/8/position = Vector3(1.32375e-05, 0.0792191, 0.111562)
+bones/7/position = Vector3(0.0231351, 0.0753556, 0.100284)
 bones/8/rotation = Quaternion(0.574667, 7.93556e-12, 1.37e-07, 0.818387)
-bones/9/rotation = Quaternion(0.678721, 1.75095e-07, 3.23637e-07, 0.734396)
-bones/10/position = Vector3(0.0281969, 0.0675003, -0.0270332)
 bones/10/rotation = Quaternion(-0.133424, -2.36208e-07, -6.30349e-08, 0.991059)
-bones/11/position = Vector3(1.30809e-08, 0.0836173, -0.0182911)
 bones/11/rotation = Quaternion(-0.133424, -2.36287e-07, -6.36183e-08, 0.991059)
-bones/12/position = Vector3(-0.0282234, 0.0675003, -0.0270332)
 bones/12/rotation = Quaternion(-0.133424, -4.72495e-07, -3.12241e-08, 0.991059)
-bones/13/position = Vector3(-0.00207268, 0.0713814, -0.0227653)
+bones/13/position = Vector3(-0.0024922, 0.0708938, -0.0243672)
 bones/13/rotation = Quaternion(-0.785934, -1.47419e-07, -3.7476e-07, 0.618311)
-bones/14/position = Vector3(-0.0665074, 0.0863193, 0.0803589)
+bones/14/position = Vector3(-0.0688503, 0.0875107, 0.0800195)
 bones/14/rotation = Quaternion(0.574667, -2.38705e-07, 6.20714e-08, 0.818388)
 bones/14/scale = Vector3(1, 1, 1)
-bones/15/position = Vector3(-0.0228287, 0.0753601, 0.100242)
-bones/16/position = Vector3(0.0451353, 0.144384, 0.0367465)
+bones/15/position = Vector3(-0.0228308, 0.0754088, 0.10022)
+bones/16/position = Vector3(0.0484311, 0.144145, 0.0351657)
 bones/16/rotation = Quaternion(0.570114, -2.42461e-08, 1.70866e-07, 0.821566)
-bones/16/scale = Vector3(0.714597, 0.714597, 0.714597)
-bones/17/position = Vector3(0.0693966, 0.121512, 0.0648278)
+bones/16/scale = Vector3(0.714569, 0.714569, 0.714569)
+bones/17/position = Vector3(0.0693877, 0.121453, 0.0648452)
 bones/17/rotation = Quaternion(0.574496, 0.00427076, 0.00299788, 0.81849)
 bones/17/scale = Vector3(1, 1, 1)
-bones/18/position = Vector3(-0.0693966, 0.121512, 0.0648277)
+bones/18/position = Vector3(-0.0693878, 0.121453, 0.0648452)
 bones/18/rotation = Quaternion(0.574496, -0.00427106, -0.0029976, 0.81849)
 bones/18/scale = Vector3(1, 1, 1)
-bones/19/position = Vector3(-0.0764637, 0.139657, 0.0239427)
+bones/19/position = Vector3(-0.0736566, 0.140344, 0.0255518)
 bones/19/rotation = Quaternion(0.570114, -2.20123e-07, 3.49399e-08, 0.821566)
-bones/19/scale = Vector3(0.714758, 0.714758, 0.714758)
-bones/20/position = Vector3(0.000878633, 0.0827726, 0.0945326)
+bones/19/scale = Vector3(0.714754, 0.714754, 0.714754)
+bones/20/position = Vector3(0.00105277, 0.0821257, 0.0947867)
 bones/20/rotation = Quaternion(0.986162, 1.68942e-11, 2.35116e-07, 0.165785)
 bones/20/scale = Vector3(1, 1, 1)
-bones/21/position = Vector3(0.0689462, 0.168516, 0.0463697)
-bones/21/rotation = Quaternion(0.574497, 0.00427076, 0.00299788, 0.81849)
+bones/21/position = Vector3(0.0690152, 0.170147, 0.045983)
 bones/21/scale = Vector3(1, 1, 1)
-bones/22/position = Vector3(-0.0684361, 0.160477, 0.0503949)
+bones/22/position = Vector3(-0.0682014, 0.155853, 0.0519796)
 bones/22/rotation = Quaternion(0.574497, -0.00427106, -0.0029976, 0.81849)
 bones/22/scale = Vector3(1, 1, 1)
-bones/23/position = Vector3(0.014986, 0.113654, 0.0159795)
 bones/23/rotation = Quaternion(-0.535559, -0.441949, -0.458366, 0.554759)
-bones/24/position = Vector3(-0.00317026, 0.131252, -0.0413297)
-bones/24/rotation = Quaternion(-0.418406, 0.7183, -0.398663, 0.387361)
+bones/24/rotation = Quaternion(-0.412664, 0.709846, -0.41149, 0.395605)
 bones/24/scale = Vector3(1, 1, 1)
-bones/25/rotation = Quaternion(0.220124, -0.142319, 0.0034404, 0.965028)
-bones/26/rotation = Quaternion(-0.00761513, 0.0729631, -0.0929698, 0.992963)
+bones/25/rotation = Quaternion(0.220525, -0.141924, 0.00184837, 0.964999)
 bones/26/scale = Vector3(1, 1, 1)
-bones/27/position = Vector3(-0.014986, 0.113654, 0.0159795)
-bones/27/rotation = Quaternion(-0.53556, 0.441949, 0.458366, 0.554759)
 bones/27/scale = Vector3(1, 1, 1)
-bones/28/position = Vector3(0.00356921, 0.131288, -0.0413119)
-bones/28/rotation = Quaternion(-0.413917, -0.720584, 0.399687, 0.386888)
+bones/28/position = Vector3(0.00363151, 0.131294, -0.0413092)
+bones/28/rotation = Quaternion(-0.411016, -0.711314, 0.412807, 0.393304)
 bones/28/scale = Vector3(1, 1, 1)
-bones/29/rotation = Quaternion(0.222383, 0.141001, 0.00179404, 0.964708)
+bones/29/rotation = Quaternion(0.219313, 0.141563, -0.00144325, 0.965329)
 bones/29/scale = Vector3(1, 1, 1)
-bones/30/rotation = Quaternion(-0.00711012, -0.0729188, 0.0929764, 0.992969)
-bones/30/scale = Vector3(1, 1, 1)
+bones/30/rotation = Quaternion(-0.00711013, -0.0729187, 0.0929765, 0.992969)
 bones/31/rotation = Quaternion(3.36933e-08, 0.61389, 0.789391, 1.9271e-07)
 bones/31/scale = Vector3(1, 1, 1)
 bones/32/rotation = Quaternion(-2.73707e-07, 0.61389, 0.789391, -4.63474e-08)
 bones/32/scale = Vector3(1, 1, 1)
 bones/33/rotation = Quaternion(-0.152455, -0.793331, -0.285504, 0.515627)
 bones/34/rotation = Quaternion(-0.152455, 0.793331, 0.285504, 0.515627)
-bones/35/rotation = Quaternion(0.941302, -8.27791e-08, 3.43655e-07, 0.337567)
-bones/36/rotation = Quaternion(0.492521, 1.02158e-08, 2.65611e-08, 0.870301)
-bones/37/rotation = Quaternion(-0.715313, 1.66608e-07, -3.41088e-07, 0.698805)
+bones/35/rotation = Quaternion(0.937673, -8.64265e-08, 3.42761e-07, 0.347519)
+bones/36/rotation = Quaternion(0.519861, 1.16773e-08, 2.65662e-08, 0.854251)
+bones/37/rotation = Quaternion(-0.72711, 1.63679e-07, -3.46713e-07, 0.686521)
 bones/37/scale = Vector3(1, 1, 1)
 bones/38/rotation = Quaternion(1.10642e-07, 0.961249, -0.275683, 3.01752e-07)
 bones/39/rotation = Quaternion(0.679706, 0.679705, -0.194937, 0.194938)
 bones/39/scale = Vector3(1, 1, 1)
-bones/40/rotation = Quaternion(0.942468, -8.30709e-08, 1.05484e-07, 0.334296)
-bones/41/rotation = Quaternion(0.487429, -1.28461e-08, -3.09293e-08, 0.873163)
-bones/42/rotation = Quaternion(-0.715313, -1.66608e-07, 3.41088e-07, 0.698805)
+bones/40/rotation = Quaternion(0.935884, -8.63815e-08, 1.03856e-07, 0.352309)
+bones/41/rotation = Quaternion(0.514273, -1.37991e-08, -3.05161e-08, 0.857627)
+bones/42/rotation = Quaternion(-0.72711, -1.63679e-07, 3.46713e-07, 0.686521)
 bones/43/rotation = Quaternion(-1.10642e-07, 0.961249, -0.275683, -3.01752e-07)
 bones/43/scale = Vector3(1, 1, 1)
 bones/44/rotation = Quaternion(0.679706, -0.679705, 0.194937, 0.194937)
 
 [node name="Body" parent="Player Model/PompRig/Skeleton3D" index="0"]
 layers = 16
-surface_material_override/0 = ExtResource("18")
-surface_material_override/1 = SubResource("StandardMaterial3D_m7fw2")
 
 [node name="Hairback" parent="Player Model/PompRig/Skeleton3D" index="1"]
 layers = 16
@@ -6068,7 +6051,7 @@ visible = false
 offset_right = 40.0
 offset_bottom = 23.0
 text = "FPS: 000"
-script = ExtResource("85")
+script = ExtResource("95_d1ryd")
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 root_node = NodePath("../Player Model")
@@ -6087,10 +6070,10 @@ parameters/Normal2D/blend_position = Vector2(0.00893998, -0.00395262)
 parameters/Normal2D/4/blend_position = 9.0
 
 [node name="PompFriendController" type="Node" parent="."]
-script = ExtResource("93_lb8ch")
+script = ExtResource("85_axcye")
 
 [node name="KOMSignalBus" type="Node" parent="."]
-script = ExtResource("94_u8mxq")
+script = ExtResource("96_mvfvh")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.464575, -2.08453)
@@ -6098,18 +6081,18 @@ target_position = Vector3(0, -3.15, 0)
 hit_back_faces = false
 collide_with_areas = true
 
-[node name="AutoSpawer" parent="." node_paths=PackedStringArray("TargetLoc") instance=ExtResource("95_toqkf")]
+[node name="AutoSpawer" parent="." node_paths=PackedStringArray("TargetLoc") instance=ExtResource("97_fh4f1")]
 TargetLoc = NodePath("../RayCast3D")
 LocOffset = Vector3(0, 15, 0)
 
 [node name="ShowDebug" type="Node" parent="." node_paths=PackedStringArray("SoundEffect", "OtherNodes")]
-script = ExtResource("71_qffgh")
+script = ExtResource("70_h6pp7")
 key = 4194335
 SoundEffect = NodePath("../UI Overlay/CanvasLayer/2DSound")
 OtherNodes = [NodePath("../UI Overlay/CanvasLayer/UIPARENT/SceneSpawner"), NodePath("../UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent/PompNpcStats"), NodePath("../UI Overlay/CanvasLayer/UIPARENT/UI/PompFriendParent")]
 
 [node name="CameraShake" type="Node3D" parent="." node_paths=PackedStringArray("cam")]
-script = ExtResource("96_431ph")
+script = ExtResource("98_vhcjj")
 cam = NodePath("../Head/SpringArm3D Z/MainCamera")
 
 [connection signal="pressed" from="UI Overlay/CanvasLayer/UIPARENT/SceneSpawner/SpawnButton" to="UI Overlay/CanvasLayer/UIPARENT/SceneSpawner/SpawnButton" method="_on_pressed"]

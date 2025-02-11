@@ -1,6 +1,5 @@
+class_name InventoryManager
 extends Node3D
-class_name InventoryManagerOld
-
 @export var inv : Inventory
 static var inventoryInstance : Inventory
 @export var invCtrl : CtrlInventoryGrid
@@ -9,6 +8,7 @@ static var itemArray : Dictionary
 @export var itemName : Label
 @export var itemDescription : Label
 @export var health_handler : Node2D
+@export var MouseCasting : MouseCaster
 var camCast : Camera3D
 
 
@@ -76,7 +76,7 @@ func OnItemDrop(item, offset):
 	pass # Replace with function body.
 
 func ItemCast(item):
-	var cast = camCast.call("ItemCast", item.get_ref().get_title());
+	var cast = MouseCasting.ItemCast(item.get_ref().get_title());
 	if (cast == true):
 		inv.remove_item(item.get_ref())
 	else:

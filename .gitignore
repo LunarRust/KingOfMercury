@@ -1,7 +1,11 @@
 # Godot 4+ specific ignores
 .godot/
 addons/
-
+*.exe
+*.pck
+*.dll
+.vs/
+.vs\
 # Godot-specific ignores
 Icon.png.import
 *.import
@@ -19,3 +23,5 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+*.vsidx
+*.tmp

@@ -183,6 +183,7 @@ stretch_mode = 0
 [node name="Cursor" parent="." instance=ExtResource("11_0nmd8")]
 
 [node name="WorldWarpButtonsParent" type="Node2D" parent="."]
+visible = false
 
 [node name="LoadWorldMap1Button" type="Button" parent="WorldWarpButtonsParent"]
 top_level = true
@@ -674,82 +675,6 @@ color = Color(0.0745098, 0.113725, 0.211765, 1)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="WorldWarpButtonsParent/LoadEyeballButton"]
 script = ExtResource("12_w86w3")
 
-[node name="LoadCustomTestButton" type="Button" parent="WorldWarpButtonsParent"]
-top_level = true
-z_as_relative = false
-offset_left = 540.0
-offset_top = 17.0
-offset_right = 754.0
-offset_bottom = 65.0
-theme = ExtResource("4_t3qcm")
-theme_override_colors/font_color = Color(0.320416, 0.418491, 0.657654, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_focus_color = Color(0.320416, 0.418491, 0.657654, 1)
-theme_override_styles/normal = SubResource("7")
-theme_override_styles/hover = SubResource("8")
-theme_override_styles/pressed = SubResource("9")
-theme_override_styles/disabled = SubResource("10")
-theme_override_styles/focus = SubResource("11")
-action_mode = 0
-text = "
-Load Test Scene
-
-"
-script = ExtResource("11_1u0cu")
-destination = "2DTestScene"
-
-[node name="ColorRect3" type="ColorRect" parent="WorldWarpButtonsParent/LoadCustomTestButton"]
-show_behind_parent = true
-layout_mode = 0
-offset_left = 4.0
-offset_top = 5.0
-offset_right = 210.0
-offset_bottom = 41.0
-mouse_filter = 2
-color = Color(0.0745098, 0.113725, 0.211765, 1)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="WorldWarpButtonsParent/LoadCustomTestButton"]
-script = ExtResource("12_w86w3")
-
-[node name="LoadCustomDebugRoomButton" type="Button" parent="WorldWarpButtonsParent"]
-top_level = true
-z_as_relative = false
-offset_left = 325.0
-offset_top = 17.0
-offset_right = 538.999
-offset_bottom = 65.0001
-theme = ExtResource("4_t3qcm")
-theme_override_colors/font_color = Color(0.320416, 0.418491, 0.657654, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_focus_color = Color(0.320416, 0.418491, 0.657654, 1)
-theme_override_styles/normal = SubResource("7")
-theme_override_styles/hover = SubResource("8")
-theme_override_styles/pressed = SubResource("9")
-theme_override_styles/disabled = SubResource("10")
-theme_override_styles/focus = SubResource("11")
-action_mode = 0
-text = "
-Load Custom World Map
-
-"
-script = ExtResource("14_ajnv3")
-destination = "res://CustomMercScenes/CustomScenes/WMMD.tscn"
-
-[node name="ColorRect3" type="ColorRect" parent="WorldWarpButtonsParent/LoadCustomDebugRoomButton"]
-show_behind_parent = true
-layout_mode = 0
-offset_left = 4.0
-offset_top = 5.0
-offset_right = 210.0
-offset_bottom = 41.0
-mouse_filter = 2
-color = Color(0.0745098, 0.113725, 0.211765, 1)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="WorldWarpButtonsParent/LoadCustomDebugRoomButton"]
-script = ExtResource("12_w86w3")
-
 [node name="LoadAbstractButton" type="Button" parent="WorldWarpButtonsParent"]
 top_level = true
 z_as_relative = false
@@ -864,7 +789,84 @@ color = Color(0.0745098, 0.113725, 0.211765, 1)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="WorldWarpButtonsParent/Load Garden"]
 script = ExtResource("12_w86w3")
 
+[node name="LoadCustomTestButton" type="Button" parent="."]
+top_level = true
+z_as_relative = false
+offset_left = 540.0
+offset_top = 17.0
+offset_right = 754.0
+offset_bottom = 65.0
+theme = ExtResource("4_t3qcm")
+theme_override_colors/font_color = Color(0.320416, 0.418491, 0.657654, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.320416, 0.418491, 0.657654, 1)
+theme_override_styles/normal = SubResource("7")
+theme_override_styles/hover = SubResource("8")
+theme_override_styles/pressed = SubResource("9")
+theme_override_styles/disabled = SubResource("10")
+theme_override_styles/focus = SubResource("11")
+action_mode = 0
+text = "
+Load Test Scene
+
+"
+script = ExtResource("11_1u0cu")
+destination = "2DTestScene"
+
+[node name="ColorRect3" type="ColorRect" parent="LoadCustomTestButton"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 210.0
+offset_bottom = 41.0
+mouse_filter = 2
+color = Color(0.0745098, 0.113725, 0.211765, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="LoadCustomTestButton"]
+script = ExtResource("12_w86w3")
+
+[node name="LoadCustomDebugRoomButton" type="Button" parent="."]
+top_level = true
+z_as_relative = false
+offset_left = 325.0
+offset_top = 17.0
+offset_right = 538.999
+offset_bottom = 65.0001
+theme = ExtResource("4_t3qcm")
+theme_override_colors/font_color = Color(0.320416, 0.418491, 0.657654, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.320416, 0.418491, 0.657654, 1)
+theme_override_styles/normal = SubResource("7")
+theme_override_styles/hover = SubResource("8")
+theme_override_styles/pressed = SubResource("9")
+theme_override_styles/disabled = SubResource("10")
+theme_override_styles/focus = SubResource("11")
+action_mode = 0
+text = "
+Load Custom World Map
+
+"
+script = ExtResource("14_ajnv3")
+destination = "res://CustomMercScenes/CustomScenes/WMMD.tscn"
+
+[node name="ColorRect3" type="ColorRect" parent="LoadCustomDebugRoomButton"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 210.0
+offset_bottom = 41.0
+mouse_filter = 2
+color = Color(0.0745098, 0.113725, 0.211765, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="LoadCustomDebugRoomButton"]
+script = ExtResource("12_w86w3")
+
 [node name="SaveDataButtonsParent" type="Node2D" parent="."]
+visible = false
 
 [node name="CheckBox" type="Button" parent="SaveDataButtonsParent"]
 offset_left = 740.0
@@ -1343,11 +1345,12 @@ stream = ExtResource("24_3ls6n")
 [node name="GameProgress" type="Node" parent="."]
 script = ExtResource("19_eiwet")
 
-[node name="ConsoleParent" type="Node2D" parent="." node_paths=PackedStringArray("SoundEffect")]
+[node name="ConsoleParent" type="Node2D" parent="." node_paths=PackedStringArray("SoundEffect", "OtherNodes")]
 visible = false
 script = ExtResource("27_1kpg6")
 key = 4194335
 SoundEffect = NodePath("AudioStreamPlayer")
+OtherNodes = [NodePath(".")]
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="ConsoleParent"]
 z_index = 2
@@ -1375,11 +1378,11 @@ stream = ExtResource("11_17170")
 [connection signal="pressed" from="WorldWarpButtonsParent/LoadGearHallButton" to="WorldWarpButtonsParent/LoadGearHallButton/AudioStreamPlayer" method="_on_button_pressed"]
 [connection signal="pressed" from="WorldWarpButtonsParent/LoadDNAButton" to="WorldWarpButtonsParent/LoadDNAButton/AudioStreamPlayer" method="_on_button_pressed"]
 [connection signal="pressed" from="WorldWarpButtonsParent/LoadEyeballButton" to="WorldWarpButtonsParent/LoadEyeballButton/AudioStreamPlayer" method="_on_button_pressed"]
-[connection signal="pressed" from="WorldWarpButtonsParent/LoadCustomTestButton" to="WorldWarpButtonsParent/LoadCustomTestButton/AudioStreamPlayer" method="_on_button_pressed"]
-[connection signal="pressed" from="WorldWarpButtonsParent/LoadCustomDebugRoomButton" to="WorldWarpButtonsParent/LoadCustomDebugRoomButton/AudioStreamPlayer" method="_on_button_pressed"]
 [connection signal="pressed" from="WorldWarpButtonsParent/LoadAbstractButton" to="WorldWarpButtonsParent/LoadAbstractButton/AudioStreamPlayer" method="_on_button_pressed"]
 [connection signal="pressed" from="WorldWarpButtonsParent/LoadMotelButton" to="WorldWarpButtonsParent/LoadMotelButton/AudioStreamPlayer" method="_on_button_pressed"]
 [connection signal="pressed" from="WorldWarpButtonsParent/Load Garden" to="WorldWarpButtonsParent/Load Garden/AudioStreamPlayer" method="_on_button_pressed"]
+[connection signal="pressed" from="LoadCustomTestButton" to="LoadCustomTestButton/AudioStreamPlayer" method="_on_button_pressed"]
+[connection signal="pressed" from="LoadCustomDebugRoomButton" to="LoadCustomDebugRoomButton/AudioStreamPlayer" method="_on_button_pressed"]
 [connection signal="pressed" from="SaveDataButtonsParent/CheckBox" to="SaveDataButtonsParent/CheckBox" method="_on_pressed"]
 [connection signal="pressed" from="SaveDataButtonsParent/CheckBox" to="SaveDataButtonsParent/CheckBox/AudioStreamPlayer" method="_on_check_box_pressed"]
 [connection signal="toggled" from="SaveDataButtonsParent/CheckBox" to="SaveDataButtonsParent/CheckBox" method="_on_toggled"]
@@ -1388,12 +1391,12 @@ stream = ExtResource("11_17170")
 [connection signal="pressed" from="SaveDataButtonsParent/Credits/Credits/TextureButton" to="SaveDataButtonsParent/Credits/Credits/TextureButton" method="_on_texture_button_pressed"]
 [connection signal="pressed" from="SaveDataButtonsParent/ToggleSchoolDone" to="SaveDataButtonsParent/ToggleSchoolDone" method="_on_pressed"]
 [connection signal="pressed" from="SaveDataButtonsParent/ToggleSchoolDone" to="SaveDataButtonsParent/ToggleSchoolDone/AudioStreamPlayer" method="_on_check_box_pressed"]
-[connection signal="toggled" from="SaveDataButtonsParent/ToggleSchoolDone" to="SaveDataButtonsParent/ToggleSchoolDone" method="_on_toggled_school"]
 [connection signal="toggled" from="SaveDataButtonsParent/ToggleSchoolDone" to="SaveDataButtonsParent/ToggleSchoolDone" method="_on_toggled"]
+[connection signal="toggled" from="SaveDataButtonsParent/ToggleSchoolDone" to="SaveDataButtonsParent/ToggleSchoolDone" method="_on_toggled_school"]
 [connection signal="pressed" from="SaveDataButtonsParent/ToggleSewerDone" to="SaveDataButtonsParent/ToggleSewerDone" method="_on_pressed"]
 [connection signal="pressed" from="SaveDataButtonsParent/ToggleSewerDone" to="SaveDataButtonsParent/ToggleSewerDone/AudioStreamPlayer" method="_on_check_box_pressed"]
-[connection signal="toggled" from="SaveDataButtonsParent/ToggleSewerDone" to="SaveDataButtonsParent/ToggleSewerDone" method="_on_toggled_sewer"]
 [connection signal="toggled" from="SaveDataButtonsParent/ToggleSewerDone" to="SaveDataButtonsParent/ToggleSewerDone" method="_on_toggled"]
+[connection signal="toggled" from="SaveDataButtonsParent/ToggleSewerDone" to="SaveDataButtonsParent/ToggleSewerDone" method="_on_toggled_sewer"]
 [connection signal="pressed" from="SaveDataButtonsParent/ToggleHostpitalDone" to="SaveDataButtonsParent/ToggleHostpitalDone" method="_on_pressed"]
 [connection signal="pressed" from="SaveDataButtonsParent/ToggleHostpitalDone" to="SaveDataButtonsParent/ToggleHostpitalDone/AudioStreamPlayer" method="_on_check_box_pressed"]
 [connection signal="ready" from="SaveDataButtonsParent/ToggleHostpitalDone" to="SaveDataButtonsParent/ToggleHostpitalDone" method="_ready"]
