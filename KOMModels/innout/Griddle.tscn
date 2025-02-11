@@ -1,19 +1,19 @@
-[gd_scene load_steps=44 format=3 uid="uid://cqn0gyd1vcqh2"]
+[gd_scene load_steps=45 format=3 uid="uid://cqn0gyd1vcqh2"]
 
-[ext_resource type="Texture2D" uid="uid://b08v5m5rhwj3g" path="res://KOMModels/innout/restaurant_Metal_Grill_024_basecolor.png" id="1_d3ufr"]
-[ext_resource type="Texture2D" uid="uid://b1jbauqt5tjix" path="res://KOMModels/innout/restaurant_Metal_006_basecolor.jpg" id="2_h7jx2"]
-[ext_resource type="Texture2D" uid="uid://dc8yvbyjat5m2" path="res://KOMModels/innout/restaurant_Metal_006_roughness.png" id="3_vjt1h"]
-[ext_resource type="Texture2D" uid="uid://dqibbq01pq5wr" path="res://KOMModels/innout/restaurant_Metal_006_normal.jpg" id="4_n4t0m"]
-[ext_resource type="Texture2D" uid="uid://bt0an4f3ckwb" path="res://KOMModels/innout/restaurant_dial Base Color.png" id="5_d4d2j"]
-[ext_resource type="Texture2D" uid="uid://o7yjytajcbf2" path="res://textures/glass_bright.png" id="6_uc764"]
+[ext_resource type="Texture2D" uid="uid://fnur461jyc4e" path="res://KOMModels/innout/restaurant_Metal_Grill_024_basecolor.png" id="1_d3ufr"]
+[ext_resource type="Texture2D" uid="uid://cr6qkmssk1r2" path="res://KOMModels/innout/restaurant_Metal_006_basecolor.jpg" id="2_h7jx2"]
+[ext_resource type="Texture2D" uid="uid://bgme1no8045sd" path="res://KOMModels/innout/restaurant_Metal_006_roughness.png" id="3_vjt1h"]
+[ext_resource type="Texture2D" uid="uid://co0e8djfdgvn2" path="res://KOMModels/innout/restaurant_Metal_006_normal.jpg" id="4_n4t0m"]
+[ext_resource type="Texture2D" uid="uid://ce5v34wq3gdkl" path="res://KOMModels/innout/restaurant_dial Base Color.png" id="5_d4d2j"]
+[ext_resource type="Texture2D" uid="uid://h8eiphbtudkv" path="res://textures/glass_bright.png" id="6_uc764"]
 [ext_resource type="PackedScene" uid="uid://bjhio0w4l3d5o" path="res://KOMModels/innout/Spatula.tscn" id="7_82u0b"]
-[ext_resource type="Texture2D" uid="uid://bl64mywvhcrqi" path="res://KOMSprites/innout/raw-patty.png" id="8_ppg8c"]
+[ext_resource type="Texture2D" uid="uid://b3ff2t2wvlbv7" path="res://KOMSprites/innout/raw-patty.png" id="8_ppg8c"]
 [ext_resource type="SpriteFrames" uid="uid://bwwe0yu1rhfcs" path="res://KOMSprites/innout/FFriesFire.tres" id="9_26h2y"]
 [ext_resource type="Script" path="res://CustomScripts/Objects/In'nOut/GriddleBehavior.gd" id="9_hery2"]
-[ext_resource type="Texture2D" uid="uid://driq2dafkx6o1" path="res://KOMSprites/innout/FryPile.png" id="11_emme3"]
-[ext_resource type="Texture2D" uid="uid://l3b4taiqqnid" path="res://KOMSprites/innout/In-N-Out-Burger.png" id="12_yrevu"]
-[ext_resource type="Texture2D" uid="uid://b8cnpnu0vqxy6" path="res://KOMSprites/innout/fries.png" id="13_7s17i"]
-[ext_resource type="Texture2D" uid="uid://cerxxnv0hmn5k" path="res://KOMSprites/innout/cooked-patty.png" id="14_u303k"]
+[ext_resource type="Texture2D" uid="uid://bote0nnsinsvg" path="res://KOMSprites/innout/FryPile.png" id="11_emme3"]
+[ext_resource type="Texture2D" uid="uid://b2j0kt7ppsv7a" path="res://KOMSprites/innout/In-N-Out-Burger.png" id="12_yrevu"]
+[ext_resource type="Texture2D" uid="uid://bwb81o7vwgs1" path="res://KOMSprites/innout/fries.png" id="13_7s17i"]
+[ext_resource type="Texture2D" uid="uid://ctdyh27w12rb4" path="res://KOMSprites/innout/cooked-patty.png" id="14_u303k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wp3qd"]
 resource_name = "grill"
@@ -350,6 +350,8 @@ graph_offset = Vector2(-266, -114)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f4g3g"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_50u8c"]
+
 [node name="Griddle" type="Node3D"]
 
 [node name="griddle " type="MeshInstance3D" parent="."]
@@ -378,6 +380,7 @@ mesh = SubResource("PlaneMesh_nhkml")
 
 [node name="SpatParent" type="Node3D" parent="griddle "]
 transform = Transform3D(0.999996, -7.10543e-15, 0, 7.10543e-15, 0.999996, -7.10543e-15, -8.47033e-22, 7.10543e-15, 0.999996, 0, 0, 0)
+visible = false
 
 [node name="Spatula" parent="griddle /SpatParent" instance=ExtResource("7_82u0b")]
 transform = Transform3D(-19.9855, -0.76127, -0.000400376, 0.757106, -19.8773, 2.07853, -0.0795141, 2.07701, 19.8917, 80.2958, 54.7197, -96.9448)
@@ -417,6 +420,153 @@ autoplay = "default"
 frame_progress = 0.692965
 
 [node name="SpriteOnGriddle" type="Sprite3D" parent="griddle /SpatParent"]
+transform = Transform3D(-1.7987, -0.0685143, -3.60365e-05, 0.0681395, -1.78896, 0.187068, -0.00715627, 0.186931, 1.79025, 80.2958, 43.579, -99.5225)
+visible = false
+billboard = 1
+alpha_cut = 2
+texture_filter = 1
+texture = ExtResource("8_ppg8c")
+
+[node name="SpatParent2" type="Node3D" parent="griddle "]
+transform = Transform3D(0.999996, -2.84217e-14, -8.47037e-22, 2.84217e-14, 0.999996, -2.84217e-14, -1.69407e-21, 2.84217e-14, 0.999996, -20.7272, -2.47088e-06, -2.94552e-13)
+visible = false
+
+[node name="Spatula" parent="griddle /SpatParent2" instance=ExtResource("7_82u0b")]
+transform = Transform3D(-19.9855, -0.76127, -0.000400376, 0.757106, -19.8773, 2.07853, -0.0795141, 2.07701, 19.8917, 80.2958, 54.7197, -96.9448)
+
+[node name="AnimationTree" type="AnimationTree" parent="griddle /SpatParent2/Spatula"]
+libraries = {
+"": SubResource("AnimationLibrary_l81uc")
+}
+tree_root = SubResource("AnimationNodeStateMachine_6l2e4")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/Down = false
+parameters/conditions/Flip = false
+parameters/conditions/Up = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="griddle /SpatParent2/Spatula"]
+libraries = {
+"": SubResource("AnimationLibrary_l81uc")
+}
+autoplay = "Down"
+
+[node name="SpriteOnSpat" type="Sprite3D" parent="griddle /SpatParent2/Spatula"]
+transform = Transform3D(0.09, -9.31323e-10, 6.16183e-11, 2.32831e-10, 0.09, 2.41765e-09, 9.07221e-11, -5.0396e-09, 0.09, -0.0205743, 0.54023, -0.186079)
+visible = false
+billboard = 1
+alpha_cut = 2
+texture_filter = 1
+texture = ExtResource("8_ppg8c")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="griddle /SpatParent2"]
+transform = Transform3D(6.23, -5.68434e-14, -1.51114e-20, 5.68434e-14, 6.23, -1.7053e-13, -7.45389e-20, -9.09495e-13, 6.23, 80.1688, 41.178, -98.3826)
+visible = false
+billboard = 1
+alpha_cut = 2
+texture_filter = 1
+sprite_frames = ExtResource("9_26h2y")
+autoplay = "default"
+frame_progress = 0.692965
+
+[node name="SpriteOnGriddle" type="Sprite3D" parent="griddle /SpatParent2"]
+transform = Transform3D(-1.7987, -0.0685143, -3.60365e-05, 0.0681395, -1.78896, 0.187068, -0.00715627, 0.186931, 1.79025, 80.2958, 43.579, -99.5225)
+visible = false
+billboard = 1
+alpha_cut = 2
+texture_filter = 1
+texture = ExtResource("8_ppg8c")
+
+[node name="SpatParent3" type="Node3D" parent="griddle "]
+transform = Transform3D(0.999996, -1.42109e-14, -1.91851e-27, 1.42109e-14, 0.999996, -1.42109e-14, -8.47033e-22, 1.42109e-14, 0.999996, -42.8006, -5.10223e-06, -6.08234e-13)
+visible = false
+
+[node name="Spatula" parent="griddle /SpatParent3" instance=ExtResource("7_82u0b")]
+transform = Transform3D(-19.9855, -0.76127, -0.000400376, 0.757106, -19.8773, 2.07853, -0.0795141, 2.07701, 19.8917, 80.2958, 54.7197, -96.9448)
+
+[node name="AnimationTree" type="AnimationTree" parent="griddle /SpatParent3/Spatula"]
+libraries = {
+"": SubResource("AnimationLibrary_l81uc")
+}
+tree_root = SubResource("AnimationNodeStateMachine_6l2e4")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/Down = false
+parameters/conditions/Flip = false
+parameters/conditions/Up = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="griddle /SpatParent3/Spatula"]
+libraries = {
+"": SubResource("AnimationLibrary_l81uc")
+}
+autoplay = "Down"
+
+[node name="SpriteOnSpat" type="Sprite3D" parent="griddle /SpatParent3/Spatula"]
+transform = Transform3D(0.09, -9.31323e-10, 6.16183e-11, 2.32831e-10, 0.09, 2.41765e-09, 9.07221e-11, -5.0396e-09, 0.09, -0.0205743, 0.54023, -0.186079)
+visible = false
+billboard = 1
+alpha_cut = 2
+texture_filter = 1
+texture = ExtResource("8_ppg8c")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="griddle /SpatParent3"]
+transform = Transform3D(6.23, -5.68434e-14, -1.51114e-20, 5.68434e-14, 6.23, -1.7053e-13, -7.45389e-20, -9.09495e-13, 6.23, 80.1688, 41.178, -98.3826)
+visible = false
+billboard = 1
+alpha_cut = 2
+texture_filter = 1
+sprite_frames = ExtResource("9_26h2y")
+autoplay = "default"
+frame_progress = 0.692965
+
+[node name="SpriteOnGriddle" type="Sprite3D" parent="griddle /SpatParent3"]
+transform = Transform3D(-1.7987, -0.0685143, -3.60365e-05, 0.0681395, -1.78896, 0.187068, -0.00715627, 0.186931, 1.79025, 80.2958, 43.579, -99.5225)
+visible = false
+billboard = 1
+alpha_cut = 2
+texture_filter = 1
+texture = ExtResource("8_ppg8c")
+
+[node name="SpatParent4" type="Node3D" parent="griddle "]
+transform = Transform3D(0.999996, -1.42109e-14, -1.91851e-27, 1.42109e-14, 0.999996, -1.42109e-14, -8.47033e-22, 1.42109e-14, 0.999996, -67.0362, -7.99134e-06, -9.52643e-13)
+visible = false
+
+[node name="Spatula" parent="griddle /SpatParent4" instance=ExtResource("7_82u0b")]
+transform = Transform3D(-19.9855, -0.76127, -0.000400376, 0.757106, -19.8773, 2.07853, -0.0795141, 2.07701, 19.8917, 80.2958, 54.7197, -96.9448)
+
+[node name="AnimationTree" type="AnimationTree" parent="griddle /SpatParent4/Spatula"]
+libraries = {
+"": SubResource("AnimationLibrary_l81uc")
+}
+tree_root = SubResource("AnimationNodeStateMachine_6l2e4")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/Down = false
+parameters/conditions/Flip = false
+parameters/conditions/Up = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="griddle /SpatParent4/Spatula"]
+libraries = {
+"": SubResource("AnimationLibrary_l81uc")
+}
+autoplay = "Down"
+
+[node name="SpriteOnSpat" type="Sprite3D" parent="griddle /SpatParent4/Spatula"]
+transform = Transform3D(0.09, -9.31323e-10, 6.16183e-11, 2.32831e-10, 0.09, 2.41765e-09, 9.07221e-11, -5.0396e-09, 0.09, -0.0205743, 0.54023, -0.186079)
+visible = false
+billboard = 1
+alpha_cut = 2
+texture_filter = 1
+texture = ExtResource("8_ppg8c")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="griddle /SpatParent4"]
+transform = Transform3D(6.23, -5.68434e-14, -1.51114e-20, 5.68434e-14, 6.23, -1.7053e-13, -7.45389e-20, -9.09495e-13, 6.23, 80.1688, 41.178, -98.3826)
+visible = false
+billboard = 1
+alpha_cut = 2
+texture_filter = 1
+sprite_frames = ExtResource("9_26h2y")
+autoplay = "default"
+frame_progress = 0.692965
+
+[node name="SpriteOnGriddle" type="Sprite3D" parent="griddle /SpatParent4"]
 transform = Transform3D(-1.7987, -0.0685143, -3.60365e-05, 0.0681395, -1.78896, 0.187068, -0.00715627, 0.186931, 1.79025, 80.2958, 43.579, -99.5225)
 visible = false
 billboard = 1
@@ -464,11 +614,29 @@ transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -0.451
 text = "
 Text"
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_50u8c")
+
 [node name="StaticBody3D2" type="StaticBody3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.885196, 1.91619, -1.07714)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
 shape = SubResource("BoxShape3D_f4g3g")
+
+[node name="Behavior" type="Node" parent="StaticBody3D2" node_paths=PackedStringArray("Spatula", "GriddleSound", "TargetLoc", "SpriteObject", "AnimatedSpriteObject")]
+script = ExtResource("9_hery2")
+Spatula = NodePath("../../griddle /SpatParent2/Spatula")
+GriddleSound = NodePath("../AudioStreamPlayer")
+TargetLoc = NodePath("..")
+SpriteObject = NodePath("../../griddle /SpatParent2/Spatula/SpriteOnSpat")
+AnimatedSpriteObject = NodePath("../../griddle /SpatParent/AnimatedSprite3D")
+Sprites = Array[Resource]([ExtResource("11_emme3"), ExtResource("12_yrevu"), ExtResource("13_7s17i"), ExtResource("8_ppg8c")])
+AltSprites = Array[Texture2D]([ExtResource("13_7s17i"), ExtResource("8_ppg8c"), ExtResource("11_emme3"), ExtResource("14_u303k")])
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="StaticBody3D2"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
+mesh = SubResource("BoxMesh_50u8c")
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.885196, 1.91619, -0.679723)
@@ -476,8 +644,38 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.885196, 1.91619, -0.6
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
 shape = SubResource("BoxShape3D_f4g3g")
 
+[node name="Behavior" type="Node" parent="StaticBody3D3" node_paths=PackedStringArray("Spatula", "GriddleSound", "TargetLoc", "SpriteObject", "AnimatedSpriteObject")]
+script = ExtResource("9_hery2")
+Spatula = NodePath("../../griddle /SpatParent3/Spatula")
+GriddleSound = NodePath("../AudioStreamPlayer")
+TargetLoc = NodePath("..")
+SpriteObject = NodePath("../../griddle /SpatParent/Spatula/SpriteOnSpat")
+AnimatedSpriteObject = NodePath("../../griddle /SpatParent/AnimatedSprite3D")
+Sprites = Array[Resource]([ExtResource("11_emme3"), ExtResource("12_yrevu"), ExtResource("13_7s17i"), ExtResource("8_ppg8c")])
+AltSprites = Array[Texture2D]([ExtResource("13_7s17i"), ExtResource("8_ppg8c"), ExtResource("11_emme3"), ExtResource("14_u303k")])
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="StaticBody3D3"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3"]
+mesh = SubResource("BoxMesh_50u8c")
+
 [node name="StaticBody3D4" type="StaticBody3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.885196, 1.91619, -0.260636)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
 shape = SubResource("BoxShape3D_f4g3g")
+
+[node name="Behavior" type="Node" parent="StaticBody3D4" node_paths=PackedStringArray("Spatula", "GriddleSound", "TargetLoc", "SpriteObject", "AnimatedSpriteObject")]
+script = ExtResource("9_hery2")
+Spatula = NodePath("../../griddle /SpatParent4/Spatula")
+GriddleSound = NodePath("../AudioStreamPlayer")
+TargetLoc = NodePath("../../StaticBody3D")
+SpriteObject = NodePath("../../griddle /SpatParent4/Spatula/SpriteOnSpat")
+AnimatedSpriteObject = NodePath("../../griddle /SpatParent/AnimatedSprite3D")
+Sprites = Array[Resource]([ExtResource("11_emme3"), ExtResource("12_yrevu"), ExtResource("13_7s17i"), ExtResource("8_ppg8c")])
+AltSprites = Array[Texture2D]([ExtResource("13_7s17i"), ExtResource("8_ppg8c"), ExtResource("11_emme3"), ExtResource("14_u303k")])
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="StaticBody3D4"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4"]
+mesh = SubResource("BoxMesh_50u8c")

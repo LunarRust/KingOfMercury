@@ -6,7 +6,6 @@ extends Node
 @export var CanvasToShow : CanvasLayer
 @export var CamCurve : Curve
 @export var CollisionShape : CollisionShape3D
-@export var MeshInstance : MeshInstance3D
 @export var UIToToggle : Array[Node2D] = []
 
 
@@ -55,8 +54,7 @@ func _process(delta):
 			else:
 				print("No UI to show!")
 			t = 0
-			MeshInstance.global_position.y = MeshInstance.global_position.y - 500
-			CollisionShape.global_position.y = CollisionShape.global_position.y - 500
+			CollisionShape.disabled = false
 			PlayerCam.global_transform = PlayerCam.get_parent().global_transform
 			var tween
 			tween = create_tween()
@@ -71,8 +69,7 @@ func _process(delta):
 	
 	
 func CameraGrab():
-	MeshInstance.global_position.y = MeshInstance.global_position.y + 500
-	CollisionShape.global_position.y = CollisionShape.global_position.y + 500
+	CollisionShape.disabled = true
 	CanvasToShow.show()
 	if !UIToToggle.is_empty():
 		for i in UIToToggle:

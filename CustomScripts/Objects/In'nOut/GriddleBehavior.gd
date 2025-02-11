@@ -32,9 +32,10 @@ func create_item(prototype_id: String) -> InventoryItem:
 	return item
 
 func _process(delta):
-	DebugLabels.get_child(0).set_text("Spatula up: " + str(up))
-	DebugLabels.get_child(1).set_text("Has Item: " + str(ItemOnSpatula))
-	DebugLabels.get_child(2).set_text("Cook Time: " + str(snapped(CookTime,0.01)))
+	if DebugLabels:
+		DebugLabels.get_child(0).set_text("Spatula up: " + str(up))
+		DebugLabels.get_child(1).set_text("Has Item: " + str(ItemOnSpatula))
+		DebugLabels.get_child(2).set_text("Cook Time: " + str(snapped(CookTime,0.01)))
 	if Input.is_physical_key_pressed(KEY_SPACE):
 		animTrigger("Down")
 		if ItemOnSpatula:
@@ -58,6 +59,7 @@ func Item(item : String):
 				ItemOnSpatula = true
 				RecivedItem = "FFries"
 				ItemOnSpatulaName = "Fries"
+				Spatula.get_parent().show()
 				SpriteObject.show()
 				return true
 			"Burger":
@@ -66,6 +68,7 @@ func Item(item : String):
 				ItemOnSpatula = true
 				RecivedItem = "Burger"
 				ItemOnSpatulaName = "Burger"
+				Spatula.get_parent().show()
 				SpriteObject.show()
 				return true
 			"Fries":
@@ -74,6 +77,7 @@ func Item(item : String):
 				ItemOnSpatula = true
 				RecivedItem = "Fries"
 				ItemOnSpatulaName = "Fries"
+				Spatula.get_parent().show()
 				SpriteObject.show()
 				return true
 			"RawPatty":
@@ -82,6 +86,7 @@ func Item(item : String):
 				ItemOnSpatula = true
 				RecivedItem = "RawPatty"
 				ItemOnSpatulaName = "RawPatty"
+				Spatula.get_parent().show()
 				SpriteObject.show()
 				return true
 			"Raw Patty":
@@ -90,6 +95,7 @@ func Item(item : String):
 				ItemOnSpatula = true
 				RecivedItem = "RawPatty"
 				ItemOnSpatulaName = "Burger"
+				Spatula.get_parent().show()
 				SpriteObject.show()
 				return true
 			_:
@@ -105,10 +111,7 @@ func Touch(AmNpc = false):
 			if ItemOnSpatula:
 				Cooking = true
 			up = false
-		else:
-			animTrigger("Up")
-			Cooking = false
-			up = true
+		
 	else:
 		if CookTime >= 15:
 			if get_tree().get_first_node_in_group("PompNPC") != null:
@@ -122,29 +125,22 @@ func Touch(AmNpc = false):
 								newItem.set_property("image","res://KOMSprites/innout/friesBurnt.png")
 								newItem.set_property("name",str("burnt " + name))
 							SpriteObject.hide()
+							Spatula.get_parent().hide()
 							ItemOnSpatula = false
 							Cooking = false
 							CookTime = 0
 						else:
 							print("Cannot Add Item, not enough Room")
-				else:
-					if NpcInv.can_add_item(create_item(ItemOnSpatulaName)):
-						var newItem = NpcInv.create_and_add_item(ItemOnSpatulaName)
+				else :
+					if inv.can_add_item(create_item(ItemOnSpatulaName)):
+						var newItem = inv.create_and_add_item(ItemOnSpatulaName)
 						if (newItem != null):
 							newItem.set_property("CookTime", CookTime)
 						SpriteObject.hide()
+						Spatula.get_parent().hide()
 						ItemOnSpatula = false
 						Cooking = false
 						CookTime = 0
-			else :
-				if inv.can_add_item(create_item(ItemOnSpatulaName)):
-					var newItem = inv.create_and_add_item(ItemOnSpatulaName)
-					if (newItem != null):
-						newItem.set_property("CookTime", CookTime)
-					SpriteObject.hide()
-					ItemOnSpatula = false
-					Cooking = false
-					CookTime = 0
 		else:
 			animTrigger("Flip")   
 
