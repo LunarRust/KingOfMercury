@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://1adl8lxhn6nw"
 path.s3tc="res://.godot/imported/AnimeNugget_0.png-e4a3de9a0d6448a5d106551cf8b78097.s3tc.ctex"
+path.etc2="res://.godot/imported/AnimeNugget_0.png-e4a3de9a0d6448a5d106551cf8b78097.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/AnimeNugget_0.png"
-dest_files=["res://.godot/imported/AnimeNugget_0.png-e4a3de9a0d6448a5d106551cf8b78097.s3tc.ctex"]
+dest_files=["res://.godot/imported/AnimeNugget_0.png-e4a3de9a0d6448a5d106551cf8b78097.s3tc.ctex", "res://.godot/imported/AnimeNugget_0.png-e4a3de9a0d6448a5d106551cf8b78097.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmwbrwls50h0e"
 path.s3tc="res://.godot/imported/LavaSpire_1.png-531824cd12b8ae7ccd9811eabd4f69e2.s3tc.ctex"
+path.etc2="res://.godot/imported/LavaSpire_1.png-531824cd12b8ae7ccd9811eabd4f69e2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/LavaSpire_1.png"
-dest_files=["res://.godot/imported/LavaSpire_1.png-531824cd12b8ae7ccd9811eabd4f69e2.s3tc.ctex"]
+dest_files=["res://.godot/imported/LavaSpire_1.png-531824cd12b8ae7ccd9811eabd4f69e2.s3tc.ctex", "res://.godot/imported/LavaSpire_1.png-531824cd12b8ae7ccd9811eabd4f69e2.etc2.ctex"]
 
 [params]
 

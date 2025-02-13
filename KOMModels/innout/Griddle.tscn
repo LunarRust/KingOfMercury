@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://cqn0gyd1vcqh2"]
+[gd_scene load_steps=44 format=3 uid="uid://cqn0gyd1vcqh2"]
 
 [ext_resource type="Texture2D" uid="uid://fnur461jyc4e" path="res://KOMModels/innout/restaurant_Metal_Grill_024_basecolor.png" id="1_d3ufr"]
 [ext_resource type="Texture2D" uid="uid://cr6qkmssk1r2" path="res://KOMModels/innout/restaurant_Metal_006_basecolor.jpg" id="2_h7jx2"]
@@ -350,8 +350,6 @@ graph_offset = Vector2(-266, -114)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f4g3g"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_50u8c"]
-
 [node name="Griddle" type="Node3D"]
 
 [node name="griddle " type="MeshInstance3D" parent="."]
@@ -383,7 +381,7 @@ transform = Transform3D(0.999996, -7.10543e-15, 0, 7.10543e-15, 0.999996, -7.105
 visible = false
 
 [node name="Spatula" parent="griddle /SpatParent" instance=ExtResource("7_82u0b")]
-transform = Transform3D(-19.9855, -0.76127, -0.000400376, 0.757106, -19.8773, 2.07853, -0.0795141, 2.07701, 19.8917, 80.2958, 54.7197, -96.9448)
+transform = Transform3D(-19.9855, -0.761272, -0.000400376, 0.757106, -19.8773, 2.07854, -0.0795141, 2.07702, 19.8917, 80.2958, 54.7197, -96.9448)
 
 [node name="AnimationTree" type="AnimationTree" parent="griddle /SpatParent/Spatula"]
 libraries = {
@@ -432,7 +430,7 @@ transform = Transform3D(0.999996, -2.84217e-14, -8.47037e-22, 2.84217e-14, 0.999
 visible = false
 
 [node name="Spatula" parent="griddle /SpatParent2" instance=ExtResource("7_82u0b")]
-transform = Transform3D(-19.9855, -0.76127, -0.000400376, 0.757106, -19.8773, 2.07853, -0.0795141, 2.07701, 19.8917, 80.2958, 54.7197, -96.9448)
+transform = Transform3D(-19.9855, -0.761272, -0.000400376, 0.757106, -19.8773, 2.07854, -0.0795141, 2.07702, 19.8917, 80.2958, 54.7197, -96.9448)
 
 [node name="AnimationTree" type="AnimationTree" parent="griddle /SpatParent2/Spatula"]
 libraries = {
@@ -481,7 +479,7 @@ transform = Transform3D(0.999996, -1.42109e-14, -1.91851e-27, 1.42109e-14, 0.999
 visible = false
 
 [node name="Spatula" parent="griddle /SpatParent3" instance=ExtResource("7_82u0b")]
-transform = Transform3D(-19.9855, -0.76127, -0.000400376, 0.757106, -19.8773, 2.07853, -0.0795141, 2.07701, 19.8917, 80.2958, 54.7197, -96.9448)
+transform = Transform3D(-19.9855, -0.761272, -0.000400376, 0.757106, -19.8773, 2.07854, -0.0795141, 2.07702, 19.8917, 80.2958, 54.7197, -96.9448)
 
 [node name="AnimationTree" type="AnimationTree" parent="griddle /SpatParent3/Spatula"]
 libraries = {
@@ -530,7 +528,7 @@ transform = Transform3D(0.999996, -1.42109e-14, -1.91851e-27, 1.42109e-14, 0.999
 visible = false
 
 [node name="Spatula" parent="griddle /SpatParent4" instance=ExtResource("7_82u0b")]
-transform = Transform3D(-19.9855, -0.76127, -0.000400376, 0.757106, -19.8773, 2.07853, -0.0795141, 2.07701, 19.8917, 80.2958, 54.7197, -96.9448)
+transform = Transform3D(-19.9855, -0.761272, -0.000400376, 0.757106, -19.8773, 2.07854, -0.0795141, 2.07702, 19.8917, 80.2958, 54.7197, -96.9448)
 
 [node name="AnimationTree" type="AnimationTree" parent="griddle /SpatParent4/Spatula"]
 libraries = {
@@ -598,6 +596,7 @@ DebugLabels = NodePath("../DebugLabels")
 
 [node name="DebugLabels" type="Node3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.183072, -0.233397)
+visible = false
 
 [node name="Label3D" type="Label3D" parent="StaticBody3D/DebugLabels"]
 transform = Transform3D(-8.74228e-08, -5.92119e-15, 2, 1.15648e-20, 2, 5.92119e-15, -2, 1.18236e-20, -8.74228e-08, -0.451802, 1.58621, 0.181295)
@@ -613,9 +612,6 @@ Text"
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -0.451802, 0.607481, 0.181295)
 text = "
 Text"
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-mesh = SubResource("BoxMesh_50u8c")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.885196, 1.91619, -1.07714)
@@ -635,9 +631,6 @@ AltSprites = Array[Texture2D]([ExtResource("13_7s17i"), ExtResource("8_ppg8c"), 
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="StaticBody3D2"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
-mesh = SubResource("BoxMesh_50u8c")
-
 [node name="StaticBody3D3" type="StaticBody3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.885196, 1.91619, -0.679723)
 
@@ -649,15 +642,12 @@ script = ExtResource("9_hery2")
 Spatula = NodePath("../../griddle /SpatParent3/Spatula")
 GriddleSound = NodePath("../AudioStreamPlayer")
 TargetLoc = NodePath("..")
-SpriteObject = NodePath("../../griddle /SpatParent/Spatula/SpriteOnSpat")
+SpriteObject = NodePath("../../griddle /SpatParent3/Spatula/SpriteOnSpat")
 AnimatedSpriteObject = NodePath("../../griddle /SpatParent/AnimatedSprite3D")
 Sprites = Array[Resource]([ExtResource("11_emme3"), ExtResource("12_yrevu"), ExtResource("13_7s17i"), ExtResource("8_ppg8c")])
 AltSprites = Array[Texture2D]([ExtResource("13_7s17i"), ExtResource("8_ppg8c"), ExtResource("11_emme3"), ExtResource("14_u303k")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="StaticBody3D3"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3"]
-mesh = SubResource("BoxMesh_50u8c")
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.885196, 1.91619, -0.260636)
@@ -676,6 +666,3 @@ Sprites = Array[Resource]([ExtResource("11_emme3"), ExtResource("12_yrevu"), Ext
 AltSprites = Array[Texture2D]([ExtResource("13_7s17i"), ExtResource("8_ppg8c"), ExtResource("11_emme3"), ExtResource("14_u303k")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="StaticBody3D4"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4"]
-mesh = SubResource("BoxMesh_50u8c")

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgkfie3wq5eri"
 path.s3tc="res://.godot/imported/PatientHeadNew_3.png-609256acad0efc2b11ef7ddb11856b00.s3tc.ctex"
+path.etc2="res://.godot/imported/PatientHeadNew_3.png-609256acad0efc2b11ef7ddb11856b00.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/PatientHeadNew_3.png"
-dest_files=["res://.godot/imported/PatientHeadNew_3.png-609256acad0efc2b11ef7ddb11856b00.s3tc.ctex"]
+dest_files=["res://.godot/imported/PatientHeadNew_3.png-609256acad0efc2b11ef7ddb11856b00.s3tc.ctex", "res://.godot/imported/PatientHeadNew_3.png-609256acad0efc2b11ef7ddb11856b00.etc2.ctex"]
 
 [params]
 

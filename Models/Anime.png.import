@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6jxwxsjyuapj"
 path.s3tc="res://.godot/imported/Anime.png-ddcccdc9fff10f03ccb5c5d60c9746b7.s3tc.ctex"
+path.etc2="res://.godot/imported/Anime.png-ddcccdc9fff10f03ccb5c5d60c9746b7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Anime.png"
-dest_files=["res://.godot/imported/Anime.png-ddcccdc9fff10f03ccb5c5d60c9746b7.s3tc.ctex"]
+dest_files=["res://.godot/imported/Anime.png-ddcccdc9fff10f03ccb5c5d60c9746b7.s3tc.ctex", "res://.godot/imported/Anime.png-ddcccdc9fff10f03ccb5c5d60c9746b7.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://myw6av7jgrnf"
 path.s3tc="res://.godot/imported/Sludgeman3_0.png-c2e531b1e1ca895d987342d6e8a2eb78.s3tc.ctex"
+path.etc2="res://.godot/imported/Sludgeman3_0.png-c2e531b1e1ca895d987342d6e8a2eb78.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Sludgeman3_0.png"
-dest_files=["res://.godot/imported/Sludgeman3_0.png-c2e531b1e1ca895d987342d6e8a2eb78.s3tc.ctex"]
+dest_files=["res://.godot/imported/Sludgeman3_0.png-c2e531b1e1ca895d987342d6e8a2eb78.s3tc.ctex", "res://.godot/imported/Sludgeman3_0.png-c2e531b1e1ca895d987342d6e8a2eb78.etc2.ctex"]
 
 [params]
 

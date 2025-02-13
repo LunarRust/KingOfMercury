@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cji14mppx6vkx"
 path.s3tc="res://.godot/imported/ClayGiant_1.png-07bbcca49fada8226ca7d21186b88252.s3tc.ctex"
+path.etc2="res://.godot/imported/ClayGiant_1.png-07bbcca49fada8226ca7d21186b88252.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/ClayGiant_1.png"
-dest_files=["res://.godot/imported/ClayGiant_1.png-07bbcca49fada8226ca7d21186b88252.s3tc.ctex"]
+dest_files=["res://.godot/imported/ClayGiant_1.png-07bbcca49fada8226ca7d21186b88252.s3tc.ctex", "res://.godot/imported/ClayGiant_1.png-07bbcca49fada8226ca7d21186b88252.etc2.ctex"]
 
 [params]
 

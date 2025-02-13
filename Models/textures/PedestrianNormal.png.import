@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b26ktmg6q38bi"
 path.s3tc="res://.godot/imported/PedestrianNormal.png-1f069117021e4a595fce80a4dd2b4c74.s3tc.ctex"
+path.etc2="res://.godot/imported/PedestrianNormal.png-1f069117021e4a595fce80a4dd2b4c74.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/textures/PedestrianNormal.png"
-dest_files=["res://.godot/imported/PedestrianNormal.png-1f069117021e4a595fce80a4dd2b4c74.s3tc.ctex"]
+dest_files=["res://.godot/imported/PedestrianNormal.png-1f069117021e4a595fce80a4dd2b4c74.s3tc.ctex", "res://.godot/imported/PedestrianNormal.png-1f069117021e4a595fce80a4dd2b4c74.etc2.ctex"]
 
 [params]
 

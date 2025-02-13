@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://csuu6f671p5oh"
 path.s3tc="res://.godot/imported/princeface_2.png-7feb5516fe82ff040e5d927cef46be8e.s3tc.ctex"
+path.etc2="res://.godot/imported/princeface_2.png-7feb5516fe82ff040e5d927cef46be8e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/princeface_2.png"
-dest_files=["res://.godot/imported/princeface_2.png-7feb5516fe82ff040e5d927cef46be8e.s3tc.ctex"]
+dest_files=["res://.godot/imported/princeface_2.png-7feb5516fe82ff040e5d927cef46be8e.s3tc.ctex", "res://.godot/imported/princeface_2.png-7feb5516fe82ff040e5d927cef46be8e.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://lgbqlq45vqdl"
 path.s3tc="res://.godot/imported/MetalMother_2.png-bd55c52b70c615f16f4507f6c0bd660f.s3tc.ctex"
+path.etc2="res://.godot/imported/MetalMother_2.png-bd55c52b70c615f16f4507f6c0bd660f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/MetalMother_2.png"
-dest_files=["res://.godot/imported/MetalMother_2.png-bd55c52b70c615f16f4507f6c0bd660f.s3tc.ctex"]
+dest_files=["res://.godot/imported/MetalMother_2.png-bd55c52b70c615f16f4507f6c0bd660f.s3tc.ctex", "res://.godot/imported/MetalMother_2.png-bd55c52b70c615f16f4507f6c0bd660f.etc2.ctex"]
 
 [params]
 

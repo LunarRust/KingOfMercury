@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://mbuvmboc4dt0"
 path.s3tc="res://.godot/imported/Grate.png-0b53cdb1c9c53fb337a9effb65b04299.s3tc.ctex"
+path.etc2="res://.godot/imported/Grate.png-0b53cdb1c9c53fb337a9effb65b04299.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://textures/CustomText/Grate.png"
-dest_files=["res://.godot/imported/Grate.png-0b53cdb1c9c53fb337a9effb65b04299.s3tc.ctex"]
+dest_files=["res://.godot/imported/Grate.png-0b53cdb1c9c53fb337a9effb65b04299.s3tc.ctex", "res://.godot/imported/Grate.png-0b53cdb1c9c53fb337a9effb65b04299.etc2.ctex"]
 
 [params]
 

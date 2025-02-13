@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6qg6mnltr7kv"
 path.s3tc="res://.godot/imported/PsychopompPlayerModel_1.png-33efe44b8de1079e17fb17b19aa36c50.s3tc.ctex"
+path.etc2="res://.godot/imported/PsychopompPlayerModel_1.png-33efe44b8de1079e17fb17b19aa36c50.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/PsychopompPlayerModel_1.png"
-dest_files=["res://.godot/imported/PsychopompPlayerModel_1.png-33efe44b8de1079e17fb17b19aa36c50.s3tc.ctex"]
+dest_files=["res://.godot/imported/PsychopompPlayerModel_1.png-33efe44b8de1079e17fb17b19aa36c50.s3tc.ctex", "res://.godot/imported/PsychopompPlayerModel_1.png-33efe44b8de1079e17fb17b19aa36c50.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://byr4pqay3lnm0"
 path.s3tc="res://.godot/imported/Dispersal Machine_0.png-b3ea48d7cbf3119a47f438f34ead81e8.s3tc.ctex"
+path.etc2="res://.godot/imported/Dispersal Machine_0.png-b3ea48d7cbf3119a47f438f34ead81e8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Dispersal Machine_0.png"
-dest_files=["res://.godot/imported/Dispersal Machine_0.png-b3ea48d7cbf3119a47f438f34ead81e8.s3tc.ctex"]
+dest_files=["res://.godot/imported/Dispersal Machine_0.png-b3ea48d7cbf3119a47f438f34ead81e8.s3tc.ctex", "res://.godot/imported/Dispersal Machine_0.png-b3ea48d7cbf3119a47f438f34ead81e8.etc2.ctex"]
 
 [params]
 

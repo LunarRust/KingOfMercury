@@ -9,7 +9,12 @@ var RecivedItem : String
 @export var SpriteObject : Sprite3D
 @export var AnimatedSpriteObject : AnimatedSprite3D
 @export var Sprites : Array[Resource]
+@export var CookedSprites : Array[CompressedTexture2D]
+@export var BurnedSprites : Array[CompressedTexture2D]
 @export var DebugLabels : Node3D
+@export_category("Parameters")
+@export var CookedTime : float = 15
+@export var BurnTime : float = 30
 var inv : Inventory
 var NpcInv : Inventory
 var used : bool = false
@@ -43,10 +48,10 @@ func _process(delta):
 		if CookTime >= 30:
 			AnimatedSpriteObject.show()
 			SpriteObject.hide()
-		else:
-			AnimatedSpriteObject.hide()
-			if ItemInBasket:
-				SpriteObject.show()
+	else:
+		AnimatedSpriteObject.hide()
+		if ItemInBasket:
+			SpriteObject.show()
 		
 func Item(item : String):
 	if up:
@@ -58,6 +63,11 @@ func Item(item : String):
 				RecivedItem = "FFries"
 				ItemInBasketName = "Fries"
 				SpriteObject.show()
+				if up:
+					animTrigger("Down")
+					if ItemInBasket:
+						Cooking = true
+					up = false
 				return true
 			"Burger":
 				SpriteObject.texture = Sprites[1]
@@ -66,6 +76,11 @@ func Item(item : String):
 				RecivedItem = "Burger"
 				ItemInBasketName = "Burger"
 				SpriteObject.show()
+				if up:
+					animTrigger("Down")
+					if ItemInBasket:
+						Cooking = true
+					up = false
 				return true
 			"Fries":
 				SpriteObject.texture = Sprites[0]
@@ -74,6 +89,11 @@ func Item(item : String):
 				RecivedItem = "Fries"
 				ItemInBasketName = "Fries"
 				SpriteObject.show()
+				if up:
+					animTrigger("Down")
+					if ItemInBasket:
+						Cooking = true
+					up = false
 				return true
 			_:
 				return false
@@ -95,7 +115,7 @@ func Touch(AmNpc = false):
 	else:
 		NpcInv = get_tree().get_first_node_in_group("PompNPC").get_node("InventoryGrid")
 		if AmNpc && NpcInv != null:
-			if CookTime >= 10:
+			if CookTime >= BurnTime:
 				if NpcInv.can_add_item(create_item(ItemInBasketName)):
 					var newItem = NpcInv.create_and_add_item(ItemInBasketName)
 					if (newItem != null):
@@ -112,17 +132,18 @@ func Touch(AmNpc = false):
 					else:
 						print("Cannot Add Item, not enough Room")
 			else:
-				if NpcInv.can_add_item(create_item(RecivedItem)):
-					var newItem = NpcInv.create_and_add_item(RecivedItem)
-					if (newItem != null):
-						newItem.set_property("CookTime", CookTime)
-					SpriteObject.hide()
-					animTrigger("Up")
-					up = true
-					ItemInBasket = false
-					Cooking = false
+				if CookTime >= CookedTime:
+					if NpcInv.can_add_item(create_item(ItemInBasketName)):
+						var newItem = NpcInv.create_and_add_item(ItemInBasketName)
+						if (newItem != null):
+							newItem.set_property("CookTime", CookTime)
+						SpriteObject.hide()
+						animTrigger("Up")
+						up = true
+						ItemInBasket = false
+						Cooking = false
 		else :
-			if CookTime >= 10:
+			if CookTime >= BurnTime:
 				var newItem = inv.create_and_add_item(ItemInBasketName)
 				if (newItem != null):
 					newItem.set_property("CookTime", CookTime)
@@ -138,15 +159,16 @@ func Touch(AmNpc = false):
 				else:
 					print("Cannot Add Item, not enough Room")
 			else:
-				if inv.can_add_item(create_item(RecivedItem)):
-					var newItem = inv.create_and_add_item(RecivedItem)
-					if (newItem != null):
-						newItem.set_property("CookTime", CookTime)
-					SpriteObject.hide()
-					animTrigger("Up")
-					up = true
-					ItemInBasket = false
-					Cooking = false
+				if CookTime >= CookedTime:
+					if inv.can_add_item(create_item(ItemInBasketName)):
+						var newItem = inv.create_and_add_item(ItemInBasketName)
+						if (newItem != null):
+							newItem.set_property("CookTime", CookTime)
+						SpriteObject.hide()
+						animTrigger("Up")
+						up = true
+						ItemInBasket = false
+						Cooking = false
 				
 
 func animTrigger(triggername : String):

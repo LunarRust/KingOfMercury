@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dynmtbljmk1ei"
 path.s3tc="res://.godot/imported/Turbine_0.png-00333f7a968328906d5048a8ee8966db.s3tc.ctex"
+path.etc2="res://.godot/imported/Turbine_0.png-00333f7a968328906d5048a8ee8966db.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Turbine_0.png"
-dest_files=["res://.godot/imported/Turbine_0.png-00333f7a968328906d5048a8ee8966db.s3tc.ctex"]
+dest_files=["res://.godot/imported/Turbine_0.png-00333f7a968328906d5048a8ee8966db.s3tc.ctex", "res://.godot/imported/Turbine_0.png-00333f7a968328906d5048a8ee8966db.etc2.ctex"]
 
 [params]
 

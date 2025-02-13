@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bu4qv3fh2018h"
 path.s3tc="res://.godot/imported/OneWay.png-eb344df3090706ff890945fd12b5d2a1.s3tc.ctex"
+path.etc2="res://.godot/imported/OneWay.png-eb344df3090706ff890945fd12b5d2a1.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://textures/Signs/OneWay.png"
-dest_files=["res://.godot/imported/OneWay.png-eb344df3090706ff890945fd12b5d2a1.s3tc.ctex"]
+dest_files=["res://.godot/imported/OneWay.png-eb344df3090706ff890945fd12b5d2a1.s3tc.ctex", "res://.godot/imported/OneWay.png-eb344df3090706ff890945fd12b5d2a1.etc2.ctex"]
 
 [params]
 

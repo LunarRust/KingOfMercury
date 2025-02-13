@@ -73,8 +73,9 @@ func CameraGrab():
 	CanvasToShow.show()
 	if !UIToToggle.is_empty():
 		for i in UIToToggle:
-			print_rich("Hiding: [color=red]" + str(i.name) + "[/color]")
-			i.hide()
+			if i != null:
+				print_rich("Hiding: [color=red]" + str(i.name) + "[/color]")
+				i.hide()
 	else:
 		print("No UI to hide!")
 	print("Lever flipped!")

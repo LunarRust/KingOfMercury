@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1owsiuqv1q5r"
 path.s3tc="res://.godot/imported/LockGate2_Em.png-0f61e5ae3c9266838d92d9fce619772a.s3tc.ctex"
+path.etc2="res://.godot/imported/LockGate2_Em.png-0f61e5ae3c9266838d92d9fce619772a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://textures/LockGate2_Em.png"
-dest_files=["res://.godot/imported/LockGate2_Em.png-0f61e5ae3c9266838d92d9fce619772a.s3tc.ctex"]
+dest_files=["res://.godot/imported/LockGate2_Em.png-0f61e5ae3c9266838d92d9fce619772a.s3tc.ctex", "res://.godot/imported/LockGate2_Em.png-0f61e5ae3c9266838d92d9fce619772a.etc2.ctex"]
 
 [params]
 

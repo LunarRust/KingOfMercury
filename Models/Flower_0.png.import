@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccorriqnsvoxp"
 path.s3tc="res://.godot/imported/Flower_0.png-0d016c770aca81c0be2fb28f743a87df.s3tc.ctex"
+path.etc2="res://.godot/imported/Flower_0.png-0d016c770aca81c0be2fb28f743a87df.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Flower_0.png"
-dest_files=["res://.godot/imported/Flower_0.png-0d016c770aca81c0be2fb28f743a87df.s3tc.ctex"]
+dest_files=["res://.godot/imported/Flower_0.png-0d016c770aca81c0be2fb28f743a87df.s3tc.ctex", "res://.godot/imported/Flower_0.png-0d016c770aca81c0be2fb28f743a87df.etc2.ctex"]
 
 [params]
 

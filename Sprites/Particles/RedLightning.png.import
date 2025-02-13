@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3ibk1jk0qrk8"
 path.s3tc="res://.godot/imported/RedLightning.png-aca088b595a8d507aeaafa1b00179d5e.s3tc.ctex"
+path.etc2="res://.godot/imported/RedLightning.png-aca088b595a8d507aeaafa1b00179d5e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/Particles/RedLightning.png"
-dest_files=["res://.godot/imported/RedLightning.png-aca088b595a8d507aeaafa1b00179d5e.s3tc.ctex"]
+dest_files=["res://.godot/imported/RedLightning.png-aca088b595a8d507aeaafa1b00179d5e.s3tc.ctex", "res://.godot/imported/RedLightning.png-aca088b595a8d507aeaafa1b00179d5e.etc2.ctex"]
 
 [params]
 

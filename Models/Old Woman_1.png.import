@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ueu8fyclfjj1"
 path.s3tc="res://.godot/imported/Old Woman_1.png-b1b24932384f20ea6e67f326de9e611a.s3tc.ctex"
+path.etc2="res://.godot/imported/Old Woman_1.png-b1b24932384f20ea6e67f326de9e611a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Old Woman_1.png"
-dest_files=["res://.godot/imported/Old Woman_1.png-b1b24932384f20ea6e67f326de9e611a.s3tc.ctex"]
+dest_files=["res://.godot/imported/Old Woman_1.png-b1b24932384f20ea6e67f326de9e611a.s3tc.ctex", "res://.godot/imported/Old Woman_1.png-b1b24932384f20ea6e67f326de9e611a.etc2.ctex"]
 
 [params]
 

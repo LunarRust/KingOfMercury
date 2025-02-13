@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bisdbhn5ihjq4"
 path.s3tc="res://.godot/imported/QueenKey_0.png-92c0d682c6d3d3cdb513859f1504f17f.s3tc.ctex"
+path.etc2="res://.godot/imported/QueenKey_0.png-92c0d682c6d3d3cdb513859f1504f17f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/QueenKey_0.png"
-dest_files=["res://.godot/imported/QueenKey_0.png-92c0d682c6d3d3cdb513859f1504f17f.s3tc.ctex"]
+dest_files=["res://.godot/imported/QueenKey_0.png-92c0d682c6d3d3cdb513859f1504f17f.s3tc.ctex", "res://.godot/imported/QueenKey_0.png-92c0d682c6d3d3cdb513859f1504f17f.etc2.ctex"]
 
 [params]
 

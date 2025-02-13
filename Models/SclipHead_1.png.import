@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c676mi7qbouca"
 path.s3tc="res://.godot/imported/SclipHead_1.png-6279ad0caace0a4fd41e6a235e9c0c18.s3tc.ctex"
+path.etc2="res://.godot/imported/SclipHead_1.png-6279ad0caace0a4fd41e6a235e9c0c18.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/SclipHead_1.png"
-dest_files=["res://.godot/imported/SclipHead_1.png-6279ad0caace0a4fd41e6a235e9c0c18.s3tc.ctex"]
+dest_files=["res://.godot/imported/SclipHead_1.png-6279ad0caace0a4fd41e6a235e9c0c18.s3tc.ctex", "res://.godot/imported/SclipHead_1.png-6279ad0caace0a4fd41e6a235e9c0c18.etc2.ctex"]
 
 [params]
 

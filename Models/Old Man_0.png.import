@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://8v6eafea6sdu"
 path.s3tc="res://.godot/imported/Old Man_0.png-5487a1ca8dd70435e523dab5fe953305.s3tc.ctex"
+path.etc2="res://.godot/imported/Old Man_0.png-5487a1ca8dd70435e523dab5fe953305.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Old Man_0.png"
-dest_files=["res://.godot/imported/Old Man_0.png-5487a1ca8dd70435e523dab5fe953305.s3tc.ctex"]
+dest_files=["res://.godot/imported/Old Man_0.png-5487a1ca8dd70435e523dab5fe953305.s3tc.ctex", "res://.godot/imported/Old Man_0.png-5487a1ca8dd70435e523dab5fe953305.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyrf45w7ppxl4"
 path.s3tc="res://.godot/imported/Brain_0.png-dbb23e1ded77d771c8b9421f4a36fabb.s3tc.ctex"
+path.etc2="res://.godot/imported/Brain_0.png-dbb23e1ded77d771c8b9421f4a36fabb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Brain_0.png"
-dest_files=["res://.godot/imported/Brain_0.png-dbb23e1ded77d771c8b9421f4a36fabb.s3tc.ctex"]
+dest_files=["res://.godot/imported/Brain_0.png-dbb23e1ded77d771c8b9421f4a36fabb.s3tc.ctex", "res://.godot/imported/Brain_0.png-dbb23e1ded77d771c8b9421f4a36fabb.etc2.ctex"]
 
 [params]
 

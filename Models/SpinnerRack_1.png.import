@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1m0yqc5sfrhr"
 path.s3tc="res://.godot/imported/SpinnerRack_1.png-a097473d8dfab76ac574f8c144e60429.s3tc.ctex"
+path.etc2="res://.godot/imported/SpinnerRack_1.png-a097473d8dfab76ac574f8c144e60429.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/SpinnerRack_1.png"
-dest_files=["res://.godot/imported/SpinnerRack_1.png-a097473d8dfab76ac574f8c144e60429.s3tc.ctex"]
+dest_files=["res://.godot/imported/SpinnerRack_1.png-a097473d8dfab76ac574f8c144e60429.s3tc.ctex", "res://.godot/imported/SpinnerRack_1.png-a097473d8dfab76ac574f8c144e60429.etc2.ctex"]
 
 [params]
 

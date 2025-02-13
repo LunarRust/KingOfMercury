@@ -52,13 +52,14 @@ rings = 10
 script = ExtResource("1_p1mgs")
 LoadText = NodePath("../RichTextLabel3")
 
-[node name="ConsoleParent" type="Node2D" parent="." node_paths=PackedStringArray("SoundEffect")]
-visible = false
+[node name="ConsoleParent" type="Node2D" parent="." node_paths=PackedStringArray("SoundEffect", "OtherNodes")]
 script = ExtResource("2_po2ij")
 key = 4194335
 SoundEffect = NodePath("AudioStreamPlayer")
+OtherNodes = [NodePath("RichTextLabel4")]
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="ConsoleParent"]
+visible = false
 z_index = 2
 offset_right = 662.0
 offset_bottom = 70.0

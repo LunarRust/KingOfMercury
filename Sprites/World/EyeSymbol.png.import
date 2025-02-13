@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmi3f1bwep67k"
 path.s3tc="res://.godot/imported/EyeSymbol.png-0e98ced815958132d2b44e18938407fe.s3tc.ctex"
+path.etc2="res://.godot/imported/EyeSymbol.png-0e98ced815958132d2b44e18938407fe.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/World/EyeSymbol.png"
-dest_files=["res://.godot/imported/EyeSymbol.png-0e98ced815958132d2b44e18938407fe.s3tc.ctex"]
+dest_files=["res://.godot/imported/EyeSymbol.png-0e98ced815958132d2b44e18938407fe.s3tc.ctex", "res://.godot/imported/EyeSymbol.png-0e98ced815958132d2b44e18938407fe.etc2.ctex"]
 
 [params]
 
