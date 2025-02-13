@@ -2,6 +2,7 @@
 .godot/
 addons/
 *.exe
+*.import
 *.pck
 *.dll
 .vs/
@@ -9,6 +10,7 @@ addons/
 # Godot-specific ignores
 Icon.png.import
 *.import
+.exported/
 *.cs
 *.csproj
 .import/
@@ -25,3 +27,4 @@ data_*/
 mono_crash.*.json
 *.vsidx
 *.tmp
+*.import
