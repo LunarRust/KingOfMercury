@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://knpb7pat8k1g"
 path.s3tc="res://.godot/imported/LavaSpire_0.png-a0d21bf39ec5b407f6c7e266d6b65d14.s3tc.ctex"
+path.etc2="res://.godot/imported/LavaSpire_0.png-a0d21bf39ec5b407f6c7e266d6b65d14.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/LavaSpire_0.png"
-dest_files=["res://.godot/imported/LavaSpire_0.png-a0d21bf39ec5b407f6c7e266d6b65d14.s3tc.ctex"]
+dest_files=["res://.godot/imported/LavaSpire_0.png-a0d21bf39ec5b407f6c7e266d6b65d14.s3tc.ctex", "res://.godot/imported/LavaSpire_0.png-a0d21bf39ec5b407f6c7e266d6b65d14.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://caavc64skwnyk"
 path.s3tc="res://.godot/imported/Tubetext.png-8781805f2f47d5993c02f19f0a5a4dbf.s3tc.ctex"
+path.etc2="res://.godot/imported/Tubetext.png-8781805f2f47d5993c02f19f0a5a4dbf.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/textures/Tubetext.png"
-dest_files=["res://.godot/imported/Tubetext.png-8781805f2f47d5993c02f19f0a5a4dbf.s3tc.ctex"]
+dest_files=["res://.godot/imported/Tubetext.png-8781805f2f47d5993c02f19f0a5a4dbf.s3tc.ctex", "res://.godot/imported/Tubetext.png-8781805f2f47d5993c02f19f0a5a4dbf.etc2.ctex"]
 
 [params]
 

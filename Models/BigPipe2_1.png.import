@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://brlp2qjbo0ft4"
 path.s3tc="res://.godot/imported/BigPipe2_1.png-2019f50861176f8c576e25826182483d.s3tc.ctex"
+path.etc2="res://.godot/imported/BigPipe2_1.png-2019f50861176f8c576e25826182483d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/BigPipe2_1.png"
-dest_files=["res://.godot/imported/BigPipe2_1.png-2019f50861176f8c576e25826182483d.s3tc.ctex"]
+dest_files=["res://.godot/imported/BigPipe2_1.png-2019f50861176f8c576e25826182483d.s3tc.ctex", "res://.godot/imported/BigPipe2_1.png-2019f50861176f8c576e25826182483d.etc2.ctex"]
 
 [params]
 

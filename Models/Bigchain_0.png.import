@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://6xxlja403vsg"
 path.s3tc="res://.godot/imported/Bigchain_0.png-0006c784f4d35fe717b809489c8945b2.s3tc.ctex"
+path.etc2="res://.godot/imported/Bigchain_0.png-0006c784f4d35fe717b809489c8945b2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Bigchain_0.png"
-dest_files=["res://.godot/imported/Bigchain_0.png-0006c784f4d35fe717b809489c8945b2.s3tc.ctex"]
+dest_files=["res://.godot/imported/Bigchain_0.png-0006c784f4d35fe717b809489c8945b2.s3tc.ctex", "res://.godot/imported/Bigchain_0.png-0006c784f4d35fe717b809489c8945b2.etc2.ctex"]
 
 [params]
 

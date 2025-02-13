@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d32bjbaxjilfa"
 path.s3tc="res://.godot/imported/Mother_0.png-4a2d6419aba71b07344af15dbc2fe21e.s3tc.ctex"
+path.etc2="res://.godot/imported/Mother_0.png-4a2d6419aba71b07344af15dbc2fe21e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Mother_0.png"
-dest_files=["res://.godot/imported/Mother_0.png-4a2d6419aba71b07344af15dbc2fe21e.s3tc.ctex"]
+dest_files=["res://.godot/imported/Mother_0.png-4a2d6419aba71b07344af15dbc2fe21e.s3tc.ctex", "res://.godot/imported/Mother_0.png-4a2d6419aba71b07344af15dbc2fe21e.etc2.ctex"]
 
 [params]
 

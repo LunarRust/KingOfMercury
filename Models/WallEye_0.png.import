@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://m0bwux7jcqv7"
 path.s3tc="res://.godot/imported/WallEye_0.png-3b5252b7ca55a7e85d519973dce7e296.s3tc.ctex"
+path.etc2="res://.godot/imported/WallEye_0.png-3b5252b7ca55a7e85d519973dce7e296.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/WallEye_0.png"
-dest_files=["res://.godot/imported/WallEye_0.png-3b5252b7ca55a7e85d519973dce7e296.s3tc.ctex"]
+dest_files=["res://.godot/imported/WallEye_0.png-3b5252b7ca55a7e85d519973dce7e296.s3tc.ctex", "res://.godot/imported/WallEye_0.png-3b5252b7ca55a7e85d519973dce7e296.etc2.ctex"]
 
 [params]
 

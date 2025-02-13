@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://l5hofds5dgck"
 path.s3tc="res://.godot/imported/rocks-2779802fc266f04eb4564c01adbae883_color_atlas.png-5b922f64c50d3ed5bd43bcc210f94d94.s3tc.ctex"
+path.etc2="res://.godot/imported/rocks-2779802fc266f04eb4564c01adbae883_color_atlas.png-5b922f64c50d3ed5bd43bcc210f94d94.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://KOMModels/rocks-2779802fc266f04eb4564c01adbae883_color_atlas.png"
-dest_files=["res://.godot/imported/rocks-2779802fc266f04eb4564c01adbae883_color_atlas.png-5b922f64c50d3ed5bd43bcc210f94d94.s3tc.ctex"]
+dest_files=["res://.godot/imported/rocks-2779802fc266f04eb4564c01adbae883_color_atlas.png-5b922f64c50d3ed5bd43bcc210f94d94.s3tc.ctex", "res://.godot/imported/rocks-2779802fc266f04eb4564c01adbae883_color_atlas.png-5b922f64c50d3ed5bd43bcc210f94d94.etc2.ctex"]
 
 [params]
 

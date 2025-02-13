@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://6trv3yjjjkkp"
 path.s3tc="res://.godot/imported/BrainWorm_0.png-29ecd2c84a461edc2ed31f592042aedc.s3tc.ctex"
+path.etc2="res://.godot/imported/BrainWorm_0.png-29ecd2c84a461edc2ed31f592042aedc.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/BrainWorm_0.png"
-dest_files=["res://.godot/imported/BrainWorm_0.png-29ecd2c84a461edc2ed31f592042aedc.s3tc.ctex"]
+dest_files=["res://.godot/imported/BrainWorm_0.png-29ecd2c84a461edc2ed31f592042aedc.s3tc.ctex", "res://.godot/imported/BrainWorm_0.png-29ecd2c84a461edc2ed31f592042aedc.etc2.ctex"]
 
 [params]
 

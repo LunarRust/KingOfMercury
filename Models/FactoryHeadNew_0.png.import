@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvfee6w0x4xk5"
 path.s3tc="res://.godot/imported/FactoryHeadNew_0.png-f62d49a263cdb50b0c8587d2ae5d5b3d.s3tc.ctex"
+path.etc2="res://.godot/imported/FactoryHeadNew_0.png-f62d49a263cdb50b0c8587d2ae5d5b3d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/FactoryHeadNew_0.png"
-dest_files=["res://.godot/imported/FactoryHeadNew_0.png-f62d49a263cdb50b0c8587d2ae5d5b3d.s3tc.ctex"]
+dest_files=["res://.godot/imported/FactoryHeadNew_0.png-f62d49a263cdb50b0c8587d2ae5d5b3d.s3tc.ctex", "res://.godot/imported/FactoryHeadNew_0.png-f62d49a263cdb50b0c8587d2ae5d5b3d.etc2.ctex"]
 
 [params]
 

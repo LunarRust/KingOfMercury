@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://df1wf3ret0bdb"
 path.s3tc="res://.godot/imported/Caldman_2.png-3fd7c43725bf3fc76308542c13c9cd18.s3tc.ctex"
+path.etc2="res://.godot/imported/Caldman_2.png-3fd7c43725bf3fc76308542c13c9cd18.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Caldman_2.png"
-dest_files=["res://.godot/imported/Caldman_2.png-3fd7c43725bf3fc76308542c13c9cd18.s3tc.ctex"]
+dest_files=["res://.godot/imported/Caldman_2.png-3fd7c43725bf3fc76308542c13c9cd18.s3tc.ctex", "res://.godot/imported/Caldman_2.png-3fd7c43725bf3fc76308542c13c9cd18.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkwsp7bsfn3d"
 path.s3tc="res://.godot/imported/Cocoon_0.png-aaba4b1bf7fae278882c04f337ce62c4.s3tc.ctex"
+path.etc2="res://.godot/imported/Cocoon_0.png-aaba4b1bf7fae278882c04f337ce62c4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Cocoon_0.png"
-dest_files=["res://.godot/imported/Cocoon_0.png-aaba4b1bf7fae278882c04f337ce62c4.s3tc.ctex"]
+dest_files=["res://.godot/imported/Cocoon_0.png-aaba4b1bf7fae278882c04f337ce62c4.s3tc.ctex", "res://.godot/imported/Cocoon_0.png-aaba4b1bf7fae278882c04f337ce62c4.etc2.ctex"]
 
 [params]
 

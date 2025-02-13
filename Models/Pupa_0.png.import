@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bf4xl16qn8ki4"
 path.s3tc="res://.godot/imported/Pupa_0.png-1730a746853dec9ec52c856ea03cdf3a.s3tc.ctex"
+path.etc2="res://.godot/imported/Pupa_0.png-1730a746853dec9ec52c856ea03cdf3a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Pupa_0.png"
-dest_files=["res://.godot/imported/Pupa_0.png-1730a746853dec9ec52c856ea03cdf3a.s3tc.ctex"]
+dest_files=["res://.godot/imported/Pupa_0.png-1730a746853dec9ec52c856ea03cdf3a.s3tc.ctex", "res://.godot/imported/Pupa_0.png-1730a746853dec9ec52c856ea03cdf3a.etc2.ctex"]
 
 [params]
 

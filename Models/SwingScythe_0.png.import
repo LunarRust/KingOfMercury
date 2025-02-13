@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://drmmemw8uangk"
 path.s3tc="res://.godot/imported/SwingScythe_0.png-a395066929c65a0602023de9ea440096.s3tc.ctex"
+path.etc2="res://.godot/imported/SwingScythe_0.png-a395066929c65a0602023de9ea440096.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/SwingScythe_0.png"
-dest_files=["res://.godot/imported/SwingScythe_0.png-a395066929c65a0602023de9ea440096.s3tc.ctex"]
+dest_files=["res://.godot/imported/SwingScythe_0.png-a395066929c65a0602023de9ea440096.s3tc.ctex", "res://.godot/imported/SwingScythe_0.png-a395066929c65a0602023de9ea440096.etc2.ctex"]
 
 [params]
 

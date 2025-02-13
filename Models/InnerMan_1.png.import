@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dert2p7fcbjmo"
 path.s3tc="res://.godot/imported/InnerMan_1.png-52431e70a0059981b6fcc9002ca19ea0.s3tc.ctex"
+path.etc2="res://.godot/imported/InnerMan_1.png-52431e70a0059981b6fcc9002ca19ea0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/InnerMan_1.png"
-dest_files=["res://.godot/imported/InnerMan_1.png-52431e70a0059981b6fcc9002ca19ea0.s3tc.ctex"]
+dest_files=["res://.godot/imported/InnerMan_1.png-52431e70a0059981b6fcc9002ca19ea0.s3tc.ctex", "res://.godot/imported/InnerMan_1.png-52431e70a0059981b6fcc9002ca19ea0.etc2.ctex"]
 
 [params]
 

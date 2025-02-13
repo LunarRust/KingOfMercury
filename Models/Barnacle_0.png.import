@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsgnedv0t17bt"
 path.s3tc="res://.godot/imported/Barnacle_0.png-38ac9cc5cf186aa39cb214be1fc0c4ae.s3tc.ctex"
+path.etc2="res://.godot/imported/Barnacle_0.png-38ac9cc5cf186aa39cb214be1fc0c4ae.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Barnacle_0.png"
-dest_files=["res://.godot/imported/Barnacle_0.png-38ac9cc5cf186aa39cb214be1fc0c4ae.s3tc.ctex"]
+dest_files=["res://.godot/imported/Barnacle_0.png-38ac9cc5cf186aa39cb214be1fc0c4ae.s3tc.ctex", "res://.godot/imported/Barnacle_0.png-38ac9cc5cf186aa39cb214be1fc0c4ae.etc2.ctex"]
 
 [params]
 

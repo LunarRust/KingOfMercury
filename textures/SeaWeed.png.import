@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckjygkxycc4e2"
 path.s3tc="res://.godot/imported/SeaWeed.png-1fc34cb3c110f087df1ce1323472f2b5.s3tc.ctex"
+path.etc2="res://.godot/imported/SeaWeed.png-1fc34cb3c110f087df1ce1323472f2b5.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://textures/SeaWeed.png"
-dest_files=["res://.godot/imported/SeaWeed.png-1fc34cb3c110f087df1ce1323472f2b5.s3tc.ctex"]
+dest_files=["res://.godot/imported/SeaWeed.png-1fc34cb3c110f087df1ce1323472f2b5.s3tc.ctex", "res://.godot/imported/SeaWeed.png-1fc34cb3c110f087df1ce1323472f2b5.etc2.ctex"]
 
 [params]
 

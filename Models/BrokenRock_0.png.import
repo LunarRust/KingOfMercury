@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://du1x1iuvfdjcf"
 path.s3tc="res://.godot/imported/BrokenRock_0.png-3e3d62bf33131846cf93cf2f5f9abced.s3tc.ctex"
+path.etc2="res://.godot/imported/BrokenRock_0.png-3e3d62bf33131846cf93cf2f5f9abced.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/BrokenRock_0.png"
-dest_files=["res://.godot/imported/BrokenRock_0.png-3e3d62bf33131846cf93cf2f5f9abced.s3tc.ctex"]
+dest_files=["res://.godot/imported/BrokenRock_0.png-3e3d62bf33131846cf93cf2f5f9abced.s3tc.ctex", "res://.godot/imported/BrokenRock_0.png-3e3d62bf33131846cf93cf2f5f9abced.etc2.ctex"]
 
 [params]
 

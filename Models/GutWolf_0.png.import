@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://botgp5dar4cy1"
 path.s3tc="res://.godot/imported/GutWolf_0.png-b79df144109ee367a01f18a3c6149007.s3tc.ctex"
+path.etc2="res://.godot/imported/GutWolf_0.png-b79df144109ee367a01f18a3c6149007.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/GutWolf_0.png"
-dest_files=["res://.godot/imported/GutWolf_0.png-b79df144109ee367a01f18a3c6149007.s3tc.ctex"]
+dest_files=["res://.godot/imported/GutWolf_0.png-b79df144109ee367a01f18a3c6149007.s3tc.ctex", "res://.godot/imported/GutWolf_0.png-b79df144109ee367a01f18a3c6149007.etc2.ctex"]
 
 [params]
 

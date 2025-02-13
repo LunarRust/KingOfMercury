@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhm0a6jt07yys"
 path.s3tc="res://.godot/imported/DNAFade_0.png-2ac1aacaea8876bcb2907753f6bbf8ad.s3tc.ctex"
+path.etc2="res://.godot/imported/DNAFade_0.png-2ac1aacaea8876bcb2907753f6bbf8ad.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/DNAFade_0.png"
-dest_files=["res://.godot/imported/DNAFade_0.png-2ac1aacaea8876bcb2907753f6bbf8ad.s3tc.ctex"]
+dest_files=["res://.godot/imported/DNAFade_0.png-2ac1aacaea8876bcb2907753f6bbf8ad.s3tc.ctex", "res://.godot/imported/DNAFade_0.png-2ac1aacaea8876bcb2907753f6bbf8ad.etc2.ctex"]
 
 [params]
 

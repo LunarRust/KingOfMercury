@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccr8dwfhdcpic"
 path.s3tc="res://.godot/imported/Texturelabs_Sky_151L.jpg-760429bcc1f218b50bc2648336f00cdb.s3tc.ctex"
+path.etc2="res://.godot/imported/Texturelabs_Sky_151L.jpg-760429bcc1f218b50bc2648336f00cdb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://KOMTextures/SkyBoxes/Texturelabs_Sky_151L.jpg"
-dest_files=["res://.godot/imported/Texturelabs_Sky_151L.jpg-760429bcc1f218b50bc2648336f00cdb.s3tc.ctex"]
+dest_files=["res://.godot/imported/Texturelabs_Sky_151L.jpg-760429bcc1f218b50bc2648336f00cdb.s3tc.ctex", "res://.godot/imported/Texturelabs_Sky_151L.jpg-760429bcc1f218b50bc2648336f00cdb.etc2.ctex"]
 
 [params]
 

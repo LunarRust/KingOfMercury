@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgstadrn21xs5"
 path.s3tc="res://.godot/imported/ChunkMeatNormal.png-98cb444aff3dbdf20d9b8b08c6740db0.s3tc.ctex"
+path.etc2="res://.godot/imported/ChunkMeatNormal.png-98cb444aff3dbdf20d9b8b08c6740db0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/ChunkMeatNormal.png"
-dest_files=["res://.godot/imported/ChunkMeatNormal.png-98cb444aff3dbdf20d9b8b08c6740db0.s3tc.ctex"]
+dest_files=["res://.godot/imported/ChunkMeatNormal.png-98cb444aff3dbdf20d9b8b08c6740db0.s3tc.ctex", "res://.godot/imported/ChunkMeatNormal.png-98cb444aff3dbdf20d9b8b08c6740db0.etc2.ctex"]
 
 [params]
 

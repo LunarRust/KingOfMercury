@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3ovm3m0gro1g"
 path.s3tc="res://.godot/imported/Redbutton_0.png-c237b637bdec0ac79fe66204cbc2463a.s3tc.ctex"
+path.etc2="res://.godot/imported/Redbutton_0.png-c237b637bdec0ac79fe66204cbc2463a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Redbutton_0.png"
-dest_files=["res://.godot/imported/Redbutton_0.png-c237b637bdec0ac79fe66204cbc2463a.s3tc.ctex"]
+dest_files=["res://.godot/imported/Redbutton_0.png-c237b637bdec0ac79fe66204cbc2463a.s3tc.ctex", "res://.godot/imported/Redbutton_0.png-c237b637bdec0ac79fe66204cbc2463a.etc2.ctex"]
 
 [params]
 

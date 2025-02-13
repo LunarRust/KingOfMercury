@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b118r1wxb6avw"
 path.s3tc="res://.godot/imported/BirdHead_1.png-65c798f1fabb309f3f9f9158377aac3e.s3tc.ctex"
+path.etc2="res://.godot/imported/BirdHead_1.png-65c798f1fabb309f3f9f9158377aac3e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/BirdHead_1.png"
-dest_files=["res://.godot/imported/BirdHead_1.png-65c798f1fabb309f3f9f9158377aac3e.s3tc.ctex"]
+dest_files=["res://.godot/imported/BirdHead_1.png-65c798f1fabb309f3f9f9158377aac3e.s3tc.ctex", "res://.godot/imported/BirdHead_1.png-65c798f1fabb309f3f9f9158377aac3e.etc2.ctex"]
 
 [params]
 

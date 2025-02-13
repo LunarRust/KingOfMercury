@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh1c510gwvq0n"
 path.s3tc="res://.godot/imported/LeverText.png-f59a3eb673d60982534df285ab409c6a.s3tc.ctex"
+path.etc2="res://.godot/imported/LeverText.png-f59a3eb673d60982534df285ab409c6a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/textures/LeverText.png"
-dest_files=["res://.godot/imported/LeverText.png-f59a3eb673d60982534df285ab409c6a.s3tc.ctex"]
+dest_files=["res://.godot/imported/LeverText.png-f59a3eb673d60982534df285ab409c6a.s3tc.ctex", "res://.godot/imported/LeverText.png-f59a3eb673d60982534df285ab409c6a.etc2.ctex"]
 
 [params]
 

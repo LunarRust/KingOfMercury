@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2tpd7l4vf1tk"
 path.s3tc="res://.godot/imported/DNASIGN4.png-52f68869c1ecdae54f9e46e600fc77ea.s3tc.ctex"
+path.etc2="res://.godot/imported/DNASIGN4.png-52f68869c1ecdae54f9e46e600fc77ea.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/World/DNASIGN4.png"
-dest_files=["res://.godot/imported/DNASIGN4.png-52f68869c1ecdae54f9e46e600fc77ea.s3tc.ctex"]
+dest_files=["res://.godot/imported/DNASIGN4.png-52f68869c1ecdae54f9e46e600fc77ea.s3tc.ctex", "res://.godot/imported/DNASIGN4.png-52f68869c1ecdae54f9e46e600fc77ea.etc2.ctex"]
 
 [params]
 

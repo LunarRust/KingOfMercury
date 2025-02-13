@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbxmwxta742uo"
 path.s3tc="res://.godot/imported/new ear_0.png-e5d3d691e43b8b6a7507a6327852f2cb.s3tc.ctex"
+path.etc2="res://.godot/imported/new ear_0.png-e5d3d691e43b8b6a7507a6327852f2cb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/new ear_0.png"
-dest_files=["res://.godot/imported/new ear_0.png-e5d3d691e43b8b6a7507a6327852f2cb.s3tc.ctex"]
+dest_files=["res://.godot/imported/new ear_0.png-e5d3d691e43b8b6a7507a6327852f2cb.s3tc.ctex", "res://.godot/imported/new ear_0.png-e5d3d691e43b8b6a7507a6327852f2cb.etc2.ctex"]
 
 [params]
 

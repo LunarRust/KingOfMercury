@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4kcxmauw50np"
 path.s3tc="res://.godot/imported/ScreamerCell_0.png-e9a027aad1f61f1bcc42c1cc713ad0ab.s3tc.ctex"
+path.etc2="res://.godot/imported/ScreamerCell_0.png-e9a027aad1f61f1bcc42c1cc713ad0ab.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/ScreamerCell_0.png"
-dest_files=["res://.godot/imported/ScreamerCell_0.png-e9a027aad1f61f1bcc42c1cc713ad0ab.s3tc.ctex"]
+dest_files=["res://.godot/imported/ScreamerCell_0.png-e9a027aad1f61f1bcc42c1cc713ad0ab.s3tc.ctex", "res://.godot/imported/ScreamerCell_0.png-e9a027aad1f61f1bcc42c1cc713ad0ab.etc2.ctex"]
 
 [params]
 

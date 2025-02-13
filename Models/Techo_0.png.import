@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://diqgsv63m47i"
 path.s3tc="res://.godot/imported/Techo_0.png-77cf5738fd8c4e830f3635de0437b558.s3tc.ctex"
+path.etc2="res://.godot/imported/Techo_0.png-77cf5738fd8c4e830f3635de0437b558.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Techo_0.png"
-dest_files=["res://.godot/imported/Techo_0.png-77cf5738fd8c4e830f3635de0437b558.s3tc.ctex"]
+dest_files=["res://.godot/imported/Techo_0.png-77cf5738fd8c4e830f3635de0437b558.s3tc.ctex", "res://.godot/imported/Techo_0.png-77cf5738fd8c4e830f3635de0437b558.etc2.ctex"]
 
 [params]
 

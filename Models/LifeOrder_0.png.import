@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://5hg1vag4xxan"
 path.s3tc="res://.godot/imported/LifeOrder_0.png-d39ff87a0f391ee0c7865812e933d44d.s3tc.ctex"
+path.etc2="res://.godot/imported/LifeOrder_0.png-d39ff87a0f391ee0c7865812e933d44d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/LifeOrder_0.png"
-dest_files=["res://.godot/imported/LifeOrder_0.png-d39ff87a0f391ee0c7865812e933d44d.s3tc.ctex"]
+dest_files=["res://.godot/imported/LifeOrder_0.png-d39ff87a0f391ee0c7865812e933d44d.s3tc.ctex", "res://.godot/imported/LifeOrder_0.png-d39ff87a0f391ee0c7865812e933d44d.etc2.ctex"]
 
 [params]
 

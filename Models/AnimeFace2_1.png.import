@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0v7qj2ekye8x"
 path.s3tc="res://.godot/imported/AnimeFace2_1.png-d59702e1e26bf713d70032affd181ead.s3tc.ctex"
+path.etc2="res://.godot/imported/AnimeFace2_1.png-d59702e1e26bf713d70032affd181ead.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/AnimeFace2_1.png"
-dest_files=["res://.godot/imported/AnimeFace2_1.png-d59702e1e26bf713d70032affd181ead.s3tc.ctex"]
+dest_files=["res://.godot/imported/AnimeFace2_1.png-d59702e1e26bf713d70032affd181ead.s3tc.ctex", "res://.godot/imported/AnimeFace2_1.png-d59702e1e26bf713d70032affd181ead.etc2.ctex"]
 
 [params]
 

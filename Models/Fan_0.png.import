@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bimova0k8xfx"
 path.s3tc="res://.godot/imported/Fan_0.png-ebe8740731c61a3ed27c263f4ed0a9b6.s3tc.ctex"
+path.etc2="res://.godot/imported/Fan_0.png-ebe8740731c61a3ed27c263f4ed0a9b6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Fan_0.png"
-dest_files=["res://.godot/imported/Fan_0.png-ebe8740731c61a3ed27c263f4ed0a9b6.s3tc.ctex"]
+dest_files=["res://.godot/imported/Fan_0.png-ebe8740731c61a3ed27c263f4ed0a9b6.s3tc.ctex", "res://.godot/imported/Fan_0.png-ebe8740731c61a3ed27c263f4ed0a9b6.etc2.ctex"]
 
 [params]
 

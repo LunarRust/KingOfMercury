@@ -28,3 +28,6 @@ mono_crash.*.json
 *.vsidx
 *.tmp
 *.import
+*.zip
+*.x86_64
+*.sh

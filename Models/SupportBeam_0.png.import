@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://72yu6vi0b2w4"
 path.s3tc="res://.godot/imported/SupportBeam_0.png-e60d9b58d2d55179665f49eab2ad8ef2.s3tc.ctex"
+path.etc2="res://.godot/imported/SupportBeam_0.png-e60d9b58d2d55179665f49eab2ad8ef2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/SupportBeam_0.png"
-dest_files=["res://.godot/imported/SupportBeam_0.png-e60d9b58d2d55179665f49eab2ad8ef2.s3tc.ctex"]
+dest_files=["res://.godot/imported/SupportBeam_0.png-e60d9b58d2d55179665f49eab2ad8ef2.s3tc.ctex", "res://.godot/imported/SupportBeam_0.png-e60d9b58d2d55179665f49eab2ad8ef2.etc2.ctex"]
 
 [params]
 

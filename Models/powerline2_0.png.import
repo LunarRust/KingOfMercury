@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://butfyqpb6184c"
 path.s3tc="res://.godot/imported/powerline2_0.png-22f3ce68376d1131bcec3a2d5eec57aa.s3tc.ctex"
+path.etc2="res://.godot/imported/powerline2_0.png-22f3ce68376d1131bcec3a2d5eec57aa.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/powerline2_0.png"
-dest_files=["res://.godot/imported/powerline2_0.png-22f3ce68376d1131bcec3a2d5eec57aa.s3tc.ctex"]
+dest_files=["res://.godot/imported/powerline2_0.png-22f3ce68376d1131bcec3a2d5eec57aa.s3tc.ctex", "res://.godot/imported/powerline2_0.png-22f3ce68376d1131bcec3a2d5eec57aa.etc2.ctex"]
 
 [params]
 

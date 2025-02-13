@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4c6gkq3uflnc"
 path.s3tc="res://.godot/imported/ThraitHair02.png-14bba4ebf3e9cf1ef6cccd145fdc73a7.s3tc.ctex"
+path.etc2="res://.godot/imported/ThraitHair02.png-14bba4ebf3e9cf1ef6cccd145fdc73a7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/textures/ThraitHair02.png"
-dest_files=["res://.godot/imported/ThraitHair02.png-14bba4ebf3e9cf1ef6cccd145fdc73a7.s3tc.ctex"]
+dest_files=["res://.godot/imported/ThraitHair02.png-14bba4ebf3e9cf1ef6cccd145fdc73a7.s3tc.ctex", "res://.godot/imported/ThraitHair02.png-14bba4ebf3e9cf1ef6cccd145fdc73a7.etc2.ctex"]
 
 [params]
 

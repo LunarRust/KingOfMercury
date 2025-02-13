@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://xlkvwuh8a1py"
 path.s3tc="res://.godot/imported/ThraitBaby_0.png-13435ed08a310c06946fa06b8b72667b.s3tc.ctex"
+path.etc2="res://.godot/imported/ThraitBaby_0.png-13435ed08a310c06946fa06b8b72667b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/ThraitBaby_0.png"
-dest_files=["res://.godot/imported/ThraitBaby_0.png-13435ed08a310c06946fa06b8b72667b.s3tc.ctex"]
+dest_files=["res://.godot/imported/ThraitBaby_0.png-13435ed08a310c06946fa06b8b72667b.s3tc.ctex", "res://.godot/imported/ThraitBaby_0.png-13435ed08a310c06946fa06b8b72667b.etc2.ctex"]
 
 [params]
 

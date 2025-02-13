@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b15aufh6yjyyj"
 path.s3tc="res://.godot/imported/BruteTongueNew_2.png-f7cd90f5109e8202aba0d62de9853688.s3tc.ctex"
+path.etc2="res://.godot/imported/BruteTongueNew_2.png-f7cd90f5109e8202aba0d62de9853688.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/BruteTongueNew_2.png"
-dest_files=["res://.godot/imported/BruteTongueNew_2.png-f7cd90f5109e8202aba0d62de9853688.s3tc.ctex"]
+dest_files=["res://.godot/imported/BruteTongueNew_2.png-f7cd90f5109e8202aba0d62de9853688.s3tc.ctex", "res://.godot/imported/BruteTongueNew_2.png-f7cd90f5109e8202aba0d62de9853688.etc2.ctex"]
 
 [params]
 
