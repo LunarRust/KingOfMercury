@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmssbh8gebb6c"
 path.s3tc="res://.godot/imported/Banner_Human.png-14657ef873fa71c9a1dbeddae7538e15.s3tc.ctex"
+path.etc2="res://.godot/imported/Banner_Human.png-14657ef873fa71c9a1dbeddae7538e15.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/World/Banner_Human.png"
-dest_files=["res://.godot/imported/Banner_Human.png-14657ef873fa71c9a1dbeddae7538e15.s3tc.ctex"]
+dest_files=["res://.godot/imported/Banner_Human.png-14657ef873fa71c9a1dbeddae7538e15.s3tc.ctex", "res://.godot/imported/Banner_Human.png-14657ef873fa71c9a1dbeddae7538e15.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://po6ylthw47pr"
 path.s3tc="res://.godot/imported/LoadingHook_0.png-00dd9536a1dbabdb11801d8e98bccbb2.s3tc.ctex"
+path.etc2="res://.godot/imported/LoadingHook_0.png-00dd9536a1dbabdb11801d8e98bccbb2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/LoadingHook_0.png"
-dest_files=["res://.godot/imported/LoadingHook_0.png-00dd9536a1dbabdb11801d8e98bccbb2.s3tc.ctex"]
+dest_files=["res://.godot/imported/LoadingHook_0.png-00dd9536a1dbabdb11801d8e98bccbb2.s3tc.ctex", "res://.godot/imported/LoadingHook_0.png-00dd9536a1dbabdb11801d8e98bccbb2.etc2.ctex"]
 
 [params]
 

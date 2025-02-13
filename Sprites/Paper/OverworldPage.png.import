@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5pk8llkl7l7f"
 path.s3tc="res://.godot/imported/OverworldPage.png-f2d0ecd12fe089016398d91f8ba4a802.s3tc.ctex"
+path.etc2="res://.godot/imported/OverworldPage.png-f2d0ecd12fe089016398d91f8ba4a802.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/Paper/OverworldPage.png"
-dest_files=["res://.godot/imported/OverworldPage.png-f2d0ecd12fe089016398d91f8ba4a802.s3tc.ctex"]
+dest_files=["res://.godot/imported/OverworldPage.png-f2d0ecd12fe089016398d91f8ba4a802.s3tc.ctex", "res://.godot/imported/OverworldPage.png-f2d0ecd12fe089016398d91f8ba4a802.etc2.ctex"]
 
 [params]
 

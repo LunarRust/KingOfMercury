@@ -14,18 +14,17 @@ universal_fade/patterns_directory="res://addons/UniversalFade/Patterns"
 
 [application]
 
-config/name="Psychopomp Resource SDK Mercury"
+config/name="King Of Mercury (Alpha 1.0)"
 config/tags=PackedStringArray("mod")
 run/main_scene="res://Scenes/DebugMenu.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 boot_splash/show_image=false
-config/icon="res://Icon.png"
+config/icon="res://icon.png"
 
 [autoload]
 
 PlayerPrefs="*res://addons/PlayerPrefs/PlayerPrefs.tscn"
 GLoot="*res://addons/gloot/gloot_autoload.gd"
-FpscInputMgr="*res://CustomPlayerController/scripts/fpsc_input_mgr.gd"
 
 [display]
 
@@ -171,3 +170,7 @@ LookAxis={
 [layer_names]
 
 3d_physics/layer_4="mouseIgnore"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true

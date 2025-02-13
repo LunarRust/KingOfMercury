@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtah2rnvn57wr"
 path.s3tc="res://.godot/imported/Paragon_0.png-b9705ef65c6912da516e720a5ebf3d43.s3tc.ctex"
+path.etc2="res://.godot/imported/Paragon_0.png-b9705ef65c6912da516e720a5ebf3d43.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Paragon_0.png"
-dest_files=["res://.godot/imported/Paragon_0.png-b9705ef65c6912da516e720a5ebf3d43.s3tc.ctex"]
+dest_files=["res://.godot/imported/Paragon_0.png-b9705ef65c6912da516e720a5ebf3d43.s3tc.ctex", "res://.godot/imported/Paragon_0.png-b9705ef65c6912da516e720a5ebf3d43.etc2.ctex"]
 
 [params]
 

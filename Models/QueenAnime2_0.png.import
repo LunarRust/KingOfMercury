@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bf4jsrq07s450"
 path.s3tc="res://.godot/imported/QueenAnime2_0.png-02b39dfd4c494014ba96ee58dd404654.s3tc.ctex"
+path.etc2="res://.godot/imported/QueenAnime2_0.png-02b39dfd4c494014ba96ee58dd404654.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/QueenAnime2_0.png"
-dest_files=["res://.godot/imported/QueenAnime2_0.png-02b39dfd4c494014ba96ee58dd404654.s3tc.ctex"]
+dest_files=["res://.godot/imported/QueenAnime2_0.png-02b39dfd4c494014ba96ee58dd404654.s3tc.ctex", "res://.godot/imported/QueenAnime2_0.png-02b39dfd4c494014ba96ee58dd404654.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://yk3kmd1tae7i"
 path.s3tc="res://.godot/imported/WeirdGear_0.png-606214a07d7f90529a66867b874b936e.s3tc.ctex"
+path.etc2="res://.godot/imported/WeirdGear_0.png-606214a07d7f90529a66867b874b936e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/WeirdGear_0.png"
-dest_files=["res://.godot/imported/WeirdGear_0.png-606214a07d7f90529a66867b874b936e.s3tc.ctex"]
+dest_files=["res://.godot/imported/WeirdGear_0.png-606214a07d7f90529a66867b874b936e.s3tc.ctex", "res://.godot/imported/WeirdGear_0.png-606214a07d7f90529a66867b874b936e.etc2.ctex"]
 
 [params]
 

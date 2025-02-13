@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cs3rn42aql2ys"
 path.s3tc="res://.godot/imported/Beluga_1.png-e05774c134416d1b489029e4ed4a7e74.s3tc.ctex"
+path.etc2="res://.godot/imported/Beluga_1.png-e05774c134416d1b489029e4ed4a7e74.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Beluga_1.png"
-dest_files=["res://.godot/imported/Beluga_1.png-e05774c134416d1b489029e4ed4a7e74.s3tc.ctex"]
+dest_files=["res://.godot/imported/Beluga_1.png-e05774c134416d1b489029e4ed4a7e74.s3tc.ctex", "res://.godot/imported/Beluga_1.png-e05774c134416d1b489029e4ed4a7e74.etc2.ctex"]
 
 [params]
 

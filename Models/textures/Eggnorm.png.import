@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cprmj7145doab"
 path.s3tc="res://.godot/imported/Eggnorm.png-b2cc4d8e886f62b6ee73174c354d0559.s3tc.ctex"
+path.etc2="res://.godot/imported/Eggnorm.png-b2cc4d8e886f62b6ee73174c354d0559.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/textures/Eggnorm.png"
-dest_files=["res://.godot/imported/Eggnorm.png-b2cc4d8e886f62b6ee73174c354d0559.s3tc.ctex"]
+dest_files=["res://.godot/imported/Eggnorm.png-b2cc4d8e886f62b6ee73174c354d0559.s3tc.ctex", "res://.godot/imported/Eggnorm.png-b2cc4d8e886f62b6ee73174c354d0559.etc2.ctex"]
 
 [params]
 

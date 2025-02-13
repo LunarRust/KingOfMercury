@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ei8wymfehnah"
 path.s3tc="res://.godot/imported/Power3.png-3b0bcf6c355ff8078e2167016e9c21b0.s3tc.ctex"
+path.etc2="res://.godot/imported/Power3.png-3b0bcf6c355ff8078e2167016e9c21b0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/TVs/Power3.png"
-dest_files=["res://.godot/imported/Power3.png-3b0bcf6c355ff8078e2167016e9c21b0.s3tc.ctex"]
+dest_files=["res://.godot/imported/Power3.png-3b0bcf6c355ff8078e2167016e9c21b0.s3tc.ctex", "res://.godot/imported/Power3.png-3b0bcf6c355ff8078e2167016e9c21b0.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cje0i7tbicb26"
 path.s3tc="res://.godot/imported/CochleaNew_3.png-ebc4cf7b5ad7921afe849545c8d5ec5a.s3tc.ctex"
+path.etc2="res://.godot/imported/CochleaNew_3.png-ebc4cf7b5ad7921afe849545c8d5ec5a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/CochleaNew_3.png"
-dest_files=["res://.godot/imported/CochleaNew_3.png-ebc4cf7b5ad7921afe849545c8d5ec5a.s3tc.ctex"]
+dest_files=["res://.godot/imported/CochleaNew_3.png-ebc4cf7b5ad7921afe849545c8d5ec5a.s3tc.ctex", "res://.godot/imported/CochleaNew_3.png-ebc4cf7b5ad7921afe849545c8d5ec5a.etc2.ctex"]
 
 [params]
 

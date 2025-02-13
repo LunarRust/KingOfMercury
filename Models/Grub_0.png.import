@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://sx1m6i82frkh"
 path.s3tc="res://.godot/imported/Grub_0.png-9486508d7aafb6ebc65e778fa060c6c8.s3tc.ctex"
+path.etc2="res://.godot/imported/Grub_0.png-9486508d7aafb6ebc65e778fa060c6c8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Grub_0.png"
-dest_files=["res://.godot/imported/Grub_0.png-9486508d7aafb6ebc65e778fa060c6c8.s3tc.ctex"]
+dest_files=["res://.godot/imported/Grub_0.png-9486508d7aafb6ebc65e778fa060c6c8.s3tc.ctex", "res://.godot/imported/Grub_0.png-9486508d7aafb6ebc65e778fa060c6c8.etc2.ctex"]
 
 [params]
 

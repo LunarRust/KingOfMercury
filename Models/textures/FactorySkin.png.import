@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqaw5ml4n5aeg"
 path.s3tc="res://.godot/imported/FactorySkin.png-556b80c13e23cb1b972e508397def74c.s3tc.ctex"
+path.etc2="res://.godot/imported/FactorySkin.png-556b80c13e23cb1b972e508397def74c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/textures/FactorySkin.png"
-dest_files=["res://.godot/imported/FactorySkin.png-556b80c13e23cb1b972e508397def74c.s3tc.ctex"]
+dest_files=["res://.godot/imported/FactorySkin.png-556b80c13e23cb1b972e508397def74c.s3tc.ctex", "res://.godot/imported/FactorySkin.png-556b80c13e23cb1b972e508397def74c.etc2.ctex"]
 
 [params]
 

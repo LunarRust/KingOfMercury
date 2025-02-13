@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpw0lwuh6atd4"
 path.s3tc="res://.godot/imported/DflyWing.png-0b6478309a5c15c20480ffb20adda25b.s3tc.ctex"
+path.etc2="res://.godot/imported/DflyWing.png-0b6478309a5c15c20480ffb20adda25b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/textures/DflyWing.png"
-dest_files=["res://.godot/imported/DflyWing.png-0b6478309a5c15c20480ffb20adda25b.s3tc.ctex"]
+dest_files=["res://.godot/imported/DflyWing.png-0b6478309a5c15c20480ffb20adda25b.s3tc.ctex", "res://.godot/imported/DflyWing.png-0b6478309a5c15c20480ffb20adda25b.etc2.ctex"]
 
 [params]
 

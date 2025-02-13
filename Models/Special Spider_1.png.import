@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdreg72fapfby"
 path.s3tc="res://.godot/imported/Special Spider_1.png-566a8f6aab408ef97e213dcd5a0273bb.s3tc.ctex"
+path.etc2="res://.godot/imported/Special Spider_1.png-566a8f6aab408ef97e213dcd5a0273bb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Special Spider_1.png"
-dest_files=["res://.godot/imported/Special Spider_1.png-566a8f6aab408ef97e213dcd5a0273bb.s3tc.ctex"]
+dest_files=["res://.godot/imported/Special Spider_1.png-566a8f6aab408ef97e213dcd5a0273bb.s3tc.ctex", "res://.godot/imported/Special Spider_1.png-566a8f6aab408ef97e213dcd5a0273bb.etc2.ctex"]
 
 [params]
 

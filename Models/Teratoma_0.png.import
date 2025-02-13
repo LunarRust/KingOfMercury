@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0kh26mcfyf3m"
 path.s3tc="res://.godot/imported/Teratoma_0.png-55456a185e406cd628a081e332acd996.s3tc.ctex"
+path.etc2="res://.godot/imported/Teratoma_0.png-55456a185e406cd628a081e332acd996.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Teratoma_0.png"
-dest_files=["res://.godot/imported/Teratoma_0.png-55456a185e406cd628a081e332acd996.s3tc.ctex"]
+dest_files=["res://.godot/imported/Teratoma_0.png-55456a185e406cd628a081e332acd996.s3tc.ctex", "res://.godot/imported/Teratoma_0.png-55456a185e406cd628a081e332acd996.etc2.ctex"]
 
 [params]
 

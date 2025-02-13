@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1bbk2cdfvqmy"
 path.s3tc="res://.godot/imported/GuardText.png-3082c6d8860b397f2e051c82a48697d6.s3tc.ctex"
+path.etc2="res://.godot/imported/GuardText.png-3082c6d8860b397f2e051c82a48697d6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/GuardText.png"
-dest_files=["res://.godot/imported/GuardText.png-3082c6d8860b397f2e051c82a48697d6.s3tc.ctex"]
+dest_files=["res://.godot/imported/GuardText.png-3082c6d8860b397f2e051c82a48697d6.s3tc.ctex", "res://.godot/imported/GuardText.png-3082c6d8860b397f2e051c82a48697d6.etc2.ctex"]
 
 [params]
 

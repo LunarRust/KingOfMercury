@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3olp4ih4iavq"
 path.s3tc="res://.godot/imported/ground_dirt_1225_9351_Small.jpg-1cd529f2c5faef242f53c7c99d809906.s3tc.ctex"
+path.etc2="res://.godot/imported/ground_dirt_1225_9351_Small.jpg-1cd529f2c5faef242f53c7c99d809906.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://KOMTextures/Dirt/ground_dirt_1225_9351_Small.jpg"
-dest_files=["res://.godot/imported/ground_dirt_1225_9351_Small.jpg-1cd529f2c5faef242f53c7c99d809906.s3tc.ctex"]
+dest_files=["res://.godot/imported/ground_dirt_1225_9351_Small.jpg-1cd529f2c5faef242f53c7c99d809906.s3tc.ctex", "res://.godot/imported/ground_dirt_1225_9351_Small.jpg-1cd529f2c5faef242f53c7c99d809906.etc2.ctex"]
 
 [params]
 

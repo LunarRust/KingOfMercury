@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckl7ox3lvt84u"
 path.s3tc="res://.godot/imported/Valve_0.png-1eeee216a87dbd502cd8a99c18de308a.s3tc.ctex"
+path.etc2="res://.godot/imported/Valve_0.png-1eeee216a87dbd502cd8a99c18de308a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Valve_0.png"
-dest_files=["res://.godot/imported/Valve_0.png-1eeee216a87dbd502cd8a99c18de308a.s3tc.ctex"]
+dest_files=["res://.godot/imported/Valve_0.png-1eeee216a87dbd502cd8a99c18de308a.s3tc.ctex", "res://.godot/imported/Valve_0.png-1eeee216a87dbd502cd8a99c18de308a.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsjajttygnnme"
 path.s3tc="res://.godot/imported/VoidMother_2.png-83986f4890e6e49d6557e4c26462b769.s3tc.ctex"
+path.etc2="res://.godot/imported/VoidMother_2.png-83986f4890e6e49d6557e4c26462b769.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/VoidMother_2.png"
-dest_files=["res://.godot/imported/VoidMother_2.png-83986f4890e6e49d6557e4c26462b769.s3tc.ctex"]
+dest_files=["res://.godot/imported/VoidMother_2.png-83986f4890e6e49d6557e4c26462b769.s3tc.ctex", "res://.godot/imported/VoidMother_2.png-83986f4890e6e49d6557e4c26462b769.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkhg7xib24nrl"
 path.s3tc="res://.godot/imported/Allele_0.png-daffae695e4030df1420124156e909de.s3tc.ctex"
+path.etc2="res://.godot/imported/Allele_0.png-daffae695e4030df1420124156e909de.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Allele_0.png"
-dest_files=["res://.godot/imported/Allele_0.png-daffae695e4030df1420124156e909de.s3tc.ctex"]
+dest_files=["res://.godot/imported/Allele_0.png-daffae695e4030df1420124156e909de.s3tc.ctex", "res://.godot/imported/Allele_0.png-daffae695e4030df1420124156e909de.etc2.ctex"]
 
 [params]
 

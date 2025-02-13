@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dckoa3wccrf0c"
 path.s3tc="res://.godot/imported/PatientFleshPile_1.png-611649acaa4cfa2a8744e10064aa538f.s3tc.ctex"
+path.etc2="res://.godot/imported/PatientFleshPile_1.png-611649acaa4cfa2a8744e10064aa538f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/PatientFleshPile_1.png"
-dest_files=["res://.godot/imported/PatientFleshPile_1.png-611649acaa4cfa2a8744e10064aa538f.s3tc.ctex"]
+dest_files=["res://.godot/imported/PatientFleshPile_1.png-611649acaa4cfa2a8744e10064aa538f.s3tc.ctex", "res://.godot/imported/PatientFleshPile_1.png-611649acaa4cfa2a8744e10064aa538f.etc2.ctex"]
 
 [params]
 

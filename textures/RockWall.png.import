@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvu6jex8jyc17"
 path.s3tc="res://.godot/imported/RockWall.png-715d95e54e1e8e8d9834df2ef18b3380.s3tc.ctex"
+path.etc2="res://.godot/imported/RockWall.png-715d95e54e1e8e8d9834df2ef18b3380.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://textures/RockWall.png"
-dest_files=["res://.godot/imported/RockWall.png-715d95e54e1e8e8d9834df2ef18b3380.s3tc.ctex"]
+dest_files=["res://.godot/imported/RockWall.png-715d95e54e1e8e8d9834df2ef18b3380.s3tc.ctex", "res://.godot/imported/RockWall.png-715d95e54e1e8e8d9834df2ef18b3380.etc2.ctex"]
 
 [params]
 

@@ -29,7 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://be3jf3qr3gbmy" path="res://Sprites/UI/Fullscreen2.png" id="24"]
 [ext_resource type="Script" path="res://Scripts/Fullscreen.gd" id="25"]
 [ext_resource type="Texture2D" uid="uid://bof065382w2pb" path="res://Sprites/UI/GlobeButton1.png" id="26"]
-[ext_resource type="AudioStream" uid="uid://b6u3qkb0mte27" path="res://Sounds/Pickup.ogg" id="26_gj226"]
+[ext_resource type="AudioStream" uid="uid://cnohmfrk4pxtj" path="res://Sounds/Pickup.ogg" id="26_gj226"]
 [ext_resource type="Texture2D" uid="uid://cmpj3v4140gc0" path="res://Sprites/UI/GlobeButton2.png" id="27"]
 [ext_resource type="Texture2D" uid="uid://biipcttqufh36" path="res://Sprites/UI/Settings.png" id="28"]
 [ext_resource type="Script" path="res://Scripts/MapButton.gd" id="29"]
@@ -1111,7 +1111,9 @@ autoplay = "titlereveal"
 [node name="Button Parent" type="Node2D" parent="."]
 position = Vector2(480, 481)
 
-[node name="CustomButtonParent" parent="Button Parent" instance=ExtResource("18_b8frp")]
+[node name="CustomButtonParent" parent="Button Parent" node_paths=PackedStringArray("OtherNodes") instance=ExtResource("18_b8frp")]
+visible = true
+OtherNodes = [NodePath(".")]
 
 [node name="NewGameButton" type="TextureButton" parent="Button Parent"]
 offset_left = -284.0
@@ -1479,7 +1481,7 @@ offset_bottom = 459.0
 texture_normal = ExtResource("28")
 script = ExtResource("29")
 destination = "modMenu"
-sceneLoader = null
+sceneLoader = "<null>"
 
 [node name="Label" type="Label" parent="ModsButton"]
 layout_mode = 0
@@ -1583,3 +1585,5 @@ script = ExtResource("37")
 [connection signal="pressed" from="Button Parent/NewGameButton/Warning/Confirm" to="Button Parent/NewGameButton" method="start"]
 [connection signal="pressed" from="Button Parent/CreditsButton" to="Button Parent/CreditsButton" method="_on_pressed"]
 [connection signal="pressed" from="Button Parent/CreditsButton/Credits/TextureButton" to="Button Parent/CreditsButton" method="_on_texture_button_pressed"]
+
+[editable path="Button Parent/CustomButtonParent"]

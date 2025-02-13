@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ct3bv5ur6o3mc"
 path.s3tc="res://.godot/imported/bigfetus_1.png-8a67b0c5d9092e930ba1d89e40292640.s3tc.ctex"
+path.etc2="res://.godot/imported/bigfetus_1.png-8a67b0c5d9092e930ba1d89e40292640.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/bigfetus_1.png"
-dest_files=["res://.godot/imported/bigfetus_1.png-8a67b0c5d9092e930ba1d89e40292640.s3tc.ctex"]
+dest_files=["res://.godot/imported/bigfetus_1.png-8a67b0c5d9092e930ba1d89e40292640.s3tc.ctex", "res://.godot/imported/bigfetus_1.png-8a67b0c5d9092e930ba1d89e40292640.etc2.ctex"]
 
 [params]
 

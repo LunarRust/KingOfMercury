@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bt0q2y3pbj2ra"
 path.s3tc="res://.godot/imported/DNASign1.png-bfbd3c963573cb253b3b2c724e42b0f6.s3tc.ctex"
+path.etc2="res://.godot/imported/DNASign1.png-bfbd3c963573cb253b3b2c724e42b0f6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/TVs/DNASign1.png"
-dest_files=["res://.godot/imported/DNASign1.png-bfbd3c963573cb253b3b2c724e42b0f6.s3tc.ctex"]
+dest_files=["res://.godot/imported/DNASign1.png-bfbd3c963573cb253b3b2c724e42b0f6.s3tc.ctex", "res://.godot/imported/DNASign1.png-bfbd3c963573cb253b3b2c724e42b0f6.etc2.ctex"]
 
 [params]
 

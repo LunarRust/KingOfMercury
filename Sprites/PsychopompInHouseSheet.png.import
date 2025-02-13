@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://da8neu2a6q8s4"
 path.s3tc="res://.godot/imported/PsychopompInHouseSheet.png-7bc2a45f9e245f01d08df1e7761e4061.s3tc.ctex"
+path.etc2="res://.godot/imported/PsychopompInHouseSheet.png-7bc2a45f9e245f01d08df1e7761e4061.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/PsychopompInHouseSheet.png"
-dest_files=["res://.godot/imported/PsychopompInHouseSheet.png-7bc2a45f9e245f01d08df1e7761e4061.s3tc.ctex"]
+dest_files=["res://.godot/imported/PsychopompInHouseSheet.png-7bc2a45f9e245f01d08df1e7761e4061.s3tc.ctex", "res://.godot/imported/PsychopompInHouseSheet.png-7bc2a45f9e245f01d08df1e7761e4061.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dei2fuwt1t50x"
 path.s3tc="res://.godot/imported/Chunk_0.png-7f5f7e5dc3cd655eed9d81b6e7c801fd.s3tc.ctex"
+path.etc2="res://.godot/imported/Chunk_0.png-7f5f7e5dc3cd655eed9d81b6e7c801fd.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Chunk_0.png"
-dest_files=["res://.godot/imported/Chunk_0.png-7f5f7e5dc3cd655eed9d81b6e7c801fd.s3tc.ctex"]
+dest_files=["res://.godot/imported/Chunk_0.png-7f5f7e5dc3cd655eed9d81b6e7c801fd.s3tc.ctex", "res://.godot/imported/Chunk_0.png-7f5f7e5dc3cd655eed9d81b6e7c801fd.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwi0qs3lsdr4e"
 path.s3tc="res://.godot/imported/DNAGateSign.png-3f7a3e88d0ce832650a89745257e56a7.s3tc.ctex"
+path.etc2="res://.godot/imported/DNAGateSign.png-3f7a3e88d0ce832650a89745257e56a7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/World/DNAGateSign.png"
-dest_files=["res://.godot/imported/DNAGateSign.png-3f7a3e88d0ce832650a89745257e56a7.s3tc.ctex"]
+dest_files=["res://.godot/imported/DNAGateSign.png-3f7a3e88d0ce832650a89745257e56a7.s3tc.ctex", "res://.godot/imported/DNAGateSign.png-3f7a3e88d0ce832650a89745257e56a7.etc2.ctex"]
 
 [params]
 

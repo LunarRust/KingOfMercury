@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bd3hs4sr1c573"
 path.s3tc="res://.godot/imported/Plato.png-209731451972eb81661abfacae08447f.s3tc.ctex"
+path.etc2="res://.godot/imported/Plato.png-209731451972eb81661abfacae08447f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/TVs/Plato.png"
-dest_files=["res://.godot/imported/Plato.png-209731451972eb81661abfacae08447f.s3tc.ctex"]
+dest_files=["res://.godot/imported/Plato.png-209731451972eb81661abfacae08447f.s3tc.ctex", "res://.godot/imported/Plato.png-209731451972eb81661abfacae08447f.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5ulcyu2plv65"
 path.s3tc="res://.godot/imported/War3.png-ae9498748f11c3b720917ee05e7d7ee2.s3tc.ctex"
+path.etc2="res://.godot/imported/War3.png-ae9498748f11c3b720917ee05e7d7ee2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/TVs/War3.png"
-dest_files=["res://.godot/imported/War3.png-ae9498748f11c3b720917ee05e7d7ee2.s3tc.ctex"]
+dest_files=["res://.godot/imported/War3.png-ae9498748f11c3b720917ee05e7d7ee2.s3tc.ctex", "res://.godot/imported/War3.png-ae9498748f11c3b720917ee05e7d7ee2.etc2.ctex"]
 
 [params]
 

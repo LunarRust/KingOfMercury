@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkxtnshpoon17"
 path.s3tc="res://.godot/imported/Water.png-69a9a0415cc936f6687437459009f098.s3tc.ctex"
+path.etc2="res://.godot/imported/Water.png-69a9a0415cc936f6687437459009f098.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://textures/Water.png"
-dest_files=["res://.godot/imported/Water.png-69a9a0415cc936f6687437459009f098.s3tc.ctex"]
+dest_files=["res://.godot/imported/Water.png-69a9a0415cc936f6687437459009f098.s3tc.ctex", "res://.godot/imported/Water.png-69a9a0415cc936f6687437459009f098.etc2.ctex"]
 
 [params]
 

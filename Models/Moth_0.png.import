@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2o1us7v163sr"
 path.s3tc="res://.godot/imported/Moth_0.png-f7a5f1b00d5cfdd7c5d289d598dfee11.s3tc.ctex"
+path.etc2="res://.godot/imported/Moth_0.png-f7a5f1b00d5cfdd7c5d289d598dfee11.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Moth_0.png"
-dest_files=["res://.godot/imported/Moth_0.png-f7a5f1b00d5cfdd7c5d289d598dfee11.s3tc.ctex"]
+dest_files=["res://.godot/imported/Moth_0.png-f7a5f1b00d5cfdd7c5d289d598dfee11.s3tc.ctex", "res://.godot/imported/Moth_0.png-f7a5f1b00d5cfdd7c5d289d598dfee11.etc2.ctex"]
 
 [params]
 

@@ -1,5 +1,5 @@
 extends Node3D
-class_name InventoryManager
+class_name InventoryManagerold
 
 @export var inv : Inventory
 static var inventoryInstance : Inventory

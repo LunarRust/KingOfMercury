@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://beqre7tbl037j"
 path.s3tc="res://.godot/imported/Teacher.png-5cecc7488051471751be30cc57b11790.s3tc.ctex"
+path.etc2="res://.godot/imported/Teacher.png-5cecc7488051471751be30cc57b11790.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/textures/Teacher.png"
-dest_files=["res://.godot/imported/Teacher.png-5cecc7488051471751be30cc57b11790.s3tc.ctex"]
+dest_files=["res://.godot/imported/Teacher.png-5cecc7488051471751be30cc57b11790.s3tc.ctex", "res://.godot/imported/Teacher.png-5cecc7488051471751be30cc57b11790.etc2.ctex"]
 
 [params]
 

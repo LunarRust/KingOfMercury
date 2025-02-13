@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bc2iyern0t2dx"
 path.s3tc="res://.godot/imported/Computer.png-233ae1ced3eae2f4b1188699c7b8312e.s3tc.ctex"
+path.etc2="res://.godot/imported/Computer.png-233ae1ced3eae2f4b1188699c7b8312e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/Computer.png"
-dest_files=["res://.godot/imported/Computer.png-233ae1ced3eae2f4b1188699c7b8312e.s3tc.ctex"]
+dest_files=["res://.godot/imported/Computer.png-233ae1ced3eae2f4b1188699c7b8312e.s3tc.ctex", "res://.godot/imported/Computer.png-233ae1ced3eae2f4b1188699c7b8312e.etc2.ctex"]
 
 [params]
 

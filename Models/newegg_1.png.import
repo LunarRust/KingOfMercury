@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyli5lwmdd60d"
 path.s3tc="res://.godot/imported/newegg_1.png-5918b5aa070be8da75bb04b56c54747a.s3tc.ctex"
+path.etc2="res://.godot/imported/newegg_1.png-5918b5aa070be8da75bb04b56c54747a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Models/newegg_1.png"
-dest_files=["res://.godot/imported/newegg_1.png-5918b5aa070be8da75bb04b56c54747a.s3tc.ctex"]
+dest_files=["res://.godot/imported/newegg_1.png-5918b5aa070be8da75bb04b56c54747a.s3tc.ctex", "res://.godot/imported/newegg_1.png-5918b5aa070be8da75bb04b56c54747a.etc2.ctex"]
 
 [params]
 
