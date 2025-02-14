@@ -20,9 +20,10 @@ var NpcInv : Inventory
 var used : bool = false
 var Cooking : bool = false
 var CookTime : float
+var SpriteNum : int
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	inv = InventoryManager.inventoryInstance
+	inv = get_tree().get_first_node_in_group("KOMInventoryManager").inv
 	animTrigger("Down")
 	up = false
 	pass # Replace with function body.
@@ -45,60 +46,49 @@ func _process(delta):
 		up = false
 	if Cooking:
 		CookTime += delta
-		if CookTime >= 30:
-			AnimatedSpriteObject.show()
-			SpriteObject.hide()
-	else:
-		AnimatedSpriteObject.hide()
-		if ItemInBasket:
-			SpriteObject.show()
+		if CookTime >= CookedTime && CookTime <= BurnTime:
+			SpriteObject.texture = CookedSprites[SpriteNum]
+		elif CookTime >= BurnTime:
+			SpriteObject.texture = BurnedSprites[SpriteNum]
 		
 func Item(item : String):
-	if up:
-		match item:
-			"Fresh Fries":
-				SpriteObject.texture = Sprites[2]
-				print_rich("Showing: [color=red]" + str(SpriteObject.name) + "[/color]")
-				ItemInBasket = true
-				RecivedItem = "FFries"
-				ItemInBasketName = "Fries"
-				SpriteObject.show()
-				if up:
-					animTrigger("Down")
-					if ItemInBasket:
-						Cooking = true
-					up = false
-				return true
-			"Burger":
-				SpriteObject.texture = Sprites[1]
-				print_rich("Showing: [color=red]" + str(SpriteObject.name) + "[/color]")
-				ItemInBasket = true
-				RecivedItem = "Burger"
-				ItemInBasketName = "Burger"
-				SpriteObject.show()
-				if up:
-					animTrigger("Down")
-					if ItemInBasket:
-						Cooking = true
-					up = false
-				return true
-			"Fries":
-				SpriteObject.texture = Sprites[0]
-				print_rich("Showing: [color=red]" + str(SpriteObject.name) + "[/color]")
-				ItemInBasket = true
-				RecivedItem = "Fries"
-				ItemInBasketName = "Fries"
-				SpriteObject.show()
-				if up:
-					animTrigger("Down")
-					if ItemInBasket:
-						Cooking = true
-					up = false
-				return true
-			_:
-				return false
-	else:
-		return false
+	match item:
+		"Fresh Fries":
+			SpriteObject.texture = Sprites[2]
+			SpriteNum = 2
+			print_rich("Showing: [color=red]" + str(SpriteObject.name) + "[/color]")
+			ItemInBasket = true
+			RecivedItem = "FFries"
+			ItemInBasketName = "Fries"
+			SpriteObject.show()
+			if up:
+				animTrigger("Down")
+			if ItemInBasket:
+				Cooking = true
+			up = false
+			return true
+		"Fries":
+			SpriteObject.texture = Sprites[0]
+			SpriteNum = 0
+			print_rich("Showing: [color=red]" + str(SpriteObject.name) + "[/color]")
+			ItemInBasket = true
+			RecivedItem = "Fries"
+			ItemInBasketName = "Fries"
+			SpriteObject.show()
+			if up:
+				animTrigger("Down")
+			if ItemInBasket:
+				Cooking = true
+			up = false
+			return true
+		_:
+			if item == "Raw Patty":
+				var newItem = inv.create_and_add_item("RawPatty")
+			elif item == "Fresh Fries":
+				var newItem = inv.create_and_add_item("FFries")
+			else:
+				var newItem = inv.create_and_add_item(item)
+			return false
 
 func Touch(AmNpc = false):
 	if !ItemInBasket || up:
@@ -169,6 +159,7 @@ func Touch(AmNpc = false):
 						up = true
 						ItemInBasket = false
 						Cooking = false
+						CookTime = 0.0
 				
 
 func animTrigger(triggername : String):

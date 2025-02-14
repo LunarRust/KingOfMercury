@@ -7,7 +7,7 @@ var used : bool = false
 @export var ItemID : String
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	inv = InventoryManager.inventoryInstance
+	inv = get_tree().get_first_node_in_group("KOMInventoryManager").inv
 	if inv == null:
 		pass
 	pass # Replace with function body.

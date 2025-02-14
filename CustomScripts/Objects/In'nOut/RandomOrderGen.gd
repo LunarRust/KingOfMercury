@@ -19,6 +19,7 @@ var RelevantItems : Dictionary
 var InvSize : Vector2i
 var InvFreeSpace
 var RandList : Array
+var ReadyToServe : bool = false
 
 #####
 #TODO Script Makes game stutter every time Inventory is generated. Can this be improved?
@@ -26,14 +27,17 @@ var RandList : Array
 
 func _ready():
 	get_tree().get_first_node_in_group("InnOutSignalBus").OrderGen.connect(Generate)
+	get_tree().get_first_node_in_group("InnOutSignalBus").ReadyToOrder.connect(ReadyForOrder)
 	InvSize = inv._constraint_manager.get_grid_constraint().size
 	InvFreeSpace = InvSize.x * InvSize.y
 	InvItemsList = Protoset._prototypes
 	
+func ReadyForOrder():
+	ReadyToServe = true
 	
 func Clear():
 	inv.clear()
-	
+	ReadyToServe = false
 	
 func Generate():
 	inv.clear()

@@ -1,16 +1,19 @@
 class_name MouseCaster
 extends Node3D
-var RCS : RayCastSystem = RayCastSystem.new()
+@export var RCS : Node3D
 var active : bool = false
 var space_state
 var cam
 var mousepos
 var CurrentIntersectedObject
+var interactionButtonKOM
 var TouchedObject
 var ViewButton = preload("res://Scripts/ViewButton.cs")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	await get_tree().create_timer(0.2).timeout
+	interactionButtonKOM = get_tree().get_first_node_in_group("InteractionButtonKOMMaster")
 	active = true
 
 
@@ -19,11 +22,12 @@ func _process(delta):
 	pass
 
 func _physics_process(delta):
-	space_state = get_world_3d().direct_space_state
-	cam = get_viewport().get_camera_3d()
-	mousepos = get_viewport().get_mouse_position()
-	self.global_position = RCS.get_mouse_world_position(space_state,cam,mousepos)
-	CurrentIntersectedObject = RCS.get_raycast_hit_object(space_state,cam,mousepos)
+	if active:
+		space_state = get_world_3d().direct_space_state
+		cam = get_viewport().get_camera_3d()
+		mousepos = get_viewport().get_mouse_position()
+		self.global_position = RCS.get_mouse_world_position(space_state,cam,mousepos)
+		CurrentIntersectedObject = RCS.get_raycast_hit_object(space_state,cam,mousepos)
 	
 func Cast():
 	var zDepth : float
@@ -69,7 +73,7 @@ func ItemCast(item : String):
 func _unhandled_input(event):
 	if event is InputEventMouseButton && event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed():
 		mousepos = event.position
-		if InteractionButtonKOM.interactionMode == 3:
+		if interactionButtonKOM.interactionMode == 3:
 			Cast()
 
 func get_all_children(in_node, array := []):

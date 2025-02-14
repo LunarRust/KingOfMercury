@@ -109,13 +109,16 @@ func get_all_children(in_node, array := []):
 
 
 func _on_pressed():
-	
-	if NpcInvCheck() == true:
-		SoundSource.stream = SoundPositive
-		SoundSource.play()
-		ItemGen.Clear()
-		Task()
+	if ItemGen.ReadyToServe == true:
+		if NpcInvCheck() == true:
+			SoundSource.stream = SoundPositive
+			SoundSource.play()
+			ItemGen.Clear()
+			Task()
+		else:
+			currentNPC.animTrigger("Shrug")
+			SoundSource.stream = SoundNegative
+			SoundSource.play()
 	else:
-		currentNPC.animTrigger("Shrug")
 		SoundSource.stream = SoundNegative
 		SoundSource.play()

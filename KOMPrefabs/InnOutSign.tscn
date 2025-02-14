@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dsw5yu4agnwvp"]
 
 [ext_resource type="Script" path="res://Scripts/RotatingObject.cs" id="1_43k18"]
-[ext_resource type="Texture2D" uid="uid://du6yw40v8rrot" path="res://KOMSprites/innout/InNOut_logo.png" id="1_t2sx3"]
+[ext_resource type="Texture2D" uid="uid://de2qgm2uiimc1" path="res://KOMSprites/innout/InNOut_logo.png" id="1_t2sx3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5caa"]
 albedo_color = Color(0, 0, 0, 1)

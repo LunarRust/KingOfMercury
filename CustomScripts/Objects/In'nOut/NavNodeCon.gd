@@ -1,9 +1,10 @@
 extends Node
 @export var RegisterOrderGen : Node
+var InnoutBus
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	InnoutBus = get_tree().get_first_node_in_group("InnOutSignalBus")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -12,4 +13,8 @@ func _process(delta):
 	
 func Reached():
 	RegisterOrderGen.Generate()
+	if InnoutBus != null:
+		InnoutBus.emit_signal("ReadyToOrder")
+	else:
+		print("SignalBus does not exist!")
 	print_rich("[color=red] Reached! [/color]")
