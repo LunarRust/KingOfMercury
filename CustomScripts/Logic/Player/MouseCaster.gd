@@ -69,7 +69,17 @@ func Cast():
 					if node.has_method("Hurt"):
 						node.Hurt()
 						print_rich("Attacked object is: [color=red]" + str(node) + "[/color]")
-	
+		2:
+			if !dictionary.is_empty():
+				if node != null:
+					if node.has_method("Talk"):
+						animTrigger("Talk")
+						node.Talk()
+		1:
+			if !dictionary.is_empty():
+				if node != null:
+					if node.has_method("Look"):
+						node.Look()
 	TouchedObject = CurrentIntersectedObject
 	
 	
