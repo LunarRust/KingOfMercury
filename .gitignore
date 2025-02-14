@@ -31,3 +31,5 @@ mono_crash.*.json
 *.zip
 *.x86_64
 *.sh
+Icon.png.import
+*.import
