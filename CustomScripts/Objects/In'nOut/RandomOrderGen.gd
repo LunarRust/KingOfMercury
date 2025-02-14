@@ -21,6 +21,8 @@ var InvSize : Vector2i
 var InvFreeSpace
 var RandList : Array
 var ReadyToServe : bool = false
+var ItemsInInv : Array
+var ItemsInInvDictionary : Dictionary
 
 #####
 #TODO Script Makes game stutter every time Inventory is generated. Can this be improved?
@@ -40,6 +42,8 @@ func ReadyForOrder(ID):
 	
 func Clear():
 	inv.clear()
+	ItemsInInv.clear()
+	ItemsInInvDictionary.clear()
 	ReadyToServe = false
 	
 func Generate(ID):
@@ -52,15 +56,20 @@ func Generate(ID):
 			while count <= RelevantItems[i] && InvFull == false:
 				count += 1
 				if inv.can_add_item(create_item(i)):
+					var Item = create_item(i)
 					print("adding: " + str(i))
-					inv.create_and_add_item(i)
+					inv.add_item(Item)
+					if ItemsInInvDictionary.has(Item.prototype_id):
+						ItemsInInvDictionary[Item.prototype_id] += 1
+					else:
+						ItemsInInvDictionary[Item.prototype_id] = 1
 				else:
 					InvFull = true
 					
 		for i in ItemCounts:
 			ItemCounts[i] = 0
 			print(str(ItemCounts))
-		var ItemsInInv = inv.get_items()
+		ItemsInInv = inv.get_items()
 		print(str(ItemsInInv))
 		print(str(RelevantItems))
 		for i in ItemsInInv:

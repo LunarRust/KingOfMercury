@@ -7,15 +7,21 @@ var last_event_pos2D = null
 # The time of the last event in seconds since engine start.
 var last_event_time: float = -1.0
 
-@onready var node_viewport = $SubViewport
-@onready var node_quad = $Quad
-@onready var node_area = $Quad/Area3D
+@export var node_viewport : SubViewport
+@export var node_quad : MeshInstance3D
+@export var node_area : Area3D
 
 func _ready():
 	node_area.mouse_entered.connect(_mouse_entered_area)
 	node_area.mouse_exited.connect(_mouse_exited_area)
 	node_area.input_event.connect(_mouse_input_event)
-
+	#var NewTexture : ViewportTexture = node_viewport
+	var NewMaterial : StandardMaterial3D = StandardMaterial3D.new()
+	NewMaterial.albedo_texture = node_viewport.get_texture()
+	NewMaterial.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	NewMaterial.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	NewMaterial.resource_local_to_scene = true
+	node_quad.set_surface_override_material(0,NewMaterial)
 	# If the material is NOT set to use billboard settings, then avoid running billboard specific code
 	if node_quad.get_surface_override_material(0).billboard_mode == BaseMaterial3D.BillboardMode.BILLBOARD_DISABLED:
 		set_process(false)

@@ -4,17 +4,27 @@ extends Node
 @export var distance : float
 @export var ArrivalAction : int = 0
 @export var SpawnOnLoad : bool = false 
+@export var SpawnDelay : float = 0.0
 var ScenePack
 var currentID
 var currentMark
 var currentNPC
 var SignalBusKOM
+@export var SpawnerID : int
 @export var NavNodeTarget : Node
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	SignalBusKOM = get_tree().get_first_node_in_group("player").get_node("KOMSignalBus")
+	SignalBusKOM.CreateNpc.connect(Spawn)
 	await get_tree().create_timer(0.3).timeout
 	if SpawnOnLoad:
+		await get_tree().create_timer(SpawnDelay).timeout
+		Packload()
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+
+func Spawn(ID):
+	if ID == SpawnerID:
 		Packload()
 
 func Packload():
@@ -23,6 +33,7 @@ func Packload():
 		node.global_position = TargetLoc.get_collision_point()
 		print(node.get_tree_string_pretty())
 		TargetLoc.get_collision_point()
+		node.SpawnerID = SpawnerID
 
 		await get_tree().create_timer(0.1).timeout
 
@@ -31,10 +42,7 @@ func Packload():
 		currentMark = get_tree().get_first_node_in_group("NavMark" + str(currentID))
 		currentNPC.MaxSpeed = 2
 		print_rich("Spawner Current ID: [color=red]" + str(currentID) + "[/color]")
-		for i in get_all_children(get_tree().get_root()):
-			if i.is_in_group("PompNPC"):
-				if i.InstID == currentID:
-					SignalBusKOM.emit_signal("NavToPoint",currentID,true,NavNodeTarget,distance,ArrivalAction,"player")
+		SignalBusKOM.emit_signal("NavToPoint",currentID,true,NavNodeTarget,distance,ArrivalAction,"player")
 		
 		currentMark.global_position = NavNodeTarget.global_position
 		currentMark = null

@@ -48,14 +48,15 @@ func NpcInvCheck():
 					print(str(ItemGen.RelevantItems.values()))
 	var TotalItems = 0
 	for i in ItemGen.RelevantItems:
-		if ItemGen.RelevantItems[i] != 0:
-			print(str(ItemGen.ItemCounts))
-			if ItemGen.RelevantItems[i] <= ItemGen.ItemCounts[i]:
-				TotalItems += ItemGen.RelevantItems[i]
-			else:
-				print(str("not enough " + str(ItemGen.RelevantItems[i])))
-	for i in ItemGen.ItemCounts:
-		NeededTotal += ItemGen.ItemCounts[i]
+		TotalItems += ItemGen.RelevantItems[i]
+		#if ItemGen.RelevantItems[i] != 0:
+			#print(str(ItemGen.ItemCounts))
+			#if ItemGen.RelevantItems[i] <= ItemGen.ItemCounts[i]:
+				#TotalItems += ItemGen.RelevantItems[i]
+			#else:
+				#print(str("not enough " + str(ItemGen.RelevantItems[i])))
+	for i in ItemGen.ItemsInInvDictionary:
+		NeededTotal += ItemGen.ItemsInInvDictionary[i]
 		
 	print(str(ItemGen.RelevantItems))
 	print(str(TotalItems) + " " + str(NeededTotal))
