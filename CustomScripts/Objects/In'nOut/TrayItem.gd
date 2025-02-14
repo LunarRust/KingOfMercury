@@ -2,35 +2,60 @@ extends Node
 @export var Scene : PackedScene
 @export var TargetLoc : Node3D
 @export var distance : float
+@export var OrderGen : Node
 var ScenePack
 var currentID
 var currentMark
 var currentNPC
 var SignalBusKOM
+var inv
+var node
 @export var NavNodeTarget : Node
+var HasItem : bool = false
 
 
 func _ready():
 	SignalBusKOM = get_tree().get_first_node_in_group("player").get_node("KOMSignalBus")
+	inv = get_tree().get_first_node_in_group("PlayerInv")
 
 func Item(item : String):
-	match item:
-		"Fries":
-			Scene = load("res://KOMPrefabs/Items/Fries_pickup.tscn") as PackedScene
-			Packload()
-			return true
-		"Burger":
-			Scene = load("res://KOMPrefabs/Items/Burger_pickup.tscn") as PackedScene
-			Packload()
-			return true
-		_:
-			return false
+	if HasItem == false && OrderGen.ReadyToServe == true:
+		match item:
+			"Fries":
+				Scene = load("res://KOMPrefabs/Items/Fries_pickup.tscn") as PackedScene
+				Packload()
+				HasItem = true
+				return true
+			"Burger":
+				Scene = load("res://KOMPrefabs/Items/Burger_pickup.tscn") as PackedScene
+				Packload()
+				HasItem = true
+				return true
+			_:
+				if item == "Raw Patty":
+					var newItem = inv.create_and_add_item("RawPatty")
+				elif item == "Fresh Fries":
+					var newItem = inv.create_and_add_item("FFries")
+				else:
+					var newItem = inv.create_and_add_item(item)
+				return false
+	else:
+		if item == "Raw Patty":
+			var newItem = inv.create_and_add_item("RawPatty")
+		elif item == "Fresh Fries":
+			var newItem = inv.create_and_add_item("FFries")
+		else:
+			var newItem = inv.create_and_add_item(item)
+		return false
 	
 			
+func _process(delta):
+	if node == null:
+		HasItem = false
 
 # Called when the node enters the scene tree for the first time.
 func Packload():
-		var node : Node = Scene.instantiate()
+		node = Scene.instantiate()
 		get_tree().current_scene.add_child(node)
 		node.global_position = TargetLoc.global_position
 		print(node.get_tree_string_pretty())

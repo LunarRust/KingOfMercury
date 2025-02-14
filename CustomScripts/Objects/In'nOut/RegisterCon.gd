@@ -48,14 +48,15 @@ func NpcInvCheck():
 					print(str(ItemGen.RelevantItems.values()))
 	var TotalItems = 0
 	for i in ItemGen.RelevantItems:
-		if ItemGen.RelevantItems[i] != 0:
-			print(str(ItemGen.ItemCounts))
-			if ItemGen.RelevantItems[i] <= ItemGen.ItemCounts[i]:
-				TotalItems += ItemGen.RelevantItems[i]
-			else:
-				print(str("not enough " + str(ItemGen.RelevantItems[i])))
-	for i in ItemGen.ItemCounts:
-		NeededTotal += ItemGen.ItemCounts[i]
+		TotalItems += ItemGen.RelevantItems[i]
+		#if ItemGen.RelevantItems[i] != 0:
+			#print(str(ItemGen.ItemCounts))
+			#if ItemGen.RelevantItems[i] <= ItemGen.ItemCounts[i]:
+				#TotalItems += ItemGen.RelevantItems[i]
+			#else:
+				#print(str("not enough " + str(ItemGen.RelevantItems[i])))
+	for i in ItemGen.ItemsInInvDictionary:
+		NeededTotal += ItemGen.ItemsInInvDictionary[i]
 		
 	print(str(ItemGen.RelevantItems))
 	print(str(TotalItems) + " " + str(NeededTotal))
@@ -109,13 +110,16 @@ func get_all_children(in_node, array := []):
 
 
 func _on_pressed():
-	
-	if NpcInvCheck() == true:
-		SoundSource.stream = SoundPositive
-		SoundSource.play()
-		ItemGen.Clear()
-		Task()
+	if ItemGen.ReadyToServe == true:
+		if NpcInvCheck() == true:
+			SoundSource.stream = SoundPositive
+			SoundSource.play()
+			ItemGen.Clear()
+			Task()
+		else:
+			currentNPC.animTrigger("Shrug")
+			SoundSource.stream = SoundNegative
+			SoundSource.play()
 	else:
-		currentNPC.animTrigger("Shrug")
 		SoundSource.stream = SoundNegative
 		SoundSource.play()

@@ -20,7 +20,9 @@ var CookTime : float
 func _ready():
 	CookTime = 0
 	ItemOnSpatula = false
-	inv = InventoryManager.inventoryInstance
+	inv = get_tree().get_first_node_in_group("KOMInventoryManager").inv
+	if inv == null:
+		inv = InventoryManager.inventoryInstance
 	animTrigger("Down")
 	up = false
 	
@@ -53,33 +55,6 @@ func _process(delta):
 func Item(item : String):
 	if  !ItemOnSpatula:
 		match item:
-			"FFries":
-				SpriteObject.texture = Sprites[0]
-				print_rich("Showing: [color=red]" + str(SpriteObject.name) + "[/color]")
-				ItemOnSpatula = true
-				RecivedItem = "FFries"
-				ItemOnSpatulaName = "Fries"
-				Spatula.get_parent().show()
-				SpriteObject.show()
-				return true
-			"Burger":
-				SpriteObject.texture = Sprites[1]
-				print_rich("Showing: [color=red]" + str(SpriteObject.name) + "[/color]")
-				ItemOnSpatula = true
-				RecivedItem = "Burger"
-				ItemOnSpatulaName = "Burger"
-				Spatula.get_parent().show()
-				SpriteObject.show()
-				return true
-			"Fries":
-				SpriteObject.texture = Sprites[2]
-				print_rich("Showing: [color=red]" + str(SpriteObject.name) + "[/color]")
-				ItemOnSpatula = true
-				RecivedItem = "Fries"
-				ItemOnSpatulaName = "Fries"
-				Spatula.get_parent().show()
-				SpriteObject.show()
-				return true
 			"RawPatty":
 				SpriteObject.texture = Sprites[3]
 				print_rich("Showing: [color=red]" + str(SpriteObject.name) + "[/color]")
@@ -99,8 +74,20 @@ func Item(item : String):
 				SpriteObject.show()
 				return true
 			_:
+				if item == "Raw Patty":
+					var newItem = inv.create_and_add_item("RawPatty")
+				elif item == "Fresh Fries":
+					var newItem = inv.create_and_add_item("FFries")
+				else:
+					var newItem = inv.create_and_add_item(item)
 				return false
 	else:
+		if item == "Raw Patty":
+			var newItem = inv.create_and_add_item("RawPatty")
+		elif item == "Fresh Fries":
+			var newItem = inv.create_and_add_item("FFries")
+		else:
+			var newItem = inv.create_and_add_item(item)
 		return false
 
 func Touch(AmNpc = false):

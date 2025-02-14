@@ -1,4 +1,4 @@
-class_name InventoryManager
+class_name KOMInventoryManager
 extends Node3D
 @export var inv : Inventory
 static var inventoryInstance : Inventory
@@ -8,7 +8,7 @@ static var itemArray : Dictionary
 @export var itemName : Label
 @export var itemDescription : Label
 @export var health_handler : Node2D
-@export var MouseCasting : MouseCaster
+@export var MouseCasting : Node3D
 var camCast : Camera3D
 
 

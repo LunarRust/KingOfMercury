@@ -1,5 +1,5 @@
 extends Node3D
-var RCS : RayCastSystem = RayCastSystem.new()
+@export var RCS : Node3D
 var active : bool = false
 @export var CharParent : Node3D
 var space_state

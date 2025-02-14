@@ -7,12 +7,15 @@ extends TextureButton
 @export var clickSound : AudioStream
 @export var blipSprite : Sprite2D
 @export var KeyCode : Key
+var master
 static var interactionMode : int
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	interactionMode = 1
+	master = get_tree().get_first_node_in_group("InteractionButtonKOMMaster").interactionMode
+	master = 1
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,9 +25,9 @@ func _process(delta):
 func _pressed():
 	soundSource.stream = clickSound
 	soundSource.play()
-	interactionMode = buttonMode
+	get_tree().get_first_node_in_group("InteractionButtonKOMMaster").interactionMode = buttonMode
 	particle.texture = cursorSprite
-	print("Interaction button pressed! Mode switched to: " + str(interactionMode))
+	print("Interaction button pressed! Mode switched to: " + str(get_tree().get_first_node_in_group("InteractionButtonKOMMaster").interactionMode))
 	if blipSprite != null:
 		blipSprite.position = self.position
 		
