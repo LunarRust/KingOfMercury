@@ -21,6 +21,8 @@ func _ready():
 	CookTime = 0
 	ItemOnSpatula = false
 	inv = get_tree().get_first_node_in_group("KOMInventoryManager").inv
+	if inv == null:
+		inv = InventoryManager.inventoryInstance
 	animTrigger("Down")
 	up = false
 	

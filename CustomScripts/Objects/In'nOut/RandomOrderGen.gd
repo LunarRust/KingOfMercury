@@ -10,6 +10,7 @@ static var itemArray : Dictionary
 var camCast : Camera3D
 @export_category("Inventory Parameters")
 const DEFAULT_SIZE: Vector2i = Vector2i(10, 10)
+@export var GenID : int
 @export_category("Item Info")
 @export var Protoset : ItemProtoset
 @export var ItemCounts : Dictionary
@@ -32,38 +33,41 @@ func _ready():
 	InvFreeSpace = InvSize.x * InvSize.y
 	InvItemsList = Protoset._prototypes
 	
-func ReadyForOrder():
-	ReadyToServe = true
+func ReadyForOrder(ID):
+	if ID == GenID:
+		ReadyToServe = true
+	
 	
 func Clear():
 	inv.clear()
 	ReadyToServe = false
 	
-func Generate():
-	inv.clear()
-	ItemListGen()
-	for i in RelevantItems:
-		var count = 1
-		var InvFull = false
-		while count <= RelevantItems[i] && InvFull == false:
-			count += 1
-			if inv.can_add_item(create_item(i)):
-				print("adding: " + str(i))
-				inv.create_and_add_item(i)
-			else:
-				InvFull = true
-				
-	for i in ItemCounts:
-		ItemCounts[i] = 0
-		print(str(ItemCounts))
-	var ItemsInInv = inv.get_items()
-	print(str(ItemsInInv))
-	print(str(RelevantItems))
-	for i in ItemsInInv:
-		#var id = str(ItemsInInv[i].prototype_id)
-		if  RelevantItems[i.prototype_id]:
-			print(str(i.prototype_id) + " " + str(RelevantItems[i.prototype_id]))
-			ItemCounts[i.prototype_id] += 1
+func Generate(ID):
+	if ID == GenID:
+		inv.clear()
+		ItemListGen()
+		for i in RelevantItems:
+			var count = 1
+			var InvFull = false
+			while count <= RelevantItems[i] && InvFull == false:
+				count += 1
+				if inv.can_add_item(create_item(i)):
+					print("adding: " + str(i))
+					inv.create_and_add_item(i)
+				else:
+					InvFull = true
+					
+		for i in ItemCounts:
+			ItemCounts[i] = 0
+			print(str(ItemCounts))
+		var ItemsInInv = inv.get_items()
+		print(str(ItemsInInv))
+		print(str(RelevantItems))
+		for i in ItemsInInv:
+			#var id = str(ItemsInInv[i].prototype_id)
+			if  RelevantItems[i.prototype_id]:
+				print(str(i.prototype_id) + " " + str(RelevantItems[i.prototype_id]))
+				ItemCounts[i.prototype_id] += 1
 				
 func ItemListGen():
 	#print_rich("InvItemsList:[color=red] " + str(InvItemsList) + "[/color]")

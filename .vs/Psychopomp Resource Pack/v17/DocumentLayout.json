@@ -3,24 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|c:\\users\\je0976317\\godotprojects\\kingofmercury\\scripts\\playerhealthhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|solutionrelative:scripts\\playerhealthhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|c:\\users\\je0976317\\godotprojects\\kingofmercury\\scripts\\interactionbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|solutionrelative:scripts\\interactionbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|c:\\users\\je0976317\\godotprojects\\kingofmercury\\scripts\\movertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|solutionrelative:scripts\\movertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|c:\\users\\je0976317\\godotprojects\\kingofmercury\\scripts\\cameracast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|solutionrelative:scripts\\cameracast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|c:\\users\\je0976317\\godotprojects\\kingofmercury\\scripts\\camerashake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\scripts\\inventorybutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|solutionrelative:scripts\\inventorybutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\scripts\\camerashake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|solutionrelative:scripts\\camerashake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|c:\\users\\je0976317\\godotprojects\\kingofmercury\\scripts\\inventorybutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|solutionrelative:scripts\\inventorybutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\scripts\\movertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|solutionrelative:scripts\\movertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|c:\\users\\je0976317\\godotprojects\\kingofmercury\\scripts\\interactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|solutionrelative:scripts\\interactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|c:\\users\\je0976317\\godotprojects\\kingofmercury\\scripts\\cursorfollower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|solutionrelative:scripts\\cursorfollower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\scripts\\interactionbuttonmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|solutionrelative:scripts\\interactionbuttonmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|c:\\users\\je0976317\\godotprojects\\kingofmercury\\scripts\\playerhealthhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E02D56D-5EF0-4651-AEAC-A322A3AA2D4F}|Psychopomp Resource Pack.csproj|solutionrelative:scripts\\playerhealthhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +46,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CursorFollower.cs",
+              "DocumentMoniker": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\CursorFollower.cs",
+              "RelativeDocumentMoniker": "Scripts\\CursorFollower.cs",
+              "ToolTip": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\CursorFollower.cs",
+              "RelativeToolTip": "Scripts\\CursorFollower.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T14:09:58.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CameraCast.cs",
+              "DocumentMoniker": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\CameraCast.cs",
+              "RelativeDocumentMoniker": "Scripts\\CameraCast.cs",
+              "ToolTip": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\CameraCast.cs",
+              "RelativeToolTip": "Scripts\\CameraCast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T14:00:21.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Interactions.cs",
+              "DocumentMoniker": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\Interactions.cs",
+              "RelativeDocumentMoniker": "Scripts\\Interactions.cs",
+              "ToolTip": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\Interactions.cs",
+              "RelativeToolTip": "Scripts\\Interactions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T14:00:16.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InteractionButton.cs",
+              "DocumentMoniker": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\InteractionButton.cs",
+              "RelativeDocumentMoniker": "Scripts\\InteractionButton.cs",
+              "ToolTip": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\InteractionButton.cs",
+              "RelativeToolTip": "Scripts\\InteractionButton.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T14:00:09.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MoverTest.cs",
               "DocumentMoniker": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\MoverTest.cs",
               "RelativeDocumentMoniker": "Scripts\\MoverTest.cs",
@@ -47,20 +115,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CameraShake.cs",
               "DocumentMoniker": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\CameraShake.cs",
               "RelativeDocumentMoniker": "Scripts\\CameraShake.cs",
               "ToolTip": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\CameraShake.cs",
               "RelativeToolTip": "Scripts\\CameraShake.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-06T16:17:33.94Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "PlayerHealthHandler.cs",
               "DocumentMoniker": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\PlayerHealthHandler.cs",
               "RelativeDocumentMoniker": "Scripts\\PlayerHealthHandler.cs",
@@ -73,28 +141,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "InventoryButton.cs",
               "DocumentMoniker": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\InventoryButton.cs",
               "RelativeDocumentMoniker": "Scripts\\InventoryButton.cs",
               "ToolTip": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\InventoryButton.cs",
               "RelativeToolTip": "Scripts\\InventoryButton.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAACAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAEQAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-06T14:04:59.447Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "InteractionButtonMaster.cs",
               "DocumentMoniker": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\InteractionButtonMaster.cs",
               "RelativeDocumentMoniker": "Scripts\\InteractionButtonMaster.cs",
               "ToolTip": "C:\\Users\\je0976317\\GodotProjects\\KingOfMercury\\Scripts\\InteractionButtonMaster.cs",
               "RelativeToolTip": "Scripts\\InteractionButtonMaster.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T16:40:16.644Z"
+              "WhenOpened": "2025-01-30T16:40:16.644Z",
+              "EditorCaption": ""
             }
           ]
         }

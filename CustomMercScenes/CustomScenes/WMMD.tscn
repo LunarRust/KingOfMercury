@@ -24,7 +24,7 @@
 [ext_resource type="Script" path="res://Scripts/Fullscreen.gd" id="22_hwsui"]
 [ext_resource type="Material" uid="uid://cf6k4tebafvvq" path="res://KOMShaders/CornerVoid.tres" id="25_grxvy"]
 [ext_resource type="PackedScene" uid="uid://c0ylp55wubpr8" path="res://KOMMaterials/green.tscn" id="25_m8tu7"]
-[ext_resource type="Texture2D" uid="uid://tk0d1labganf" path="res://KOMMaterials/green.PNG" id="26_4eiso"]
+[ext_resource type="Texture2D" uid="uid://0eyk37hoo024" path="res://KOMMaterials/green.PNG" id="26_4eiso"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5mmss"]
 shader = ExtResource("3_6r8c3")

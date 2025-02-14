@@ -8,14 +8,14 @@
 [sub_resource type="QuadMesh" id="1"]
 size = Vector2(3, 2)
 
-[sub_resource type="ViewportTexture" id="2"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_l8wo0"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="3"]
 resource_local_to_scene = true
 transparency = 1
 shading_mode = 0
-albedo_texture = SubResource("2")
+albedo_texture = SubResource("ViewportTexture_l8wo0")
 
 [sub_resource type="BoxShape3D" id="4"]
 size = Vector3(3, 2, 0.1)

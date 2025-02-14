@@ -1,8 +1,7 @@
-[gd_scene load_steps=297 format=3 uid="uid://bnsf0wmclcn8f"]
+[gd_scene load_steps=288 format=3 uid="uid://bnsf0wmclcn8f"]
 
 [ext_resource type="Script" path="res://CustomScripts/Logic/InnOutSignalBus.gd" id="1_cabgq"]
 [ext_resource type="Script" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_edl00"]
-[ext_resource type="PackedScene" uid="uid://cf08hharkb570" path="res://KOMPrefabs/Logic/RandomOrderGen.tscn" id="1_ttnhp"]
 [ext_resource type="Resource" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="2_o302f"]
 [ext_resource type="Material" path="res://textures/Tile5.tres" id="3_g3xlg"]
 [ext_resource type="Material" path="res://textures/Stucco.tres" id="4_knrkr"]
@@ -19,37 +18,32 @@
 [ext_resource type="Script" path="res://CustomScripts/AutoLoads/NpcSceneRules.gd" id="14_ynhoq"]
 [ext_resource type="PackedScene" uid="uid://2p8rl2gpbnxv" path="res://KOMPrefabs/DoorGlass.tscn" id="15_e6u2e"]
 [ext_resource type="PackedScene" uid="uid://bjwu2ait6stxh" path="res://KOMPrefabs/Interactables/AreaTrigger.tscn" id="16_g5cp3"]
+[ext_resource type="PackedScene" uid="uid://gix2jhce0o2h" path="res://KOMPrefabs/Interactables/InnOut/Food_Spawner.tscn" id="17_np13h"]
 [ext_resource type="Script" path="res://CustomScripts/NPC/Objects/NpcSpawner.gd" id="18_j62et"]
 [ext_resource type="Script" path="res://CustomScripts/NPC/Objects/NavNodeSpawnHandler.gd" id="18_s3gdk"]
-[ext_resource type="PackedScene" uid="uid://jur7vxccf5uw" path="res://KOMPrefabs/Interactables/CamGrabber.tscn" id="21_cs2nk"]
-[ext_resource type="PackedScene" uid="uid://cbmb6fb7ncl8" path="res://KOMModels/innout/cash_register.glb" id="22_se4gb"]
-[ext_resource type="AudioStream" uid="uid://wi5bbugtlb5w" path="res://Sounds/DNAstart.ogg" id="23_2ich2"]
-[ext_resource type="AudioStream" uid="uid://cfjal7c4hnmq" path="res://Sounds/DNAfail.ogg" id="24_divb8"]
-[ext_resource type="Script" path="res://CustomScripts/Objects/In'nOut/NavNodeCon.gd" id="24_j3tin"]
-[ext_resource type="Script" path="res://CustomScripts/Objects/In'nOut/TrayItem.gd" id="25_56rcf"]
+[ext_resource type="AudioStream" uid="uid://bb67bgrowip25" path="res://Sounds/DNAstart.ogg" id="23_2ich2"]
+[ext_resource type="PackedScene" uid="uid://cnd41ygwjkosa" path="res://KOMPrefabs/Interactables/InnOut/Register.tscn" id="23_upf76"]
+[ext_resource type="AudioStream" uid="uid://dqx257ns6tgoe" path="res://Sounds/DNAfail.ogg" id="24_divb8"]
 [ext_resource type="PackedScene" uid="uid://cmthr6fl3qdjq" path="res://KOMPrefabs/Items/Fries_pickup.tscn" id="25_dmq7q"]
-[ext_resource type="PackedScene" uid="uid://hwn7dvmm3jm1" path="res://KOMModels/innout/food_tray.glb" id="26_81bkd"]
-[ext_resource type="Texture2D" uid="uid://beeruwf8rqvpx" path="res://KOMSprites/Keyboard/keyboard_206.png" id="28_fvikg"]
+[ext_resource type="Texture2D" uid="uid://b2n4t4eenb3cd" path="res://KOMSprites/Keyboard/keyboard_206.png" id="28_fvikg"]
 [ext_resource type="PackedScene" uid="uid://cxyisi7c13orx" path="res://KOMModels/innout/Fryer.tscn" id="28_xn888"]
 [ext_resource type="PackedScene" uid="uid://cqn0gyd1vcqh2" path="res://KOMModels/innout/Griddle.tscn" id="29_8b2gq"]
 [ext_resource type="PackedScene" uid="uid://clak8qk3qyhik" path="res://KOMPrefabs/Items/Burger_pickup.tscn" id="29_bvlyp"]
-[ext_resource type="Texture2D" uid="uid://dg5sx55iyk4m1" path="res://KOMSprites/Keyboard/keyboard_210.png" id="29_g3fsb"]
+[ext_resource type="Texture2D" uid="uid://bh6m2kfipropd" path="res://KOMSprites/Keyboard/keyboard_210.png" id="29_g3fsb"]
 [ext_resource type="Script" path="res://CustomScripts/Objects/In'nOut/DriveThruCon.gd" id="30_7rwlu"]
-[ext_resource type="Texture2D" uid="uid://jd44ysgb4yey" path="res://KOMSprites/innout/Register.png" id="30_chapo"]
+[ext_resource type="Texture2D" uid="uid://cvu28dwc8s2y5" path="res://KOMSprites/innout/Register.png" id="30_chapo"]
 [ext_resource type="Script" path="res://CustomScripts/Objects/In'nOut/RegisterCon.gd" id="31_0wo30"]
 [ext_resource type="Script" path="res://CustomScripts/Objects/In'nOut/MenuGrabber.gd" id="31_nmv1o"]
 [ext_resource type="AudioStream" uid="uid://cwu83yi6qfjwb" path="res://Sounds/tick3.ogg" id="32_fai3p"]
 [ext_resource type="Curve" uid="uid://iwl6freusb4t" path="res://KOMResources/Curves/CamGrabberCurve.tres" id="34_umu80"]
 [ext_resource type="PackedScene" uid="uid://drcoate2elxi7" path="res://KOMPrefabs/Items/Fresh_Fries_pickup.tscn" id="41_o01wo"]
-[ext_resource type="Script" path="res://CustomMercScenes/CustomScenes/3dgui/gui_3d.gd" id="44_ci45g"]
-[ext_resource type="Texture2D" uid="uid://h8eiphbtudkv" path="res://textures/glass_bright.png" id="45_gstyw"]
-[ext_resource type="Script" path="res://addons/gloot/ui/ctrl_inventory_grid_ex.gd" id="46_ldhek"]
-[ext_resource type="Texture2D" uid="uid://bo7ngnq4uajfs" path="res://Sprites/Items/Generic.png" id="47_l7gdn"]
+[ext_resource type="Texture2D" uid="uid://o7yjytajcbf2" path="res://textures/glass_bright.png" id="45_gstyw"]
 [ext_resource type="Script" path="res://CustomScripts/Logic/AppearOnPress.gd" id="49_nbb8w"]
 [ext_resource type="AudioStream" uid="uid://bwf44cbb4w1uc" path="res://KOMSounds/speaker-buzz-82989.mp3" id="50_mn1gb"]
 [ext_resource type="FontFile" uid="uid://dku4ohp5rmpr5" path="res://Fonts/DBStylez.ttf" id="51_nba7k"]
 [ext_resource type="Material" uid="uid://wh62y6r1qr16" path="res://KOMShaders/Fire.tres" id="52_dtbe4"]
 [ext_resource type="Script" path="res://CustomScripts/Logic/KOMStats.gd" id="52_scrsn"]
+[ext_resource type="Texture2D" uid="uid://driq2dafkx6o1" path="res://KOMSprites/innout/FryPile.png" id="53_ka4si"]
 [ext_resource type="PackedScene" uid="uid://cvdfk0p6gjdfs" path="res://KOMPrefabs/Player/KOM_player_object.tscn" id="54_02isy"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_m231j"]
@@ -849,33 +843,31 @@ points = PackedVector3Array(-1.75, 1.375, 2, -1.75, 1.25, 2, -1.25, 1.25, 2, -1.
 lightmap_size_hint = Vector2i(14, 21)
 material = ExtResource("12_y4s1n")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_qwke8"]
-size = Vector3(0.981979, 0.309296, 1.02734)
-
-[sub_resource type="QuadMesh" id="1"]
+[sub_resource type="QuadMesh" id="QuadMesh_lx0m2"]
+resource_local_to_scene = true
 size = Vector2(3, 2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_2tvgm"]
-viewport_path = NodePath("Register/OrderPanel/SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_7pgvn"]
+viewport_path = NodePath("CounterParent/Register/OrderPanel/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_st0yu"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7bg37"]
 resource_local_to_scene = true
 transparency = 1
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_2tvgm")
+albedo_texture = SubResource("ViewportTexture_7pgvn")
 
-[sub_resource type="BoxShape3D" id="4"]
-size = Vector3(3, 2, 0.1)
+[sub_resource type="QuadMesh" id="QuadMesh_h5or2"]
+resource_local_to_scene = true
+size = Vector2(3, 2)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f7007"]
-albedo_color = Color(0.054902, 0.054902, 0.054902, 1)
+[sub_resource type="ViewportTexture" id="ViewportTexture_ss0oc"]
+viewport_path = NodePath("CounterParent/Register2/OrderPanel/SubViewport")
 
-[sub_resource type="BoxMesh" id="BoxMesh_2rpwp"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_kcj7t"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m8j5n"]
-albedo_color = Color(0.239216, 0.239216, 0.239216, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_le1vn"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_ss0oc")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s47yy"]
 size = Vector3(2.78459, 2.76039, 1.29054)
@@ -951,40 +943,40 @@ transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 8.43359,
 visible = false
 
 [node name="Skeleton3D" parent="PlayerObject/Player Model/PompRig" index="0"]
-bones/0/position = Vector3(-3.08456e-09, 0.813105, -0.158666)
+bones/0/position = Vector3(1.29442e-08, 0.792627, -0.158666)
 bones/1/rotation = Quaternion(-0.0628926, 0.000945223, 0.00010601, 0.99802)
-bones/2/rotation = Quaternion(-0.0727582, 0.0910177, -0.016514, 0.993051)
-bones/3/rotation = Quaternion(-0.00217293, -0.000259381, -0.000420943, 0.999998)
+bones/2/rotation = Quaternion(-0.110553, -0.020214, -0.0152195, 0.993548)
+bones/3/rotation = Quaternion(-0.00212922, -0.000209847, -0.000422477, 0.999998)
 bones/4/rotation = Quaternion(0.0298244, 2.17346e-15, 7.11069e-09, 0.999555)
-bones/5/rotation = Quaternion(0.160406, 0.0202064, -0.109635, 0.980735)
-bones/6/position = Vector3(0.0543594, 0.0792709, 0.0818457)
-bones/7/position = Vector3(0.0232468, 0.0754632, 0.10025)
-bones/13/position = Vector3(-0.00268881, 0.0706654, -0.0251178)
-bones/14/position = Vector3(-0.0718485, 0.089135, 0.0794674)
-bones/15/position = Vector3(-0.022836, 0.075535, 0.100164)
-bones/16/position = Vector3(0.0826742, 0.141673, 0.0188225)
-bones/16/scale = Vector3(0.714494, 0.714494, 0.714493)
-bones/17/position = Vector3(0.0693647, 0.1213, 0.0648905)
-bones/18/position = Vector3(-0.0693647, 0.1213, 0.0648905)
-bones/19/position = Vector3(-0.0448412, 0.147397, 0.0422178)
-bones/19/scale = Vector3(0.714744, 0.714744, 0.714744)
-bones/20/position = Vector3(0.00112834, 0.081845, 0.0948969)
-bones/21/position = Vector3(0.0691938, 0.174377, 0.044981)
-bones/22/position = Vector3(-0.0676718, 0.145416, 0.0555562)
+bones/5/rotation = Quaternion(0.166264, -0.128107, 0.0440084, 0.976733)
+bones/6/position = Vector3(0.0544409, 0.0795127, 0.0817628)
+bones/7/position = Vector3(0.0231207, 0.0753417, 0.100289)
+bones/13/position = Vector3(-0.00236005, 0.0710474, -0.0238626)
+bones/14/position = Vector3(-0.0681371, 0.0871505, 0.0801295)
+bones/15/position = Vector3(-0.0228301, 0.0753925, 0.100228)
+bones/16/position = Vector3(0.0451965, 0.14438, 0.0367171)
+bones/16/scale = Vector3(0.714578, 0.714578, 0.714578)
+bones/17/position = Vector3(0.0693907, 0.121472, 0.0648394)
+bones/18/position = Vector3(-0.0693907, 0.121472, 0.0648394)
+bones/19/position = Vector3(-0.0764116, 0.13967, 0.0239727)
+bones/19/scale = Vector3(0.714755, 0.714755, 0.714756)
+bones/20/position = Vector3(0.000994694, 0.0823414, 0.094702)
+bones/21/position = Vector3(0.0689922, 0.169603, 0.046112)
+bones/22/position = Vector3(-0.0682797, 0.157395, 0.0514511)
 bones/22/rotation = Quaternion(0.574497, -0.00427106, -0.0029976, 0.81849)
 bones/23/rotation = Quaternion(-0.535559, -0.441949, -0.458366, 0.554759)
-bones/24/rotation = Quaternion(-0.39854, 0.669703, -0.455836, 0.429974)
-bones/25/rotation = Quaternion(0.212033, -0.133969, 0.00336208, 0.96803)
-bones/28/position = Vector3(0.00379295, 0.131308, -0.041302)
-bones/28/rotation = Quaternion(-0.39346, -0.672098, 0.457209, 0.429457)
-bones/29/rotation = Quaternion(0.215024, 0.1323, 0.00291101, 0.967602)
+bones/24/rotation = Quaternion(-0.414639, 0.713198, -0.406743, 0.392409)
+bones/25/rotation = Quaternion(0.22042, -0.142063, 0.00226306, 0.965002)
+bones/28/position = Vector3(0.00361073, 0.131292, -0.0413101)
+bones/28/rotation = Quaternion(-0.412232, -0.714887, 0.407948, 0.390614)
+bones/29/rotation = Quaternion(0.220151, 0.141454, -0.00058732, 0.965155)
 bones/30/rotation = Quaternion(-0.00711013, -0.0729187, 0.0929765, 0.992969)
-bones/35/rotation = Quaternion(0.948786, -3.1476e-08, 3.38956e-07, 0.315918)
-bones/36/rotation = Quaternion(0.442273, -4.04521e-09, 1.22756e-07, 0.89688)
-bones/37/rotation = Quaternion(-0.694669, 1.71501e-07, -3.31244e-07, 0.71933)
-bones/40/rotation = Quaternion(0.950468, -1.23591e-07, 1.13775e-07, 0.310824)
-bones/41/rotation = Quaternion(0.440781, 1.19203e-09, -1.28163e-07, 0.897614)
-bones/42/rotation = Quaternion(-0.694669, -1.71501e-07, 3.31244e-07, 0.719329)
+bones/35/rotation = Quaternion(0.938374, -8.57271e-08, 3.42934e-07, 0.345623)
+bones/36/rotation = Quaternion(0.51519, 1.15673e-08, 2.66903e-08, 0.857076)
+bones/37/rotation = Quaternion(-0.724599, 1.64311e-07, -3.45516e-07, 0.689171)
+bones/40/rotation = Quaternion(0.937383, -8.55955e-08, 1.04226e-07, 0.348299)
+bones/41/rotation = Quaternion(0.508439, -1.35916e-08, -3.0609e-08, 0.861098)
+bones/42/rotation = Quaternion(-0.724599, -1.64311e-07, 3.45516e-07, 0.689171)
 
 [node name="FlashLightTPS" parent="PlayerObject" index="8"]
 visible = false
@@ -1018,7 +1010,7 @@ shape = SubResource("BoxShape3D_mwgd3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="MapsParent/NavigationRegion3D2/StaticBody3D2"]
 mesh = SubResource("BoxMesh_u0lml")
-skeleton = NodePath("../../../../Register/RegisterTarget")
+skeleton = NodePath("")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="MapsParent"]
 navigation_mesh = SubResource("NavigationMesh_5xqcj")
@@ -1843,7 +1835,7 @@ shape = SubResource("BoxShape3D_mwgd3")
 [node name="Behavior" type="Node" parent="Exit"]
 
 [node name="Spawner" type="Node3D" parent="." groups=["Spawner"]]
-transform = Transform3D(-1.49591e-08, 0, -0.342225, 0, 0.342225, 0, 0.342225, 0, -1.49591e-08, 9.86816, 2.18592, 10.7341)
+transform = Transform3D(-0.342225, 0, 2.99182e-08, 0, 0.342225, 0, -2.99182e-08, 0, -0.342225, 11.432, 2.18592, 12.7821)
 script = ExtResource("18_s3gdk")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Spawner"]
@@ -1854,15 +1846,13 @@ mesh = SubResource("BoxMesh_u0lml")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Spawner/StaticBody3D"]
 shape = SubResource("BoxShape3D_mwgd3")
 
-[node name="Behavior" type="Node" parent="Spawner"]
-
 [node name="AutoSpawner" type="Node3D" parent="Spawner" node_paths=PackedStringArray("TargetLoc", "NavNodeTarget")]
 script = ExtResource("18_j62et")
 Scene = ExtResource("10_g40kn")
 TargetLoc = NodePath("RayCast3D")
 ArrivalAction = 1
 SpawnOnLoad = true
-NavNodeTarget = NodePath("../../Register/RegisterTarget")
+NavNodeTarget = NodePath("../../CounterParent/Register/RegisterTarget")
 
 [node name="RayCast3D" type="RayCast3D" parent="Spawner/AutoSpawner"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.03296, 0.00861788, -0.00107765)
@@ -1870,153 +1860,76 @@ target_position = Vector3(0, -3.71, 0)
 debug_shape_custom_color = Color(0, 0, 0, 0.988235)
 debug_shape_thickness = 5
 
-[node name="Register" type="Node3D" parent="."]
-transform = Transform3D(0.585, 0, 0, 0, 0.585, 0, 0, 0, 0.585, 3.67332, 0.610299, -4.50224)
+[node name="Spawner2" type="Node3D" parent="." groups=["Spawner"]]
+transform = Transform3D(-0.342225, 0, 2.99182e-08, 0, 0.342225, 0, -2.99182e-08, 0, -0.342225, 11.432, 2.18592, 13.7821)
+script = ExtResource("18_s3gdk")
 
-[node name="RegisterTarget" type="Node3D" parent="Register" node_paths=PackedStringArray("RegisterOrderGen") groups=["ExecOnReached", "NavNodeTarget", "Register"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112799, 0, 0)
-script = ExtResource("24_j3tin")
-RegisterOrderGen = NodePath("../RandomOrderGen")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Spawner2"]
+mesh = SubResource("BoxMesh_u0lml")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Register/RegisterTarget"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Spawner2"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Register/RegisterTarget/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spawner2/StaticBody3D"]
 shape = SubResource("BoxShape3D_mwgd3")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Register/RegisterTarget/StaticBody3D"]
-mesh = SubResource("BoxMesh_u0lml")
-skeleton = NodePath("../..")
+[node name="AutoSpawner" type="Node3D" parent="Spawner2" node_paths=PackedStringArray("TargetLoc", "NavNodeTarget")]
+script = ExtResource("18_j62et")
+Scene = ExtResource("10_g40kn")
+TargetLoc = NodePath("RayCast3D")
+ArrivalAction = 1
+SpawnOnLoad = true
+NavNodeTarget = NodePath("../../CounterParent/Register2/RegisterTarget")
 
-[node name="RegisterGrabber" parent="Register" instance=ExtResource("21_cs2nk")]
-transform = Transform3D(-1.19658, 0, -1.80679e-07, 0, 1.19658, 0, 1.80679e-07, 0, -1.19658, -0.837778, 2.74735, -0.383419)
+[node name="RayCast3D" type="RayCast3D" parent="Spawner2/AutoSpawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.03296, 0.00861788, -0.00107765)
+target_position = Vector3(0, -3.71, 0)
+debug_shape_custom_color = Color(0, 0, 0, 0.988235)
+debug_shape_thickness = 5
 
-[node name="Register2" parent="Register/RegisterGrabber/CanvasLayer" index="0" node_paths=PackedStringArray("NavNodeTarget", "SoundSource", "PosRefrence", "ItemGen") groups=["Register1"]]
-NavNodeTarget = NodePath("../../../../Exit")
-SoundSource = NodePath("../Sound")
-SoundPositive = ExtResource("23_2ich2")
-SoundNegative = ExtResource("24_divb8")
-PosRefrence = NodePath("../..")
-ItemGen = NodePath("../../../RandomOrderGen")
+[node name="CounterParent" type="Node3D" parent="."]
+transform = Transform3D(0.585, 0, 0, 0, 0.585, 0, 0, 0, 0.585, 3.67332, 0.610299, -4.50224)
 
-[node name="CollisionShape3D" parent="Register/RegisterGrabber" index="2"]
-transform = Transform3D(0.24, 0, 2.97838e-12, 0, 0.24, 0, -8.56062e-13, 0, 0.835, -0.00165892, -0.271315, 0.0449848)
+[node name="Register" parent="CounterParent" instance=ExtResource("23_upf76")]
 
-[node name="Camera3D" parent="Register/RegisterGrabber" index="3"]
-transform = Transform3D(1.42857, 0, 2.84217e-14, 0, 1.34082, 0.492978, -1.42109e-14, -0.492978, 1.34082, 3.57628e-07, 0.600475, 1.03062)
+[node name="RegisterTarget" parent="CounterParent/Register" index="0"]
+GeneratorID = 1
 
-[node name="Behavior" parent="Register/RegisterGrabber" index="4" node_paths=PackedStringArray("PlayerCam", "head", "CanvasToShow", "UIToToggle")]
-PlayerCam = NodePath("../../../PlayerObject/Head/SpringArm3D Z/MainCamera")
-head = NodePath("../../../PlayerObject/Head")
-CanvasToShow = NodePath("../CanvasLayer")
-UIToToggle = [NodePath("../../../PlayerObject/UI Overlay/CanvasLayer/UIPARENT")]
+[node name="Behavior" parent="CounterParent/Register/RegisterGrabber" index="4" node_paths=PackedStringArray("PlayerCam", "head", "UIToToggle")]
+PlayerCam = NodePath("../../../../PlayerObject/Head/SpringArm3D Z/MainCamera")
+head = NodePath("../../../../PlayerObject/Head")
+UIToToggle = [NodePath("../../../../PlayerObject/UI Overlay/CanvasLayer/UIPARENT")]
 
-[node name="Sketchfab_Scene" parent="Register/RegisterGrabber" instance=ExtResource("22_se4gb")]
-transform = Transform3D(-6.9064e-08, 0, -1.58, 0, 1.58, 0, 1.58, 0, -6.9064e-08, 0, -0.31476, 0)
+[node name="RandomOrderGen" parent="CounterParent/Register" index="3"]
+GenID = 1
 
-[node name="FoodTray" type="StaticBody3D" parent="Register"]
-transform = Transform3D(1.7094, 0, 0, 0, 1.7094, 0, 0, 0, 1.7094, 0.490974, 2.3959, -0.159983)
-
-[node name="Tray" parent="Register/FoodTray" instance=ExtResource("26_81bkd")]
-transform = Transform3D(0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 0, 0, 0)
-
-[node name="Behavior" type="Node" parent="Register/FoodTray" node_paths=PackedStringArray("TargetLoc", "OrderGen", "NavNodeTarget")]
-script = ExtResource("25_56rcf")
-Scene = ExtResource("25_dmq7q")
-TargetLoc = NodePath("../SpawnLoc")
-OrderGen = NodePath("../../RandomOrderGen")
-NavNodeTarget = NodePath("../../RegisterTarget")
-
-[node name="SpawnLoc" type="Node3D" parent="Register/FoodTray"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.179992, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Register/FoodTray"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0144118, 0.0861363, -0.0136719)
-shape = SubResource("BoxShape3D_qwke8")
-
-[node name="RandomOrderGen" parent="Register" groups=["OrderGen1"] instance=ExtResource("1_ttnhp")]
-
-[node name="CtrlInventoryGridEx" parent="Register/RandomOrderGen" index="3"]
-visible = false
-
-[node name="OrderPanel" type="Node3D" parent="Register"]
+[node name="SubViewport" parent="CounterParent/Register/OrderPanel" index="0"]
 process_mode = 3
-transform = Transform3D(-0.348682, 0, 0.181651, 0, 0.393162, 0, -0.181651, 0, -0.348682, -1.87698, 2.99961, -0.336513)
-script = ExtResource("44_ci45g")
 
-[node name="SubViewport" type="SubViewport" parent="Register/OrderPanel"]
-transparent_bg = true
-gui_embed_subwindows = true
-size = Vector2i(192, 157)
-render_target_update_mode = 4
+[node name="Quad" parent="CounterParent/Register/OrderPanel" index="1"]
+process_mode = 3
+mesh = SubResource("QuadMesh_lx0m2")
+surface_material_override/0 = SubResource("StandardMaterial3D_7bg37")
 
-[node name="CtrlInventoryGridEx" type="Control" parent="Register/OrderPanel/SubViewport"]
-custom_minimum_size = Vector2(168, 66)
-layout_direction = 1
-layout_mode = 3
-anchors_preset = 0
-offset_left = 10.0
-offset_top = 16.175
-offset_right = 178.0
-offset_bottom = 82.175
-scale = Vector2(1, 2)
-script = ExtResource("46_ldhek")
-item_spacing = 2
-grid_color = Color(0.494118, 0.415686, 0, 1)
-draw_selections = true
-selection_color = Color(0.492188, 0.414063, 0, 1)
-inventory_path = NodePath("../../../RandomOrderGen/InventoryGrid")
-default_item_texture = ExtResource("47_l7gdn")
+[node name="Register2" parent="CounterParent" instance=ExtResource("23_upf76")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.13413, 0, 0)
 
-[node name="Labels" type="Node2D" parent="Register/OrderPanel/SubViewport/CtrlInventoryGridEx"]
-visible = false
+[node name="RegisterTarget" parent="CounterParent/Register2" index="0"]
+GeneratorID = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Register/OrderPanel/SubViewport/CtrlInventoryGridEx/Labels"]
-offset_left = -14.0
-offset_top = -24.0
-offset_right = 149.0
-offset_bottom = 16.0
-bbcode_enabled = true
-text = "Order Gen Inventory"
+[node name="Register2" parent="CounterParent/Register2/RegisterGrabber/CanvasLayer" index="0" node_paths=PackedStringArray("NavNodeTarget")]
+NavNodeTarget = NodePath("../../../../../Exit")
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Register/OrderPanel/SubViewport/CtrlInventoryGridEx/Labels"]
-offset_top = 69.0
-offset_right = 135.0
-offset_bottom = 109.0
-bbcode_enabled = true
+[node name="Behavior" parent="CounterParent/Register2/RegisterGrabber" index="4" node_paths=PackedStringArray("PlayerCam", "head", "UIToToggle")]
+PlayerCam = NodePath("../../../../PlayerObject/Head/SpringArm3D Z/MainCamera")
+head = NodePath("../../../../PlayerObject/Head")
+UIToToggle = [NodePath("../../../../PlayerObject/UI Overlay/CanvasLayer/UIPARENT")]
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="Register/OrderPanel/SubViewport/CtrlInventoryGridEx/Labels"]
-offset_left = -304.0
-offset_top = -184.0
-offset_right = 114.0
-offset_bottom = -144.0
-bbcode_enabled = true
+[node name="RandomOrderGen" parent="CounterParent/Register2" index="3"]
+GenID = 2
 
-[node name="Quad" type="MeshInstance3D" parent="Register/OrderPanel"]
-transform = Transform3D(0.875, 0, 0, 0, 0.52, 0, 0, 0, 0.875, 0, 0, 0)
-mesh = SubResource("1")
-surface_material_override/0 = SubResource("StandardMaterial3D_st0yu")
-
-[node name="Area3D" type="Area3D" parent="Register/OrderPanel/Quad"]
-collision_layer = 2
-input_capture_on_drag = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Register/OrderPanel/Quad/Area3D"]
-shape = SubResource("4")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Register/OrderPanel"]
-transform = Transform3D(2.44, 0, -9.89732e-15, 0, 1, 0, 2.84111e-13, 0, 0.085, -0.0417078, -0.016037, -0.0472193)
-material_override = SubResource("StandardMaterial3D_f7007")
-mesh = SubResource("BoxMesh_2rpwp")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Register/OrderPanel"]
-transform = Transform3D(0.265, 0, -5.42962e-15, 0, 1.115, 0, 1.06581e-14, 0, 0.135, 1.19209e-07, -1.05388, -0.0578394)
-mesh = SubResource("BoxMesh_kcj7t")
-surface_material_override/0 = SubResource("StandardMaterial3D_m8j5n")
-
-[node name="ShowDebug" type="Node" parent="Register/OrderPanel" node_paths=PackedStringArray("OtherNodes")]
-script = ExtResource("49_nbb8w")
-key = 4194335
-OtherNodes = [null]
+[node name="Quad" parent="CounterParent/Register2/OrderPanel" index="1"]
+mesh = SubResource("QuadMesh_h5or2")
+surface_material_override/0 = SubResource("StandardMaterial3D_le1vn")
 
 [node name="Fries Pickup" parent="." instance=ExtResource("25_dmq7q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.84268, 1.72142, -8.16225)
@@ -2049,7 +1962,7 @@ transform = Transform3D(0.7, 0, 1.66893e-07, 0, 0.7, 0, -1.66893e-07, 0, 0.7, 0.
 layer = 2
 visible = false
 
-[node name="Register2" type="TextureButton" parent="KitchenParent/CamGrabber/CanvasLayer" node_paths=PackedStringArray("NavNodeTarget", "SoundSource", "PosRefrence", "ItemGen")]
+[node name="Register2" type="TextureButton" parent="KitchenParent/CamGrabber/CanvasLayer" node_paths=PackedStringArray("NavNodeTarget")]
 offset_left = -451.0
 offset_top = 122.0
 offset_right = -1.0
@@ -2057,11 +1970,8 @@ offset_bottom = 572.0
 texture_normal = ExtResource("30_chapo")
 script = ExtResource("31_0wo30")
 NavNodeTarget = NodePath("../../../../Exit")
-SoundSource = NodePath("../../../../Register/RegisterGrabber/CanvasLayer/Sound")
 SoundPositive = ExtResource("23_2ich2")
 SoundNegative = ExtResource("24_divb8")
-PosRefrence = NodePath("../../../../Register/RegisterTarget")
-ItemGen = NodePath("../../../../Register/RandomOrderGen")
 
 [node name="Sound" type="AudioStreamPlayer" parent="KitchenParent/CamGrabber/CanvasLayer"]
 
@@ -2070,7 +1980,7 @@ transform = Transform3D(1, 0, 3.58114e-12, 0, 1, 0, -3.58114e-12, 0, 1, 0.023293
 shape = SubResource("BoxShape3D_s47yy")
 
 [node name="Camera3D" type="Camera3D" parent="KitchenParent/CamGrabber"]
-transform = Transform3D(1.42857, 1.82311e-07, 5.29006e-08, -1.82311e-07, 1.20669, 0.764667, 5.29006e-08, -0.764667, 1.20669, 9.53674e-07, 0.46123, 0.69226)
+transform = Transform3D(1.42857, 1.69954e-07, 4.54328e-08, -1.69954e-07, 1.23801, 0.712839, 4.54326e-08, -0.712839, 1.23801, 9.53674e-07, 0.46123, 0.69226)
 
 [node name="Behavior" type="Node" parent="KitchenParent/CamGrabber" node_paths=PackedStringArray("PlayerCam", "MenuCam", "head", "CanvasToShow", "CollisionShape", "UIToToggle")]
 script = ExtResource("31_nmv1o")
@@ -2270,6 +2180,22 @@ text = "[shake rate=20] PLACEHOLDER"
 script = ExtResource("52_scrsn")
 InnoutVerLabel = NodePath("..")
 
+[node name="FreezerParent" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1822, 2.52899, -2.10724)
+
+[node name="FoodSpawner" parent="FreezerParent" instance=ExtResource("17_np13h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16579, -0.451822, 0.798867)
+
+[node name="FoodSpawner2" parent="FreezerParent" instance=ExtResource("17_np13h")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2.58315, -0.442741, 0.0106087)
+
+[node name="Behavior" parent="FreezerParent/FoodSpawner2/StaticBody3D" index="1"]
+ItemID = "FFries"
+
+[node name="FoodDisplay" parent="FreezerParent/FoodSpawner2" index="2"]
+transform = Transform3D(-5.55135e-09, 0, -0.077, 0, 0.197, 0, 0.127, 0, -3.36578e-09, -0.77107, 0.376952, -0.382354)
+texture = ExtResource("53_ka4si")
+
 [connection signal="closed" from="FrontDoor/DoorGlass/Behavior" to="FrontDoor/AreaTrigger" method="_on_behavior_closed"]
 [connection signal="open" from="FrontDoor/DoorGlass/Behavior" to="FrontDoor/AreaTrigger" method="_on_behavior_open"]
 [connection signal="closed" from="BackDoor/DoorGlass/Behavior" to="BackDoor/AreaTrigger" method="_on_behavior_closed"]
@@ -2286,10 +2212,20 @@ InnoutVerLabel = NodePath("..")
 [editable path="BackDoor/DoorGlass"]
 [editable path="BackDoor/DoorGlass2"]
 [editable path="BackDoor/AreaTrigger"]
-[editable path="Register/RegisterGrabber"]
-[editable path="Register/RandomOrderGen"]
+[editable path="CounterParent/Register"]
+[editable path="CounterParent/Register/RegisterGrabber"]
+[editable path="CounterParent/Register/FoodTray"]
+[editable path="CounterParent/Register/RandomOrderGen"]
+[editable path="CounterParent/Register/OrderPanel"]
+[editable path="CounterParent/Register2"]
+[editable path="CounterParent/Register2/RegisterGrabber"]
+[editable path="CounterParent/Register2/FoodTray"]
+[editable path="CounterParent/Register2/RandomOrderGen"]
+[editable path="CounterParent/Register2/OrderPanel"]
 [editable path="KitchenParent/Fryer"]
 [editable path="KitchenParent/Fryer/Fryer_basket"]
 [editable path="KitchenParent/Fryer/Fryer_basket2"]
 [editable path="DriveThruParent/DriveThru/DoorGlass"]
 [editable path="FreshFriesParent/Fresh Fries Pickup"]
+[editable path="FreezerParent/FoodSpawner"]
+[editable path="FreezerParent/FoodSpawner2"]

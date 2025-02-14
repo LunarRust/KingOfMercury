@@ -24,6 +24,8 @@ var SpriteNum : int
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	inv = get_tree().get_first_node_in_group("KOMInventoryManager").inv
+	if inv == null:
+		inv = InventoryManager.inventoryInstance
 	animTrigger("Down")
 	up = false
 	pass # Replace with function body.
