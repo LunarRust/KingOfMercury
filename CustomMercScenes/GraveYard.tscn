@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dlno3r6y8bqcb" path="res://KOMModels/GraveStones/GraveStone.tscn" id="13_yf2k5"]
 [ext_resource type="Texture2D" uid="uid://crxbg1jt8f3df" path="res://KOMSprites/Trees/Tree_4 (2).PNG" id="14_33drs"]
 [ext_resource type="Script" path="res://CustomScripts/SceneTransfer.gd" id="14_73phg"]
-[ext_resource type="Texture2D" uid="uid://blrurxsx4yddd" path="res://KOMSprites/Trees/Tree_2 (5).PNG" id="15_44d0x"]
+[ext_resource type="Texture2D" uid="uid://cijeyw4itr1lr" path="res://KOMSprites/Trees/Tree_2 (5).PNG" id="15_44d0x"]
 [ext_resource type="PackedScene" uid="uid://wtckr3mak6q8" path="res://KOMPrefabs/Thrait/thrait_woman.tscn" id="17_tmsj8"]
 [ext_resource type="PackedScene" uid="uid://dq26m2l7pkuqp" path="res://KOMPrefabs/Thrait/thrait_youngling.tscn" id="18_w6wq0"]
 [ext_resource type="Texture2D" uid="uid://xc2tdf6fowil" path="res://Models/PsychopompPlayerModel_0.png" id="20_yst2y"]
@@ -4971,8 +4971,8 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.488
 transform = Transform3D(-0.499929, -3.81787e-11, -0.00845574, -5.15518e-11, 0.5, 7.90332e-10, 0.00845574, 7.91091e-10, -0.499928, -0.0420245, 1.01861, 0.0283227)
 
 [node name="DialogueSystem" parent="GraveStone/GenericDiologueBody" index="1"]
-Dialogue = "Gravestones can make for surprisingly conversation if you are willing to
-listen."
+Dialogue = "Gravestones can make for surprisingly
+good conversation if you are willing to listen."
 LookDescription = " Reads \"Here lies Ashley E-----, gone before the world
 could truly know her.\""
 
