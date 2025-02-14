@@ -1,12 +1,14 @@
-[gd_scene load_steps=26 format=3 uid="uid://ukgfvuqmgmx6"]
+[gd_scene load_steps=28 format=3 uid="uid://ukgfvuqmgmx6"]
 
-[ext_resource type="Texture2D" uid="uid://b08v5m5rhwj3g" path="res://KOMModels/innout/restaurant_Metal_Grill_024_basecolor.png" id="1_lqmyy"]
-[ext_resource type="AudioStream" uid="uid://x3xpwx5jds16" path="res://Sounds/Droplet.ogg" id="2_pp7sf"]
+[ext_resource type="Texture2D" uid="uid://fnur461jyc4e" path="res://KOMModels/innout/restaurant_Metal_Grill_024_basecolor.png" id="1_lqmyy"]
+[ext_resource type="AudioStream" uid="uid://dpdoe14tukan8" path="res://Sounds/Droplet.ogg" id="2_pp7sf"]
 [ext_resource type="Script" path="res://CustomScripts/Objects/In'nOut/FryerBehavior.gd" id="3_ikwmq"]
-[ext_resource type="Texture2D" uid="uid://b8cnpnu0vqxy6" path="res://KOMSprites/innout/fries.png" id="4_3ixg2"]
-[ext_resource type="Texture2D" uid="uid://l3b4taiqqnid" path="res://KOMSprites/innout/In-N-Out-Burger.png" id="5_bauqm"]
-[ext_resource type="Texture2D" uid="uid://driq2dafkx6o1" path="res://KOMSprites/innout/FryPile.png" id="6_x2hep"]
+[ext_resource type="Texture2D" uid="uid://bwb81o7vwgs1" path="res://KOMSprites/innout/fries.png" id="4_3ixg2"]
+[ext_resource type="Texture2D" uid="uid://b3ff2t2wvlbv7" path="res://KOMSprites/innout/raw-patty.png" id="5_x77u4"]
+[ext_resource type="Texture2D" uid="uid://bote0nnsinsvg" path="res://KOMSprites/innout/FryPile.png" id="6_x2hep"]
 [ext_resource type="SpriteFrames" uid="uid://bwwe0yu1rhfcs" path="res://KOMSprites/innout/FFriesFire.tres" id="7_ljurn"]
+[ext_resource type="Texture2D" uid="uid://ctdyh27w12rb4" path="res://KOMSprites/innout/cooked-patty.png" id="7_sox1w"]
+[ext_resource type="Texture2D" uid="uid://dxdbgpdskrtjp" path="res://KOMSprites/innout/friesBurnt.png" id="8_rhgwp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5sa5h"]
 resource_name = "grill"
@@ -226,7 +228,9 @@ FryerSound = NodePath("../../FryerSound")
 TargetLoc = NodePath("../../TargetLoc")
 SpriteObject = NodePath("../../Sprite3D")
 AnimatedSpriteObject = NodePath("../../AnimatedSprite3D")
-Sprites = Array[Resource]([ExtResource("4_3ixg2"), ExtResource("5_bauqm"), ExtResource("6_x2hep")])
+Sprites = Array[Resource]([ExtResource("4_3ixg2"), ExtResource("5_x77u4"), ExtResource("6_x2hep")])
+CookedSprites = Array[CompressedTexture2D]([ExtResource("6_x2hep"), ExtResource("7_sox1w"), ExtResource("4_3ixg2")])
+BurnedSprites = Array[CompressedTexture2D]([null, null, ExtResource("8_rhgwp")])
 DebugLabels = NodePath("../../DebugLabels")
 
 [node name="TargetLoc" type="Node3D" parent="fryer basket1 "]
@@ -240,6 +244,7 @@ texture_filter = 1
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="fryer basket1 "]
 transform = Transform3D(6.23, -1.13687e-13, -1.77715e-26, 1.13687e-13, 6.23, -1.13687e-13, -2.03288e-20, 1.13687e-13, 6.23, 21.6993, 39.3777, -95.942)
+visible = false
 billboard = 1
 alpha_cut = 2
 texture_filter = 1

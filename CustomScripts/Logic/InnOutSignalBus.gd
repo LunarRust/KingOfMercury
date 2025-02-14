@@ -1,2 +1,3 @@
 extends Node
-signal OrderGen
+signal OrderGen(ID : int)
+signal ReadyToOrder(ID : int)

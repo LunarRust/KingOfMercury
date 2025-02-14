@@ -13,6 +13,8 @@ extends CharacterBody3D
 @export var FlashLight : SpotLight3D
 @export var DebugLabelParent : Node3D
 var TargetEntity
+var NavNodeTarget : Node
+var PreviousNavNodeTarget : Node
 var PreviousTarget
 var DoLookAt : bool = false
 var LookTarget : Node3D
@@ -35,6 +37,7 @@ var walkName = "Walk"
 var attackName = "Attack"
 var meleeAttack : bool = true
 
+var SpawnerID : int
 var AllowPlayerCon : bool = true
 var attackTimer : float
 var attacking : bool = false
@@ -49,7 +52,7 @@ var forwardVel : float
 var PointNavrunning : bool
 var InstID
 var SignalBusKOM
-var NavNodeTarget : Node
+
 var player
 var ActionOnArrive : int = 0
 @onready var SoundSource : AudioStreamPlayer3D = self.get_node("AudioStreamPlayer3D")
@@ -129,7 +132,9 @@ func running_handling(delta):
 			handle_Move(delta)
 		elif !hurt:
 			velocity = velocity.lerp(Vector3.ZERO, delta)
-			
+		
+		if NavNodeTarget == null:
+			NavNodeTarget = get_tree().get_first_node_in_group("NavMark" + str(InstID))
 		if position.distance_to(TargetEntity.position) < AttackDistance && ActionOnArrive != 0:
 			ArrivalAction(ActionOnArrive)
 			if NavNodeTarget != null:
@@ -138,13 +143,17 @@ func running_handling(delta):
 							NavNodeTarget.Reached()
 		if attackTimer > attackThreshold:
 			if NavNodeTarget != null:
-				if NavNodeTarget.is_in_group("KillNPC") && TargetEntity.name == "NavNode":
-					attackTimer = 0
-					var currentMark = get_tree().get_first_node_in_group("NavMark" + str(InstID))
-					currentMark.queue_free()
-					if NavNodeTarget.is_in_group("Respawn"):
-						SignalBusKOM.emit_signal("CreateNpc")
-					KillSelf()
+				if NavNodeTarget.is_in_group("KillNPC"):
+					if "InstID" in TargetEntity:
+						if TargetEntity.InstID == InstID:
+							attackTimer = 0
+							var currentMark = get_tree().get_first_node_in_group("NavMark" + str(InstID))
+							currentMark.queue_free()
+							if NavNodeTarget.is_in_group("Respawn"):
+								SignalBusKOM.emit_signal("CreateNpc",SpawnerID)
+							KillSelf()
+			else:
+				print("NavNodeTarget is NULL")
 				
 		if (attackTimer > attackThreshold && attacking && hostile):
 			Attack()
@@ -299,18 +308,21 @@ func CheckGlobals():
 ###################################
 				
 func NavToPoint(id : int,doLook : bool,NavNodeTargetFromSignalBus : Node,distance : float,Action : int,LookTargetFromBus : String):
-	NavNodeTarget = NavNodeTargetFromSignalBus
-	ActionOnArrive = Action
+	
 	if id == InstID:
 		TargetEntity = TargetLocator("NavMark" + str(InstID),distance)
-	if doLook == true:
-		if LookTargetFromBus == "default":
-			LookTarget = NavNodeTargetFromSignalBus
+		if NavNodeTargetFromSignalBus != null:
+			PreviousNavNodeTarget = NavNodeTarget
+			NavNodeTarget = NavNodeTargetFromSignalBus
+		ActionOnArrive = Action
+		if doLook == true:
+			if LookTargetFromBus == "default":
+				LookTarget = NavNodeTargetFromSignalBus
+			else:
+				LookTarget = find_closest_or_furthest(self,LookTargetFromBus)
+			DoLookAt = true
 		else:
-			LookTarget = find_closest_or_furthest(self,LookTargetFromBus)
-		DoLookAt = true
-	else:
-		DoLookAt = false
+			DoLookAt = false
 		
 func NavToItem(id : int,NavNodeTargetFromSignalBus : Node,Action : int):
 	NavNodeTarget = NavNodeTargetFromSignalBus

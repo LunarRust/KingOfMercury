@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://1hngh8psls2n"]
+[gd_scene load_steps=42 format=3 uid="uid://1hngh8psls2n"]
 
 [ext_resource type="PackedScene" uid="uid://d1m1r3psoqh4d" path="res://CustomMercScenes/CustomScenes/MenuLabelBase.tscn" id="1_ybrmv"]
 [ext_resource type="Texture2D" uid="uid://dr1ccek3pjmf7" path="res://Sprites/UI/PsychopompFaceSmile.png" id="2_bob0l"]
@@ -30,6 +30,7 @@
 [ext_resource type="Script" path="res://CustomScripts/EmeraldKeysCollectedChanger.gd" id="23_307jd"]
 [ext_resource type="AudioStream" uid="uid://cwu83yi6qfjwb" path="res://Sounds/tick3.ogg" id="24_3ls6n"]
 [ext_resource type="Script" path="res://CustomScripts/Logic/AppearOnPress.gd" id="27_1kpg6"]
+[ext_resource type="Script" path="res://CustomScripts/Logic/KOMStats.gd" id="31_frqit"]
 
 [sub_resource type="StyleBoxEmpty" id="7"]
 
@@ -53,10 +54,25 @@
 
 [node name="Node2D" type="Node2D"]
 
+[node name="KOMStats" type="Node" parent="." node_paths=PackedStringArray("KOMVerLabel")]
+script = ExtResource("31_frqit")
+KOMVerLabel = NodePath("../VerLabel")
+
 [node name="DebugLabel" parent="." instance=ExtResource("1_ybrmv")]
-offset_right = 335.0
+offset_right = 448.245
 offset_bottom = 69.0
 mouse_filter = 2
+text = "[shake rate=20] KING OF MERCURY"
+
+[node name="VerLabel" parent="." instance=ExtResource("1_ybrmv")]
+offset_left = 1.0
+offset_top = 60.0
+offset_right = 501.0
+offset_bottom = 121.0
+scale = Vector2(0.635, 0.635)
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "[shake rate=20] PLACEHOLDER"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -5
@@ -181,6 +197,7 @@ texture_normal = ExtResource("11_626e0")
 stretch_mode = 0
 
 [node name="Cursor" parent="." instance=ExtResource("11_0nmd8")]
+visible = false
 
 [node name="WorldWarpButtonsParent" type="Node2D" parent="."]
 visible = false
@@ -792,10 +809,10 @@ script = ExtResource("12_w86w3")
 [node name="LoadCustomTestButton" type="Button" parent="."]
 top_level = true
 z_as_relative = false
-offset_left = 540.0
-offset_top = 17.0
-offset_right = 754.0
-offset_bottom = 65.0
+offset_left = 221.0
+offset_top = 98.0
+offset_right = 435.0
+offset_bottom = 146.0
 theme = ExtResource("4_t3qcm")
 theme_override_colors/font_color = Color(0.320416, 0.418491, 0.657654, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -830,10 +847,10 @@ script = ExtResource("12_w86w3")
 [node name="LoadCustomDebugRoomButton" type="Button" parent="."]
 top_level = true
 z_as_relative = false
-offset_left = 325.0
-offset_top = 17.0
-offset_right = 538.999
-offset_bottom = 65.0001
+offset_left = 6.0
+offset_top = 98.0
+offset_right = 219.999
+offset_bottom = 146.0
 theme = ExtResource("4_t3qcm")
 theme_override_colors/font_color = Color(0.320416, 0.418491, 0.657654, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
