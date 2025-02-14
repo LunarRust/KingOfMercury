@@ -232,6 +232,8 @@ Sprites = Array[Resource]([ExtResource("4_3ixg2"), ExtResource("5_x77u4"), ExtRe
 CookedSprites = Array[CompressedTexture2D]([ExtResource("6_x2hep"), ExtResource("7_sox1w"), ExtResource("4_3ixg2")])
 BurnedSprites = Array[CompressedTexture2D]([null, null, ExtResource("8_rhgwp")])
 DebugLabels = NodePath("../../DebugLabels")
+CookedTime = 10.0
+BurnTime = 25.0
 
 [node name="TargetLoc" type="Node3D" parent="fryer basket1 "]
 transform = Transform3D(0.999999, -4.26326e-14, -1.01644e-20, 4.26326e-14, 0.999999, -4.26326e-14, -1.35525e-20, 4.26326e-14, 0.999999, 21.7056, 43.9248, -95.2075)
