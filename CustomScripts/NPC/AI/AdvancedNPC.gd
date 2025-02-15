@@ -298,7 +298,7 @@ func CheckGlobals():
 			if FlashLight.visible:
 				FlashLightOff()
 		if !NpcRules.InventoryVisible:
-			self.get_node("CtrlInventoryGridEx").hide()
+			self.get_node("VenusModel/OrderPanel/SubViewport/InvDisplay").hide()
 		if NpcRules.AllowPlayerControl == true:
 			AllowPlayerCon = true
 		else:

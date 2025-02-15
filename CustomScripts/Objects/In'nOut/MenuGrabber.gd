@@ -4,6 +4,7 @@ extends Node
 @export var MenuCam : Camera3D
 @export var head : Node3D
 @export var CanvasToShow : CanvasLayer
+@export var Speed : float = 1
 @export var CamCurve : Curve
 @export var CollisionShape : CollisionShape3D
 @export var UIToToggle : Array[Node2D] = []
@@ -64,7 +65,7 @@ func _process(delta):
 			#sPlayerCam.make_current()
 			
 		if CamCurve.sample(t) <= 1:
-			t += delta
+			t += delta * Speed
 		PlayerCam.global_transform = PlayerCamCurrentTransform.interpolate_with(MenuCamCurrentTransform,CamCurve.sample(t))
 	
 	

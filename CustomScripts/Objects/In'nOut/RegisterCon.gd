@@ -117,6 +117,7 @@ func _on_pressed():
 			ItemGen.Clear()
 			Task()
 		else:
+			currentNPC.get_node("InventoryGrid").clear()
 			currentNPC.animTrigger("Shrug")
 			SoundSource.stream = SoundNegative
 			SoundSource.play()
