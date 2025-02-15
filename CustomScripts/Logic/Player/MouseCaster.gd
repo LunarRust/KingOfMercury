@@ -45,15 +45,18 @@ func Cast():
 	physicsRayQueryParameters3D.hit_back_faces = false
 	var dictionary : Dictionary = space_state.intersect_ray(physicsRayQueryParameters3D)
 	print_rich("[color=red]" + str(dictionary) + "[/color]")
+	if !dictionary.is_empty() && (dictionary["collider"] as CollisionObject3D).has_node("DialogueSystem"):
+		(dictionary["collider"] as CollisionObject3D).get_node("DialogueSystem").DialogueProcessing()
 	if !dictionary.is_empty() && (dictionary["collider"] as CollisionObject3D).has_node("Behavior"):
 		node = (dictionary["collider"] as CollisionObject3D).get_node("Behavior")
 	match  interactionButtonKOM.interactionMode:
 		3: 
 			if !dictionary.is_empty():
-				if node.has_method("Touch"):
-					animTrigger("Touch")
-					node.Touch()
-					print_rich("Touched object is: [color=red]" + str(node) + "[/color]")
+				if node != null:
+					if node.has_method("Touch"):
+						animTrigger("Touch")
+						node.Touch()
+						print_rich("Touched object is: [color=red]" + str(node) + "[/color]")
 		4: 
 			animTrigger("Attack")
 			HammerAnim.stop()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=284 format=3 uid="uid://bnsf0wmclcn8f"]
+[gd_scene load_steps=285 format=3 uid="uid://bnsf0wmclcn8f"]
 
 [ext_resource type="Script" path="res://CustomScripts/Logic/InnOutSignalBus.gd" id="1_cabgq"]
 [ext_resource type="Script" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_edl00"]
@@ -33,6 +33,7 @@
 [ext_resource type="Script" path="res://CustomScripts/Objects/In'nOut/MenuGrabber.gd" id="31_nmv1o"]
 [ext_resource type="AudioStream" uid="uid://cwu83yi6qfjwb" path="res://Sounds/tick3.ogg" id="32_fai3p"]
 [ext_resource type="Curve" uid="uid://iwl6freusb4t" path="res://KOMResources/Curves/CamGrabberCurve.tres" id="34_umu80"]
+[ext_resource type="PackedScene" uid="uid://ciryyfobi7dmd" path="res://KOMPrefabs/Thrait/thrait_albino.tscn" id="42_k2en5"]
 [ext_resource type="Texture2D" uid="uid://h8eiphbtudkv" path="res://textures/glass_bright.png" id="45_gstyw"]
 [ext_resource type="Script" path="res://CustomScripts/Logic/AppearOnPress.gd" id="49_nbb8w"]
 [ext_resource type="AudioStream" uid="uid://bwf44cbb4w1uc" path="res://KOMSounds/speaker-buzz-82989.mp3" id="50_mn1gb"]
@@ -939,35 +940,33 @@ transform = Transform3D(-1, 0, 8.74232e-08, 0, 1, 0, -8.74232e-08, 0, -1, 4.6101
 visible = false
 
 [node name="Skeleton3D" parent="PlayerObject/Player Model/PompRig" index="0"]
-bones/0/position = Vector3(-1.3468e-10, 0.901106, -0.158666)
-bones/2/rotation = Quaternion(-0.0820529, -0.0152369, 0.000803873, 0.996511)
-bones/3/rotation = Quaternion(-0.00203327, -0.000101119, -0.000425845, 0.999998)
-bones/5/rotation = Quaternion(0.160284, -0.0177778, 0.00331697, 0.986905)
-bones/6/position = Vector3(0.0546197, 0.0800432, 0.0815809)
-bones/7/position = Vector3(0.0228437, 0.0750751, 0.100373)
-bones/13/position = Vector3(-9.19134e-05, 0.0736834, -0.0152018)
-bones/14/position = Vector3(-0.0550232, 0.0803412, 0.0816405)
-bones/15/position = Vector3(-0.0228171, 0.0750797, 0.100367)
-bones/16/position = Vector3(0.048237, 0.144793, 0.037992)
-bones/16/scale = Vector3(0.714765, 0.714765, 0.714765)
-bones/17/position = Vector3(0.0694479, 0.121851, 0.0647273)
-bones/18/position = Vector3(-0.0694479, 0.121851, 0.0647273)
-bones/19/position = Vector3(-0.0672217, 0.142088, 0.0305208)
-bones/19/scale = Vector3(0.714781, 0.714781, 0.714781)
-bones/20/position = Vector3(6.88339e-05, 0.0857813, 0.0933511)
-bones/21/position = Vector3(0.0694091, 0.179475, 0.0437729)
-bones/22/position = Vector3(-0.0694268, 0.179999, 0.0437048)
-bones/24/rotation = Quaternion(-0.367463, 0.603313, -0.522898, 0.477035)
-bones/25/rotation = Quaternion(0.00175918, -0.0949072, -0.00221016, 0.995482)
-bones/28/position = Vector3(0.00321077, 0.131255, -0.0413278)
-bones/28/rotation = Quaternion(-0.365403, -0.604864, 0.524637, 0.474737)
-bones/29/rotation = Quaternion(0.00145242, 0.0940259, 0.00371339, 0.995562)
-bones/35/rotation = Quaternion(0.984655, -2.49096e-08, 3.52837e-07, 0.174514)
-bones/36/rotation = Quaternion(0.136689, -2.32101e-10, 2.78944e-08, 0.990614)
-bones/37/rotation = Quaternion(-0.557477, 1.97933e-07, -2.65826e-07, 0.830193)
-bones/40/rotation = Quaternion(0.984138, -6.58624e-08, 1.17749e-07, 0.177406)
-bones/41/rotation = Quaternion(0.143378, -8.19304e-10, -3.55707e-08, 0.989668)
-bones/42/rotation = Quaternion(-0.557477, -1.97933e-07, 2.65826e-07, 0.830193)
+bones/0/position = Vector3(5.12779e-09, 0.856897, -0.158666)
+bones/2/rotation = Quaternion(-0.0778213, -0.00781328, 0.00154843, 0.996935)
+bones/3/rotation = Quaternion(-0.0716954, -0.0790505, 0.0038863, 0.994282)
+bones/5/rotation = Quaternion(-0.0274461, -0.271283, 0.0546407, 0.960556)
+bones/6/position = Vector3(0.050067, 0.066509, 0.0861356)
+bones/7/position = Vector3(0.0292884, 0.0812801, 0.0984115)
+bones/13/position = Vector3(-3.81876e-05, 0.0737458, -0.0149968)
+bones/14/position = Vector3(-0.0496657, 0.0659042, 0.0862907)
+bones/15/position = Vector3(-0.0228527, 0.0759342, 0.0999856)
+bones/16/position = Vector3(0.0540133, 0.153064, 0.0371425)
+bones/16/scale = Vector3(0.714256, 0.714256, 0.714256)
+bones/17/position = Vector3(0.0691281, 0.119732, 0.0653547)
+bones/18/position = Vector3(-0.0691281, 0.119732, 0.0653547)
+bones/19/position = Vector3(-0.0548649, 0.152949, 0.0368068)
+bones/19/scale = Vector3(0.714711, 0.714711, 0.714712)
+bones/21/position = Vector3(0.0694263, 0.17988, 0.043677)
+bones/24/rotation = Quaternion(-0.348428, 0.616176, -0.505115, 0.493745)
+bones/25/rotation = Quaternion(0.248624, -0.191496, 0.0177418, 0.949316)
+bones/28/position = Vector3(0.0136526, 0.132206, -0.0408644)
+bones/28/rotation = Quaternion(-0.38798, -0.659658, 0.452549, 0.457737)
+bones/29/rotation = Quaternion(0.249771, 0.190615, -0.0137772, 0.949258)
+bones/35/rotation = Quaternion(0.96904, -4.98609e-08, 3.4995e-07, 0.246903)
+bones/36/rotation = Quaternion(0.30072, 4.4884e-09, 2.86844e-08, 0.953713)
+bones/37/rotation = Quaternion(-0.629529, 1.85246e-07, -3.00183e-07, 0.776977)
+bones/40/rotation = Quaternion(0.969302, -7.33445e-08, 1.12737e-07, 0.245873)
+bones/41/rotation = Quaternion(0.292791, -6.05058e-09, -3.29399e-08, 0.956177)
+bones/42/rotation = Quaternion(-0.629529, -1.85246e-07, 3.00183e-07, 0.776977)
 
 [node name="FlashLightTPS" parent="PlayerObject" index="8"]
 visible = false
@@ -2156,6 +2155,9 @@ ItemID = "FFries"
 [node name="FoodDisplay" parent="FreezerParent/FoodSpawner2" index="2"]
 transform = Transform3D(-5.55135e-09, 0, -0.077, 0, 0.197, 0, 0.127, 0, -3.36578e-09, -0.77107, 0.376952, -0.382354)
 texture = ExtResource("53_ka4si")
+
+[node name="Thrait Albino" parent="." instance=ExtResource("42_k2en5")]
+transform = Transform3D(1, 0, 4.47035e-08, 0, 1, 0, -4.47035e-08, 0, 1, -2.96705, 1, 0.34419)
 
 [connection signal="closed" from="FrontDoor/DoorGlass/Behavior" to="FrontDoor/AreaTrigger" method="_on_behavior_closed"]
 [connection signal="open" from="FrontDoor/DoorGlass/Behavior" to="FrontDoor/AreaTrigger" method="_on_behavior_open"]
