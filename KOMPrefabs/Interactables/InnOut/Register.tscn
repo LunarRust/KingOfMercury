@@ -196,6 +196,9 @@ mouse_filter = 2
 mesh = SubResource("QuadMesh_cisdd")
 surface_material_override/0 = SubResource("StandardMaterial3D_7xt4g")
 
+[node name="ShowDebug" parent="OrderPanel" index="4" node_paths=PackedStringArray("OtherNodes")]
+OtherNodes = [null]
+
 [editable path="RegisterGrabber"]
 [editable path="FoodTray"]
 [editable path="RandomOrderGen"]

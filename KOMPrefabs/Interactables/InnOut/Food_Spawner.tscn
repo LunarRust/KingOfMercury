@@ -1,12 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://gix2jhce0o2h"]
+[gd_scene load_steps=20 format=3 uid="uid://gix2jhce0o2h"]
 
+[ext_resource type="Script" path="res://CustomMercScenes/CustomScenes/3dgui/gui_3d.gd" id="1_5jc4k"]
 [ext_resource type="Script" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_34j1f"]
 [ext_resource type="Resource" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="2_pfff6"]
 [ext_resource type="Material" path="res://textures/Plastic2.tres" id="3_amkx1"]
 [ext_resource type="Material" path="res://textures/Rust.tres" id="4_aj38o"]
 [ext_resource type="Script" path="res://CustomScripts/Objects/In'nOut/FoodSpawner.gd" id="5_y1vtp"]
-[ext_resource type="AudioStream" uid="uid://cnohmfrk4pxtj" path="res://Sounds/Pickup.ogg" id="6_8dvv0"]
-[ext_resource type="Texture2D" uid="uid://bl64mywvhcrqi" path="res://KOMSprites/innout/raw-patty.png" id="7_l2pam"]
+[ext_resource type="AudioStream" uid="uid://b6u3qkb0mte27" path="res://Sounds/Pickup.ogg" id="6_8dvv0"]
+[ext_resource type="Texture2D" uid="uid://b3ff2t2wvlbv7" path="res://KOMSprites/innout/raw-patty.png" id="7_l2pam"]
+[ext_resource type="Material" uid="uid://b2q8quyis51mr" path="res://KOMShaders/CRT.tres" id="8_jv6nd"]
+[ext_resource type="Texture2D" uid="uid://tk0d1labganf" path="res://KOMMaterials/green.PNG" id="9_6bhio"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wl11t"]
 size = Vector3(0.764831, 0.747994, 0.74646)
@@ -48,7 +51,27 @@ points = PackedVector3Array(-1, 1, -1, -1, 0, -1, 0, 0, -1, 0, 1, -1, -1, 1, 0, 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uuscy"]
 points = PackedVector3Array(0, -1, -1, 0, 0, -1, -1, 0, -1, -1, 0, 0, 0, -1, 0, 0, 0, 0)
 
-[node name="FoodSpawner" type="Node3D"]
+[sub_resource type="QuadMesh" id="QuadMesh_0ulbx"]
+resource_local_to_scene = true
+size = Vector2(3, 2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_lwuib"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xknp7"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_lwuib")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n1oak"]
+size = Vector3(3, 2, 0.1)
+
+[node name="FoodSpawner" type="Node3D" node_paths=PackedStringArray("node_viewport", "node_quad", "node_area")]
+script = ExtResource("1_5jc4k")
+node_viewport = NodePath("SubViewport")
+node_quad = NodePath("Quad")
+node_area = NodePath("Quad/Area3D")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -96,3 +119,24 @@ shape = SubResource("ConvexPolygonShape3D_aiymt")
 
 [node name="entity_0_brush_1_collision_shape" type="CollisionShape3D" parent="FoodSpawner/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_uuscy")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="SubViewport"]
+material = ExtResource("8_jv6nd")
+offset_right = 512.0
+offset_bottom = 512.0
+texture = ExtResource("9_6bhio")
+
+[node name="Quad" type="MeshInstance3D" parent="."]
+process_mode = 3
+transform = Transform3D(-1.11464e-08, 0, -0.875, 0, 0.375, 0, 0.255, 0, -3.82475e-08, -0.770244, 0.38581, -0.383956)
+mesh = SubResource("QuadMesh_0ulbx")
+surface_material_override/0 = SubResource("StandardMaterial3D_xknp7")
+
+[node name="Area3D" type="Area3D" parent="Quad"]
+collision_layer = 2
+input_capture_on_drag = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Quad/Area3D"]
+shape = SubResource("BoxShape3D_n1oak")

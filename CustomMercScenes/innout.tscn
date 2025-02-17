@@ -1,4 +1,4 @@
-[gd_scene load_steps=292 format=3 uid="uid://bnsf0wmclcn8f"]
+[gd_scene load_steps=298 format=3 uid="uid://bnsf0wmclcn8f"]
 
 [ext_resource type="Script" path="res://CustomScripts/Logic/InnOutSignalBus.gd" id="1_cabgq"]
 [ext_resource type="Script" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_edl00"]
@@ -884,14 +884,14 @@ material = ExtResource("12_y4s1n")
 resource_local_to_scene = true
 size = Vector2(3, 2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_lwuib"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_cieri"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5qtbk"]
 resource_local_to_scene = true
 transparency = 1
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_lwuib")
+albedo_texture = SubResource("ViewportTexture_cieri")
 
 [sub_resource type="QuadMesh" id="QuadMesh_h5or2"]
 resource_local_to_scene = true
@@ -955,6 +955,32 @@ font_size = 50
 height = 1.47487
 radius = 0.629386
 
+[sub_resource type="QuadMesh" id="QuadMesh_pbdrl"]
+resource_local_to_scene = true
+size = Vector2(3, 2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_uw0u3"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_86qu8"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_uw0u3")
+
+[sub_resource type="QuadMesh" id="QuadMesh_u0018"]
+resource_local_to_scene = true
+size = Vector2(3, 2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_r2n8h"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xgd6l"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_r2n8h")
+
 [node name="Innout" type="Node3D"]
 
 [node name="InnOutSignalBus" type="Node" parent="." groups=["InnOutSignalBus"]]
@@ -978,35 +1004,40 @@ transform = Transform3D(-1, 0, 8.74232e-08, 0, 1, 0, -8.74232e-08, 0, -1, 4.6101
 visible = false
 
 [node name="Skeleton3D" parent="PlayerObject/Player Model/PompRig" index="0"]
-bones/0/position = Vector3(8.01268e-09, 0.832662, -0.158666)
-bones/2/rotation = Quaternion(-0.142522, -0.117611, -0.0109348, 0.982718)
-bones/3/rotation = Quaternion(-0.00209163, -0.000167249, -0.000423796, 0.999998)
-bones/5/rotation = Quaternion(0.164318, -0.249324, 0.0472491, 0.953208)
-bones/6/position = Vector3(0.0545109, 0.0797205, 0.0816915)
-bones/7/position = Vector3(0.0230122, 0.0752372, 0.100322)
-bones/13/position = Vector3(-0.00127558, 0.0723078, -0.0197216)
-bones/14/position = Vector3(-0.0619872, 0.0840139, 0.0809949)
-bones/15/position = Vector3(-0.022825, 0.07527, 0.100282)
-bones/16/position = Vector3(0.0449654, 0.144397, 0.0368279)
-bones/16/scale = Vector3(0.714651, 0.714651, 0.714651)
-bones/17/position = Vector3(0.0694131, 0.121621, 0.0647955)
-bones/18/position = Vector3(-0.0694131, 0.121621, 0.0647955)
-bones/19/position = Vector3(-0.0766084, 0.139622, 0.0238598)
-bones/19/scale = Vector3(0.714765, 0.714765, 0.714765)
-bones/20/position = Vector3(0.000556701, 0.0839687, 0.0940629)
-bones/21/position = Vector3(0.0688958, 0.167319, 0.0466531)
-bones/22/position = Vector3(-0.0688639, 0.168907, 0.0475058)
-bones/24/rotation = Quaternion(-0.416584, 0.717061, -0.401482, 0.388707)
-bones/25/rotation = Quaternion(0.201029, -0.138844, 0.00212197, 0.969693)
-bones/28/position = Vector3(0.00345403, 0.131278, -0.041317)
-bones/28/rotation = Quaternion(-0.413818, -0.718834, 0.402884, 0.386932)
-bones/29/rotation = Quaternion(0.20094, 0.138239, -0.000170244, 0.969801)
-bones/35/rotation = Quaternion(0.958802, -6.44083e-08, 3.47802e-07, 0.284076)
-bones/36/rotation = Quaternion(0.380141, 6.74229e-09, 2.69839e-08, 0.924929)
-bones/37/rotation = Quaternion(-0.667009, 1.77634e-07, -3.18055e-07, 0.745049)
-bones/40/rotation = Quaternion(0.95813, -7.85292e-08, 1.09641e-07, 0.286335)
-bones/41/rotation = Quaternion(0.386589, -9.6957e-09, -3.42064e-08, 0.922252)
-bones/42/rotation = Quaternion(-0.667009, -1.77634e-07, 3.18055e-07, 0.745049)
+bones/0/position = Vector3(1.14659e-08, 0.803652, -0.158666)
+bones/1/rotation = Quaternion(-0.0628926, 0.000945223, 0.00010601, 0.99802)
+bones/2/rotation = Quaternion(-0.126985, -0.0698576, -0.0131907, 0.989354)
+bones/3/rotation = Quaternion(-0.00211372, -0.000192288, -0.000423021, 0.999998)
+bones/4/rotation = Quaternion(0.0298244, 2.17346e-15, 7.11069e-09, 0.999555)
+bones/5/rotation = Quaternion(0.166929, -0.196024, 0.0515439, 0.964911)
+bones/6/position = Vector3(0.0544697, 0.0795983, 0.0817334)
+bones/7/position = Vector3(0.0230759, 0.0752986, 0.100302)
+bones/13/position = Vector3(-0.00191304, 0.0715669, -0.0221557)
+bones/14/position = Vector3(-0.0656021, 0.0858576, 0.0804862)
+bones/15/position = Vector3(-0.022828, 0.075342, 0.10025)
+bones/16/position = Vector3(0.0451012, 0.144387, 0.0367628)
+bones/16/scale = Vector3(0.714608, 0.714608, 0.714608)
+bones/17/position = Vector3(0.0693999, 0.121533, 0.0648213)
+bones/18/position = Vector3(-0.0694, 0.121533, 0.0648213)
+bones/19/position = Vector3(-0.0764927, 0.13965, 0.0239261)
+bones/19/scale = Vector3(0.71476, 0.71476, 0.71476)
+bones/20/position = Vector3(0.000814155, 0.0830122, 0.0944385)
+bones/21/position = Vector3(0.0689208, 0.167911, 0.0465129)
+bones/22/position = Vector3(-0.068523, 0.162189, 0.0498081)
+bones/22/rotation = Quaternion(0.574497, -0.00427106, -0.0029976, 0.81849)
+bones/23/rotation = Quaternion(-0.535559, -0.441949, -0.458366, 0.554759)
+bones/24/rotation = Quaternion(-0.419942, 0.720217, -0.395446, 0.385432)
+bones/25/rotation = Quaternion(0.219974, -0.142466, 0.00398463, 0.965038)
+bones/28/position = Vector3(0.00354614, 0.131286, -0.041313)
+bones/28/rotation = Quaternion(-0.414558, -0.722739, 0.396523, 0.385434)
+bones/29/rotation = Quaternion(0.223166, 0.140883, 0.00268571, 0.964542)
+bones/30/rotation = Quaternion(-0.00711013, -0.0729187, 0.0929765, 0.992969)
+bones/35/rotation = Quaternion(0.943826, -8.01821e-08, 3.44269e-07, 0.330443)
+bones/36/rotation = Quaternion(0.470813, 9.25361e-09, 2.55161e-08, 0.882233)
+bones/37/rotation = Quaternion(-0.707962, 1.68383e-07, -3.37583e-07, 0.70625)
+bones/40/rotation = Quaternion(0.945791, -8.16228e-08, 1.06313e-07, 0.324777)
+bones/41/rotation = Quaternion(0.470859, -1.226e-08, -3.11663e-08, 0.882209)
+bones/42/rotation = Quaternion(-0.707962, -1.68383e-07, 3.37583e-07, 0.70625)
 
 [node name="FlashLightTPS" parent="PlayerObject" index="8"]
 visible = false
@@ -2033,7 +2064,7 @@ Speed = 1.5
 UIToToggle = [NodePath("../../../../PlayerObject/UI Overlay/CanvasLayer/UIPARENT/UI/Base"), NodePath("../../../../PlayerObject/UI Overlay/CanvasLayer/UIPARENT/UI/HealthHandler"), NodePath("../../../../PlayerObject/UI Overlay/CanvasLayer/DialogueParent"), NodePath("../../../../PlayerObject/UI Overlay/CanvasLayer/UIPARENT/UI/UIButtonParent")]
 
 [node name="TrayParent" type="Node3D" parent="KitchenParent/RackParent"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.152388, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.152388, 0, -0.0806065)
 
 [node name="FoodTray" parent="KitchenParent/RackParent/TrayParent" instance=ExtResource("27_875ws")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 1.20488, 1.06148, -0.346889)
@@ -2041,9 +2072,6 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 1.20488, 1.06148, -0.34
 [node name="Behavior" parent="KitchenParent/RackParent/TrayParent/FoodTray" index="1"]
 ObjectScale = Vector3(0.7, 0.7, 0.7)
 NPCNavEnabled = false
-
-[node name="SpawnLoc" parent="KitchenParent/RackParent/TrayParent/FoodTray" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.179992, 0)
 
 [node name="FoodTray2" parent="KitchenParent/RackParent/TrayParent" instance=ExtResource("27_875ws")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.543535, 1.06148, -0.346889)
@@ -2232,6 +2260,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1822, 2.52899, -2.10724)
 [node name="FoodSpawner" parent="FreezerParent" instance=ExtResource("17_np13h")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0565567, -0.451822, 2.38619)
 
+[node name="Quad" parent="FreezerParent/FoodSpawner" index="5"]
+mesh = SubResource("QuadMesh_pbdrl")
+surface_material_override/0 = SubResource("StandardMaterial3D_86qu8")
+
 [node name="FoodSpawner2" parent="FreezerParent" instance=ExtResource("17_np13h")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.07181, -0.442741, 2.37371)
 
@@ -2241,6 +2273,10 @@ ItemID = "FFries"
 [node name="FoodDisplay" parent="FreezerParent/FoodSpawner2" index="2"]
 transform = Transform3D(-5.55135e-09, 0, -0.077, 0, 0.197, 0, 0.127, 0, -3.36578e-09, -0.77107, 0.376952, -0.382354)
 texture = ExtResource("53_ka4si")
+
+[node name="Quad" parent="FreezerParent/FoodSpawner2" index="5"]
+mesh = SubResource("QuadMesh_u0018")
+surface_material_override/0 = SubResource("StandardMaterial3D_xgd6l")
 
 [node name="Thrait Albino" parent="." instance=ExtResource("42_k2en5")]
 transform = Transform3D(1, 0, 4.47035e-08, 0, 1, 0, -4.47035e-08, 0, 1, -2.96705, 1, 0.34419)
