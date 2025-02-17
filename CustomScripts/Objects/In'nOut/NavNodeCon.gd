@@ -12,7 +12,7 @@ func _ready():
 func _process(delta):
 	pass
 	
-func Reached():
+func Reached(id : int):
 	RegisterOrderGen.Generate(GeneratorID)
 	if InnoutBus != null:
 		InnoutBus.emit_signal("ReadyToOrder",GeneratorID)
