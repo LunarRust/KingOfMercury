@@ -69,6 +69,7 @@ var LightSound = preload("res://Sounds/FlashLight.ogg")
 
 func _ready():
 	InstID = self.get_instance_id()
+	self.add_to_group(str(InstID))
 	SignalBusKOM = get_tree().get_first_node_in_group("player").get_node("KOMSignalBus")
 	player = get_tree().get_first_node_in_group("player")
 	SignalBusKOM.PompNpcInstances.append(InstID)
@@ -135,12 +136,12 @@ func running_handling(delta):
 		
 		if NavNodeTarget == null:
 			NavNodeTarget = get_tree().get_first_node_in_group("NavMark" + str(InstID))
-		if position.distance_to(TargetEntity.position) < AttackDistance && ActionOnArrive != 0:
+		if position.distance_to(TargetEntity.position) < AttackDistance:
 			ArrivalAction(ActionOnArrive)
 			if NavNodeTarget != null:
 				if NavNodeTarget.is_in_group("ExecOnReached"):
 						if !TargetReached:
-							NavNodeTarget.Reached()
+							NavNodeTarget.Reached(InstID)
 		if attackTimer > attackThreshold:
 			if NavNodeTarget != null:
 				if NavNodeTarget.is_in_group("KillNPC"):
@@ -207,6 +208,7 @@ func running_handling(delta):
 	if (animTree != null):
 		animTree["parameters/Normal2D/blend_position"] = velV2
 		animTree["parameters/Normal2D/4/blend_position"] = float(HealthHandler.CoreHealthHandler.HP)
+		animTree["parameters/TalkBlend/blend_position"] = velV2
 	
 	DebugLabelParent.get_child(1).text = ("InstanceID " +  str(InstID))
 	DebugLabelParent.get_child(0).text = ("Speed:  " +  str(speed))
@@ -298,7 +300,7 @@ func CheckGlobals():
 			if FlashLight.visible:
 				FlashLightOff()
 		if !NpcRules.InventoryVisible:
-			self.get_node("CtrlInventoryGridEx").hide()
+			self.get_node("VenusModel/OrderPanel/SubViewport/InvDisplay").hide()
 		if NpcRules.AllowPlayerControl == true:
 			AllowPlayerCon = true
 		else:
