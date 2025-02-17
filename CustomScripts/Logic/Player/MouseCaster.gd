@@ -13,6 +13,8 @@ var CurrentIntersectedObject
 var interactionButtonKOM
 var TouchedObject
 var ViewButton = preload("res://Scripts/ViewButton.cs")
+var WooshSound = preload("res://Sounds/Woosh.ogg") as AudioStream
+var ImpactSound = preload("res://Sounds/Impact.ogg") as AudioStream
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -61,13 +63,18 @@ func Cast():
 			animTrigger("Attack")
 			HammerAnim.stop()
 			HammerAnim.play("Attack")
-			SoundSource.stream = load("res://Sounds/Woosh.ogg")
+			SoundSource.stream = WooshSound
 			SoundSource.play()
 			await get_tree().create_timer(0.15000000596046448).timeout
 			if !dictionary.is_empty():
 				if (dictionary["collider"] as CollisionObject3D).has_node("HealthHandler"):
 					var health : Node = (dictionary["collider"] as CollisionObject3D).get_node("HealthHandler")
 					health.Hurt(HurtFor)
+					print("Hitting creature")
+				else:
+					SoundSource.stream = ImpactSound
+					SoundSource.play()
+					print("Hitting object")
 				if node != null:
 					if node.has_method("Hurt"):
 						node.Hurt()
@@ -103,11 +110,6 @@ func ItemCast(item : String):
 			return true
 	else:
 		return false
-	
-	
-#func _input(event):
-	#if event is InputEventMouseButton && event.is_pressed():
-		#Cast()
 		
 func _unhandled_input(event):
 	if event is InputEventMouseButton && event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed():
